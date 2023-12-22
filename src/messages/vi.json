@@ -1,0 +1,18 @@
+{
+  "Index": {
+    "title": "Xin chào",
+    "language-one": "Tiếng Anh",
+    "language-two": "Tiếng Việt"
+  },
+  "navbar": {
+    "home": "Trang Chủ",
+    "about": "Giới thiệu",
+    "products": "Sản phẩm",
+    "blog": "Blog",
+    "contacts": "Liên hệ"
+  },
+  "footer": {
+    "company": "CÔNG TY CỔ PHẦN SẢN XUẤT THƯƠNG MẠI DƯỢC PHẨM ĐÔNG NAM",
+    "address": "Lô 2A, Đường 1A KCN Tân Tạo, P. Tân Tạo A, Q. Bình Tân TP. Hồ Chí Minh - Việt Nam"
+  }
+}

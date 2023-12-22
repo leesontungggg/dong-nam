@@ -1,0 +1,18 @@
+{
+  "Index": {
+    "title": "Hello world!",
+    "language-one": "English",
+    "language-two": "Vietnam"
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "blog": "Blog",
+    "contacts": "Contacts"
+  },
+  "footer": {
+    "company": "Corporation Production Trading Pharmaceutical Southeast",
+    "address": "Number 2A, Street 1A Industrial Area Tan Tao, Tan Tao A Ward, Bình Tân District, Ho Chi Minh City, Viet Nam"
+  }
+}
