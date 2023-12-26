@@ -18,40 +18,6 @@ const Navbar = () => {
   };
 
   return (
-    // <nav className="bg-white">
-    //   <div className="container mx-auto py-4 flex justify-between items-center font-bold text-black">
-    //     <a className="text-4xl" href="#">
-    //       <img className="w-20 h-20" src="/logo.svg" alt="DongNam" />
-    //     </a>
-    //     <ul className="inline-flex justify-between text-lg w-7/12">
-    //       <li>
-    //         <a href="/">{t("home")}</a>
-    //       </li>
-    //       <li>
-    //         <a href="/about">{t("about")}</a>
-    //       </li>
-    //       <li>
-    //         <a href="/products">{t("products")}</a>
-    //       </li>
-    //       <li>
-    //         <a href="/blog">{t("blog")}</a>
-    //       </li>
-    //       <li>
-    //         <a href="/contact">{t("contacts")}</a>
-    //       </li>
-    //     </ul>
-    //     <select
-    //       name="language"
-    //       id="language"
-    //       onChange={handleSelect}
-    //       defaultValue={locale}
-    //       className="px-2 py-1 rounded-lg bg-gray-200"
-    //     >
-    //       <option value="en">EN </option>
-    //       <option value="vi">VI </option>
-    //     </select>
-    //   </div>
-    // </nav>
     <div className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
