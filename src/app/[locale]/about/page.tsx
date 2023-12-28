@@ -3,6 +3,8 @@
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "next-intl/client";
 import { useTransition } from "react";
+import Button from "@/components/button";
+import Accordion from "@/components/accordion";
 
 export default function Root() {
   const t = useTranslations("Index");
@@ -24,6 +26,15 @@ export default function Root() {
  flex flex-col justify-center items-center"
     >
       <h1 className="text-8xl">{t("title")}</h1>
+      <Button text={"Bao Hoang"} />
+      <div className="text-white">
+        <Accordion
+          items={[
+            { title: "Lele", description: "lelé1" },
+            { title: "Lele2", description: "lelé2" },
+          ]}
+        />
+      </div>
     </div>
   );
 }
