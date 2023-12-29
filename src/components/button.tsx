@@ -1,6 +1,10 @@
 const Button = (props: any) => {
-  const { text } = props;
-  return <button className="bg-blue-600">{text}</button>;
+  const { text, className } = props;
+  return (
+    <button className={`${className} bg-[#00A259]`} onClick={props.onClick}>
+      {text}
+    </button>
+  );
 };
 
 export default Button;

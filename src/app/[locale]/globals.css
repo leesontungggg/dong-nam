@@ -25,3 +25,7 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+[data-theme="light"] .btn {
+  background-color: #00a259 !important;
+}

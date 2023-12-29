@@ -26,15 +26,6 @@ export default function Root() {
  flex flex-col justify-center items-center"
     >
       <h1 className="text-8xl">{t("title")}</h1>
-      <Button text={"Bao Hoang"} />
-      <div className="text-white">
-        <Accordion
-          items={[
-            { title: "Lele", description: "lelé1" },
-            { title: "Lele2", description: "lelé2" },
-          ]}
-        />
-      </div>
     </div>
   );
 }

@@ -42,13 +42,13 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a>{t("home")}</a>
+              <a href="/home">{t("home")}</a>
             </li>
             <li>
-              <a>{t("about")}</a>
+              <a href="/about">{t("about")}</a>
             </li>
             <li>
-              <a>{t("products")}</a>
+              <a href="/products">{t("products")}</a>
               <ul className="p-2">
                 <li>
                   <a>Submenu 1</a>
@@ -59,26 +59,29 @@ const Navbar = () => {
               </ul>
             </li>
             <li>
-              <a>{t("blog")}</a>
+              <a href="/blog">{t("blog")}</a>
             </li>
             <li>
-              <a>{t("contacts")}</a>
+              <a href="/contacts">{t("contacts")}</a>
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">
+        <a className="btn btn-ghost text-xl h-24">
           <img className="w-full h-full" src="/logo.svg" alt="DongNam" />
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 gap-8 2xl:gap-16 text-xl">
           <li>
-            <a>{t("home")}</a>
+            <a href="/home">{t("home")}</a>
           </li>
           <li>
-            <a>{t("about")}</a>
+            <a href="/about">{t("about")}</a>
           </li>
           <li>
+            <a href="/products">{t("products")}</a>
+          </li>
+          {/* <li>
             <details>
               <summary>{t("products")}</summary>
               <ul className="p-2">
@@ -90,12 +93,12 @@ const Navbar = () => {
                 </li>
               </ul>
             </details>
+          </li> */}
+          <li>
+            <a href="/blog">{t("blog")}</a>
           </li>
           <li>
-            <a>{t("blog")}</a>
-          </li>
-          <li>
-            <a>{t("contacts")}</a>
+            <a href="/contacts">{t("contacts")}</a>
           </li>
         </ul>
       </div>
