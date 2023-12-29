@@ -13,6 +13,7 @@ import Avatar from "@/components/avatar";
 import Badge from "@/components/badge";
 import Card from "@/components/card";
 import Carousel from "@/components/carousel"
+import ChatBubble from "@/components/chat-bubble";
 
 export default function Root() {
   const t = useTranslations("Index");
@@ -67,7 +68,7 @@ export default function Root() {
         }}
       /> */}
       {/* <Badge title="hehe" /> */}
-      <Card 
+      {/* <Card 
         actions="Fight!" 
         items=
         {[{
@@ -83,7 +84,7 @@ export default function Root() {
           title: "Eula",
           description: "Eula!",
           handleActionClick: () => console.log("2")
-        }]}/>
+        }]}/> */}
       {/* <Carousel img={[
         {url: "https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg", alt:"1"}
       ,
@@ -92,6 +93,24 @@ export default function Root() {
       {url:"https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg", alt: "4"}, {
         url:"https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg", alt: "5" 
       }]}/> */}
+      {/* <ChatBubble       customer={[{
+        alt: "bao2 ",
+        url: "https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg",
+        name: "bao2",
+        text: "hehe2"
+      }]} staff={[{
+        alt: "bao ",
+        url: "https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg",
+        name: "bao",
+        text: "hehe"
+      },{
+        alt: "bao1 ",
+        url: "https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg",
+        name: "bao1",
+        text: "hehe1"
+      }]}
+ /> */}
+ 
     </div>
   );
 }
