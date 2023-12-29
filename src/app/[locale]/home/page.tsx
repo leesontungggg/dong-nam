@@ -15,8 +15,8 @@ import Card from "@/components/card";
 import Carousel from "@/components/carousel"
 import ChatBubble from "@/components/chat-bubble";
 import Collapse from "@/components/collapse";
-import App from "@/components/countdowncopy";
 import Countdown from "@/components/countdown";
+import Diff from "@/components/diff";
 
 export default function Root() {
   const t = useTranslations("Index");
@@ -120,8 +120,13 @@ export default function Root() {
         title: "bao1",
         description: "bao1!"
       }]} /> */}
-
-      <Countdown numHours="48" />
+      {/* <Countdown numHours="48" /> */}
+      <Diff items={[{
+        alt1: "Bao",
+        url1: "https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2020/05/Image-Files-Blog-Vector.jpg",
+        alt2: "Bao1",
+        url2: "https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg"
+      }]} />
     </div>
   );
 }
