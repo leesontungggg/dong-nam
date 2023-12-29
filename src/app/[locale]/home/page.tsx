@@ -15,6 +15,8 @@ import Card from "@/components/card";
 import Carousel from "@/components/carousel"
 import ChatBubble from "@/components/chat-bubble";
 import Collapse from "@/components/collapse";
+import App from "@/components/countdowncopy";
+import Countdown from "@/components/countdown";
 
 export default function Root() {
   const t = useTranslations("Index");
@@ -118,6 +120,8 @@ export default function Root() {
         title: "bao1",
         description: "bao1!"
       }]} /> */}
+
+      <Countdown numHours="48" />
     </div>
   );
 }
