@@ -17,6 +17,7 @@ import ChatBubble from "@/components/chat-bubble";
 import Collapse from "@/components/collapse";
 import Countdown from "@/components/countdown";
 import Diff from "@/components/diff";
+import Kbd from "@/components/kbd";
 
 export default function Root() {
   const t = useTranslations("Index");
@@ -121,12 +122,19 @@ export default function Root() {
         description: "bao1!"
       }]} /> */}
       {/* <Countdown numHours="48" /> */}
-      <Diff items={[{
+      {/* <Diff items={[{
         alt1: "Bao",
         url1: "https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2020/05/Image-Files-Blog-Vector.jpg",
         alt2: "Bao1",
         url2: "https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg"
-      }]} />
+      }]} /> */}
+      <Kbd items={[{
+        text: "Ctrl"
+      }, {
+        text: "Alt"
+      }, {
+        text: "Delete"
+      }]}/>
     </div>
   );
 }
