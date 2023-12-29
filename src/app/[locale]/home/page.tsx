@@ -14,6 +14,7 @@ import Badge from "@/components/badge";
 import Card from "@/components/card";
 import Carousel from "@/components/carousel"
 import ChatBubble from "@/components/chat-bubble";
+import Collapse from "@/components/collapse";
 
 export default function Root() {
   const t = useTranslations("Index");
@@ -110,7 +111,13 @@ export default function Root() {
         text: "hehe1"
       }]}
  /> */}
- 
+      {/* <Collapse items={[{
+        title: "bao",
+        description: "bao!"
+      },{
+        title: "bao1",
+        description: "bao1!"
+      }]} /> */}
     </div>
   );
 }
