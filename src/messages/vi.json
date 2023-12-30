@@ -14,5 +14,49 @@
   "footer": {
     "company": "CÔNG TY CỔ PHẦN SẢN XUẤT THƯƠNG MẠI DƯỢC PHẨM ĐÔNG NAM",
     "address": "Lô 2A, Đường 1A KCN Tân Tạo, P. Tân Tạo A, Q. Bình Tân TP. Hồ Chí Minh - Việt Nam"
+  },
+  "hero": {
+    "title": "Dược phẩm ĐÔNG NAM",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "CTA": "Tìm hiểu thêm",
+    "reason": {
+      "title": "Lí do chọn Đông Nam?",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "reason1" : {
+        "title" : "Lí do 1",
+        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      },
+      "reason2" : {
+        "title" : "Lí do 2",
+        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      },
+      "reason3" : {
+        "title" : "Lí do 3",
+        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      },
+      "reason4" : {
+        "title" : "Lí do 4",
+        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      }
+    },
+    "article": {
+      "title": "Bài viết mới nhất",
+      "article1": {
+        "title" : "Bài viết 1",
+        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      },
+      "article2": {
+        "title" : "Bài viết 2",
+        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      },
+      "article3": {
+        "title" : "Bài viết 3",
+        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      },
+      "article4": {
+        "title" : "Bài viết 4",
+        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      }
+    }
   }
 }

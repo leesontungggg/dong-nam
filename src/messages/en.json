@@ -14,5 +14,49 @@
   "footer": {
     "company": "Corporation Production Trading Pharmaceutical Southeast",
     "address": "Number 2A, Street 1A Industrial Area Tan Tao, Tan Tao A Ward, Bình Tân District, Ho Chi Minh City, Viet Nam"
+  },
+  "hero": {
+    "title": "DONG NAM Pharmaceutical",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "CTA": "Learn more",
+    "reason": {
+      "title": "Why choose DongNam?",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "reason1" : {
+        "title" : "Reason 1",
+        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      },
+      "reason2" : {
+        "title" : "Reason 2",
+        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      },
+      "reason3" : {
+        "title" : "Reason 3",
+        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      },
+      "reason4" : {
+        "title" : "Reason 4",
+        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      }
+    },
+    "article": {
+      "title": "Latest Articles",
+      "article1": {
+        "title" : "Article 1",
+        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      },
+      "article2": {
+        "title" : "Article 2",
+        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      },
+      "article3": {
+        "title" : "Article 3",
+        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      },
+      "article4": {
+        "title" : "Article 4",
+        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      }
+    }
   }
 }

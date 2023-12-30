@@ -18,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 text-">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -39,47 +39,64 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 gap-6"
           >
             <li>
-              <a href="/home">{t("home")}</a>
+              <a href="/" className="text-xl">
+                {t("home")}
+              </a>
             </li>
             <li>
-              <a href="/about">{t("about")}</a>
+              <a href="/about" className="text-xl">
+                {t("about")}
+              </a>
             </li>
             <li>
-              <a href="/products">{t("products")}</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
+              <a href="/products" className="text-xl">
+                {t("products")}
+              </a>
             </li>
             <li>
-              <a href="/blog">{t("blog")}</a>
+              <a href="/blog" className="text-xl">
+                {t("blog")}
+              </a>
             </li>
             <li>
-              <a href="/contacts">{t("contacts")}</a>
+              <a href="/contacts" className="text-xl">
+                {t("contacts")}
+              </a>
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl h-24">
+        <a className="btn btn-ghost text-xl h-36 hover:bg-transparent">
           <img className="w-full h-full" src="/logo.svg" alt="DongNam" />
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 gap-8 2xl:gap-16 text-xl">
+        <ul className="menu menu-horizontal px-1 gap-8 2xl:gap-16 text-2xl !text-black">
           <li>
-            <a href="/home">{t("home")}</a>
+            <a
+              href="/"
+              className="block px-3 py-5 relative font-primary text-black after:content[''] after:absolute after:block after:bottom-0 after:left-0 after:h-1 after:w-0 after:bg-primary-gradient after:transition-all after:duration-150 after: hover:text-black hover:after:w-full hover:bg-transparent"
+            >
+              {t("home")}
+            </a>
           </li>
           <li>
-            <a href="/about">{t("about")}</a>
+            <a
+              href="/about"
+              className="block px-3 py-5 relative font-primary text-black after:content[''] after:absolute after:block after:bottom-0 after:left-0 after:h-1 after:w-0 after:bg-primary-gradient after:transition-all after:duration-150 after: hover:text-black hover:after:w-full hover:bg-transparent"
+            >
+              {t("about")}
+            </a>
           </li>
           <li>
-            <a href="/products">{t("products")}</a>
+            <a
+              href="/products"
+              className="block px-3 py-5 relative font-primary text-black after:content[''] after:absolute after:block after:bottom-0 after:left-0 after:h-1 after:w-0 after:bg-primary-gradient after:transition-all after:duration-150 after: hover:text-black hover:after:w-full hover:bg-transparent"
+            >
+              {t("products")}
+            </a>
           </li>
           {/* <li>
             <details>
@@ -95,10 +112,20 @@ const Navbar = () => {
             </details>
           </li> */}
           <li>
-            <a href="/blog">{t("blog")}</a>
+            <a
+              href="/blog"
+              className="block px-3 py-5 relative font-primary text-black after:content[''] after:absolute after:block after:bottom-0 after:left-0 after:h-1 after:w-0 after:bg-primary-gradient after:transition-all after:duration-150 after: hover:text-black hover:after:w-full hover:bg-transparent"
+            >
+              {t("blog")}
+            </a>
           </li>
           <li>
-            <a href="/contacts">{t("contacts")}</a>
+            <a
+              href="/contacts"
+              className="block px-3 py-5 relative font-primary text-black after:content[''] after:absolute after:block after:bottom-0 after:left-0 after:h-1 after:w-0 after:bg-primary-gradient after:transition-all after:duration-150 after: hover:text-black hover:after:w-full hover:bg-transparent"
+            >
+              {t("contacts")}
+            </a>
           </li>
         </ul>
       </div>
