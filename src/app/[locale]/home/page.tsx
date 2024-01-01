@@ -18,6 +18,7 @@ import Collapse from "@/components/collapse";
 import Countdown from "@/components/countdown";
 import Diff from "@/components/diff";
 import Kbd from "@/components/kbd";
+import Stat from "@/components/stat";
 
 export default function Root() {
   const t = useTranslations("Index");
@@ -128,13 +129,14 @@ export default function Root() {
         alt2: "Bao1",
         url2: "https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg"
       }]} /> */}
-      <Kbd items={[{
+      {/* <Kbd items={[{
         text: "Ctrl"
       }, {
         text: "Alt"
       }, {
         text: "Delete"
-      }]}/>
+      }]}/> */}
+      <Stat result={{total: 9000, percentage: "200% more than last month"}} />
     </div>
   );
 }
