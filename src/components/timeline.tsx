@@ -6,7 +6,7 @@ const Timeline = (props: any) => {
             <ul className="timeline timeline-vertical lg:timeline-horizontal">
   {items.map((item: any, index: any) => {
     const isLast = items.length - 1 === index; 
-
+    
     return (
   <li >
     <div className="timeline-start">{item.year}</div>
