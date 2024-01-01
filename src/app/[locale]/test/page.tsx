@@ -12,7 +12,7 @@ import Hamburger from "@/components/hamburger";
 import Avatar from "@/components/avatar";
 import Badge from "@/components/badge";
 import Card from "@/components/card";
-import Carousel from "@/components/carousel"
+import Carousel from "@/components/carousel";
 import ChatBubble from "@/components/chat-bubble";
 import Collapse from "@/components/collapse";
 import Countdown from "@/components/countdown";
@@ -21,6 +21,7 @@ import Kbd from "@/components/kbd";
 import Stat from "@/components/stat";
 import Table from "@/components/table";
 import Timeline from "@/components/timeline";
+import Breadcrumbs from "@/components/breadcrumbs";
 
 export default function Root() {
   const t = useTranslations("Index");
@@ -156,6 +157,14 @@ export default function Root() {
         year: 2015,
         description: "hehe"
       }]} /> */}
+      <Breadcrumbs
+        className="bg-blue-600"
+        items={[
+          { name: "bao", href: "/bao" },
+          { name: "pao", href: "/pao" },
+          { name: "sao", href: "/sao" },
+        ]}
+      />
     </div>
   );
 }
