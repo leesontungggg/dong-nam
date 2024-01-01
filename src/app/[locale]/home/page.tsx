@@ -20,6 +20,7 @@ import Diff from "@/components/diff";
 import Kbd from "@/components/kbd";
 import Stat from "@/components/stat";
 import Table from "@/components/table";
+import Timeline from "@/components/timeline";
 
 export default function Root() {
   const t = useTranslations("Index");
@@ -138,10 +139,23 @@ export default function Root() {
         text: "Delete"
       }]}/> */}
       {/* <Stat result={{total: 9000, percentage: "200% more than last month"}} /> */}
-      <Table head={{title1: "pro", title2: 20, title3:"hehe"}}
+      {/* <Table head={{title1: "pro", title2: 20, title3:"hehe"}}
             body={[{number: 1, title: "name", description: 2000, note: "bao"}, 
             {number: 2, title: "name", description: 100, note: "bao"}, 
-            {number: 3, title: "name", description: 100, note: "bao"}]} />
+            {number: 3, title: "name", description: 100, note: "bao"}]} /> */}
+      <Timeline items={[{
+        year: 1999,
+        description: "Bao"
+      },{
+        year: 2000,
+        description: "hehe"
+      },{
+        year: 2004,
+        description: "hehe"
+      },{
+        year: 2015,
+        description: "hehe"
+      }]} />
     </div>
   );
 }
