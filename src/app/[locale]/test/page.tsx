@@ -28,6 +28,7 @@ import Pagination from "@/components/pagination";
 import Alert from "@/components/alert";
 import Loading from "@/components/loading";
 import Skeleton from "@/components/skeleton";
+import Toast from "@/components/toast";
 
 export default function Root() {
   const t = useTranslations("Index");
@@ -205,7 +206,8 @@ export default function Root() {
         }}
       /> */}
       {/* <Loading /> */}
-      <Skeleton />
+      {/* <Skeleton /> */}
+      <Toast text="hehe" />
     </div>
   );
 }
