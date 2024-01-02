@@ -25,6 +25,7 @@ import Breadcrumbs from "@/components/breadcrumbs";
 import Link from "@/components/link";
 import Menu from "@/components/menu";
 import Pagination from "@/components/pagination";
+import Alert from "@/components/alert";
 
 export default function Root() {
   const t = useTranslations("Index");
@@ -184,7 +185,7 @@ export default function Root() {
           { name: "saoooooooooooooooo", href: "/sao" },
         ]}
       /> */}
-      <Pagination
+      {/* <Pagination
         items={[
           {
             name: "bao",
@@ -193,6 +194,13 @@ export default function Root() {
           { name: "123", onClick: () => console.log("haha") },
           { name: "poi", onClick: () => console.log("hihi") },
         ]}
+      /> */}
+      <Alert
+        isSuccess={false}
+        text={{
+          success: "chuc mung ban!",
+          error: "that bai, vui long thu lai",
+        }}
       />
     </div>
   );
