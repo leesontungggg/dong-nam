@@ -24,6 +24,7 @@ import Timeline from "@/components/timeline";
 import Breadcrumbs from "@/components/breadcrumbs";
 import Link from "@/components/link";
 import Menu from "@/components/menu";
+import Pagination from "@/components/pagination";
 
 export default function Root() {
   const t = useTranslations("Index");
@@ -175,12 +176,22 @@ export default function Root() {
           { text: "ba", href: "/ba" },
         ]}
       /> */}
-      <Menu
+      {/* <Menu
         className="bg-pink-500"
         items={[
           { name: "waoooooooooooooooo", href: "/wao" },
           { name: "zaoooooooooooooooo", href: "/zao" },
           { name: "saoooooooooooooooo", href: "/sao" },
+        ]}
+      /> */}
+      <Pagination
+        items={[
+          {
+            name: "bao",
+            onClick: () => console.log("huhu"),
+          },
+          { name: "123", onClick: () => console.log("haha") },
+          { name: "poi", onClick: () => console.log("hihi") },
         ]}
       />
     </div>
