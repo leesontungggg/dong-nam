@@ -27,6 +27,7 @@ import Menu from "@/components/menu";
 import Pagination from "@/components/pagination";
 import Alert from "@/components/alert";
 import Loading from "@/components/loading";
+import Skeleton from "@/components/skeleton";
 
 export default function Root() {
   const t = useTranslations("Index");
@@ -199,11 +200,12 @@ export default function Root() {
       {/* <Alert
         isSuccess={false}
         text={{
-          success: "chuc mung ban!",
+          success: "thanh cong!",
           error: "that bai, vui long thu lai",
         }}
       /> */}
-      <Loading />
+      {/* <Loading /> */}
+      <Skeleton />
     </div>
   );
 }

@@ -1,5 +1,7 @@
-const Loading = () => {
-  return <span className="loading loading-spinner loading-lg"></span>;
+const Loading = ({ className }: any) => {
+  return (
+    <span className={`${className} loading loading-spinner loading-lg`}></span>
+  );
 };
 
 export default Loading;

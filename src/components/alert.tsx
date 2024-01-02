@@ -1,8 +1,8 @@
 const Alert = (props: any) => {
-  const { isSuccess = Boolean, text = {} } = props;
+  const { isSuccess = Boolean, text = {}, className } = props;
   if (isSuccess)
     return (
-      <div role="alert" className="alert alert-success">
+      <div role="alert" className={`${className} alert alert-success`}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="stroke-current shrink-0 h-6 w-6"
@@ -21,7 +21,7 @@ const Alert = (props: any) => {
     );
   else {
     return (
-      <div role="alert" className="alert alert-error">
+      <div role="alert" className={`${className} alert alert-error`}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="stroke-current shrink-0 h-6 w-6"
