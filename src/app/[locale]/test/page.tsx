@@ -23,6 +23,7 @@ import Table from "@/components/table";
 import Timeline from "@/components/timeline";
 import Breadcrumbs from "@/components/breadcrumbs";
 import Link from "@/components/link";
+import Menu from "@/components/menu";
 
 export default function Root() {
   const t = useTranslations("Index");
@@ -166,12 +167,20 @@ export default function Root() {
           { name: "sao", href: "/sao" },
         ]}
       /> */}
-      <Link
+      {/* <Link
         className="bg-white"
         items={[
           { text: "mot", href: "/mot" },
           { text: "hai", href: "/hai" },
           { text: "ba", href: "/ba" },
+        ]}
+      /> */}
+      <Menu
+        className="bg-pink-500"
+        items={[
+          { name: "waoooooooooooooooo", href: "/wao" },
+          { name: "zaoooooooooooooooo", href: "/zao" },
+          { name: "saoooooooooooooooo", href: "/sao" },
         ]}
       />
     </div>
