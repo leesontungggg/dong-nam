@@ -30,6 +30,7 @@ import Loading from "@/components/loading";
 import Skeleton from "@/components/skeleton";
 import Toast from "@/components/toast";
 import Select from "@/components/select";
+import TextInput from "@/components/text-input";
 
 export default function Root() {
   const t = useTranslations("Index");
@@ -209,11 +210,12 @@ export default function Root() {
       {/* <Loading /> */}
       {/* <Skeleton /> */}
       {/* <Toast text="hehe" /> */}
-      <Select
+      {/* <Select
         className="bg-yellow-500"
         title="what is this?"
         options={["baobao", "wa0wa0", "dwdwdw"]}
-      />
+      /> */}
+      <TextInput />
     </div>
   );
 }
