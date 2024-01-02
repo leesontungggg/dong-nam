@@ -26,6 +26,7 @@ import Link from "@/components/link";
 import Menu from "@/components/menu";
 import Pagination from "@/components/pagination";
 import Alert from "@/components/alert";
+import Loading from "@/components/loading";
 
 export default function Root() {
   const t = useTranslations("Index");
@@ -195,13 +196,14 @@ export default function Root() {
           { name: "poi", onClick: () => console.log("hihi") },
         ]}
       /> */}
-      <Alert
+      {/* <Alert
         isSuccess={false}
         text={{
           success: "chuc mung ban!",
           error: "that bai, vui long thu lai",
         }}
-      />
+      /> */}
+      <Loading />
     </div>
   );
 }
