@@ -29,6 +29,7 @@ import Alert from "@/components/alert";
 import Loading from "@/components/loading";
 import Skeleton from "@/components/skeleton";
 import Toast from "@/components/toast";
+import Select from "@/components/select";
 
 export default function Root() {
   const t = useTranslations("Index");
@@ -207,7 +208,12 @@ export default function Root() {
       /> */}
       {/* <Loading /> */}
       {/* <Skeleton /> */}
-      <Toast text="hehe" />
+      {/* <Toast text="hehe" /> */}
+      <Select
+        className="bg-yellow-500"
+        title="what is this?"
+        options={["baobao", "wa0wa0", "dwdwdw"]}
+      />
     </div>
   );
 }
