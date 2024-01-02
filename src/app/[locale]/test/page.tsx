@@ -22,6 +22,7 @@ import Stat from "@/components/stat";
 import Table from "@/components/table";
 import Timeline from "@/components/timeline";
 import Breadcrumbs from "@/components/breadcrumbs";
+import Link from "@/components/link";
 
 export default function Root() {
   const t = useTranslations("Index");
@@ -157,12 +158,20 @@ export default function Root() {
         year: 2015,
         description: "hehe"
       }]} /> */}
-      <Breadcrumbs
+      {/* <Breadcrumbs
         className="bg-blue-600"
         items={[
           { name: "bao", href: "/bao" },
           { name: "pao", href: "/pao" },
           { name: "sao", href: "/sao" },
+        ]}
+      /> */}
+      <Link
+        className="bg-white"
+        items={[
+          { text: "mot", href: "/mot" },
+          { text: "hai", href: "/hai" },
+          { text: "ba", href: "/ba" },
         ]}
       />
     </div>

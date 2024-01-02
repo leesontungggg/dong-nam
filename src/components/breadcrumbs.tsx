@@ -1,11 +1,11 @@
 const Breadcrumbs = (props: any) => {
-  const { items = [], className } = props;
+  const { className, items = [] } = props;
 
   return (
     <div className={`${className} text-sm breadcrumbs`}>
       <ul>
         {items.map((item: any) => (
-          <li key={item}>
+          <li key={item.name}>
             <a className="cursor-pointer" href={item.href}>
               {item.name}
             </a>
