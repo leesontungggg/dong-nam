@@ -31,6 +31,7 @@ import Skeleton from "@/components/skeleton";
 import Toast from "@/components/toast";
 import Select from "@/components/select";
 import TextInput from "@/components/text-input";
+import TextArea from "@/components/text-area";
 
 export default function Root() {
   const t = useTranslations("Index");
@@ -215,7 +216,8 @@ export default function Root() {
         title="what is this?"
         options={["baobao", "wa0wa0", "dwdwdw"]}
       /> */}
-      <TextInput />
+      {/* <TextInput /> */}
+      <TextArea />
     </div>
   );
 }
