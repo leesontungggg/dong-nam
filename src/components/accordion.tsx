@@ -1,9 +1,9 @@
 const Accordion = (props: any) => {
-  const { items = [] } = props;
+  const { items = [], className } = props;
   return (
     <>
       {items.map((item: any, index: any) => (
-        <div className="collapse collapse-arrow bg-blue-600">
+        <div className={`${className} collapse collapse-arrow bg-blue-600`}>
           <input
             type="radio"
             name="my-accordion-2"

@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { useEffect, useState } from 'react';
+import * as React from "react";
+import { useEffect, useState } from "react";
 
 const useCountdown = (deadline: Date) => {
   // Time is in seconds
@@ -18,7 +18,7 @@ const useCountdown = (deadline: Date) => {
   }, []);
 
   const format = (num: number): string => {
-    return num < 10 ? '0' + num : num.toString();
+    return num < 10 ? "0" + num : num.toString();
   };
 
   return {
@@ -30,45 +30,41 @@ const useCountdown = (deadline: Date) => {
 };
 
 const Countdown = (props: any) => {
-    const hour = 3.6e6; // 1 Hour in milliseconds
-  const {numHours} = props; // Number of hours in the future
+  const hour = 3.6e6; // 1 Hour in milliseconds
+  const { numHours } = props; // Number of hours in the future
   const [deadline] = useState(new Date(Date.now() + numHours * hour));
   const time = useCountdown(deadline);
 
-    return (
-        <>
-            <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
-  <div className="flex flex-col">
-    <span className="countdown font-mono text-5xl">
-    <span style={{"--value":15}}></span>
-
-    </span>
-    {time.days} <br/> Days
-  </div> 
-  <div className="flex flex-col">
-    <span className="countdown font-mono text-5xl">
-    <span style={{"--value":15}}></span>
-
-    </span>
-    {time.hours} <br/> Hours
-  </div> 
-  <div className="flex flex-col">
-    <span className="countdown font-mono text-5xl">
-    <span style={{"--value":15}}></span>
-
-    </span>
-    {time.minutes} <br/> Minutes
-  </div> 
-  <div className="flex flex-col">
-    <span className="countdown font-mono text-5xl">
-    <span style={{"--value":15}}></span>
-
-    </span>
-    {time.seconds} <br/> Seconds
-  </div>
-</div>
-        </>
-    );
-}
+  return (
+    <>
+      <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
+        <div className="flex flex-col">
+          <span className="countdown font-mono text-5xl">
+            <span style={{ "--value": 15 }}></span>
+          </span>
+          {time.days} <br /> Days
+        </div>
+        <div className="flex flex-col">
+          <span className="countdown font-mono text-5xl">
+            <span style={{ "--value": 15 }}></span>
+          </span>
+          {time.hours} <br /> Hours
+        </div>
+        <div className="flex flex-col">
+          <span className="countdown font-mono text-5xl">
+            <span style={{ "--value": 15 }}></span>
+          </span>
+          {time.minutes} <br /> Minutes
+        </div>
+        <div className="flex flex-col">
+          <span className="countdown font-mono text-5xl">
+            <span style={{ "--value": 15 }}></span>
+          </span>
+          {time.seconds} <br /> Seconds
+        </div>
+      </div>
+    </>
+  );
+};
 
 export default Countdown;
