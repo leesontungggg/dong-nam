@@ -1,20 +1,30 @@
-const Pagination = (props: any) => {
-  const { className, items = [] } = props;
+import { useState } from "react";
 
-  return (
-    <div className={`${className} join`}>
-      {items.map((item: any) => {
-        return (
-          <button
-            className={`${className} join-item btn`}
-            onClick={item.onClick}
-          >
-            {item.name}
-          </button>
-        );
-      })}
-    </div>
-  );
+const Pagination = (props: any) => {
+  const { className = "", pages = 4, page = 0 } = props;
+  const [currentPage, setCurrentPage] = useState(page);
+
+  const handleClickPage = (index: number) => {
+    setCurrentPage(index);
+  };
+
+  const handleRenderPagination = () => {
+    let content = [];
+    for (let i = 0; i < pages; i++) {
+      const item = (
+        <button
+          className={`join-item btn ${currentPage === i && "btn-active"}`}
+          onClick={() => handleClickPage(i)}
+        >
+          {i + 1}
+        </button>
+      );
+      content.push(item);
+    }
+    return content;
+  };
+
+  return <div className={`${className} join`}>{handleRenderPagination()}</div>;
 };
 
 export default Pagination;

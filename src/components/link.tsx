@@ -1,14 +1,10 @@
 const Link = (props: any) => {
-  const { className, items = [] } = props;
+  const { className, text = "", href = "/" } = props;
 
   return (
-    <>
-      {items.map((item: any) => (
-        <a className={`${className} link`} href={item.href}>
-          {item.text}
-        </a>
-      ))}
-    </>
+    <a className={`${className} link`} href={href}>
+      {text}
+    </a>
   );
 };
 

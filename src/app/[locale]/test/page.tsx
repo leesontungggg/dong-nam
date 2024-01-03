@@ -167,47 +167,29 @@ export default function Root() {
         year: 2015,
         description: "hehe"
       }]} /> */}
-      {/* <Breadcrumbs
-        className="bg-blue-600"
+      <Breadcrumbs
+        className="bg-white text-black"
         items={[
           { name: "bao", href: "/bao" },
           { name: "pao", href: "/pao" },
           { name: "sao", href: "/sao" },
         ]}
-      /> */}
+      />
       {/* <Link
-        className="bg-white"
-        items={[
-          { text: "mot", href: "/mot" },
-          { text: "hai", href: "/hai" },
-          { text: "ba", href: "/ba" },
-        ]}
+        className="underline hover:text-blue-400"
+        text="Uida"
+        href="/home"
       /> */}
       {/* <Menu
         className="bg-pink-500"
         items={[
-          { name: "waoooooooooooooooo", href: "/wao" },
-          { name: "zaoooooooooooooooo", href: "/zao" },
-          { name: "saoooooooooooooooo", href: "/sao" },
+          { name: "Home", href: "/home" },
+          { name: "About", href: "/about" },
+          { name: "Contacts", href: "/contacts" },
         ]}
       /> */}
-      {/* <Pagination
-        items={[
-          {
-            name: "bao",
-            onClick: () => console.log("huhu"),
-          },
-          { name: "123", onClick: () => console.log("haha") },
-          { name: "poi", onClick: () => console.log("hihi") },
-        ]}
-      /> */}
-      {/* <Alert
-        isSuccess={false}
-        text={{
-          success: "thanh cong!",
-          error: "that bai, vui long thu lai",
-        }}
-      /> */}
+      {/* <Pagination pages={8} /> */}
+      {/* <Alert isSuccess={false} text="that bai roi" /> */}
       {/* <Loading /> */}
       {/* <Skeleton /> */}
       {/* <Toast text="hehe" /> */}
@@ -215,9 +197,11 @@ export default function Root() {
         className="bg-yellow-500"
         title="what is this?"
         options={["baobao", "wa0wa0", "dwdwdw"]}
+        onSelect={(data: any) => console.log(data)}
       /> */}
-      {/* <TextInput /> */}
-      <TextArea />
+
+      {/* <TextInput onChange={(e: any) => console.log(e.target.value)} /> */}
+      {/* <TextArea /> */}
     </div>
   );
 }
