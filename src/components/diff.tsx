@@ -1,12 +1,12 @@
 // Diff component shows a side-by-side comparison of two items.
 
 const Diff = (props: any) => {
-  const { items = [] } = props;
+  const { items = [], className = "" } = props;
 
   return (
     <>
       {items.map((item: any) => (
-        <div className="diff aspect-[16/9]">
+        <div className={`${className} diff aspect-[16/9]`}>
           <div className="diff-item-1">
             <img alt={item.alt1} src={item.url1} />
           </div>

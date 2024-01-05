@@ -1,10 +1,13 @@
-const Avatar = ({ handleAvatar }: any) => {
+const Avatar = (props: any) => {
+  const { handleAvatar, className = "" } = props;
+
   const handleClick = () => {
     handleAvatar();
   };
+
   return (
     <>
-      <div className="avatar online ">
+      <div className={`${className} avatar online`}>
         <div className="w-24 rounded-full">
           <img
             onClick={handleClick}
@@ -12,7 +15,7 @@ const Avatar = ({ handleAvatar }: any) => {
           />
         </div>
       </div>
-      <div className="avatar offline ">
+      <div className={`${className} avatar offline`}>
         <div className="w-24 rounded-full">
           <img
             onClick={handleClick}

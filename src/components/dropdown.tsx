@@ -1,10 +1,13 @@
 const Dropdown = (props: any) => {
-  const { title } = props;
-  const { options = [] } = props;
+  const { className = "", title, options = [] } = props;
   return (
     <>
-      <div className="dropdown">
-        <div tabIndex={0} role="button" className="btn m-1">
+      <div className={`${className} dropdown`}>
+        <div
+          tabIndex={0}
+          role="button"
+          className=" btn m-1 bg-base-300 text-black"
+        >
           {title}
         </div>
         <ul
@@ -13,7 +16,9 @@ const Dropdown = (props: any) => {
         >
           {options.map((option: any) => (
             <li>
-              <a href={option.href}>{option.title}</a>
+              <a className=" text-black" href={option.href}>
+                {option.text}
+              </a>
             </li>
           ))}
         </ul>

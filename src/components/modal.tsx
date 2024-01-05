@@ -1,7 +1,7 @@
 import { useRef } from "react";
 
 const Modal = (props: any) => {
-  const { text, title, description } = props;
+  const { text, title, description, className = "" } = props;
   const modalRef = useRef<any>(null);
 
   const handleOpenModal = () => {
@@ -12,13 +12,16 @@ const Modal = (props: any) => {
   };
   return (
     <>
-      <button className="btn" onClick={handleOpenModal}>
+      <button
+        className={`${className} bg-base-300 text-black btn `}
+        onClick={handleOpenModal}
+      >
         {text}
       </button>
       <dialog ref={modalRef} className="modal">
         <div className="modal-box">
-          <h3 className="font-bold text-lg">{title}</h3>
-          <p className="py-4">{description}</p>
+          <h3 className=" font-bold text-lg text-black">{title}</h3>
+          <p className=" py-4 text-black">{description}</p>
         </div>
         <form method="dialog" className="modal-backdrop">
           <button></button>

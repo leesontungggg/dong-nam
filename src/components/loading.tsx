@@ -1,6 +1,8 @@
-const Loading = ({ className }: any) => {
+const Loading = ({ className = "" }: any) => {
   return (
-    <span className={`${className} loading loading-spinner loading-lg`}></span>
+    <span
+      className={`${className} bg-black loading loading-spinner loading-lg`}
+    ></span>
   );
 };
 

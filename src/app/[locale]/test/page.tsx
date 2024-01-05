@@ -15,7 +15,6 @@ import Card from "@/components/card";
 import Carousel from "@/components/carousel";
 import ChatBubble from "@/components/chat-bubble";
 import Collapse from "@/components/collapse";
-import Countdown from "@/components/countdown";
 import Diff from "@/components/diff";
 import Kbd from "@/components/kbd";
 import Stat from "@/components/stat";
@@ -49,21 +48,34 @@ export default function Root() {
 
   return (
     <div
-      className="w-full h-screen bg-orange-500 text-black 
- flex flex-col justify-center items-center"
+      className="w-full h-screen   
+ flex flex-col justify-center items-center bg-white"
     >
       {/* <h1 className="text-8xl">{t("title")}</h1> */}
-      {/* <Button text={"Bao Hoang"} />
-      <div className="text-white">
-        <Accordion
-          items={[
-            { title: "Lele", description: "lelé1" },
-            { title: "Lele2", description: "lelé2" },
-          ]}
-        />
-      </div> */}
-      {/* <Dropdown title="bao" options={[{ title: "Bao" }, { title: "Bao2" }]} /> */}
+      {/* <Button text={"Bao Hoang"} /> */}
+
+      {/* <Accordion
+        className=""
+        classNameTitle=""
+        classNameDescription=""
+        items={[
+          { title: "baobao", description: "lelé1" },
+          { title: "Lele2", description: "lelé2" },
+        ]}
+      /> */}
+
+      {/* <Dropdown
+        className=""
+        title="bao"
+        options={[
+          { href: "/Bao", text: "Bao" },
+          { href: "/Bao2", text: "Bao2" },
+        ]}
+      /> */}
       {/* <Swaptext
+        className=""
+        classNameLabel=""
+        classNameText=""
         handleOn={() => {
           console.log("On");
         }}
@@ -71,8 +83,10 @@ export default function Root() {
           console.log("Off");
         }}
       /> */}
-      {/* <Modal text="Bao" title="bao" description="bao" /> */}
+      {/* <Modal className="" text="Bao" title="bao" description="bao" /> */}
       {/* <Hamburger
+        className="mix-blend-multiply	"
+        classNameIcon="mix-blend-difference"
         handleOn={() => {
           console.log("On");
         }}
@@ -81,107 +95,155 @@ export default function Root() {
         }}
       /> */}
       {/* <Avatar
+        className=""
+        classNameImg=""
         handleAvatar={() => {
           console.log("Hello");
         }}
       /> */}
-      {/* <Badge title="hehe" /> */}
-      {/* <Card 
-        actions="Fight!" 
-        items=
-        {[{
-          url: "https://ih1.redbubble.net/image.2506552510.6595/st,small,507x507-pad,600x600,f8f8f8.u1.jpg",
-          alt: "Eula",
-          title: "Eula",
-          description: "Eula!",
-          handleActionClick: () => console.log("1")
-        },
-        {
-          url: "https://ih1.redbubble.net/image.2506552510.6595/st,small,507x507-pad,600x600,f8f8f8.u1.jpg",
-          alt: "Eula",
-          title: "Eula",
-          description: "Eula!",
-          handleActionClick: () => console.log("2")
-        }]}/> */}
-      {/* <Carousel img={[
-        {url: "https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg", alt:"1"}
-      ,
-      {url: "https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg", alt: "2"},
-      {url:"https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg", alt: "3"},
-      {url:"https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg", alt: "4"}, {
-        url:"https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg", alt: "5" 
-      }]}/> */}
-      {/* <ChatBubble       customer={[{
-        alt: "bao2 ",
-        url: "https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg",
-        name: "bao2",
-        text: "hehe2"
-      }]} staff={[{
-        alt: "bao ",
-        url: "https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg",
-        name: "bao",
-        text: "hehe"
-      },{
-        alt: "bao1 ",
-        url: "https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg",
-        name: "bao1",
-        text: "hehe1"
-      }]}
- /> */}
-      {/* <Collapse items={[{
-        title: "bao",
-        description: "bao!"
-      },{
-        title: "bao1",
-        description: "bao1!"
-      }]} /> */}
-      {/* <Countdown numHours="48" /> */}
-      {/* <Diff items={[{
-        alt1: "Bao",
-        url1: "https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2020/05/Image-Files-Blog-Vector.jpg",
-        alt2: "Bao1",
-        url2: "https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg"
-      }]} /> */}
-      {/* <Kbd items={[{
-        text: "Ctrl"
-      }, {
-        text: "Alt"
-      }, {
-        text: "Delete"
-      }]}/> */}
-      {/* <Stat result={{total: 9000, percentage: "200% more than last month"}} /> */}
-      {/* <Table head={{title1: "pro", title2: 20, title3:"hehe"}}
-            body={[{number: 1, title: "name", description: 2000, note: "bao"}, 
-            {number: 2, title: "name", description: 100, note: "bao"}, 
-            {number: 3, title: "name", description: 100, note: "bao"}]} /> */}
-      {/* <Timeline items={[{
-        year: 1999,
-        description: "Bao"
-      },{
-        year: 2000,
-        description: "hehe"
-      },{
-        year: 2004,
-        description: "hehe"
-      },{
-        year: 2015,
-        description: "hehe"
-      }]} /> */}
-      <Breadcrumbs
-        className="bg-white text-black"
+      {/* <Badge className="" title="hehe" /> */}
+      {/* <Card
+        className=""
+        actions="Fight!"
+        items={[
+          {
+            url: "https://ih1.redbubble.net/image.2506552510.6595/st,small,507x507-pad,600x600,f8f8f8.u1.jpg",
+            alt: "Eula",
+            title: "Eula",
+            description: "Eula!",
+            handleActionClick: () => console.log("1"),
+          },
+          {
+            url: "https://ih1.redbubble.net/image.2506552510.6595/st,small,507x507-pad,600x600,f8f8f8.u1.jpg",
+            alt: "Eula",
+            title: "Eula",
+            description: "Eula!",
+            handleActionClick: () => console.log("2"),
+          },
+        ]}
+      /> */}
+      {/* <Carousel
+        img={[
+          {
+            url: "https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg",
+            alt: "1",
+          },
+          {
+            url: "https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg",
+            alt: "2",
+          },
+          {
+            url: "https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg",
+            alt: "3",
+          },
+          {
+            url: "https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg",
+            alt: "4",
+          },
+          {
+            url: "https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg",
+            alt: "5",
+          },
+        ]}
+      /> */}
+      {/* <ChatBubble
+        customer={[
+          {
+            alt: "bao2 ",
+            url: "https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg",
+            name: "bao2",
+            text: "hehe2",
+          },
+        ]}
+        staff={[
+          {
+            alt: "bao ",
+            url: "https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg",
+            name: "bao",
+            text: "hehe",
+          },
+          {
+            alt: "bao1 ",
+            url: "https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg",
+            name: "bao1",
+            text: "hehe1",
+          },
+        ]}
+      /> */}
+      {/* <Collapse
+        className=""
+        items={[
+          {
+            title: "bao",
+            description: "bao!",
+          },
+          {
+            title: "bao1",
+            description: "bao1!",
+          },
+        ]}
+      /> */}
+      {/* <Diff
+        items={[
+          {
+            alt1: "Bao",
+            url1: "https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2020/05/Image-Files-Blog-Vector.jpg",
+            alt2: "Bao1",
+            url2: "https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg",
+          },
+        ]}
+      /> */}
+      {/* <Kbd items={["Ctrl", "Alt", "Delete"]} /> */}
+      {/* <Stat
+        result={{
+          title: "Total Page View",
+          total: 9000,
+          percentage: "200% more than last month",
+        }}
+      /> */}
+      {/* <Table
+        head={{ title1: "pro", title2: 20, title3: "hehe" }}
+        body={[
+          { number: 1, title: "name", description: 2000, note: "bao" },
+          { number: 2, title: "name", description: 100, note: "bao" },
+          { number: 3, title: "name", description: 100, note: "bao" },
+        ]}
+      /> */}
+      {/* <Timeline
+        items={[
+          {
+            year: 1999,
+            description: "Bao",
+          },
+          {
+            year: 2000,
+            description: "hehe",
+          },
+          {
+            year: 2004,
+            description: "hehe",
+          },
+          {
+            year: 2015,
+            description: "hehe",
+          },
+        ]}
+      /> */}
+      {/* <Breadcrumbs
+        className=""
         items={[
           { name: "bao", href: "/bao" },
           { name: "pao", href: "/pao" },
           { name: "sao", href: "/sao" },
         ]}
-      />
+      /> */}
       {/* <Link
-        className="underline hover:text-blue-400"
+        className=""
         text="Uida"
         href="/home"
       /> */}
       {/* <Menu
-        className="bg-pink-500"
+        className=""
         items={[
           { name: "Home", href: "/home" },
           { name: "About", href: "/about" },
@@ -189,12 +251,12 @@ export default function Root() {
         ]}
       /> */}
       {/* <Pagination pages={8} /> */}
-      {/* <Alert isSuccess={false} text="that bai roi" /> */}
+      {/* <Alert isSuccess={false} text="Bao" /> */}
       {/* <Loading /> */}
       {/* <Skeleton /> */}
-      {/* <Toast text="hehe" /> */}
+      {/* <Toast text="hehe" variant="" /> */}
       {/* <Select
-        className="bg-yellow-500"
+        className=""
         title="what is this?"
         options={["baobao", "wa0wa0", "dwdwdw"]}
         onSelect={(data: any) => console.log(data)}

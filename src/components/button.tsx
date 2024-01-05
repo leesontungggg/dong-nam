@@ -1,7 +1,10 @@
 const Button = (props: any) => {
-  const { text, className } = props;
+  const { text, className = "" } = props;
   return (
-    <button className={`${className} bg-[#00A259]`} onClick={props.onClick}>
+    <button
+      className={`${className} rounded-full px-4 py-2 bg-base-300 text-black`}
+      onClick={props.onClick}
+    >
       {text}
     </button>
   );

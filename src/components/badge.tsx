@@ -1,8 +1,10 @@
 const Badge = (props: any) => {
-  const { title } = props;
+  const { title, className = "" } = props;
   return (
     <>
-      <span className="badge">{title}</span>
+      <span className={`${className} badge text-black bg-base-300`}>
+        {title}
+      </span>
     </>
   );
 };

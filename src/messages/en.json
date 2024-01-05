@@ -58,5 +58,23 @@
         "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
       }
     }
+  },
+  "about": {
+    "title": "About Us",
+    "description": "Welcome to Dong Nam. Our mission is making you healthy", 
+    "pros": {
+      "article1": {
+        "title": "Our Story",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquet facilisis odio, nec cursus metus condimentum vel. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula auctor turpis vitae elementum. Donec vitae lobortis orci. Praesent efficitur enim"
+      },
+      "article2": {
+        "title": "What Sets Us Apart",
+        "description": "Sed sagittis convallis nibh. Morbi ullamcorper neque nec turpis ultricies congue. Sed eget erat non magna semper maximus nec vel eros. Aliquam erat volutpat. Nullam a nibh ut massa rutrum aliquam quis sed nibh. Morbi pretium elit mauris, dictum lacinia velit volutpat a. Curabitur congue nulla nibh, sed posuere lorem accumsan eu. Ut placerat orci lectus, eu bibendum dui egestas at. Duis magna arcu,"
+      }
+    }
+  },
+  "contacts": {
+    "title": "Contact Us",
+    "description": "We are reachable at"
   }
 }

@@ -1,8 +1,8 @@
 const ChatBubble = (props: any) => {
-  const { staff, customer = [] } = props;
+  const { staff, customer = [], className = "" } = props;
 
   return (
-    <>
+    <div className={`${className}`}>
       {staff.map((staff: any) => (
         <div className="chat chat-start">
           <div className="chat-image avatar">
@@ -35,7 +35,7 @@ const ChatBubble = (props: any) => {
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 

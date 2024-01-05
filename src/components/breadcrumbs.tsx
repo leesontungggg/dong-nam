@@ -1,8 +1,10 @@
 const Breadcrumbs = (props: any) => {
-  const { className, items = [] } = props;
+  const { className = "", items = [] } = props;
 
   return (
-    <div className={`${className} text-sm breadcrumbs p-4 rounded-lg`}>
+    <div
+      className={`${className} bg-base-300  text-sm breadcrumbs p-4 rounded-lg`}
+    >
       <ul>
         {items.map((item: any) => (
           <li

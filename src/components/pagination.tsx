@@ -13,7 +13,7 @@ const Pagination = (props: any) => {
     for (let i = 0; i < pages; i++) {
       const item = (
         <button
-          className={`join-item btn ${currentPage === i && "btn-active"}`}
+          className={`join-item btn  ${currentPage === i && "btn-active"}`}
           onClick={() => handleClickPage(i)}
         >
           {i + 1}
@@ -24,7 +24,7 @@ const Pagination = (props: any) => {
     return content;
   };
 
-  return <div className={`${className} join`}>{handleRenderPagination()}</div>;
+  return <div className={`${className}  join`}>{handleRenderPagination()}</div>;
 };
 
 export default Pagination;

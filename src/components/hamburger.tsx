@@ -1,6 +1,8 @@
 import { useState } from "react";
 
-const Hamburger = ({ handleOn, handleOff }: any) => {
+const Hamburger = (props: any) => {
+  const { handleOn, handleOff, className = "" } = props;
+
   const [isOn, setIsOn] = useState(false);
 
   const handleToggle = () => {
@@ -14,12 +16,14 @@ const Hamburger = ({ handleOn, handleOff }: any) => {
 
   return (
     <>
-      <label className="btn btn-circle swap swap-rotate">
+      <label
+        className={`${className} mix-blend-multiply btn btn-circle swap swap-rotate bg-black text-black`}
+      >
         <input type="checkbox" onClick={handleToggle} />
 
         {/* hamburger icon */}
         <svg
-          className="swap-off fill-current"
+          className="mix-blend-difference swap-off fill-current text-black"
           xmlns="http://www.w3.org/2000/svg"
           width="32"
           height="32"
@@ -30,7 +34,7 @@ const Hamburger = ({ handleOn, handleOff }: any) => {
 
         {/* close icon */}
         <svg
-          className="swap-on fill-current"
+          className="mix-blend-difference swap-on fill-current text-black"
           xmlns="http://www.w3.org/2000/svg"
           width="32"
           height="32"

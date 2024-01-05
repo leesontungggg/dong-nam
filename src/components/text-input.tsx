@@ -1,11 +1,17 @@
-const TextInput = ({ className, onChange }: any) => {
+const TextInput = ({
+  placeholder = "Text here",
+  className = "",
+  onChange,
+}: any) => {
   return (
-    <input
-      type="text"
-      placeholder="Type here"
-      className={`${className} input input-bordered w-full max-w-xs`}
-      onChange={onChange}
-    />
+    <div>
+      <input
+        type="text"
+        placeholder={placeholder}
+        className={`${className} bg-base-200 text-black input input-bordered w-full`}
+        onChange={onChange}
+      />
+    </div>
   );
 };
 
