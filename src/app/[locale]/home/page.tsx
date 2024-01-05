@@ -12,10 +12,9 @@ import Hamburger from "@/components/hamburger";
 import Avatar from "@/components/avatar";
 import Badge from "@/components/badge";
 import Card from "@/components/card";
-import Carousel from "@/components/carousel"
+import Carousel from "@/components/carousel";
 import ChatBubble from "@/components/chat-bubble";
 import Collapse from "@/components/collapse";
-import Countdown from "@/components/countdown";
 import Diff from "@/components/diff";
 import Kbd from "@/components/kbd";
 import Stat from "@/components/stat";
@@ -37,7 +36,7 @@ export default function Root() {
   };
 
   return (
-<main>
+    <main>
       <section className="bg-white min-h-screen px-[2em] bg-hero-mobile bg-[80%_-30vh] bg-cover bg-no-repeat lg:px-[5em] lg:bg-hero-desktop lg:bg-[40vw_-28vh]">
         <div className="container flex flex-col-reverse gap-20 max-w-screen-xl mx-auto pt-[4em] lg:min-h-screen lg:items-center lg:flex-row">
           <div className="flex flex-col gap-6 content-center items-start lg:h-100 lg:w-1/2 xl:w-2/5">
