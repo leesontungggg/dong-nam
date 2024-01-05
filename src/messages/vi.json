@@ -61,20 +61,20 @@
   },
   "about": {
     "title": "Ve Chung Toi",
-    "description": "Chao mung den voi Dong Nam. Su menh chung toi la muon ban khoe manh", 
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", 
     "pros": {
       "article1": {
         "title": "Cau Chuyen Cua Chung Toi",
-        "description": "Chung toi co kinh nghiem 20 nam"
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
       },
       "article2": {
         "title": "Dieu Lam Chung Toi Khac Biet",
-        "description": "Chung toi co su tan tam"
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
       }
     }
   },
   "contacts": {
     "title": "Lien He Chung Toi",
-    "description": "Lien he tai"
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
   }
 }
