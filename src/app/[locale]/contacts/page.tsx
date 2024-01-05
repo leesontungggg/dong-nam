@@ -34,12 +34,12 @@ export default function Root() {
           <TextInput
             onChange={(e: any) => console.log(e.target.value)}
             placeholder="Email"
-            className="py-4 w-full"
+            className="mt-16 py-4 w-full"
           />
           <TextArea
             onChange={(e: any) => console.log(e.target.value)}
             placeholder="More thoughts"
-            className="px-4 py-4 text-base"
+            className="mt-12 px-4 py-4 text-base"
           />
           <Button
             className="text-white font-bold px-4 py-2 rounded-lg bg-blue-500 mt-4"
