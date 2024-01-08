@@ -87,9 +87,7 @@ export default function Root() {
                 {t("reason.reason1.title")}
               </h3>
               <p className="text-center lg:text-left text-slate-950">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
+                {t("reason.reason1.description")}
               </p>
             </div>
 
@@ -103,9 +101,7 @@ export default function Root() {
                 {t("reason.reason2.title")}
               </h3>
               <p className="text-center lg:text-left text-slate-950">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
+                {t("reason.reason2.description")}
               </p>
             </div>
 
@@ -119,8 +115,7 @@ export default function Root() {
                 {t("reason.reason3.title")}
               </h3>
               <p className="text-center lg:text-left text-slate-950">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+                {t("reason.reason3.description")}
               </p>
             </div>
 
@@ -134,8 +129,7 @@ export default function Root() {
                 {t("reason.reason4.title")}
               </h3>
               <p className="text-center lg:text-left text-slate-950">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+                {t("reason.reason4.description")}
               </p>
             </div>
           </div>

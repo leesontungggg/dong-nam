@@ -23,20 +23,20 @@
       "title": "Why choose DongNam?",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
       "reason1" : {
-        "title" : "Reason 1",
-        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+        "title" : "High quality products",
+        "description" : "Dong Nam Pharmaceutical is committed to providing high quality pharmaceutical products, strictly tested and manufactured according to GMP - WHO standards."
       },
       "reason2" : {
-        "title" : "Reason 2",
-        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+        "title" : "Competitive prices",
+        "description" : "We always optimize material supplies and efficient production to minimize costs for customers. Therefore, we have the ability to provide products at suitable prices, to help customers increase their competitiveness in the market."
       },
       "reason3" : {
-        "title" : "Reason 3",
-        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+        "title" : "Product diversification",
+        "description" : "We currently have 70 registrations with a wide range of products, including medical treatments, over-the-counter medicines and more. Furthermore, we have leading equipment and experts to assist you in developing and manufacturing your own products."
       },
       "reason4" : {
-        "title" : "Reason 4",
-        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+        "title" : "Prestige and brand",
+        "description" : "As the first manufacturing unit in Vietnam to achieve GMP-WHO, we have over 20 years of pioneering experience in the field of pharmaceutical production. Currently, we have exported our products to Southeast Asian countries."
       }
     },
     "article": {
@@ -61,7 +61,7 @@
   },
   "about": {
     "title": "About Us",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", 
+    "description": "Being the first pioneer in manufacturing pharmaceuticals meeting GMP-WHO standards in Vietnam. Dong Nam Pharmaceutical Company carries within itself the spirit of continuous development and innovation, with the goal of providing international quality products to the people of Vietnam and neighboring countries.", 
     "pros": {
       "article1": {
         "title": "Our Story",

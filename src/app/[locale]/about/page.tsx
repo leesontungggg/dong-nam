@@ -30,13 +30,13 @@ export default function Root() {
         <div className="w-full md:px-0 px-4 ">
           <p className="mt-8 text-black">{t("description")}</p>
           <h3 className="text-black mt-8 font-bold text-xl">
-            {t("pros.article1.title")}
+            {/* {t("pros.article1.title")} */}
           </h3>
-          <p className="mt-2 text-black">{t("pros.article1.description")}</p>
+          {/* <p className="mt-2 text-black">{t("pros.article1.description")}</p> */}
           <h3 className="text-black mt-8 font-bold text-xl">
-            {t("pros.article2.title")}
+            {/* {t("pros.article2.title")} */}
           </h3>
-          <p className="mt-2 text-black">{t("pros.article2.description")}</p>
+          {/* <p className="mt-2 text-black">{t("pros.article2.description")}</p> */}
         </div>
       </div>
     </div>
