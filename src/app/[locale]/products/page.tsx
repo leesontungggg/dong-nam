@@ -28,7 +28,7 @@ export default function Root() {
                 <a href={`/products/${product.id}`} className="shrink-0 ">
                   <img
                     src={`https://dongnam.up.railway.app/assets/${product.galleries[0].directus_files_id}`}
-                    alt="I baught a chair and here's what I learned"
+                    alt="DONG-NAM"
                     className="rounded bg-base-200 object-cover w-auto h-40"
                   />
                 </a>
