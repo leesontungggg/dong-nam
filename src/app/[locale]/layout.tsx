@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { ContextProvider } from "@/services/context";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -38,9 +39,11 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={`${montserrat.variable} font-sans`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Navbar />
-          {children}
-          <Footer />
+          <ContextProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </ContextProvider>
         </NextIntlClientProvider>
       </body>
     </html>

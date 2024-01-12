@@ -37,31 +37,6 @@ export default function Root() {
               {t("CTA")}
             </a>
           </div>
-
-          {/* <div className="relative overflow-hidden h-[50vh] md:h-[60vh] lg:static lg:h-auto">
-            <div className="absolute grid grid-cols-3 grid-rows-4 gap-5 bottom-0 lg:w-1/2 lg:right-0 lg:bottom-[unset] lg:top-2/4 lg:translate-y-[-40%] lg:translate-x-[7vw] lg:scale-60 xl:max-w-3/5 xl:grid-cols-[repeat(auto-fit,_minmax(150px,1fr))]">
-              <img
-                className="w-[300px] object-contain row-start-2 row-span-2 load-hidden animate-slide-up"
-                src="./src/img/phone-mockup-1.png"
-                alt=""
-              />
-              <img
-                className="w-[300px] object-contain col-start-2 row-span-2 load-hidden animate-slide-up animate-delay-200"
-                src="./src/img/phone-mockup-2.png"
-                alt=""
-              />
-              <img
-                className="w-[300px] object-contain row-start-3 row-span-2 load-hidden animate-slide-up animate-delay-300"
-                src="./src/img/phone-mockup-3.png"
-                alt=""
-              />
-              <img
-                className="w-[300px] object-contain row-start-2 row-span-2 load-hidden animate-slide-up animate-delay-400"
-                src="./src/img/phone-mockup-4.png"
-                alt=""
-              />
-            </div>
-          </div> */}
         </div>
       </section>
 
