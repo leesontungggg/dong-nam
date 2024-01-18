@@ -13,10 +13,10 @@ export default function Root() {
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
   const locale = useLocale();
-  const productId = pathname.split("/")[2];
-  const product =
-    data.products && data.products.length > 0
-      ? data.products.find((item: any) => item.id == productId)
+  const blogId = pathname.split("/")[2];
+  const blog =
+    data.blogs && data.blogs.length > 0
+      ? data.blogs.find((item: any) => item.id == blogId)
       : null;
 
   return (
@@ -26,22 +26,19 @@ export default function Root() {
     >
       <div className="p-4 pb-10">
         <div className="container mx-auto">
-          {!!product && (
+          {!!blog && (
             <div className="flex flex-col items-center gap-4">
               <h1 className="text-black font-medium text-4xl">
-                {locale === "vi" ? product.name : product.name_en}
+                {locale === "vi" ? blog.title : blog.title_en}
               </h1>
               <img
-                src={`https://dongnam.up.railway.app/assets/${product.galleries[0].directus_files_id}`}
+                src={`https://dongnam.up.railway.app/assets/${blog.thumbnail}`}
                 alt="DONG-NAM"
                 className="rounded bg-base-200 object-cover w-auto h-80"
               />
               <div
                 dangerouslySetInnerHTML={{
-                  __html:
-                    locale === "vi"
-                      ? product.description
-                      : product.description_en,
+                  __html: locale === "vi" ? blog.content : blog.content_en,
                 }}
                 className="!text-black"
               ></div>

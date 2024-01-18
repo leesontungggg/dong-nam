@@ -17,7 +17,8 @@ strong,
 li,
 th,
 td,
-span {
+span,
+div {
   color: black !important;
 }
 

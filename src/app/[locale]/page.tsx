@@ -21,7 +21,7 @@ export default function Root() {
   return (
     <main className="!font-sans">
       <section className="relative bg-white min-h-screen ">
-        <div className="absolute top-0 left-0 w-full h-full opacity-50 bg-[url('https://gmp.com.vn/pic/New/images/Tin%20tuc/12-1-696x464.jpg')] bg-cover bg-repeat" />
+        <div className="absolute top-0 left-0 w-full h-full opacity-50 bg-[url('https://d2jx2rerrg6sh3.cloudfront.net/images/Article_Images/ImageForArticle_23751_16831178817174714.jpg')] bg-cover bg-repeat" />
         <div className="absolute bg-transparent container flex flex-col-reverse gap-20 max-w-screen-xl mx-auto pt-[4em] lg:min-h-screen lg:items-center lg:flex-row left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
           <div className="flex flex-col gap-6 content-center items-start lg:h-100 lg:w-1/2 xl:w-2/5">
             <h1 className="text-4xl md:text-5xl text-black text-center mx-auto lg:text-left lg:mx-0 load-hidden animate-fade-in">
@@ -55,7 +55,7 @@ export default function Root() {
             <div className="flex flex-col items-center gap-5 p-5 w-full md:p-3 md:w-1/2 lg:w-1/4 lg:items-start load-hidden animate-slide-up">
               <img
                 className="aspect-square object-contain w-full h-[250px] rounded-lg"
-                src="https://gmp.com.vn/pic/New/images/Tin%20tuc/12-1-696x464.jpg"
+                src="https://d2jx2rerrg6sh3.cloudfront.net/images/Article_Images/ImageForArticle_23751_16831178817174714.jpg"
                 alt="Online Banking"
               />
               <h3 className="text-[1.25em] md:text-[1.75em] text-center lg:text-left text-black">
@@ -69,7 +69,7 @@ export default function Root() {
             <div className="flex flex-col items-center gap-5 p-5 w-full md:p-3 md:w-1/2 lg:w-1/4 lg:items-start load-hidden animate-slide-up animate-delay-200">
               <img
                 className="aspect-square object-contain w-full h-[250px] rounded-lg"
-                src="https://gmp.com.vn/pic/New/images/Tin%20tuc/12-1-696x464.jpg"
+                src="https://d2jx2rerrg6sh3.cloudfront.net/images/Article_Images/ImageForArticle_23751_16831178817174714.jpg"
                 alt="Simple Budgeting"
               />
               <h3 className="text-[1.25em] md:text-[1.75em] text-center lg:text-left text-black">
@@ -83,7 +83,7 @@ export default function Root() {
             <div className="flex flex-col items-center gap-5 p-5 w-full md:p-3 md:w-1/2 lg:w-1/4 lg:items-start load-hidden animate-slide-up animate-delay-300">
               <img
                 className="aspect-square object-contain w-full h-[250px] rounded-lg"
-                src="https://gmp.com.vn/pic/New/images/Tin%20tuc/12-1-696x464.jpg"
+                src="https://d2jx2rerrg6sh3.cloudfront.net/images/Article_Images/ImageForArticle_23751_16831178817174714.jpg"
                 alt="Fast Onboarding"
               />
               <h3 className="text-[1.25em] md:text-[1.75em] text-center lg:text-left text-black">
@@ -97,7 +97,7 @@ export default function Root() {
             <div className="flex flex-col items-center gap-5 p-5 w-full md:p-3 md:w-1/2 lg:w-1/4 lg:items-start load-hidden animate-slide-up animate-delay-400">
               <img
                 className="aspect-square object-contain w-full h-[250px] rounded-lg"
-                src="https://gmp.com.vn/pic/New/images/Tin%20tuc/12-1-696x464.jpg"
+                src="https://d2jx2rerrg6sh3.cloudfront.net/images/Article_Images/ImageForArticle_23751_16831178817174714.jpg"
                 alt="Open API"
               />
               <h3 className="text-[1.25em] md:text-[1.75em] text-center lg:text-left text-black">
@@ -121,7 +121,7 @@ export default function Root() {
             <div className="group bg-white rounded-md overflow-hidden cursor-pointer hover:drop-shadow-sm load-hidden animate-slide-up animate-delay-200">
               <img
                 className="object-cover w-full h-[250px] transition-transform duration-600 group-hover:scale-105"
-                src="https://gmp.com.vn/pic/New/images/Tin%20tuc/12-1-696x464.jpg"
+                src="https://d2jx2rerrg6sh3.cloudfront.net/images/Article_Images/ImageForArticle_23751_16831178817174714.jpg"
                 alt="Article thumbnail"
               />
               <div className="flex flex-col gap-3 p-5 md:px-5 md:py-7">
@@ -142,7 +142,7 @@ export default function Root() {
             <div className="group bg-white rounded-md overflow-hidden cursor-pointer hover:drop-shadow-sm load-hidden animate-slide-up animate-delay-300">
               <img
                 className="object-cover w-full h-[250px] transition-transform duration-600 group-hover:scale-105"
-                src="https://gmp.com.vn/pic/New/images/Tin%20tuc/12-1-696x464.jpg"
+                src="https://d2jx2rerrg6sh3.cloudfront.net/images/Article_Images/ImageForArticle_23751_16831178817174714.jpg"
                 alt="Article thumbnail"
               />
               <div className="flex flex-col gap-3 p-5 md:px-5 md:py-7">
@@ -161,7 +161,7 @@ export default function Root() {
             <div className="group bg-white rounded-md overflow-hidden cursor-pointer hover:drop-shadow-sm load-hidden animate-slide-up animate-delay-400">
               <img
                 className="object-cover w-full h-[250px] transition-transform duration-600 group-hover:scale-105"
-                src="https://gmp.com.vn/pic/New/images/Tin%20tuc/12-1-696x464.jpg"
+                src="https://d2jx2rerrg6sh3.cloudfront.net/images/Article_Images/ImageForArticle_23751_16831178817174714.jpg"
                 alt="Article thumbnail"
               />
               <div className="flex flex-col gap-3 p-5 md:px-5 md:py-7">
@@ -178,7 +178,7 @@ export default function Root() {
             <div className="group bg-white rounded-md overflow-hidden cursor-pointer hover:drop-shadow-sm load-hidden animate-slide-up animate-delay-500">
               <img
                 className="object-cover w-full h-[250px] transition-transform duration-600 group-hover:scale-105"
-                src="https://gmp.com.vn/pic/New/images/Tin%20tuc/12-1-696x464.jpg"
+                src="https://d2jx2rerrg6sh3.cloudfront.net/images/Article_Images/ImageForArticle_23751_16831178817174714.jpg"
                 alt="Article thumbnail"
               />
               <div className="flex flex-col gap-3 p-5 md:px-5 md:py-7">

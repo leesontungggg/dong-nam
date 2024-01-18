@@ -5,7 +5,8 @@ import React, { createContext, useEffect, useRef, useState } from "react";
 export const Context = createContext<any>([]);
 
 export const ContextProvider = ({ children }: { children: any }) => {
-  const [items, setItems] = useState<any>(null);
+  const [products, setProducts] = useState<any>([]);
+  const [blogs, setBlogs] = useState<any>([]);
 
   useEffect(() => {
     fetch("/api/products", {
@@ -14,14 +15,22 @@ export const ContextProvider = ({ children }: { children: any }) => {
     }).then(async (val: any) => {
       let result = await val.json();
       if (result.data) {
-        console.log("result.data", result.data);
-        setItems(result.data);
+        setProducts(result.data);
+      }
+    });
+
+    fetch("/api/blogs", {
+      method: "GET",
+      cache: "no-store",
+    }).then(async (val: any) => {
+      let result = await val.json();
+      if (result.data) {
+        setBlogs(result.data);
       }
     });
   }, []);
 
-  const itemsRef = useRef(items);
-  itemsRef.current = items;
-
-  return <Context.Provider value={items}>{children}</Context.Provider>;
+  return (
+    <Context.Provider value={{ products, blogs }}>{children}</Context.Provider>
+  );
 };
