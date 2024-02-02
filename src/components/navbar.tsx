@@ -62,6 +62,11 @@ const Navbar = () => {
               </a>
             </li>
             <li>
+              <a href="/career" className="text-xl">
+                {t("career")}
+              </a>
+            </li>
+            <li>
               <a href="/contacts" className="text-xl">
                 {t("contacts")}
               </a>
@@ -98,25 +103,20 @@ const Navbar = () => {
               {t("products")}
             </a>
           </li>
-          {/* <li>
-            <details>
-              <summary>{t("products")}</summary>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li> */}
           <li>
             <a
               href="/blog"
               className="block px-3 py-5 relative font-primary text-black after:content[''] after:absolute after:block after:bottom-0 after:left-0 after:h-1 after:w-0 after:bg-primary-gradient after:transition-all after:duration-150 after: hover:text-black hover:after:w-full hover:bg-transparent"
             >
               {t("blog")}
+            </a>
+          </li>
+          <li>
+            <a
+              href="/career"
+              className="block px-3 py-5 relative font-primary text-black after:content[''] after:absolute after:block after:bottom-0 after:left-0 after:h-1 after:w-0 after:bg-primary-gradient after:transition-all after:duration-150 after: hover:text-black hover:after:w-full hover:bg-transparent"
+            >
+              {t("career")}
             </a>
           </li>
           <li>
