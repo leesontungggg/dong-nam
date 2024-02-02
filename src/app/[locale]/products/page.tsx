@@ -5,6 +5,8 @@ import { Context } from "@/services/context";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "next-intl/client";
 import { useContext, useState, useTransition } from "react";
+import * as _ from "lodash";
+import { CATEGORY } from "@/services/category";
 
 export default function Root() {
   const data = useContext(Context);
@@ -34,6 +36,10 @@ export default function Root() {
     );
   }
 
+  const groupCategory = _.groupBy(data.products, (item: any) =>
+    locale === "vi" ? item.categories : item.categories_en
+  );
+
   return (
     <div
       className="w-full h-screen bg-white text-black 
@@ -41,30 +47,37 @@ export default function Root() {
     >
       <div className="p-4 pb-10">
         <div>
-          {data.products.map((product: any) => (
-            <div className="py-6 flex flex-col md:flex-row-reverse gap-6 md:gap-10 items-center justify-between">
-              <a href={`/products/${product.id}`} className="shrink-0 ">
-                <img
-                  src={`https://dongnam.up.railway.app/assets/${product.galleries[0].directus_files_id}`}
-                  alt="DONG-NAM"
-                  className="rounded bg-base-200 object-cover w-auto h-40"
-                />
-              </a>
-              <div className="flex flex-col gap-4">
-                <h2 className="text-2xl font-bold text-center md:text-left">
-                  <a
-                    className="hover:underline text-black"
-                    href={`/products/${product.id}`}
-                  >
-                    {locale === "vi" ? product.name : product.name_en}
+          {Object.keys(groupCategory).map((item: string) => (
+            <div>
+              <h2 className="text-black text-3xl text-center">
+                {CATEGORY[item]}
+              </h2>
+              {groupCategory[item].map((product: any) => (
+                <div className="py-6 flex flex-col md:flex-row-reverse gap-6 md:gap-10 items-center justify-between">
+                  <a href={`/products/${product.id}`} className="shrink-0 ">
+                    <img
+                      src={`https://dongnam.up.railway.app/assets/${product.galleries[0].directus_files_id}`}
+                      alt="DONG-NAM"
+                      className="rounded bg-base-200 object-cover w-auto h-40"
+                    />
                   </a>
-                </h2>
-                <p className="text-sm text-base-content/70 text-center md:text-left">
-                  {locale === "vi"
-                    ? product.short_description
-                    : product.short_description_en}
-                </p>
-              </div>
+                  <div className="flex flex-col gap-4">
+                    <h2 className="text-2xl font-bold text-center md:text-left">
+                      <a
+                        className="hover:underline text-black"
+                        href={`/products/${product.id}`}
+                      >
+                        {locale === "vi" ? product.name : product.name_en}
+                      </a>
+                    </h2>
+                    <p className="text-sm text-base-content/70 text-center md:text-left">
+                      {locale === "vi"
+                        ? product.short_description
+                        : product.short_description_en}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           ))}
         </div>
