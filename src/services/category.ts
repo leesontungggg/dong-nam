@@ -1,4 +1,4 @@
-export const CATEGORY = {
+export const CATEGORY: any = {
   vien_nang_cung: "Viên nang cứng",
   vien_nang_mem: "Viên nang mềm",
   dang_bao_che: "Dạng bào chế",
