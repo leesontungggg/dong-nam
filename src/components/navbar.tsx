@@ -3,12 +3,14 @@ import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "next-intl/client";
 import { useTransition } from "react";
 
-const Navbar = () => {
+const Navbar = (props: any) => {
   const t = useTranslations("navbar");
   const router = useRouter();
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
   const locale = useLocale();
+
+  console.log("props", props);
 
   const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const lang = e.target.value;
