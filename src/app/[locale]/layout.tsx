@@ -41,14 +41,19 @@ export default async function RootLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ContextProvider>
             <div className="w-screen h-screen flex flex-col justify-center items-center text-3xl text-black px-8">
-              Hệ thống của chúng tôi đang được nâng cấp. Quý khách vui lòng quay
-              lại sau.
-              <br />
-              <br /> Chúc quý khách năm mới an khang thịnh vượng, vạn sự như ý!
-              <br />
-              <br />
-              <div className="w-full justify-end text-right">
-                Đông Nam Pharma
+              <div className="container mx-auto flex flex-col">
+                <p className="">
+                  Hệ thống của chúng tôi đang được nâng cấp. Quý khách vui lòng
+                  quay lại sau.
+                  <br />
+                  <br /> Chúc quý khách năm mới an khang thịnh vượng, vạn sự như
+                  ý!
+                  <br />
+                  <br />
+                  <div className="w-full justify-end text-right">
+                    <p>Đông Nam Pharma</p>
+                  </div>
+                </p>
               </div>
             </div>
             {/* <Navbar />
