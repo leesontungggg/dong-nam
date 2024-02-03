@@ -6,7 +6,7 @@ import { NextIntlClientProvider } from "next-intl";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { ContextProvider } from "@/services/context";
-import { headers } from "next/headers";
+// import { headers } from "next/headers";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -26,7 +26,7 @@ export default async function RootLayout({
   children,
   params: { locale },
 }: {
-  children: React.ReactNode;
+  children: any;
   params: { locale: string };
 }) {
   let messages;
@@ -36,17 +36,14 @@ export default async function RootLayout({
     notFound();
   }
 
-  const headersList = headers();
-  const activePath = headersList.get("x-invoke-path");
-
-  console.log("activePath", activePath);
+  const activePath = children?.props?.childProp.segment;
 
   return (
     <html lang={locale}>
       <body className={`${montserrat.variable} font-sans`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ContextProvider>
-            {activePath !== "/vi" && <Navbar />}
+            {!!activePath && activePath !== "__PAGE__" && <Navbar />}
             {children}
             <Footer />
           </ContextProvider>

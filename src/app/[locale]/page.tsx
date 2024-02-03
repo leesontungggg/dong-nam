@@ -28,8 +28,8 @@ export default function Root() {
           <br /> Chúc quý khách năm mới an khang thịnh vượng, vạn sự như ý!
           <br />
           <br />
-          <p className="text-right">Đông Nam Pharma</p>
         </p>
+        <p className="text-right">Đông Nam Pharma</p>
       </div>
     </div>
   );
