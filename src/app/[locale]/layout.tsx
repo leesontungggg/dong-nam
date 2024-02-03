@@ -6,6 +6,7 @@ import { NextIntlClientProvider } from "next-intl";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { ContextProvider } from "@/services/context";
+import { headers } from "next/headers";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -35,30 +36,19 @@ export default async function RootLayout({
     notFound();
   }
 
+  const headersList = headers();
+  const activePath = headersList.get("x-invoke-path");
+
+  console.log("activePath", activePath);
+
   return (
     <html lang={locale}>
       <body className={`${montserrat.variable} font-sans`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ContextProvider>
-            <div className="w-screen h-screen flex flex-col justify-center items-center text-3xl text-black px-8">
-              <div className="container mx-auto flex flex-col">
-                <p className="">
-                  Hệ thống của chúng tôi đang được nâng cấp. Quý khách vui lòng
-                  quay lại sau.
-                  <br />
-                  <br /> Chúc quý khách năm mới an khang thịnh vượng, vạn sự như
-                  ý!
-                  <br />
-                  <br />
-                  <div className="w-full justify-end text-right">
-                    <p>Đông Nam Pharma</p>
-                  </div>
-                </p>
-              </div>
-            </div>
-            {/* <Navbar />
+            {activePath !== "/vi" && <Navbar />}
             {children}
-            <Footer /> */}
+            <Footer />
           </ContextProvider>
         </NextIntlClientProvider>
       </body>
