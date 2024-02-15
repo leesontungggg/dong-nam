@@ -45,9 +45,7 @@ export default async function RootLayout({
       <body className={`${montserrat.variable} font-sans`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ContextProvider>
-            {!!activePath && activePath !== "__PAGE__" && (
-              <Navbar activePath={activePath} />
-            )}
+            {/* <Navbar activePath={activePath} /> */}
             {children}
             <Footer />
           </ContextProvider>
