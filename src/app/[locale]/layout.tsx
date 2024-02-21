@@ -38,14 +38,12 @@ export default async function RootLayout({
 
   const activePath = children?.props?.childProp.segment;
 
-  console.log(activePath);
-
   return (
     <html lang={locale}>
       <body className={`${montserrat.variable} font-sans`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ContextProvider>
-            {/* <Navbar activePath={activePath} /> */}
+            <Navbar activePath={activePath} />
             {children}
             <Footer />
           </ContextProvider>
