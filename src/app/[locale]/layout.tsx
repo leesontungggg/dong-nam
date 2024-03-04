@@ -1,16 +1,17 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Montserrat as FontSans } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { ContextProvider } from "@/services/context";
+import { cn } from "@/lib/utils";
 // import { headers } from "next/headers";
 
-const montserrat = Montserrat({
+const fontSans = FontSans({
   subsets: ["latin"],
-  variable: "--font-montserrat",
+  variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
@@ -40,7 +41,12 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${montserrat.variable} font-sans`}>
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
+        )}
+      >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ContextProvider>
             <Navbar activePath={activePath} />

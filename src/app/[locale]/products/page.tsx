@@ -57,7 +57,7 @@ export default function Root() {
                   <div className="py-6 flex flex-col md:flex-row-reverse gap-6 md:gap-10 items-center justify-between">
                     <a href={`/products/${product.id}`} className="shrink-0 ">
                       <img
-                        src={`https://dongnam.up.railway.app/assets/${product.galleries[0].directus_files_id}`}
+                        src={`https://dongnam.up.railway.app/assets/${product.galleries[0]?.directus_files_id}`}
                         alt="DONG-NAM"
                         className="rounded bg-base-200 object-cover w-auto h-40"
                       />

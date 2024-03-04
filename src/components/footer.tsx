@@ -5,14 +5,18 @@ const Footer = () => {
   const t = useTranslations("footer");
 
   return (
-    <footer className="footer footer-center p-10 bg-white text-black">
-      <aside>
+    <footer className="flex flex-col justify-center items-center p-10 bg-white text-black">
+      <aside className="flex flex-col justify-center items-center">
         <img className="w-32 h-32" src="/logo.svg" alt="DongNam" />
-        <p className="font-bold mt-4 text-slate-950">{t("company")}</p>
-        <p className="text-slate-950">{t("address")}</p>
-        <p className="text-slate-950">Copyright © 2023 - All right reserved</p>
+        <p className="font-bold mt-4 text-slate-950 text-center">
+          {t("company")}
+        </p>
+        <p className="text-slate-950 text-center">{t("address")}</p>
+        <p className="text-slate-950 text-center">
+          Copyright © 2023 - All right reserved
+        </p>
       </aside>
-      <nav>
+      <nav className="mt-4">
         <div className="grid grid-flow-col gap-4">
           <a>
             <svg

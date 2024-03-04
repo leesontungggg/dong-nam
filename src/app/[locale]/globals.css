@@ -1,169 +1,76 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-body {
-  color: black;
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-p,
-strong,
-li,
-th,
-td,
-span,
-div {
-  color: black !important;
-}
-
-li {
-  list-style: decimal;
-  list-style-position: inside;
-}
-
-blockquote {
-  margin-block-end: 16px;
-  margin-block-start: 16px;
-  margin-inline-end: 40px;
-  margin-inline-start: 40px;
-}
-
-blockquote > p {
-  margin: auto;
-}
-
-[data-theme="light"] .btn {
-  background-color: #00a259 !important;
-}
-
+ 
 @layer base {
-  :root,
-  html {
-    @apply bg-transparent;
-  }
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
 
-  /********************
-    Set your base color & font for body here:
-    ********************/
-  * {
-    @apply text-base-300  accent-primary selection:bg-primary selection:text-primary-content transition-all duration-150;
-  }
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply text-primary;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+ 
+    --radius: 0.5rem;
   }
-
-  i {
-    @apply text-inherit;
-  }
-
-  .bg-primary-gradient {
-    @apply bg-gradient-to-r from-[#00A259] to-[#E5873B];
-  }
-
-  html.sr .load-hidden {
-    @apply invisible;
-  }
-
-  body {
-    overflow: overlay;
+ 
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+ 
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+ 
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
   }
 }
-
-@layer components {
-  /********************
-    *** HEADER
-    ********************/
-  .nav__icon {
-    @apply w-[28px] h-[18px] relative rotate-0 cursor-pointer ease-in-out duration-500;
+ 
+@layer base {
+  * {
+    @apply border-border;
   }
-
-  .nav__icon span {
-    @apply block absolute h-[3px] w-full bg-primary rounded-full opacity-100 left-0 rotate-0 ease-out duration-200;
-  }
-
-  .nav__icon span:nth-child(1) {
-    @apply top-0;
-  }
-
-  .nav__icon span:nth-child(2) {
-    @apply top-[6px] origin-[left_center];
-  }
-
-  .nav__icon span:nth-child(3) {
-    @apply top-[12px];
-  }
-
-  .nav__icon.is-clicked span:nth-child(1) {
-    @apply rotate-45 top-[6px];
-  }
-
-  .nav__icon.is-clicked span:nth-child(2) {
-    @apply w-0 opacity-0;
-  }
-
-  .nav__icon.is-clicked span:nth-child(3) {
-    @apply rotate-[-45deg] top-[6px];
-  }
-
-  .nav__mobile-menu {
-    @apply fixed top-[82px] left-[50%] translate-x-[-50%] w-11/12 p-4 rounded-md bg-white opacity-0 h-0 ease-in duration-200 z-[99];
-  }
-
-  .nav__mobile-menu.is-opened {
-    @apply opacity-100 h-fit;
-  }
-
-  .menu-open {
-    @apply overflow-hidden;
-  }
-
-  .menu-open main::after {
-    @apply content-[''] w-screen h-screen fixed top-0 left-0 z-[1] bg-[linear-gradient(to_bottom,_#2d314d,_transparent)];
-  }
-
-  /********************
-    *** BUTTONS
-    ********************/
-  .ds-btn {
-    @apply h-[unset] min-h-[unset] py-3.5 px-6 border-0 rounded-[21px]  capitalize transition-opacity duration-150 hover:opacity-70;
-  }
-
-  .ds-btn-wide {
-    @apply w-[unset] min-w-[10rem];
-  }
-  .ds-btn-primary {
-    @apply bg-gradient-to-r from-[#00A259] to-[#E5873B];
-  }
-
-  .ds-btn-ghost {
-    @apply hover:bg-neutral hover:text-neutral-content;
-  }
-
-  /********************
-    *** FORMS
-    ********************/
-
-  .ds-input {
-    @apply border border-solid border-neutral transition-all duration-200 focus:outline focus:outline-primary focus:border-primary;
-  }
-
-  .ds-input-error {
-    @apply border-error focus:outline-error focus:border-error;
-  }
-
-  .ds-input-success {
-    @apply border-success focus:outline-success focus:border-success;
+  body {
+    @apply bg-background text-foreground;
   }
 }
