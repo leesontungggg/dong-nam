@@ -5,6 +5,12 @@ import { Context } from "@/services/context";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "next-intl/client";
 import { useContext, useState, useTransition } from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function Root() {
   const data = useContext(Context);
@@ -19,13 +25,15 @@ export default function Root() {
       ? data.products.find((item: any) => item.id == productId)
       : null;
 
+  console.log(product);
+
   return (
     <div
       className="w-full min-h-screen bg-white text-black 
  flex flex-col justify-center items-center"
     >
-      <div className="p-4 pb-10">
-        <div className="container mx-auto">
+      <div className="p-4 pb-10 w-full">
+        <div className="container mx-auto w-full">
           {!!product && (
             <div className="flex flex-col items-center gap-4">
               <h1 className="text-black font-medium text-4xl">
@@ -36,7 +44,51 @@ export default function Root() {
                 alt="DONG-NAM"
                 className="rounded bg-base-200 object-cover w-auto h-80"
               />
-              <div
+              <Accordion
+                type="single"
+                collapsible
+                className="w-full max-w-full"
+              >
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>Hướng dẫn sử dụng</AccordionTrigger>
+                  <AccordionContent className="whitespace-pre-line">
+                    {locale === "vi"
+                      ? product.administration
+                      : product.administration_en}
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>Chống chỉ định</AccordionTrigger>
+                  <AccordionContent className="whitespace-pre-line">
+                    {locale === "vi"
+                      ? product.contraindication
+                      : product.contraindication_en}
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>Liều lượng</AccordionTrigger>
+                  <AccordionContent className="whitespace-pre-line">
+                    {locale === "vi" ? product.dosage : product.dosage_en}
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-4">
+                  <AccordionTrigger>Tác dụng phụ</AccordionTrigger>
+                  <AccordionContent className="whitespace-pre-line">
+                    {locale === "vi"
+                      ? product.drug_interaction
+                      : product.drug_interaction_en}
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-5">
+                  <AccordionTrigger>Thành phần</AccordionTrigger>
+                  <AccordionContent className="whitespace-pre-line">
+                    {locale === "vi"
+                      ? product.ingredients
+                      : product.ingredients_en}
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+              {/* <div
                 dangerouslySetInnerHTML={{
                   __html:
                     locale === "vi"
@@ -44,7 +96,7 @@ export default function Root() {
                       : product.description_en,
                 }}
                 className="!text-black"
-              ></div>
+              ></div> */}
             </div>
           )}
         </div>
