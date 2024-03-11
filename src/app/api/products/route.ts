@@ -3,10 +3,10 @@ export const revalidate = 1; //revalidate api every 1 second
 
 export async function GET(request: Request) {
   let productsPromise = await fetch(
-    `https://dongnam.up.railway.app/items/products?fields[]=*, galleries.*`,
+    `https://dongnam.up.railway.app/items/products?limit=-1&fields[]=*, galleries.*`,
     {
       method: "GET",
-      next: { revalidate: 1 },
+      next: { revalidate: 3600 },
     }
   );
 
