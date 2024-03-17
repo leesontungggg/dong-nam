@@ -18,11 +18,15 @@
     "address": "Lô 2A, Đường 1A KCN Tân Tạo, P. Tân Tạo A, Q. Bình Tân TP. Hồ Chí Minh - Việt Nam"
   },
   "hero": {
-    "title": "Dược phẩm ĐÔNG NAM",
-    "description": "Là đơn vị tiên phong trong việc sản xuất dược phẩm đạt tiêu chuẩn GMP-WHO đầu tiên tại Việt Nam. Công Ty Dược Đông Nam mang trong mình tinh thần luôn phát triển liên tục và đổi mới, cùng mới với mục tiêu cung cấp những sản phẩm đạt chất lượng quốc tế cho người dân Việt Nam và các nước lân cận.",
+    "title": "CÔNG TY DƯỢC ĐÔNG NAM",
+    "description": "Với hơn 20 năm cung cấp dược phẩm đạt tiêu chuẩn quốc tế CMP-WHO, Dược phẩm Đông Nam sản xuất và phân phối độc quyền thuốc kê đơn và không kê đơn chất lượng cao với giá thành tốt cho các đại lý phân phối, cửa hàng bản lẻ lớn tại Việt Nam và các quốc gia lân cận.",
     "CTA": "Tìm hiểu thêm",
+    "mission": {
+      "title": "Sứ mệnh của chúng tôi",
+      "description": "Với sứ mệnh 'Đồng hành cùng người tiêu dùng trên hành trình sức khỏe toàn diện', chúng tôi có đa dạng danh mục sản phẩm thuốc đáp ứng các nhu cầu của bệnh nhân trong các lĩnh vực giảm đau hạ sốt, dạ dày - đường ruột, gan - mật, tim mạch... Điểm mạnh của chúng tôi không chỉ nằm ở việc phát triển các sản phẩm thuốc mới, mà còn ở khả năng nghiên cứu và chế tạo sản phẩm độc quyền theo yêu cầu của các Quý đối tác."
+    },
     "reason": {
-      "title": "Lí do chọn Đông Nam?",
+      "title": "VÌ SAO CÔNG TY DƯỢC ĐÔNG NAM ĐƯỢC NHIỀU ĐỐI TÁC LỚN TIN TƯỞNG?",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
       "reason1": {
         "title": "Sản phẩm chất lượng cao",
@@ -41,8 +45,31 @@
         "description": "Là đơn vị sản xuất đầu tiên của Việt Nam đạt GMP-WHO, chúng tôi có trên 20 năm kinh nghiệm tiên phong trong lĩnh vực sản xuất dược phẩm. Hiện nay, chúng tôi đã xuất khẩu sản phẩm của mình qua các nước Đông Nam Á."
       }
     },
+    "highlight": {
+      "title": "DƯỢC PHẨM ĐÔNG NAM QUA NHỮNG CON SỐ NỔI BẬT",
+      "description": "Với sứ mệnh 'Đồng hành cùng người tiêu dùng trên hành trình sức khỏe toàn diện', chúng tôi có đa dạng danh mục sản phẩm thuốc đáp ứng các nhu cầu của bệnh nhân trong các lĩnh vực giảm đau hạ sốt, dạ dày - đường ruột, gan - mật, tim mạch... Điểm mạnh của chúng tôi không chỉ nằm ở việc phát triển các sản phẩm thuốc mới, mà còn ở khả năng nghiên cứu và chế tạo sản phẩm độc quyền theo yêu cầu của các Quý đối tác."
+    },
     "article": {
-      "title": "Bài viết mới nhất",
+      "title": "Tin Tức - Sự Kiện Công Ty",
+      "article1": {
+        "title": "Bài viết 1",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      },
+      "article2": {
+        "title": "Bài viết 2",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      },
+      "article3": {
+        "title": "Bài viết 3",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      },
+      "article4": {
+        "title": "Bài viết 4",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      }
+    },
+    "blog": {
+      "title": "Sức khỏe của bạn",
       "article1": {
         "title": "Bài viết 1",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
