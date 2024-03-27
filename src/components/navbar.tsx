@@ -182,6 +182,12 @@ const Navbar = (props: any) => {
             </a>
             <a
               className="transition-colors hover:text-foreground/80 text-foreground"
+              href="/news"
+            >
+              {t("news")}
+            </a>
+            <a
+              className="transition-colors hover:text-foreground/80 text-foreground"
               href="/career"
             >
               {t("career")}

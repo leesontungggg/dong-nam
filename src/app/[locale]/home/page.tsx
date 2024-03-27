@@ -18,6 +18,7 @@ export default function Root() {
     });
   };
 
+  console.log("locale", locale);
   return (
     <main className="!font-sans">
       <section className="relative bg-white min-h-screen ">
@@ -31,7 +32,29 @@ export default function Root() {
               className="text-center load-hidden animate-fade-in animate-delay-200 text-slate-950"
               // dangerouslySetInnerHTML={{ __html: t("description") }}
             >
-              {t("description")}
+              {/* {t("description")} */}
+              {locale === "vi" ? (
+                <>
+                  Với hơn 20 năm cung cấp dược phẩm đạt tiêu chuẩn quốc tế
+                  CMP-WHO, Dược phẩm Đông Nam{" "}
+                  <strong>
+                    sản xuất và phân phối độc quyền thuốc kê đơn và không kê đơn
+                  </strong>{" "}
+                  chất lượng cao với giá thành tốt cho các đại lý phân phối, cửa
+                  hàng bản lẻ lớn tại Việt Nam và các quốc gia lân cận.
+                </>
+              ) : (
+                <>
+                  With over two decades of providing internationally
+                  standardized pharmaceuticals, Dong Nam Pharmaceuticals{" "}
+                  <strong>
+                    manufactures high-quality prescription and over-the- counter
+                    medications
+                  </strong>{" "}
+                  at competitive prices for distributors and major retail
+                  outlets in Vietnam and around the world.
+                </>
+              )}
             </p>
           </div>
         </div>
@@ -43,7 +66,45 @@ export default function Root() {
             <h1 className="text-2xl uppercase font-bold text-[#F18200]">
               {t("mission.title")}
             </h1>
-            <p>{t("mission.description")}</p>
+            <p>
+              {locale === "vi" ? (
+                <>
+                  Với sứ mệnh{" "}
+                  <strong>
+                    'Đồng hành cùng người tiêu dùng trên hành trình sức khỏe
+                    toàn diện'
+                  </strong>
+                  , chúng tôi có đa dạng danh mục sản phẩm thuốc đáp ứng các nhu
+                  cầu của bệnh nhân trong các lĩnh vực giảm đau hạ sốt, dạ dày -
+                  đường ruột, gan - mật, tim mạch... Điểm mạnh của chúng tôi
+                  không chỉ nằm ở việc phát triển các sản phẩm thuốc mới, mà còn
+                  ở khả năng{" "}
+                  <strong>
+                    {" "}
+                    nghiên cứu và chế tạo sản phẩm độc quyền theo yêu cầu của
+                    các Quý đối tác.
+                  </strong>
+                </>
+              ) : (
+                <>
+                  With a mission to{" "}
+                  <strong>
+                    "accompany consumers on the journey to comprehensive
+                    health,"
+                  </strong>{" "}
+                  we offer a diverse portfolio of medicines to meet patient
+                  needs across various areas, such as pain relief, digestive
+                  health, liver function, cardiovascular health, and more. Our
+                  strength lies not only in developing new drug products but
+                  also in our ability to
+                  <strong>
+                    {" "}
+                    research products tailored to the specific requirements of
+                    our esteemed partners.
+                  </strong>
+                </>
+              )}
+            </p>
           </div>
         </div>
       </section>
@@ -63,9 +124,10 @@ export default function Root() {
                 src="/image/reason-1.jpg"
                 alt="Online Banking"
               />
-              <h3 className="text-xl text-center lg:text-left text-black font-semibold">
-                {t("reason.reason1.title")}
-              </h3>
+              <h3
+                className="text-xl text-center lg:text-left text-black font-semibold px-4 capitalize"
+                dangerouslySetInnerHTML={{ __html: t("reason.reason1.title") }}
+              ></h3>
               <p className="text-center lg:text-left text-slate-950 p-4">
                 {t("reason.reason1.description")}
               </p>
@@ -77,9 +139,10 @@ export default function Root() {
                 src="/image/reason-2.jpg"
                 alt="Simple Budgeting"
               />
-              <h3 className="text-xl text-center lg:text-left text-black font-semibold">
-                {t("reason.reason2.title")}
-              </h3>
+              <h3
+                className="text-xl text-center lg:text-left text-black font-semibold px-4 capitalize"
+                dangerouslySetInnerHTML={{ __html: t("reason.reason2.title") }}
+              ></h3>
               <p className="text-center lg:text-left text-slate-950 p-4">
                 {t("reason.reason2.description")}
               </p>
@@ -91,9 +154,10 @@ export default function Root() {
                 src="/image/reason-3.jpg"
                 alt="Fast Onboarding"
               />
-              <h3 className="text-xl text-center lg:text-left text-black font-semibold">
-                {t("reason.reason3.title")}
-              </h3>
+              <h3
+                className="text-xl text-center lg:text-left text-black font-semibold px-4 capitalize"
+                dangerouslySetInnerHTML={{ __html: t("reason.reason3.title") }}
+              ></h3>
               <p className="text-center lg:text-left text-slate-950 p-4">
                 {t("reason.reason3.description")}
               </p>
@@ -111,23 +175,33 @@ export default function Root() {
           </div>
           <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
             <div className="rounded-[64px] border-[1px] border-gray-400 p-4 w-full flex-col justify-center items-center">
-              <h6 className="text-2xl font-bold text-center">20+</h6>
-              <p className="text-center">năm phát triển tại Việt Nam</p>
+              <h6 className="text-2xl font-bold text-center">{">"}20</h6>
+              <p className="text-center">
+                {locale === "vi"
+                  ? "năm phát triển tại Việt Nam"
+                  : "years of development in Vietnam"}
+              </p>
             </div>
 
             <div className="rounded-[64px] border-[1px] border-gray-400 p-4 w-full flex-col justify-center items-center">
-              <h6 className="text-2xl font-bold text-center">70+</h6>
-              <p className="text-center">sản phẩm</p>
+              <h6 className="text-2xl font-bold text-center">{">"}70</h6>
+              <p className="text-center">
+                {locale === "vi" ? "sản phẩm" : "products"}
+              </p>
             </div>
 
             <div className="rounded-[64px] border-[1px] border-gray-400 p-4 w-full flex-col justify-center items-center">
-              <h6 className="text-2xl font-bold text-center">13,000+</h6>
-              <p className="text-center">m2 diện tích nhà máy</p>
+              <h6 className="text-2xl font-bold text-center">{">"}13,000</h6>
+              <p className="text-center">
+                {locale === "vi" ? "m2 diện tích nhà máy" : "m2 factory area"}
+              </p>
             </div>
 
             <div className="rounded-[64px] border-[1px] border-gray-400 p-4 w-full flex-col justify-center items-center">
-              <h6 className="text-2xl font-bold text-center">40+</h6>
-              <p className="text-center">đối tác</p>
+              <h6 className="text-2xl font-bold text-center">{">"}40</h6>
+              <p className="text-center">
+                {locale === "vi" ? "đối tác" : "partners"}
+              </p>
             </div>
           </div>
         </div>
@@ -211,65 +285,7 @@ export default function Root() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-3 gap-8 mt-8 md:mt-10 md:gap-5">
-            {/* <div className="group bg-white rounded-md overflow-hidden cursor-pointer hover:drop-shadow-sm load-hidden animate-slide-up animate-delay-200">
-              <img
-                className="object-cover w-full h-[250px] transition-transform duration-600 group-hover:scale-105"
-                src="https://d2jx2rerrg6sh3.cloudfront.net/images/Article_Images/ImageForArticle_23751_16831178817174714.jpg"
-                alt="Article thumbnail"
-              />
-              <div className="flex flex-col gap-3 p-5 md:px-5 md:py-7">
-                <span className="text-xs text-slate-950">By TUNG SON LE</span>
-                <h3 className="text-lg leading-6 group-hover:text-secondary text-slate-950">
-                  {t("article.article1.title")}
-                </h3>
-                <p className="text-slate-600">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.
-                </p>
-              </div>
-            </div>
-
-            <div className="group bg-white rounded-md overflow-hidden cursor-pointer hover:drop-shadow-sm load-hidden animate-slide-up animate-delay-300">
-              <img
-                className="object-cover w-full h-[250px] transition-transform duration-600 group-hover:scale-105"
-                src="https://d2jx2rerrg6sh3.cloudfront.net/images/Article_Images/ImageForArticle_23751_16831178817174714.jpg"
-                alt="Article thumbnail"
-              />
-              <div className="flex flex-col gap-3 p-5 md:px-5 md:py-7">
-                <span className="text-xs text-slate-950">By Tung Son Le</span>
-                <h3 className="text-lg leading-6 group-hover:text-secondary text-slate-950">
-                  {t("article.article2.title")}
-                </h3>
-                <p className="text-slate-600">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                </p>
-              </div>
-            </div>
-
-            <div className="group bg-white rounded-md overflow-hidden cursor-pointer hover:drop-shadow-sm load-hidden animate-slide-up animate-delay-400">
-              <img
-                className="object-cover w-full h-[250px] transition-transform duration-600 group-hover:scale-105"
-                src="https://d2jx2rerrg6sh3.cloudfront.net/images/Article_Images/ImageForArticle_23751_16831178817174714.jpg"
-                alt="Article thumbnail"
-              />
-              <div className="flex flex-col gap-3 p-5 md:px-5 md:py-7">
-                <span className="text-xs text-slate-950">By TUNG SON LE</span>
-                <h3 className="text-lg leading-6 group-hover:text-secondary text-slate-950">
-                  {t("article.article3.title")}
-                </h3>
-                <p className="text-slate-600">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                </p>
-              </div>
-            </div> */}
-          </div>
+          <div className="grid grid-cols-3 gap-8 mt-8 md:mt-10 md:gap-5"></div>
         </div>
       </section>
     </main>

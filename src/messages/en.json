@@ -8,7 +8,8 @@
     "home": "Home",
     "about": "About",
     "products": "Products",
-    "blog": "Blog",
+    "blog": "Your health",
+    "news": "News",
     "career": "Career",
     "standard": "Standard",
     "contacts": "Contacts"
@@ -21,25 +22,29 @@
     "title": "DONG NAM Pharmaceutical",
     "description": "Being the first pioneer in manufacturing pharmaceuticals meeting GMP-WHO standards in Vietnam. Dong Nam Pharmaceutical Company carries within itself the spirit of continuous development and innovation, with the goal of providing international quality products to the people of Vietnam and neighboring countries.",
     "CTA": "Learn more",
+    "mission": {
+      "title": "Our Mission",
+      "description": "Với sứ mệnh 'Đồng hành cùng người tiêu dùng trên hành trình sức khỏe toàn diện', chúng tôi có đa dạng danh mục sản phẩm thuốc đáp ứng các nhu cầu của bệnh nhân trong các lĩnh vực giảm đau hạ sốt, dạ dày - đường ruột, gan - mật, tim mạch... Điểm mạnh của chúng tôi không chỉ nằm ở việc phát triển các sản phẩm thuốc mới, mà còn ở khả năng nghiên cứu và chế tạo sản phẩm độc quyền theo yêu cầu của các Quý đối tác."
+    },
     "reason": {
       "title": "Why choose DongNam?",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
       "reason1": {
-        "title": "High quality products",
-        "description": "Dong Nam Pharmaceutical is committed to providing high quality pharmaceutical products, strictly tested and manufactured according to GMP - WHO standards."
+        "title": "Quality Products <br /> Competitive Prices",
+        "description": "Committed to providing high-quality products at competitive prices, rigorously tested according to the standards of the Vietnam Ministry of Health and GMP-WHO."
       },
       "reason2": {
-        "title": "Competitive prices",
-        "description": "We always optimize material supplies and efficient production to minimize costs for customers. Therefore, we have the ability to provide products at suitable prices, to help customers increase their competitiveness in the market."
+        "title": "Fast Production <br /> Consistent Quality",
+        "description": "With top-notch manufacturing management capabilities and advanced technology, we ensure all products are manufactured with the highest level of accuracy in the shortest time."
       },
       "reason3": {
-        "title": "Product diversification",
+        "title": "Diverse Portfolio<br/>Exclusive Manufacturing",
         "description": "We currently have 70 registrations with a wide range of products, including medical treatments, over-the-counter medicines and more. Furthermore, we have leading equipment and experts to assist you in developing and manufacturing your own products."
-      },
-      "reason4": {
-        "title": "Prestige and brand",
-        "description": "As the first manufacturing unit in Vietnam to achieve GMP-WHO, we have over 20 years of pioneering experience in the field of pharmaceutical production. Currently, we have exported our products to Southeast Asian countries."
       }
+    },
+    "highlight": {
+      "title": "DONG NAM PHARMACEUTICALS IN NUMBERS",
+      "description": "Với sứ mệnh 'Đồng hành cùng người tiêu dùng trên hành trình sức khỏe toàn diện', chúng tôi có đa dạng danh mục sản phẩm thuốc đáp ứng các nhu cầu của bệnh nhân trong các lĩnh vực giảm đau hạ sốt, dạ dày - đường ruột, gan - mật, tim mạch... Điểm mạnh của chúng tôi không chỉ nằm ở việc phát triển các sản phẩm thuốc mới, mà còn ở khả năng nghiên cứu và chế tạo sản phẩm độc quyền theo yêu cầu của các Quý đối tác."
     },
     "article": {
       "title": "Latest Articles",
@@ -57,6 +62,25 @@
       },
       "article4": {
         "title": "Article 4",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      }
+    },
+    "blog": {
+      "title": "FOR YOUR HEALTH",
+      "article1": {
+        "title": "Bài viết 1",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      },
+      "article2": {
+        "title": "Bài viết 2",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      },
+      "article3": {
+        "title": "Bài viết 3",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      },
+      "article4": {
+        "title": "Bài viết 4",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
       }
     }

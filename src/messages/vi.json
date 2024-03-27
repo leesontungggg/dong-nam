@@ -8,7 +8,8 @@
     "home": "Trang Chủ",
     "about": "Giới thiệu",
     "products": "Sản phẩm",
-    "blog": "Blog",
+    "blog": "Sức khỏe của bạn",
+    "news": "Tin tức",
     "career": "Tuyển dụng",
     "standard": "Chứng chỉ",
     "contacts": "Liên hệ"
@@ -29,16 +30,16 @@
       "title": "VÌ SAO CÔNG TY DƯỢC ĐÔNG NAM ĐƯỢC NHIỀU ĐỐI TÁC LỚN TIN TƯỞNG?",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
       "reason1": {
-        "title": "Sản phẩm chất lượng cao",
-        "description": "Dược phẩm Đông Nam cam kết cung cấp các sản phẩm dược phẩm chất lượng cao, được kiểm nghiệm nghiêm ngặt và sản xuất theo tiêu chuẩn GMP - WHO."
+        "title": "Sản Phẩm Chất Lượng<br /> Giá Cả Cạnh Tranh",
+        "description": "Cam kết cung cấp các sản phẩm dược phẩm chất lượng với giá thành cạnh tranh, được kiểm nghiệm nghiêm ngặt theo tiêu chuẩn của Bộ Y Tế và tiêu chuẩn quốc tế GMP-WHO."
       },
       "reason2": {
-        "title": "Giá cả cạnh tranh",
-        "description": "Chúng tôi luôn tối ưu hóa các nguồn cung cấp nguyên liệu và sản xuất hiệu quả để giảm thiểu chi phí cho khách hàng. Vì vậy, chúng tôi có khả năng cung cấp các sản phẩm với mức giá phù hợp, nhằm hỗ trợ khách hàng tăng khả năng cạnh tranh trên thị trường."
+        "title": "Sản xuất nhanh chóng<br /> chất lượng đồng bộ",
+        "description": "Với khả năng quản trị sản xuất hàng đầu và công nghệ tiên tiến, chúng tôi đảm bảo mọi sản phẩm đều được sản xuất với độ chính xác cao nhất trong thời gian nhanh nhất"
       },
       "reason3": {
-        "title": "Đa dạng sản phẩm",
-        "description": "Chúng tôi hiện đang có 70 số đăng ký với đa dạng sản phẩm, bao gồm điều trị bệnh, thuốc không kê đơn và hơn thế nữa. Hơn nữa, chúng tôi có những thiết bị và chuyên gia hàng đầu để hỗ trợ bạn trong việc phát triển và sản xuất sản phẩm của riêng mình."
+        "title": "Đa dạng danh mục <br /> sản xuất độc quyền",
+        "description": "Với đội ngũ chuyên gia đầu ngành và thiết bị hiện đại, chúng tôi có thể hỗ trợ bạn trong việc phát triển và sản xuất các sản phẩm độc quyền, đáp ứng mọi nhu cầu y tế của Quý đối tác"
       },
       "reason4": {
         "title": "Uy tín và thương hiệu",
