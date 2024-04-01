@@ -28,7 +28,7 @@ export default function Root() {
             <h1 className="text-3xl text-[#00A44E] font-bold text-center mx-auto lg:mx-0 load-hidden animate-fade-in">
               {t("title")}
             </h1>
-            <p className="text-center load-hidden animate-fade-in animate-delay-200 text-slate-950 text-2xl">
+            <p className="text-center load-hidden animate-fade-in animate-delay-200 text-slate-950 text-2xl leading-10">
               {locale === "vi" ? (
                 <>
                   Với hơn 20 năm cung cấp dược phẩm đạt tiêu chuẩn quốc tế
@@ -62,7 +62,7 @@ export default function Root() {
             <h1 className="text-3xl uppercase font-bold text-[#F18200]">
               {t("mission.title")}
             </h1>
-            <p className="text-2xl">
+            <p className="text-2xl leading-10">
               {locale === "vi" ? (
                 <>
                   Với sứ mệnh{" "}
@@ -121,10 +121,10 @@ export default function Root() {
                 alt="Online Banking"
               />
               <h3
-                className="text-xl text-center lg:text-left text-black font-semibold px-4 capitalize"
+                className="text-center lg:text-left text-black font-semibold px-4 capitalize text-2xl"
                 dangerouslySetInnerHTML={{ __html: t("reason.reason1.title") }}
               ></h3>
-              <p className="text-center lg:text-left text-slate-950 p-4">
+              <p className="text-center lg:text-left text-slate-950 p-4 text-xl">
                 {t("reason.reason1.description")}
               </p>
             </div>
@@ -136,10 +136,10 @@ export default function Root() {
                 alt="Simple Budgeting"
               />
               <h3
-                className="text-xl text-center lg:text-left text-black font-semibold px-4 capitalize"
+                className="text-2xl text-center lg:text-left text-black font-semibold px-4 capitalize"
                 dangerouslySetInnerHTML={{ __html: t("reason.reason2.title") }}
               ></h3>
-              <p className="text-center lg:text-left text-slate-950 p-4">
+              <p className="text-center lg:text-left text-slate-950 p-4 text-xl">
                 {t("reason.reason2.description")}
               </p>
             </div>
@@ -151,10 +151,10 @@ export default function Root() {
                 alt="Fast Onboarding"
               />
               <h3
-                className="text-xl text-center lg:text-left text-black font-semibold px-4 capitalize"
+                className="text-2xl text-center lg:text-left text-black font-semibold px-4 capitalize"
                 dangerouslySetInnerHTML={{ __html: t("reason.reason3.title") }}
               ></h3>
-              <p className="text-center lg:text-left text-slate-950 p-4">
+              <p className="text-center lg:text-left text-slate-950 p-4 text-xl">
                 {t("reason.reason3.description")}
               </p>
             </div>
@@ -170,32 +170,32 @@ export default function Root() {
             </h2>
           </div>
           <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
-            <div className="rounded-[64px] border-[1px] border-gray-400 p-4 w-full flex-col justify-center items-center">
-              <h6 className="text-2xl font-bold text-center">{">"}20</h6>
-              <p className="text-center">
+            <div className="rounded-[64px] border-[1px] border-gray-400 p-4 w-full flex flex-col justify-center items-center">
+              <h6 className="text-3xl font-bold text-center">{">"}20</h6>
+              <p className="text-center text-xl">
                 {locale === "vi"
                   ? "năm phát triển tại Việt Nam"
                   : "years of development in Vietnam"}
               </p>
             </div>
 
-            <div className="rounded-[64px] border-[1px] border-gray-400 p-4 w-full flex-col justify-center items-center">
-              <h6 className="text-2xl font-bold text-center">{">"}70</h6>
-              <p className="text-center">
+            <div className="rounded-[64px] border-[1px] border-gray-400 p-4 w-full flex flex-col justify-center items-center">
+              <h6 className="text-3xl font-bold text-center">{">"}70</h6>
+              <p className="text-center text-xl">
                 {locale === "vi" ? "sản phẩm" : "products"}
               </p>
             </div>
 
-            <div className="rounded-[64px] border-[1px] border-gray-400 p-4 w-full flex-col justify-center items-center">
-              <h6 className="text-2xl font-bold text-center">{">"}13,000</h6>
-              <p className="text-center">
+            <div className="rounded-[64px] border-[1px] border-gray-400 p-4 w-full flex flex-col justify-center items-center">
+              <h6 className="text-3xl font-bold text-center">{">"}13,000</h6>
+              <p className="text-center text-xl">
                 {locale === "vi" ? "m2 diện tích nhà máy" : "m2 factory area"}
               </p>
             </div>
 
-            <div className="rounded-[64px] border-[1px] border-gray-400 p-4 w-full flex-col justify-center items-center">
-              <h6 className="text-2xl font-bold text-center">{">"}40</h6>
-              <p className="text-center">
+            <div className="rounded-[64px] border-[1px] border-gray-400 p-4 w-full flex flex-col justify-center items-center">
+              <h6 className="text-3xl font-bold text-center">{">"}40</h6>
+              <p className="text-center text-xl">
                 {locale === "vi" ? "đối tác" : "partners"}
               </p>
             </div>

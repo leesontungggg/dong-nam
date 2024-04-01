@@ -16,11 +16,11 @@ export default function About() {
       <section className="relative bg-white min-h-screen ">
         <div className="absolute top-0 left-0 w-full h-full opacity-100 bg-[url('/image/about-hero-bg.jpg')] bg-cover bg-repeat bg-cli" />
         <div className="absolute bg-transparent container flex flex-col-reverse gap-20 max-w-screen-xl mx-auto pt-[4em] lg:min-h-screen lg:items-center lg:flex-row left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
-          <div className="flex flex-col gap-6 content-center items-center lg:h-100 lg:w-1/2 xl:w-2/5 bg-white rounded-3xl p-8">
-            <h1 className="text-xl md:text-2xl text-[#00A44E] font-bold text-center mx-auto lg:mx-0 load-hidden animate-fade-in">
+          <div className="flex flex-col gap-6 content-center items-center lg:h-100 lg:w-1/2 bg-white rounded-3xl p-8">
+            <h1 className="text-3xl text-[#00A44E] font-bold text-center mx-auto lg:mx-0 load-hidden animate-fade-in">
               {t("title")}
             </h1>
-            <p className="text-center load-hidden animate-fade-in animate-delay-200 text-slate-950">
+            <p className="text-center load-hidden animate-fade-in animate-delay-200 text-slate-950 text-2xl leading-10">
               {locale === "vi" ? (
                 <>
                   Công ty Dược Phẩm Đông Nam được thành lập từ năm 2001, là đơn
@@ -46,10 +46,10 @@ export default function About() {
             className="w-full h-full rounded-lg max-h-80 object-cover"
           />
           <div className="flex flex-col gap-4">
-            <h1 className="text-2xl uppercase font-bold text-[#F18200]">
+            <h1 className="text-3xl uppercase font-bold text-[#F18200]">
               {locale === "vi" ? "Về chúng tôi" : "About us"}
             </h1>
-            <p>
+            <p className="text-2xl leading-10">
               {locale === "vi" ? (
                 <>
                   Với{" "}
@@ -77,10 +77,10 @@ export default function About() {
         </div>
         <div className="container max-w-screen-xl mx-auto grid grid-cols-2 gap-8 mt-32">
           <div className="flex flex-col gap-4">
-            <h1 className="text-2xl uppercase font-bold text-[#00A44E]">
+            <h1 className="text-3xl uppercase font-bold text-[#00A44E]">
               {locale === "vi" ? "Tầm nhìn" : "Our vision"}
             </h1>
-            <p>
+            <p className="text-2xl leading-10">
               {locale === "vi" ? (
                 <>
                   Tầm nhìn của chúng tôi là{" "}
@@ -114,10 +114,10 @@ export default function About() {
             className="w-full h-full rounded-lg max-h-80 object-cover"
           />
           <div className="flex flex-col gap-4">
-            <h1 className="text-2xl uppercase font-bold text-[#F18200]">
+            <h1 className="text-3xl uppercase font-bold text-[#F18200]">
               {locale === "vi" ? "Sứ mệnh" : "Our mission"}
             </h1>
-            <p>
+            <p className="text-2xl leading-10">
               {locale === "vi" ? (
                 <>
                   Sứ mệnh của chúng tôi không chỉ là{" "}
@@ -150,10 +150,10 @@ export default function About() {
         </div>
         <div className="container max-w-screen-xl mx-auto grid grid-cols-2 gap-8 mt-32">
           <div className="flex flex-col gap-4 h-fit">
-            <h1 className="text-2xl uppercase font-bold text-[#00A44E]">
+            <h1 className="text-3xl uppercase font-bold text-[#00A44E]">
               {locale === "vi" ? "Chiến lược" : "Strategy"}
             </h1>
-            <p>
+            <p className="text-2xl leading-10">
               {locale === "vi" ? (
                 <>
                   Điểm mạnh của chúng tôi không chỉ nằm ở việc phát triển các
@@ -170,7 +170,7 @@ export default function About() {
               ) : (
                 <>
                   Our strength lies not only in developing new drug products but
-                  also in our ability to research and manufacture products
+                  also in our ability to research and manufacture products{" "}
                   <strong>
                     according to the customized requirements of our valued
                     partners.

@@ -34,7 +34,7 @@ const Navbar = (props: any) => {
           <nav className="flex flex-row items-center justify-around text-sm w-full">
             <a
               className="transition-colors hover:text-foreground/80 text-foreground text-lg"
-              href="/home"
+              href="/"
             >
               {t("home")}
             </a>
