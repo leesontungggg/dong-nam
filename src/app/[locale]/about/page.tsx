@@ -11,14 +11,6 @@ export default function About() {
   const [isPending, startTransition] = useTransition();
   const locale = useLocale();
 
-  const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const lang = e.target.value;
-    startTransition(() => {
-      router.replace(pathname, { locale: lang });
-    });
-  };
-
-  console.log("locale", locale);
   return (
     <main className="!font-sans">
       <section className="relative bg-white min-h-screen ">
@@ -28,11 +20,7 @@ export default function About() {
             <h1 className="text-xl md:text-2xl text-[#00A44E] font-bold text-center mx-auto lg:mx-0 load-hidden animate-fade-in">
               {t("title")}
             </h1>
-            <p
-              className="text-center load-hidden animate-fade-in animate-delay-200 text-slate-950"
-              // dangerouslySetInnerHTML={{ __html: t("description") }}
-            >
-              {/* {t("description")} */}
+            <p className="text-center load-hidden animate-fade-in animate-delay-200 text-slate-950">
               {locale === "vi" ? (
                 <>
                   Công ty Dược Phẩm Đông Nam được thành lập từ năm 2001, là đơn

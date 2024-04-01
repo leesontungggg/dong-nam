@@ -42,7 +42,7 @@ export default function Root() {
 
   return (
     <div
-      className="w-full h-screen bg-white text-black 
+      className="w-full h-fit min-h-screen bg-white text-black 
  flex flex-col justify-center items-center"
     >
       <div className="p-4 pb-10">
