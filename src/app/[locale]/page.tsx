@@ -24,15 +24,11 @@ export default function Root() {
       <section className="relative bg-white min-h-screen ">
         <div className="absolute top-0 left-0 w-full h-full opacity-100 bg-[url('/image/hero-bg.jpg')] bg-cover bg-repeat" />
         <div className="absolute bg-transparent container flex flex-col-reverse gap-20 max-w-screen-xl mx-auto pt-[4em] lg:min-h-screen lg:items-center lg:flex-row left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
-          <div className="flex flex-col gap-6 content-center items-center lg:h-100 lg:w-1/2 xl:w-2/5 bg-white rounded-3xl p-8">
-            <h1 className="text-xl md:text-2xl text-[#00A44E] font-bold text-center mx-auto lg:mx-0 load-hidden animate-fade-in">
+          <div className="flex flex-col gap-6 content-center items-center lg:w-1/2 bg-white rounded-3xl p-8">
+            <h1 className="text-3xl text-[#00A44E] font-bold text-center mx-auto lg:mx-0 load-hidden animate-fade-in">
               {t("title")}
             </h1>
-            <p
-              className="text-center load-hidden animate-fade-in animate-delay-200 text-slate-950"
-              // dangerouslySetInnerHTML={{ __html: t("description") }}
-            >
-              {/* {t("description")} */}
+            <p className="text-center load-hidden animate-fade-in animate-delay-200 text-slate-950 text-2xl">
               {locale === "vi" ? (
                 <>
                   Với hơn 20 năm cung cấp dược phẩm đạt tiêu chuẩn quốc tế
@@ -63,10 +59,10 @@ export default function Root() {
         <div className="container max-w-screen-xl mx-auto grid grid-cols-2 gap-8">
           <img src="/image/sumenh.jpg" className="w-full" />
           <div className="flex flex-col gap-4">
-            <h1 className="text-2xl uppercase font-bold text-[#F18200]">
+            <h1 className="text-3xl uppercase font-bold text-[#F18200]">
               {t("mission.title")}
             </h1>
-            <p>
+            <p className="text-2xl">
               {locale === "vi" ? (
                 <>
                   Với sứ mệnh{" "}

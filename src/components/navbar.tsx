@@ -27,26 +27,26 @@ const Navbar = (props: any) => {
   return (
     <header className="sticky top-0 z-50 w-full h-fit border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex max-w-screen-2xl items-center h-14 md:py-2 md:h-fit">
-        <div className="mr-4 hidden md:flex">
+        <div className="mr-4 hidden md:flex flex-1">
           <a className="mr-6 flex items-center space-x-2" href="/">
             <img className="w-auto h-20" src="/logo.svg" alt="DongNam" />
           </a>
-          <nav className="flex items-center gap-6 text-sm">
+          <nav className="flex flex-row items-center justify-around text-sm w-full">
             <a
-              className="transition-colors hover:text-foreground/80 text-foreground"
+              className="transition-colors hover:text-foreground/80 text-foreground text-lg"
               href="/home"
             >
               {t("home")}
             </a>
             <Menubar className="border-none bg-transparent">
               <MenubarMenu>
-                <MenubarTrigger className="font-normal">
+                <MenubarTrigger className="font-normal text-lg">
                   {t("about")}
                 </MenubarTrigger>
                 <MenubarContent>
                   <MenubarItem>
                     <a
-                      className="transition-colors hover:text-foreground/80 text-foreground"
+                      className="transition-colors hover:text-foreground/80 text-foreground text-lg"
                       href="/about"
                     >
                       Về Chúng Tôi
@@ -54,7 +54,7 @@ const Navbar = (props: any) => {
                   </MenubarItem>
                   <MenubarItem>
                     <a
-                      className="transition-colors hover:text-foreground/80 text-foreground"
+                      className="transition-colors hover:text-foreground/80 text-foreground text-lg"
                       href="/factory"
                     >
                       Nhà Máy Đông Nam
@@ -62,7 +62,7 @@ const Navbar = (props: any) => {
                   </MenubarItem>
                   <MenubarItem>
                     <a
-                      className="transition-colors hover:text-foreground/80 text-foreground"
+                      className="transition-colors hover:text-foreground/80 text-foreground text-lg"
                       href="/history"
                     >
                       Lịch Sử Hình Thành
@@ -72,31 +72,31 @@ const Navbar = (props: any) => {
               </MenubarMenu>
             </Menubar>
             <a
-              className="transition-colors hover:text-foreground/80 text-foreground"
+              className="transition-colors hover:text-foreground/80 text-foreground text-lg"
               href="/products"
             >
               {t("products")}
             </a>
             <a
-              className="transition-colors hover:text-foreground/80 text-foreground"
+              className="transition-colors hover:text-foreground/80 text-foreground text-lg"
               href="/blog"
             >
               {t("blog")}
             </a>
             <a
-              className="transition-colors hover:text-foreground/80 text-foreground"
+              className="transition-colors hover:text-foreground/80 text-foreground text-lg"
               href="/news"
             >
               {t("news")}
             </a>
             <a
-              className="transition-colors hover:text-foreground/80 text-foreground"
+              className="transition-colors hover:text-foreground/80 text-foreground text-lg"
               href="/career"
             >
               {t("career")}
             </a>
             <a
-              className="transition-colors hover:text-foreground/80 text-foreground"
+              className="transition-colors hover:text-foreground/80 text-foreground text-lg"
               href="/contacts"
             >
               {t("contacts")}
@@ -142,7 +142,7 @@ const Navbar = (props: any) => {
           </svg>
           <span className="sr-only">Toggle Menu</span>
         </button>
-        <div className="flex flex-1 items-center justify-end space-x-2 md:justify-end">
+        <div className="flex ml-auto items-center justify-end space-x-2 md:justify-end">
           <nav className="flex items-center">
             <Menubar>
               <MenubarMenu>
