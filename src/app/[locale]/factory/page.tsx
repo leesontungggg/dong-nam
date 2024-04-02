@@ -17,10 +17,10 @@ export default function About() {
         <div className="absolute top-0 left-0 w-full h-full opacity-100 bg-[url('/image/factory-hero-bg.jpg')] bg-cover bg-repeat bg-cli" />
         <div className="absolute bg-transparent container flex flex-col-reverse gap-20 max-w-screen-xl mx-auto pt-[4em] lg:min-h-screen lg:items-center lg:flex-row left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
           <div className="flex flex-col gap-6 content-center items-center lg:h-100 lg:w-1/2 xl:w-2/5 bg-white rounded-3xl p-8">
-            <h1 className="text-xl md:text-2xl text-[#00A44E] font-bold text-center mx-auto lg:mx-0 load-hidden animate-fade-in">
+            <h1 className="text-xl md:text-3xl text-[#00A44E] font-bold text-center mx-auto lg:mx-0 load-hidden animate-fade-in">
               {locale === "vi" ? <>NHÀ MÁY ĐÔNG NAM</> : <>DONG NAM FACTORY</>}
             </h1>
-            <p className="text-center load-hidden animate-fade-in animate-delay-200 text-slate-950">
+            <p className="text-center load-hidden animate-fade-in animate-delay-200 text-slate-950 text-2xl">
               {locale === "vi" ? (
                 <>
                   Hơn 20 năm sản xuất đa dạng theo nhu cầu khách hàng với cam
@@ -36,7 +36,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="bg-base-200 py-[3em] px-[2em] md:py-[4em] lg:p-[5em] container">
+      <section className="bg-base-200 py-[3em] px-[2em] md:py-[4em] lg:p-[5em] container text-2xl leading-9">
         {locale === "vi" ? (
           <>
             Thành lập từ năm 2001, Nhà máy Dược Phẩm Đông Nam đã trở thành{" "}
@@ -67,12 +67,12 @@ export default function About() {
             className="w-full h-full rounded-lg max-h-80 object-cover"
           />
           <div className="flex flex-col gap-4">
-            <h1 className="text-2xl uppercase font-bold text-[#F18200]">
+            <h1 className="text-3xl uppercase font-bold text-[#F18200]">
               {locale === "vi"
                 ? "Quy mô và cơ sở hạ tầng"
                 : "Scale and Infrastructure"}
             </h1>
-            <p>
+            <p className="text-2xl leading-9">
               {locale === "vi" ? (
                 <>
                   Nhà máy sản xuất dược phẩm Đông Nam đã tuân thủ nghiêm ngặt
@@ -99,10 +99,10 @@ export default function About() {
         </div>
         <div className="container max-w-screen-xl mx-auto grid grid-cols-2 gap-8 mt-32">
           <div className="flex flex-col gap-4">
-            <h1 className="text-2xl uppercase font-bold text-[#00A44E]">
+            <h1 className="text-3xl uppercase font-bold text-[#00A44E]">
               {locale === "vi" ? "Chất lượng sản xuất" : "Product Quality"}
             </h1>
-            <p>
+            <p className="text-2xl leading-9">
               {locale === "vi" ? (
                 <>
                   Chúng tôi chuyên sản xuất các loại sản phẩm dạng{" "}
@@ -153,12 +153,12 @@ export default function About() {
             className="w-full h-full rounded-lg max-h-80 object-cover"
           />
           <div className="flex flex-col gap-4">
-            <h1 className="text-2xl uppercase font-bold text-[#F18200]">
+            <h1 className="text-3xl uppercase font-bold text-[#F18200]">
               {locale === "vi"
                 ? "Hiệu quả vượt trội"
                 : "Superior Effectiveness"}
             </h1>
-            <p>
+            <p className="text-2xl leading-9">
               {locale === "vi" ? (
                 <>
                   Nhờ vào sự đầu tư mạnh mẽ vào nghiên cứu và phát triển, các

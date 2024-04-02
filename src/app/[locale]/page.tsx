@@ -62,7 +62,7 @@ export default function Root() {
             <h1 className="text-3xl uppercase font-bold text-[#F18200]">
               {t("mission.title")}
             </h1>
-            <p className="text-2xl leading-10">
+            <p className="text-xl leading-10">
               {locale === "vi" ? (
                 <>
                   Với sứ mệnh{" "}

@@ -14,6 +14,10 @@ const Footer = () => {
             : "Dong Nam Pharmaceutical Trading and Production Joint Stock Company"}
         </p>
         <p className="text-white text-center mt-4 text-lg">
+          <img
+            src="/image/footer-1.png"
+            className="w-10 h-10 inline-block mr-2"
+          />
           {locale === "vi" ? (
             <>
               <strong>Trụ sở:</strong> Lô 2A Đường 1A, KCN Tân Tạo, Q.Bình Tân,
@@ -27,6 +31,10 @@ const Footer = () => {
           )}
         </p>
         <p className="text-white text-center text-lg">
+          <img
+            src="/image/footer-2.png"
+            className="w-10 h-10 inline-block mr-2"
+          />
           {locale === "vi" ? (
             <>
               <strong>Liên hệ:</strong> (+84 283) 7541 748 - (+84 283) 7541 749
@@ -38,6 +46,10 @@ const Footer = () => {
           )}
         </p>
         <p className="text-white text-center text-lg">
+          <img
+            src="/image/footer-3.png"
+            className="w-10 h-10 inline-block mr-2"
+          />
           <strong>Email:</strong> kinhdoanh@dongnampharma.vn
         </p>
       </aside>
@@ -46,7 +58,7 @@ const Footer = () => {
         <img
           src="/image/bocongthuong.png"
           alt="DongNam"
-          className="w-auto h-32"
+          className="w-auto h-40"
         />
       </div>
     </footer>
