@@ -2,14 +2,18 @@
 
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "next-intl/client";
-import { useTransition } from "react";
+import { useContext, useTransition } from "react";
+import { Context } from "@/services/context";
 
 export default function Root() {
   const t = useTranslations("hero");
+  const data = useContext(Context);
   const router = useRouter();
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
   const locale = useLocale();
+
+  console.log(data);
 
   const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const lang = e.target.value;
@@ -18,7 +22,6 @@ export default function Root() {
     });
   };
 
-  console.log("locale", locale);
   return (
     <main className="!font-sans">
       <section className="relative bg-white min-h-screen ">
@@ -211,64 +214,31 @@ export default function Root() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-3 gap-8 mt-8 md:mt-10 md:gap-5">
-            {/* <div className="group bg-white rounded-md overflow-hidden cursor-pointer hover:drop-shadow-sm load-hidden animate-slide-up animate-delay-200">
-              <img
-                className="object-cover w-full h-[250px] transition-transform duration-600 group-hover:scale-105"
-                src="https://d2jx2rerrg6sh3.cloudfront.net/images/Article_Images/ImageForArticle_23751_16831178817174714.jpg"
-                alt="Article thumbnail"
-              />
-              <div className="flex flex-col gap-3 p-5 md:px-5 md:py-7">
-                <span className="text-xs text-slate-950">By TUNG SON LE</span>
-                <h3 className="text-lg leading-6 group-hover:text-secondary text-slate-950">
-                  {t("article.article1.title")}
-                </h3>
-                <p className="text-slate-600">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.
-                </p>
-              </div>
-            </div>
-
-            <div className="group bg-white rounded-md overflow-hidden cursor-pointer hover:drop-shadow-sm load-hidden animate-slide-up animate-delay-300">
-              <img
-                className="object-cover w-full h-[250px] transition-transform duration-600 group-hover:scale-105"
-                src="https://d2jx2rerrg6sh3.cloudfront.net/images/Article_Images/ImageForArticle_23751_16831178817174714.jpg"
-                alt="Article thumbnail"
-              />
-              <div className="flex flex-col gap-3 p-5 md:px-5 md:py-7">
-                <span className="text-xs text-slate-950">By Tung Son Le</span>
-                <h3 className="text-lg leading-6 group-hover:text-secondary text-slate-950">
-                  {t("article.article2.title")}
-                </h3>
-                <p className="text-slate-600">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                </p>
-              </div>
-            </div>
-
-            <div className="group bg-white rounded-md overflow-hidden cursor-pointer hover:drop-shadow-sm load-hidden animate-slide-up animate-delay-400">
-              <img
-                className="object-cover w-full h-[250px] transition-transform duration-600 group-hover:scale-105"
-                src="https://d2jx2rerrg6sh3.cloudfront.net/images/Article_Images/ImageForArticle_23751_16831178817174714.jpg"
-                alt="Article thumbnail"
-              />
-              <div className="flex flex-col gap-3 p-5 md:px-5 md:py-7">
-                <span className="text-xs text-slate-950">By TUNG SON LE</span>
-                <h3 className="text-lg leading-6 group-hover:text-secondary text-slate-950">
-                  {t("article.article3.title")}
-                </h3>
-                <p className="text-slate-600">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                </p>
-              </div>
-            </div> */}
+          <div className="mt-2 md:mt-4 grid grid-cols-3 gap-4">
+            {data.blogs
+              .filter((blog: any) => blog.type === "news")
+              .map((blog: any) => (
+                <div
+                  className="flex flex-col items-center gap-5 w-full load-hidden animate-slide-up border-[1px] border-black border-solid rounded-t-lg animate-delay-200 cursor-pointer"
+                  onClick={() => router.push(`/news/${blog.id}`)}
+                >
+                  <img
+                    className="aspect-square object-cover w-full h-[250px] rounded-lg"
+                    src={`https://dongnam.up.railway.app/assets/${blog.thumbnail}`}
+                    alt="Online Banking"
+                  />
+                  <h3
+                    className="text-center lg:text-left text-black font-semibold px-4 capitalize text-2xl"
+                    dangerouslySetInnerHTML={{
+                      __html: blog.title,
+                    }}
+                  ></h3>
+                  <p className="text-center lg:text-left text-slate-950 p-4 text-xl">
+                    {blog.description}
+                  </p>
+                  <p className="mt-auto mb-4 font-bold text-xl">Xem thêm</p>
+                </div>
+              ))}
           </div>
         </div>
       </section>
@@ -281,7 +251,32 @@ export default function Root() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-3 gap-8 mt-8 md:mt-10 md:gap-5"></div>
+          <div className="mt-2 md:mt-4 grid grid-cols-3 gap-4">
+            {data.blogs
+              .filter((blog: any) => blog.type === "blog")
+              .map((blog: any) => (
+                <div
+                  className="flex flex-col items-center gap-5 w-full load-hidden animate-slide-up border-[1px] border-black border-solid rounded-t-lg animate-delay-200 cursor-pointer"
+                  onClick={() => router.push(`/blog/${blog.id}`)}
+                >
+                  <img
+                    className="aspect-square object-cover w-full h-[250px] rounded-lg"
+                    src={`https://dongnam.up.railway.app/assets/${blog.thumbnail}`}
+                    alt="Online Banking"
+                  />
+                  <h3
+                    className="text-center lg:text-left text-black font-semibold px-4 capitalize text-2xl"
+                    dangerouslySetInnerHTML={{
+                      __html: blog.title,
+                    }}
+                  ></h3>
+                  <p className="text-center lg:text-left text-slate-950 p-4 text-xl">
+                    {blog.description}
+                  </p>
+                  <p className="mt-auto mb-4 font-bold text-xl">Xem thêm</p>
+                </div>
+              ))}
+          </div>
         </div>
       </section>
     </main>

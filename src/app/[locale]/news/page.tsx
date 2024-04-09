@@ -42,7 +42,7 @@ export default function Root() {
       <div className="p-4 pb-10">
         <div className="grid grid-cols-2 gap-8">
           {data?.blogs
-            ?.filter((blog: any) => blog.type === "blog")
+            ?.filter((blog: any) => blog.type === "news")
             .map((blog: any) => (
               <div className="py-6 flex flex-col md:flex-row-reverse gap-6 md:gap-10 items-center justify-between">
                 <a href={`/blog/${blog.id}`} className="shrink-0 ">
