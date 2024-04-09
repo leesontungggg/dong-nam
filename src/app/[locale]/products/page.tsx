@@ -90,6 +90,7 @@ export default function Root() {
               <input
                 className="w-full rounded-2xl border-2 p-2 border-black"
                 placeholder="Nhập tên thuốc"
+                // @ts-ignore
                 onChange={(e) => setSearchText(event?.target.value)}
               />
               <div className="flex flex-col gap-2">
