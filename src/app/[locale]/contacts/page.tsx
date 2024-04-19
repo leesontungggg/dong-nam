@@ -22,14 +22,14 @@ export default function Root() {
   };
 
   return (
-    <div className="w-full h-fit bg-white flex flex-col justify-center items-center">
+    <div className="w-full h-fit bg-white flex flex-col justify-center items-center ">
       <div className="  place-items-center mx-auto">
         <div className="mt-8 h-fit px-4 justify-center w-full  flex flex-col">
           <div className="flex flex-col">
-            <div className=" mx-auto  w-fit pb-8">
-              <div className="text-2xl pb-6  ">{t("description1")}</div>
-              <div className="text-2xl pb-6">{t("description2")}</div>
-              <h2 className="flex flex-col text-xl p-10 border border-black rounded-full w-fit mx-auto text-left ">
+            <div className=" mx-auto  w-fit pb-8 ">
+              <div className="text-[22.6px] pb-6  ">{t("description1")}</div>
+              <div className="text-[22.6px] pb-6">{t("description2")}</div>
+              <h2 className="flex flex-col text-xl p-10 border border-black rounded-full w-fit mx-auto text-left text-[20px] ">
                 <div className="font-bold pb-4">{t("contact.title")}</div>
                 <div className=" flex-wrap w-[420px]">
                   {t("contact.description")}
@@ -38,7 +38,7 @@ export default function Root() {
             </div>
             <div className="flex sm:flex-row flex-col w-full pb-6">
               <div className="flex flex-col sm:w-1/2 w-full sm:pr-8 pr-0  h-max sm:mb-0 mb-3 ">
-                <h1 className="text-2xl sm:px-0 px-4 text-left block">
+                <h1 className=" text-[22.6px] sm:px-0 px-4 text-left block">
                   {t("description3")}
                 </h1>
 

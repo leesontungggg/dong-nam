@@ -11,6 +11,10 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+    fontFamily: {
+      montserrat: ["montserrat", "sans-serif"],
+      MyFont: ['"MyFont"', "serif"],
+    },
     container: {
       center: true,
       padding: "2rem",
