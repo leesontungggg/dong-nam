@@ -42,11 +42,6 @@ export default function Root() {
                   {t("description3")}
                 </h1>
 
-                {/* <TextInput
-                  onChange={(e: any) => console.log(e.target.value)}
-                  placeholder="Write your questions"
-                  className="mt-4  h-[100px] placeholder:pl-2 placeholder:-translate-y-8 placeholder:pb-4 "
-                /> */}
                 <TextArea
                   onChange={(e: any) => console.log(e.target.value)}
                   placeholder="Write your questions"
