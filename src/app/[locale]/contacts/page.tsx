@@ -72,7 +72,7 @@ export default function Root() {
                   className="mt-4 sm:mt-0 content-center w-full  flex flex-col"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15680.19674298908!2d106.58854878075915!3d10.730689913367156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752eeffb47f6e9%3A0xdfb0b5cf3bb6ab62!2sCorporation%20Production%20Trading%20Pharmaceutical%20Southeast!5e0!3m2!1sen!2s!4v1704289046654!5m2!1sen!2s"
                   width="680"
-                  height="360"
+                  height="390"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
