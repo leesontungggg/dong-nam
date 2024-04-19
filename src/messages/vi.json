@@ -103,6 +103,12 @@
       }
     }
   },
+  "news": {
+    "title1": "Tin tức - Sự kiện",
+    "title2": "Phát triển bền vững",
+    "title3": "Phát triển công việc",
+    "navigate": "Xem chi tiết"
+  },
   "contacts": {
     "description1": "Cảm ơn bạn đã quan tâm đến Công ty Dược phẩm Đông Nam.",
     "description2": "Hãy để chúng tôi được đồng hành cùng bạn trên hành trình chăm sóc sức khỏe cộng đồng.",

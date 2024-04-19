@@ -6,9 +6,9 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/ui/pagination";
+} from "@/components/ui/paginationEng";
 
-export function PaginationDemo({ className }: any) {
+export function PaginationEng({ className }: any) {
   return (
     <Pagination className={`${className}`}>
       <PaginationContent>

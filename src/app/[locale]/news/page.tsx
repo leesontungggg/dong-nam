@@ -1,20 +1,28 @@
 "use client";
 import { SlArrowRight } from "react-icons/sl";
-import { PaginationDemo } from "@/components/pagination1";
 import Skeleton from "@/components/skeleton";
 import { Context } from "@/services/context";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "next-intl/client";
 import { useContext, useState, useTransition } from "react";
+import { PaginationEng } from "@/components/paginationEng";
+import { PaginationVie } from "@/components/paginationVie";
 
 export default function Root() {
   const data = useContext(Context);
-  const t = useTranslations("Index");
+  const t = useTranslations("news");
   const router = useRouter();
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
   const locale = useLocale();
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const lang = e.target.value;
+    startTransition(() => {
+      router.replace(pathname, { locale: lang });
+    });
+  };
 
   if (data?.blogs?.length === 0) {
     return (
@@ -58,7 +66,7 @@ export default function Root() {
                 currentIndex === 0 && "text-green-400"
               } cursor-pointer border border-black rounded-full mr-4 px-10 py-8 `}
             >
-              News - Events
+              {t("title1")}
             </div>
             <div
               onClick={() => {
@@ -68,7 +76,7 @@ export default function Root() {
                 currentIndex === 1 && "text-green-400"
               } cursor-pointer border border-black rounded-full mr-4 px-10 py-8 `}
             >
-              Sustainable Development
+              {t("title2")}
             </div>
             <div
               onClick={() => {
@@ -78,7 +86,7 @@ export default function Root() {
                 currentIndex === 2 && "text-green-400"
               } cursor-pointer border border-black rounded-full mr-4 px-10 py-8 `}
             >
-              Working Development
+              {t("title3")}
             </div>
           </div>
           <div className="grid grid-cols-1 gap-8 pb-6">
@@ -108,13 +116,17 @@ export default function Root() {
                       className="flex items-center font-bold pt-8 text-[16px]"
                     >
                       <SlArrowRight className="pr-2" size="25" />
-                      Read the article
+                      {t("navigate")}
                     </a>
                   </div>
                 </div>
               ))}
           </div>
-          <PaginationDemo className="pb-6" />
+          {locale === "vi" ? (
+            <PaginationEng className="pb-6" />
+          ) : (
+            <PaginationVie className="pb-6" />
+          )}
         </div>
       </div>
     </div>
