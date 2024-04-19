@@ -104,7 +104,12 @@
     }
   },
   "contacts": {
-    "title": "Liên hệ chúng tôi",
-    "description": "Hãy để lại thông tin, chúng tôi sẽ liên hệ bạn"
+    "description1": "Cảm ơn bạn đã quan tâm đến Công ty Dược phẩm Đông Nam.",
+    "description2": "Hãy để chúng tôi được đồng hành cùng bạn trên hành trình chăm sóc sức khỏe cộng đồng.",
+    "contact": {
+      "title": "Liên hệ với chúng tôi để được tư vấn và hỗ trợ miễn phí:",
+      "description": "(+84 283) 7541 748 - (+84 283) 754 1749 Thứ 2 - Thứ 6 từ 7:30 đến 16:30 kinhdoanh@dongnampharma.vn"
+    },
+    "description3": "Hoặc hãy để lại thông tin, chúng tôi sẽ liên hệ bạn."
   }
 }

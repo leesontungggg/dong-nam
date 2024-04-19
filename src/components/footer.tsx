@@ -54,7 +54,17 @@ const Footer = () => {
         </p>
       </aside>
       <div className="absolute bottom-0 right-12 flex flex-row items-center">
-        <img src="/image/facebook.png" alt="DongNam" className="w-16 h-16" />
+        <a
+          href="https://web.facebook.com/dongnampharmaceutical"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/image/facebook.png"
+            alt="Facebook-DongNam"
+            className="w-16 h-16"
+          />
+        </a>
         <img
           src="/image/bocongthuong.png"
           alt="DongNam"

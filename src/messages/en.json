@@ -100,7 +100,12 @@
     }
   },
   "contacts": {
-    "title": "Contact Us",
-    "description": "Please leave your info, we will contact you later"
+    "description1": "Thank you for your interest in Dong Nam Pharmaceuticals.",
+    "description2": "Let us accompany you on the journey of community healthcare.",
+    "contact": {
+      "title": "Contact us for free consultation and support:",
+      "description": "(+84 283) 7541 748 - (+84 283) 754 1749 Monday - Friday 7.30 AM - 4.30 PM kinhdoanh@dongnampharma.vn"
+    },
+    "description3": "Or leave your information, and we will contact you."
   }
 }

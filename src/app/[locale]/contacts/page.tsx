@@ -23,39 +23,70 @@ export default function Root() {
 
   return (
     <div className="w-full h-fit bg-white flex flex-col justify-center items-center">
-      <div className="container grid grid-cols-1 md:grid-cols-2 place-items-center mx-auto">
-        <div className="mt-16 h-fit px-4 justify-center w-full  flex flex-col">
-          <h1 className="text-black text-4xl font-bold md:px-0 px-4 text-left block">
-            {t("title")}
-          </h1>
-          <div className="w-full md:px-0 px-4">
-            <p className="text-black mt-12">{t("description")}</p>
+      <div className="  place-items-center mx-auto">
+        <div className="mt-8 h-fit px-4 justify-center w-full  flex flex-col">
+          <div className="flex flex-col">
+            <div className=" mx-auto  w-fit pb-8">
+              <div className="text-2xl pb-6  ">{t("description1")}</div>
+              <div className="text-2xl pb-6">{t("description2")}</div>
+              <h2 className="flex flex-col text-xl p-10 border border-black rounded-full w-fit mx-auto text-left ">
+                <div className="font-bold pb-4">{t("contact.title")}</div>
+                <div className=" flex-wrap w-[420px]">
+                  {t("contact.description")}
+                </div>
+              </h2>
+            </div>
+            <div className="flex sm:flex-row flex-col w-full pb-6">
+              <div className="flex flex-col sm:w-1/2 w-full sm:pr-8 pr-0  h-max sm:mb-0 mb-3 ">
+                <h1 className="text-2xl sm:px-0 px-4 text-left block">
+                  {t("description3")}
+                </h1>
+
+                {/* <TextInput
+                  onChange={(e: any) => console.log(e.target.value)}
+                  placeholder="Write your questions"
+                  className="mt-4  h-[100px] placeholder:pl-2 placeholder:-translate-y-8 placeholder:pb-4 "
+                /> */}
+                <TextArea
+                  onChange={(e: any) => console.log(e.target.value)}
+                  placeholder="Write your questions"
+                  className="mt-4 p-2  text-base h-[100px] resize-none border border-black"
+                />
+                <TextInput
+                  onChange={(e: any) => console.log(e.target.value)}
+                  className="mt-8 border-b pl-2 border-black"
+                  placeholder="Name"
+                />
+                <TextInput
+                  onChange={(e: any) => console.log(e.target.value)}
+                  className="mt-4 border-b pl-2 border-black"
+                  placeholder="Phone number"
+                />
+                <TextInput
+                  onChange={(e: any) => console.log(e.target.value)}
+                  className="mt-4 border-b pl-2 border-black"
+                  placeholder="Email"
+                />
+                <Button
+                  className="text-white font-bold px-4  rounded-lg bg-blue-500 mt-8"
+                  text="Submit"
+                />
+              </div>
+              <div className=" sm:w-1/2 w-full">
+                <iframe
+                  className="mt-4 sm:mt-0 content-center w-full  flex flex-col"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15680.19674298908!2d106.58854878075915!3d10.730689913367156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752eeffb47f6e9%3A0xdfb0b5cf3bb6ab62!2sCorporation%20Production%20Trading%20Pharmaceutical%20Southeast!5e0!3m2!1sen!2s!4v1704289046654!5m2!1sen!2s"
+                  width="680"
+                  height="360"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
           </div>
-          <TextInput
-            onChange={(e: any) => console.log(e.target.value)}
-            placeholder="Email"
-            className="mt-4 py-4 w-full"
-          />
-          <TextArea
-            onChange={(e: any) => console.log(e.target.value)}
-            placeholder="More thoughts"
-            className="mt-3 px-4 py-4 text-base"
-          />
-          <Button
-            className="text-white font-bold px-4 py-2 rounded-lg bg-blue-500 mt-4"
-            text="Submit"
-          />
         </div>
-        <iframe
-          className="mt-4 md:mt-0 content-center w-full flex flex-col"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15680.19674298908!2d106.58854878075915!3d10.730689913367156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752eeffb47f6e9%3A0xdfb0b5cf3bb6ab62!2sCorporation%20Production%20Trading%20Pharmaceutical%20Southeast!5e0!3m2!1sen!2s!4v1704289046654!5m2!1sen!2s"
-          width="680"
-          height="450"
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
       </div>
     </div>
   );
