@@ -122,7 +122,7 @@ export default function Root() {
                 </div>
               ))}
           </div>
-          {locale === "vi" ? (
+          {locale === "en" ? (
             <PaginationEng className="pb-6" />
           ) : (
             <PaginationVie className="pb-6" />
