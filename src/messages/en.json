@@ -99,6 +99,19 @@
       }
     }
   },
+  "blog": {
+    "title1": "Immune System",
+    "title2": "Digestion - Liver & Bite",
+    "title3": "Bones and Joints",
+    "title4": "Skin Disease & Skin Care",
+    "title5": "Heart Disease",
+    "title6": "Ear - Nose - Throat",
+    "title7": "Cancer",
+    "title8": "Nervous System",
+    "title9": "Respiratory Disease",
+    "title10": "Other",
+    "navigate": "Read the article"
+  },
   "news": {
     "title1": "News - Events",
     "title2": "Sustainable Development",

@@ -103,6 +103,19 @@
       }
     }
   },
+  "blog": {
+    "title1": "Hệ Miễn Dịch",
+    "title2": "Tiêu Hoá - Gan Mật",
+    "title3": "Cơ Xương Khớp",
+    "title4": "Bệnh Da & Chăm Sóc Da",
+    "title5": "Bệnh Tim Mạch",
+    "title6": "Tai - Mũi - Họng",
+    "title7": "Bệnh Ung Bướu",
+    "title8": "Bệnh Thần Kinh",
+    "title9": "Bệnh Hô Hấp",
+    "title10": "Khác",
+    "navigate": "Đọc bài viết"
+  },
   "news": {
     "title1": "Tin Tức - Sự Kiện Đông Nam",
     "title2": "Trách Nhiệm Xã Hội",

@@ -51,7 +51,6 @@ export default function Root() {
         alt="DongNam"
         className="w-[1500px] h-[700px] mx-auto"
       />
-
       <div
         className="container mx-auto w-full mt-8 bg-white text-black 
        flex flex-col justify-center items-center"
