@@ -30,15 +30,18 @@
       "title": "Why choose Dong Nam?",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
       "reason1": {
-        "title": "Quality Products <br /> Competitive Prices",
+        "title1": "Quality Products",
+        "title2": "Competitive Prices",
         "description": "Committed to providing high-quality products at competitive prices, rigorously tested according to the standards of the Vietnam Ministry of Health and GMP-WHO."
       },
       "reason2": {
-        "title": "Fast Production <br /> Consistent Quality",
+        "title1": "Fast Production",
+        "title2": "Consistent Quality",
         "description": "With top-notch manufacturing management capabilities and advanced technology, we ensure all products are manufactured with the highest level of accuracy in the shortest time."
       },
       "reason3": {
-        "title": "Diverse Portfolio<br/>Exclusive Manufacturing",
+        "title1": "Diverse Portfolio",
+        "title2": "Exclusive Manufacturing",
         "description": "We currently have 70 registrations with a wide range of products, including medical treatments, over-the-counter medicines and more. Furthermore, we have leading equipment and experts to assist you in developing and manufacturing your own products."
       }
     },

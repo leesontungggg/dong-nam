@@ -30,15 +30,18 @@
       "title": "VÌ SAO CÔNG TY DƯỢC ĐÔNG NAM ĐƯỢC NHIỀU ĐỐI TÁC LỚN TIN TƯỞNG?",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
       "reason1": {
-        "title": "Sản Phẩm Chất Lượng<br /> Giá Cả Cạnh Tranh",
+        "title1": "Sản Phẩm Chất Lượng",
+        "title2": "Giá Cả Cạnh Tranh",
         "description": "Cam kết cung cấp các sản phẩm dược phẩm chất lượng với giá thành cạnh tranh, được kiểm nghiệm nghiêm ngặt theo tiêu chuẩn của Bộ Y Tế và tiêu chuẩn quốc tế GMP-WHO."
       },
       "reason2": {
-        "title": "Sản xuất nhanh chóng<br /> chất lượng đồng bộ",
+        "title1": "Sản xuất nhanh chóng",
+        "title2": "chất lượng đồng bộ",
         "description": "Với khả năng quản trị sản xuất hàng đầu và công nghệ tiên tiến, chúng tôi đảm bảo mọi sản phẩm đều được sản xuất với độ chính xác cao nhất trong thời gian nhanh nhất"
       },
       "reason3": {
-        "title": "Đa dạng danh mục <br /> sản xuất độc quyền",
+        "title1": "Đa dạng danh mục",
+        "title2": "sản xuất độc quyền",
         "description": "Với đội ngũ chuyên gia đầu ngành và thiết bị hiện đại, chúng tôi có thể hỗ trợ bạn trong việc phát triển và sản xuất các sản phẩm độc quyền, đáp ứng mọi nhu cầu y tế của Quý đối tác"
       },
       "reason4": {
