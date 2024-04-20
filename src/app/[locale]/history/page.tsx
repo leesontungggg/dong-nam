@@ -16,7 +16,7 @@ export default function About() {
       <section className="relative bg-white h-fit w-full">
         <img
           src="/image/history-hero-bg.jpg"
-          className="w-full h-auto rounded-lg"
+          className="w-full h-max rounded-lg max-h-screen "
         />
       </section>
       <section className="bg-base-200 py-[3em] px-[2em] md:py-[4em] lg:p-[5em] flex flex-col items-center">

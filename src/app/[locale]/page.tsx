@@ -4,6 +4,8 @@ import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "next-intl/client";
 import { useContext, useTransition } from "react";
 import { Context } from "@/services/context";
+import { ImArrowRight2 } from "react-icons/im";
+import { SlArrowRight } from "react-icons/sl";
 
 export default function Root() {
   const t = useTranslations("hero");
@@ -24,14 +26,21 @@ export default function Root() {
 
   return (
     <main className="!font-sans">
-      <section className="relative bg-white min-h-screen ">
-        <div className="absolute top-0 left-0 w-full h-full opacity-100 bg-[url('/image/hero-bg.jpg')] bg-cover bg-repeat" />
-        <div className="absolute bg-transparent container flex flex-col-reverse gap-20 max-w-screen-xl mx-auto pt-[4em] lg:min-h-screen lg:items-center lg:flex-row left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
-          <div className="flex flex-col gap-6 content-center items-center lg:w-1/2 bg-white rounded-3xl p-8">
-            <h1 className="text-3xl text-[#00A44E] font-bold text-center mx-auto lg:mx-0 load-hidden animate-fade-in">
+      <section className="relative bg-white  min-h-screen">
+        <div
+          className="absolute   top-[-100px] left-0 w-full h-full opacity-100 bg-[url('/image/hero-bg.jpg')] bg-cover bg-repeat "
+          style={{ minHeight: "-webkit-fill-available" }}
+        />
+        <div className="absolute bg-transparent container flex flex-col-reverse gap-20 max-w-screen-xl mx-auto pt-[4em] lg:min-h-screen lg:items-center lg:flex-row left-1/2 -translate-x-[800px] top-[610px] -translate-y-1/2">
+          <div className=" flex flex-col gap-6   lg:h-100 lg:w-1/2 xl:w-2/5 bg-white rounded-[60px] px-8  min-w-[700px]  justify-center   min-h-[350px] max-h-[300px]">
+            <h1 className="text-[37.4px] pt-6 leading-[33px]  text-[#00A44E] font-bold text-center  mx-auto load-hidden animate-fade-in uppercase  w-fit min-w-max  ">
               {t("title")}
             </h1>
-            <p className="text-center load-hidden animate-fade-in animate-delay-200 text-slate-950 text-2xl leading-10">
+            <p
+              className="text-justify load-hidden animate-fade-in animate-delay-200 text-slate-950 text-[22.6px] leading-[30px] pb-6"
+              // dangerouslySetInnerHTML={{ __html: t("description") }}
+            >
+              {/* {t("description")} */}
               {locale === "vi" ? (
                 <>
                   Với hơn 20 năm cung cấp dược phẩm đạt tiêu chuẩn quốc tế
@@ -58,14 +67,14 @@ export default function Root() {
           </div>
         </div>
       </section>
-      <section className="bg-base-200 py-[3em] px-[2em] md:py-[4em] lg:p-[5em]">
+      <section className="bg-base-200 pt-[3em] px-[2em] md:pt-[4em] lg:pt-[5em] lg:px-[5em]">
         <div className="container max-w-screen-xl mx-auto grid grid-cols-2 gap-8">
           <img src="/image/sumenh.jpg" className="w-full" />
           <div className="flex flex-col gap-4">
-            <h1 className="text-3xl uppercase font-bold text-[#F18200]">
+            <h1 className="text-[38px] uppercase font-bold text-[#F18200] ">
               {t("mission.title")}
             </h1>
-            <p className="text-xl leading-10">
+            <p className="text-[22.6px] pt-4">
               {locale === "vi" ? (
                 <>
                   Với sứ mệnh{" "}
@@ -108,56 +117,96 @@ export default function Root() {
         </div>
       </section>
 
-      <section className="bg-base-200 py-[3em] px-[2em] md:py-[4em] lg:p-[5em]">
-        <div className="container max-w-screen-xl mx-auto">
-          <div className="max-w-screen-sm load-hidden animate-fade-in animate-delay-200">
-            <h2 className="w-80 mx-auto mb-4 text-2xl text-center text-[#00A44E] md:w-full md:text-3xl lg:text-left lg:ml-0 font-bold">
+      <section className="bg-base-200 pt-[3em] px-[2em] md:pt-[4em] lg:pt-[4em] lg:px-[5em]">
+        <div className="container max-w-screen-xl mx-auto ">
+          <div className=" load-hidden animate-fade-in animate-delay-200 max-w-[800px] w-max ">
+            <h2 className="w-80 mx-auto mb-[40px] text-2xl text-center text-[#00A44E] md:w-full md:text-[38px] leading-10 max-h-fit min-w-max  lg:text-left lg:ml-0 font-bold uppercase  ">
               {t("reason.title")}
             </h2>
           </div>
 
           <div className="mt-2 md:mt-4 grid grid-cols-3 gap-4">
-            <div className="flex flex-col items-center gap-5 w-full load-hidden animate-slide-up border-[1px] border-black border-solid rounded-t-lg animate-delay-200">
+            <div className="flex flex-col items-center  w-full load-hidden animate-slide-up border-[1px] border-black border-solid rounded-t-lg animate-delay-200">
               <img
-                className="aspect-square object-cover w-full h-[250px] rounded-lg"
+                className="aspect-square object-cover w-full h-[250px] rounded-lg "
                 src="/image/reason-1.jpg"
                 alt="Online Banking"
               />
-              <h3
-                className="text-center lg:text-left text-black font-semibold px-4 capitalize text-2xl"
-                dangerouslySetInnerHTML={{ __html: t("reason.reason1.title") }}
-              ></h3>
-              <p className="text-center lg:text-left text-slate-950 p-4 text-xl">
+              <div className="flex flex-col">
+                <h3
+                  className={`text-[24.6px] text-left pt-4 ${
+                    locale === "en" ? "pr-16" : "pr-8"
+                  } text-black font-semibold capitalize`}
+                  dangerouslySetInnerHTML={{
+                    __html: t("reason.reason1.title1"),
+                  }}
+                ></h3>
+                <h3
+                  className="text-[24.6px] text-right  text-black font-semibold  capitalize"
+                  dangerouslySetInnerHTML={{
+                    __html: t("reason.reason1.title2"),
+                  }}
+                ></h3>
+              </div>
+              <p className="text-center text-[22.6px] lg:text-left text-slate-950 p-4 leading-[36px]">
                 {t("reason.reason1.description")}
               </p>
             </div>
 
-            <div className="flex flex-col items-center gap-5 w-full load-hidden animate-slide-up border-[1px] border-black border-solid rounded-t-lg animate-delay-200">
+            <div className="flex flex-col items-center  w-full load-hidden animate-slide-up border-[1px] border-black border-solid rounded-t-lg animate-delay-200">
               <img
                 className="aspect-square object-cover w-full h-[250px] rounded-lg"
                 src="/image/reason-2.jpg"
                 alt="Simple Budgeting"
               />
-              <h3
-                className="text-2xl text-center lg:text-left text-black font-semibold px-4 capitalize"
-                dangerouslySetInnerHTML={{ __html: t("reason.reason2.title") }}
-              ></h3>
-              <p className="text-center lg:text-left text-slate-950 p-4 text-xl">
+              <div className="flex flex-col">
+                <h3
+                  className={`text-[24.6px] text-left pt-4 ${
+                    locale === "en" ? "pr-16" : "pr-8"
+                  }
+                   text-black font-semibold capitalize`}
+                  dangerouslySetInnerHTML={{
+                    __html: t("reason.reason2.title1"),
+                  }}
+                ></h3>
+                <h3
+                  className="text-[24.6px] text-right  text-black font-semibold  capitalize"
+                  dangerouslySetInnerHTML={{
+                    __html: t("reason.reason2.title2"),
+                  }}
+                ></h3>
+              </div>
+              <p className="text-center text-[22.6px] lg:text-left text-slate-950 p-4 leading-[36px]">
                 {t("reason.reason2.description")}
               </p>
             </div>
 
-            <div className="flex flex-col items-center gap-5 w-full load-hidden animate-slide-up border-[1px] border-black border-solid rounded-t-lg animate-delay-300">
+            <div className="flex flex-col items-center  w-full load-hidden animate-slide-up border-[1px] border-black border-solid rounded-t-lg animate-delay-200">
               <img
                 className="aspect-square object-cover w-full h-[250px] rounded-lg"
                 src="/image/reason-3.jpg"
                 alt="Fast Onboarding"
               />
-              <h3
-                className="text-2xl text-center lg:text-left text-black font-semibold px-4 capitalize"
-                dangerouslySetInnerHTML={{ __html: t("reason.reason3.title") }}
-              ></h3>
-              <p className="text-center lg:text-left text-slate-950 p-4 text-xl">
+              <div className="flex flex-col">
+                <h3
+                  className={`text-[24.6px] text-left pt-4 ${
+                    locale === "en" ? "" : ""
+                  } pr-16 
+                   text-black font-semibold capitalize`}
+                  dangerouslySetInnerHTML={{
+                    __html: t("reason.reason3.title1"),
+                  }}
+                ></h3>
+                <h3
+                  className={`text-[24.6px] text-right  text-black font-semibold ${
+                    locale === "en" ? "pl-6" : ""
+                  } capitalize`}
+                  dangerouslySetInnerHTML={{
+                    __html: t("reason.reason3.title2"),
+                  }}
+                ></h3>
+              </div>
+              <p className="text-center text-[22.6px] lg:text-left text-slate-950 p-4 leading-[36px]">
                 {t("reason.reason3.description")}
               </p>
             </div>
@@ -165,40 +214,48 @@ export default function Root() {
         </div>
       </section>
 
-      <section className="bg-base-200 py-[3em] px-[2em] md:py-[4em] lg:p-[5em]">
+      <section className="bg-base-200 pt-[3em] px-[2em] md:pt-[4em] lg:pt-[3em] lg:px-[5em]">
         <div className="container max-w-screen-xl mx-auto w-full">
-          <div className="max-w-screen-sm load-hidden animate-fade-in animate-delay-200 w-full">
-            <h2 className="w-80 mx-auto uppercase mb-4 text-2xl text-center text-[#F18200] md:w-full md:text-3xl lg:text-left lg:ml-0 font-bold">
+          <div className=" load-hidden animate-fade-in animate-delay-200 max-w-[800px] w-max ">
+            <h2 className="w-80 mx-auto uppercase mb-4 text-2xl text-center text-[#F18200] md:w-full md:text-[38px] leading-[40px] lg:text-left lg:ml-0 font-bold">
               {t("highlight.title")}
             </h2>
           </div>
           <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
-            <div className="rounded-[64px] border-[1px] border-gray-400 p-4 w-full flex flex-col justify-center items-center">
-              <h6 className="text-3xl font-bold text-center">{">"}20</h6>
-              <p className="text-center text-xl">
+            <div className="rounded-[64px] border-[1px] border-gray-400 py-2 px-8  w-full flex-col justify-center items-center ">
+              <h6 className="text-[41.6px] leading-[45px] font-bold text-center">
+                {">"}20
+              </h6>
+              <p className="text-center text-[22.6px] leading-[32px]">
                 {locale === "vi"
                   ? "năm phát triển tại Việt Nam"
                   : "years of development in Vietnam"}
               </p>
             </div>
 
-            <div className="rounded-[64px] border-[1px] border-gray-400 p-4 w-full flex flex-col justify-center items-center">
-              <h6 className="text-3xl font-bold text-center">{">"}70</h6>
-              <p className="text-center text-xl">
+            <div className="rounded-[64px] border-[1px] border-gray-400 py-4 px-8 w-full flex-col justify-center items-center">
+              <h6 className="text-[41.6px] leading-[45px] font-bold text-center">
+                {">"}70
+              </h6>
+              <p className="text-center text-[22.6px] leading-[32px]">
                 {locale === "vi" ? "sản phẩm" : "products"}
               </p>
             </div>
 
-            <div className="rounded-[64px] border-[1px] border-gray-400 p-4 w-full flex flex-col justify-center items-center">
-              <h6 className="text-3xl font-bold text-center">{">"}13,000</h6>
-              <p className="text-center text-xl">
+            <div className="rounded-[64px] border-[1px] border-gray-400 p-4 w-full flex-col justify-center items-center">
+              <h6 className="text-[41.6px] leading-[45px] font-bold text-center">
+                {">"}13,000
+              </h6>
+              <p className="text-center text-[22.6px] leading-[32px]">
                 {locale === "vi" ? "m2 diện tích nhà máy" : "m2 factory area"}
               </p>
             </div>
 
-            <div className="rounded-[64px] border-[1px] border-gray-400 p-4 w-full flex flex-col justify-center items-center">
-              <h6 className="text-3xl font-bold text-center">{">"}40</h6>
-              <p className="text-center text-xl">
+            <div className="rounded-[64px] border-[1px] border-gray-400 p-4 w-full flex-col justify-center items-center">
+              <h6 className="text-[41.6px] leading-[45px] font-bold text-center">
+                {">"}40
+              </h6>
+              <p className="text-center text-[22.6px] leading-[32px]">
                 {locale === "vi" ? "đối tác" : "partners"}
               </p>
             </div>
@@ -206,12 +263,25 @@ export default function Root() {
         </div>
       </section>
 
-      <section className="bg-base-100 py-[4em] px-[2em] lg:p-[5em]">
+      <section className="bg-base-100 py-[3em] px-[2em] lg:px-[5em] lg:pb-[2em] ">
         <div className="container max-w-screen-xl mx-auto">
-          <div className="max-w-screen-sm load-hidden animate-fade-in animate-delay-200 w-full">
-            <h2 className="w-80 mx-auto uppercase mb-4 text-2xl text-center text-[#00A44E] md:w-full md:text-3xl lg:text-left lg:ml-0 font-bold">
+          <div className="flex flex-row  load-hidden animate-fade-in animate-delay-200 w-full">
+            <h2 className="w-80 mx-auto uppercase mb-4 text-2xl text-center text-[#00A44E] md:w-full md:text-[38px] lg:text-left lg:ml-0 font-bold pb-2 pt-4">
               {t("article.title")}
             </h2>
+            <div
+              className="flex flex-row content-center items-center text-center cursor-pointer"
+              onClick={() => router.push(`/news/`)}
+            >
+              <div className="cursor-pointer w-[350px] text-[22.6px] font-bold pl-3">
+                {`${
+                  locale === "vi"
+                    ? "Xem tất cả bài viết tại đây"
+                    : "Read all articles here"
+                }`}
+              </div>
+              <ImArrowRight2 size="22.6" />
+            </div>
           </div>
 
           <div className="mt-2 md:mt-4 grid grid-cols-3 gap-4">
@@ -219,7 +289,7 @@ export default function Root() {
               .filter((blog: any) => blog.type === "news")
               .map((blog: any) => (
                 <div
-                  className="flex flex-col items-center gap-5 w-full load-hidden animate-slide-up border-[1px] border-black border-solid rounded-t-lg animate-delay-200 cursor-pointer"
+                  className="flex flex-col items-center  w-full load-hidden animate-slide-up border-[1px] border-black border-solid rounded-t-lg animate-delay-200 cursor-pointer"
                   onClick={() => router.push(`/news/${blog.id}`)}
                 >
                   <img
@@ -228,27 +298,45 @@ export default function Root() {
                     alt="Online Banking"
                   />
                   <h3
-                    className="text-center lg:text-left text-black font-semibold px-4 capitalize text-2xl"
+                    className=" text-center text-black font-semibold px-4 pt-4  capitalize text-[24.6px] leading-[30px]  "
                     dangerouslySetInnerHTML={{
                       __html: blog.title,
                     }}
                   ></h3>
-                  <p className="text-center lg:text-left text-slate-950 p-4 text-xl">
+                  <p className="text-center lg:text-left text-slate-950 p-4 text-[22.6px] h-fit leading-[35px]   ">
                     {blog.description}
                   </p>
-                  <p className="mt-auto mb-4 font-bold text-xl">Xem thêm</p>
+                  <div className="mt-auto mb-4 flex flex-row content-center items-center">
+                    <SlArrowRight className="pr-2 " size="25" />
+                    <p className="mt-auto  font-bold text-[19.6px]">{`${
+                      locale === "vi" ? "Đọc thêm" : "Read more"
+                    }`}</p>
+                  </div>
                 </div>
               ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-base-100 py-[4em] px-[2em] lg:p-[5em]">
+      <section className="bg-base-100 px-[2em] lg:px-[5em] lg:pb-[3em] ">
         <div className="container max-w-screen-xl mx-auto">
-          <div className="max-w-screen-sm load-hidden animate-fade-in animate-delay-200 w-full">
-            <h2 className="w-80 mx-auto uppercase mb-4 text-2xl text-center text-[#00A44E] md:w-full md:text-3xl lg:text-left lg:ml-0 font-bold">
+          <div className="flex flex-row  load-hidden animate-fade-in animate-delay-200 w-full">
+            <h2 className="w-80 mx-auto uppercase mb-4 text-2xl text-center text-[#00A44E] md:w-full md:text-[38px] lg:text-left lg:ml-0 font-bold pb-2 pt-4">
               {t("blog.title")}
             </h2>
+            <div
+              className="flex flex-row content-center items-center text-center cursor-pointer"
+              onClick={() => router.push(`/blog/`)}
+            >
+              <div className="cursor-pointer w-[350px] text-[22.6px] font-bold pl-3">
+                {`${
+                  locale === "vi"
+                    ? "Xem tất cả bài viết tại đây"
+                    : "Read all articles here"
+                }`}
+              </div>
+              <ImArrowRight2 size="22.6" />
+            </div>
           </div>
 
           <div className="mt-2 md:mt-4 grid grid-cols-3 gap-4">
@@ -256,7 +344,7 @@ export default function Root() {
               .filter((blog: any) => blog.type === "blog")
               .map((blog: any) => (
                 <div
-                  className="flex flex-col items-center gap-5 w-full load-hidden animate-slide-up border-[1px] border-black border-solid rounded-t-lg animate-delay-200 cursor-pointer"
+                  className="flex flex-col items-center  w-full load-hidden animate-slide-up border-[1px] border-black border-solid rounded-t-lg animate-delay-200 cursor-pointer"
                   onClick={() => router.push(`/blog/${blog.id}`)}
                 >
                   <img
@@ -265,15 +353,20 @@ export default function Root() {
                     alt="Online Banking"
                   />
                   <h3
-                    className="text-center lg:text-left text-black font-semibold px-4 capitalize text-2xl"
+                    className=" text-center text-black font-semibold px-4 pt-4  capitalize text-[24.6px] leading-[30px]  "
                     dangerouslySetInnerHTML={{
                       __html: blog.title,
                     }}
                   ></h3>
-                  <p className="text-center lg:text-left text-slate-950 p-4 text-xl">
+                  <p className="text-center lg:text-left text-slate-950 p-4 text-[22.6px] h-fit leading-[35px]   ">
                     {blog.description}
                   </p>
-                  <p className="mt-auto mb-4 font-bold text-xl">Xem thêm</p>
+                  <div className="mt-auto mb-4 flex flex-row content-center items-center">
+                    <SlArrowRight className="pr-2 " size="25" />
+                    <p className="mt-auto  font-bold text-[19.6px]">{`${
+                      locale === "vi" ? "Đọc thêm" : "Read more"
+                    }`}</p>
+                  </div>
                 </div>
               ))}
           </div>
