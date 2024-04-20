@@ -64,7 +64,7 @@ export default function Root() {
               }}
               className={`font-bold ${
                 currentIndex === 0 && "text-green-400"
-              } cursor-pointer border border-black rounded-full mr-4 px-10 py-8 `}
+              } cursor-pointer border border-black rounded-full mr-4 px-10 max-h-[100px] max-w-[250px] text-center content-center `}
             >
               {t("title1")}
             </div>
@@ -74,7 +74,7 @@ export default function Root() {
               }}
               className={`font-bold ${
                 currentIndex === 1 && "text-green-400"
-              } cursor-pointer border border-black rounded-full mr-4 px-10 py-8 `}
+              } cursor-pointer border border-black rounded-full mr-4 px-10 py-8 max-w-[200px] max-h-[100px] content-center text-center `}
             >
               {t("title2")}
             </div>
@@ -84,7 +84,7 @@ export default function Root() {
               }}
               className={`font-bold ${
                 currentIndex === 2 && "text-green-400"
-              } cursor-pointer border border-black rounded-full mr-4 px-10 py-8 `}
+              } cursor-pointer border border-black rounded-full mr-4 px-10 py-8 max-w-[200px] text-center max-h-[100px] content-center `}
             >
               {t("title3")}
             </div>
