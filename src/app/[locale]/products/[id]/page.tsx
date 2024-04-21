@@ -33,15 +33,22 @@ export default function Root() {
       <div className="p-4 pb-10 w-full">
         <div className="container mx-auto w-full">
           {!!product && (
-            <div className="flex flex-col items-center gap-4">
-              <h1 className="text-black font-medium text-4xl">
+            <div className="flex flex-col gap-4">
+              <h1 className="text-black font-bold text-[22.6px] text-justify sm:text-left sm:mb-6 leading-[22px]  ">
                 {locale === "vi" ? product.name : product.name_en}
               </h1>
-              <img
-                src={`https://dongnam.up.railway.app/assets/${product.galleries[0]?.directus_files_id}`}
-                alt="DONG-NAM"
-                className="rounded bg-base-200 object-cover w-auto h-80"
-              />
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-16  w-full justify-center">
+                <img
+                  src={`https://dongnam.up.railway.app/assets/${product.galleries[0]?.directus_files_id}`}
+                  alt="DONG-NAM"
+                  className="rounded bg-base-200 object-cover w-auto sm:w-1/2 h-80 sm:h-full "
+                />
+                <img
+                  src={`https://dongnam.up.railway.app/assets/${product.galleries[1]?.directus_files_id}`}
+                  alt="DONG-NAM"
+                  className="rounded bg-base-200 object-cover w-auto sm:w-1/2 h-80 sm:h-full"
+                />
+              </div>
               <Accordion
                 type="single"
                 collapsible

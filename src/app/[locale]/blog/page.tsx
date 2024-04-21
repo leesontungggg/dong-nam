@@ -4,6 +4,7 @@ import { PaginationEng } from "@/components/paginationEng";
 import { PaginationVie } from "@/components/paginationVie";
 import Skeleton from "@/components/skeleton";
 import { Context } from "@/services/context";
+import _ from "lodash";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "next-intl/client";
 import { useContext, useState, useTransition } from "react";
@@ -44,6 +45,12 @@ export default function Root() {
       </div>
     );
   }
+
+  // const groupCategory = _.groupBy(data.blog, (item: any) =>
+  // locale === "vi" ? item.categories : item.categories_en
+  // );
+
+  console.log(data.blog);
 
   return (
     <div>
