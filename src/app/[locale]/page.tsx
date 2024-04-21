@@ -28,10 +28,10 @@ export default function Root() {
     <main className="!font-sans">
       <section className="relative bg-white  min-h-screen">
         <div
-          className="absolute   top-[-100px] left-0 w-full h-full opacity-100 bg-[url('/image/hero-bg.jpg')] bg-cover bg-repeat "
+          className="absolute top-[-100px] left-0 w-full h-full opacity-100 bg-[url('/image/hero-bg.jpg')] bg-cover bg-repeat "
           style={{ minHeight: "-webkit-fill-available" }}
         />
-        <div className="absolute bg-transparent container flex flex-col-reverse gap-20 max-w-screen-xl mx-auto pt-[4em] lg:min-h-screen lg:items-center lg:flex-row left-1/2 -translate-x-[800px] top-[610px] -translate-y-1/2">
+        <div className="absolute bg-transparent flex xl:pt-[4em]  xl:-translate-x-[800px] xl:top-[640px] xl:left-[970px] xl:-translate-y-1/2 lg:pt-[20em] lg:-translate-x-[-140px] lg:top-[5px] lg:left-[-5px] ">
           <div className=" flex flex-col gap-6   lg:h-100 lg:w-1/2 xl:w-2/5 bg-white rounded-[60px] px-8  min-w-[700px]  justify-center   min-h-[350px] max-h-[300px]">
             <h1 className="text-[37.4px] pt-6 leading-[33px]  text-[#00A44E] font-bold text-center  mx-auto load-hidden animate-fade-in uppercase  w-fit min-w-max  ">
               {t("title")}
@@ -67,14 +67,14 @@ export default function Root() {
           </div>
         </div>
       </section>
-      <section className="bg-base-200 pt-[3em] px-[2em] md:pt-[4em] lg:pt-[5em] lg:px-[5em]">
-        <div className="container max-w-screen-xl mx-auto grid grid-cols-2 gap-8">
-          <img src="/image/sumenh.jpg" className="w-full" />
-          <div className="flex flex-col gap-4">
+      <section className="bg-base-200 pt-[4em] ">
+        <div className="container xl:px-[95px]  mx-auto grid grid-cols-2 gap-8">
+          <img src="/image/sumenh.jpg" className="w-full lg:h-full" />
+          <div className="flex flex-col xl:gap-4">
             <h1 className="text-[38px] uppercase font-bold text-[#F18200] ">
               {t("mission.title")}
             </h1>
-            <p className="text-[22.6px] pt-4">
+            <p className="text-[22.6px] xl:pt-4 lg:pt-2 max-w-[600px]  lg:leading-[30px] xl:leading-[40px] text-justify">
               {locale === "vi" ? (
                 <>
                   Với sứ mệnh{" "}
@@ -132,9 +132,9 @@ export default function Root() {
                 src="/image/reason-1.jpg"
                 alt="Online Banking"
               />
-              <div className="flex flex-col">
+              <div className="flex flex-col lg:px-4  ">
                 <h3
-                  className={`text-[24.6px] text-left pt-4 ${
+                  className={`text-[24.6px] text-left pt-4  ${
                     locale === "en" ? "pr-16" : "pr-8"
                   } text-black font-semibold capitalize`}
                   dangerouslySetInnerHTML={{
@@ -159,7 +159,7 @@ export default function Root() {
                 src="/image/reason-2.jpg"
                 alt="Simple Budgeting"
               />
-              <div className="flex flex-col">
+              <div className="flex flex-col lg:px-4">
                 <h3
                   className={`text-[24.6px] text-left pt-4 ${
                     locale === "en" ? "pr-16" : "pr-8"
@@ -187,7 +187,7 @@ export default function Root() {
                 src="/image/reason-3.jpg"
                 alt="Fast Onboarding"
               />
-              <div className="flex flex-col">
+              <div className="flex flex-col lg:px-4">
                 <h3
                   className={`text-[24.6px] text-left pt-4 ${
                     locale === "en" ? "" : ""
