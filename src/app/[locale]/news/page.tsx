@@ -49,7 +49,7 @@ export default function Root() {
       <img
         src="https://i.postimg.cc/zfwDkngH/2abb5eaf-9b49-4fd4-9b71-0cfed12c17a9.jpg"
         alt="DongNam"
-        className="w-[1500px] h-[700px] mx-auto"
+        className="w-full h-max rounded-lg max-h-screen"
       />
       <div
         className="container mx-auto w-full mt-8 bg-white text-black 
