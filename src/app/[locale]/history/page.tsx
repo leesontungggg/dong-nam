@@ -151,7 +151,7 @@ export default function About() {
             alt="DongNam-history"
             className="w-full mx-auto "
           />
-          <div className="flex flex-row w-full  text-justify lg:leading-[18px] 2xl:leading-[25px] lg:pr-[220px] xl:pr-[265px] 2xl:pr-[360px] lg:text-[15px] 2xl:text-[18.6px] xl:text-[16.6px]  ">
+          <div className="flex flex-row w-full  text-justify lg:leading-[18px] 2xl:leading-[25px] lg:pr-[210px] xl:pr-[285px] 2xl:pr-[360px] lg:text-[15px] 2xl:text-[18.6px] xl:text-[16.6px]  ">
             <p
               className={`border border-black rounded-full text-justify content-center p-[24px]  2xl:mr-4 max-w-full`}
             >
@@ -196,7 +196,7 @@ export default function About() {
               )}
             </p>
             <p
-              className={`border border-black rounded-full text-justify content-center lg:p-[14px] 2xl:p-[24px] 2xl:mr-4  max-w-full`}
+              className={`border border-black rounded-full text-justify content-center lg:px-4  2xl:p-[24px] 2xl:mr-4  max-w-full lg:min-w-[180px]`}
             >
               {locale === "vi" ? (
                 <>
@@ -211,7 +211,7 @@ export default function About() {
               )}
             </p>
             <p
-              className={`border border-black rounded-full text-justify content-center lg:p-[20px] 2xl:p-[24px]   max-w-full`}
+              className={`border border-black rounded-full text-justify content-center lg:px-4 2xl:p-[24px] max-w-full lg:min-w-[200px]`}
             >
               {locale === "vi" ? (
                 <>
