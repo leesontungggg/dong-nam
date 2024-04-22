@@ -19,12 +19,12 @@ export default function About() {
           className="w-screen h-max  rounded-lg max-h-screen  "
         />
       </section>
-      <section className="bg-base-200 py-[3em] px-[2em] md:py-[4em] lg:p-[5em] flex flex-col items-center">
-        <div className="w-full center flex-col">
+      <section className="bg-base-200 py-[3em]  flex flex-col items-center">
+        <div className="w-full center flex-col container">
           <h1 className="uppercase text-[37.4px] text-[#00A44E] font-semibold">
             {locale === "vi" ? <>LỊCH SỬ HÌNH THÀNH</> : <>OUR STORIES</>}
           </h1>
-          <p className="text-[22.6px] leading-9 text-center mt-8">
+          <p className="text-[22.6px] leading-9 text-center mt-8 ">
             {locale === "vi" ? (
               <>
                 Hơn 20 năm với những <strong>bước tiến khoa học đột phá</strong>
@@ -43,12 +43,10 @@ export default function About() {
             )}
           </p>
         </div>
-        <div className="flex flex-col">
-          <div className="flex flex-row mt-20 w-full mx-auto text-justify leading-5  items-end justify-evenly">
+        <div className="flex flex-col w-full mx-auto 2xl:px-8  ">
+          <div className="flex flex-row mt-20 w-full  text-justify lg:leading-[18px] 2xl:leading-[25px] lg:text-[15px] xl:text-[16.6px] 2xl:text-[18.6px]  ">
             <p
-              className={`border border-black rounded-full px-5 py-4  text-[16.6px]    ${
-                locale === "vi" ? "max-w-[230px]" : "max-w-[240px]"
-              }`}
+              className={`border border-black rounded-full text-justify content-center p-[20px] 2xl:mr-4  max-w-full`}
             >
               {locale === "vi" ? (
                 <>
@@ -65,9 +63,7 @@ export default function About() {
             </p>
 
             <p
-              className={`border border-black rounded-full px-5 py-4  text-[16.6px] text-justify   ${
-                locale === "vi" ? "max-w-[240px]" : "max-w-[258px]"
-              }`}
+              className={`border border-black rounded-full text-justify content-center p-[20px] 2xl:mr-4  max-w-full`}
             >
               {locale === "vi" ? (
                 <>
@@ -89,9 +85,7 @@ export default function About() {
               )}
             </p>
             <p
-              className={`border border-black rounded-full px-6 py-4  text-[16.6px] text-justify    ${
-                locale === "vi" ? "max-w-[300px]" : "max-w-[340px]"
-              }`}
+              className={`border border-black rounded-full text-justify content-center p-[20px] 2xl:mr-4  max-w-full`}
             >
               {locale === "vi" ? (
                 <>
@@ -115,9 +109,7 @@ export default function About() {
               )}
             </p>
             <p
-              className={`border border-black rounded-full px-5 py-4  text-[16.6px] text-justify    ${
-                locale === "vi" ? "max-w-[240px]" : "max-w-[240px]"
-              }`}
+              className={`border border-black rounded-full text-justify content-center p-[20px] 2xl:mr-4  max-w-full`}
             >
               {locale === "vi" ? (
                 <>
@@ -132,13 +124,11 @@ export default function About() {
               )}
             </p>
             <p
-              className={`border border-black rounded-full px-6 py-4  text-[16.6px] text-justify    ${
-                locale === "vi" ? "max-w-[260px]" : "max-w-[300px]"
-              }`}
+              className={`border border-black rounded-full text-justify content-center p-[20px]   max-w-full`}
             >
               {locale === "vi" ? (
                 <>
-                  Nhà
+                  Nhà{" "}
                   <strong>
                     Tài trợ cho chương trình chạy bộ thiện nguyện “Run to
                     Future”
@@ -161,11 +151,9 @@ export default function About() {
             alt="DongNam-history"
             className="w-full mx-auto "
           />
-          <div className="flex flex-row w-full mx-auto text-justify leading-5  items-start justify-around   ">
+          <div className="flex flex-row w-full  text-justify lg:leading-[18px] 2xl:leading-[25px] lg:pr-[220px] xl:pr-[265px] 2xl:pr-[360px] lg:text-[15px] 2xl:text-[18.6px] xl:text-[16.6px]  ">
             <p
-              className={`border border-black rounded-full px-6 py-4  text-[16.6px] text-justify    ${
-                locale === "vi" ? "max-w-[285px]" : "max-w-[300px]"
-              }`}
+              className={`border border-black rounded-full text-justify content-center p-[24px]  2xl:mr-4 max-w-full`}
             >
               {locale === "vi" ? (
                 <>
@@ -186,9 +174,7 @@ export default function About() {
               )}
             </p>
             <p
-              className={`border border-black rounded-full px-7 py-5  text-[16.6px] text-justify    ${
-                locale === "vi" ? "max-w-[290px]" : "max-w-[301px]"
-              }`}
+              className={`border border-black rounded-full text-justify content-center p-[24px] 2xl:mr-4  max-w-full`}
             >
               {locale === "vi" ? (
                 <>
@@ -210,9 +196,7 @@ export default function About() {
               )}
             </p>
             <p
-              className={`border border-black rounded-full px-6 py-4  text-[16.6px] text-justify     ${
-                locale === "vi" ? "max-w-[285px]" : "max-w-[250px]"
-              }`}
+              className={`border border-black rounded-full text-justify content-center lg:p-[14px] 2xl:p-[24px] 2xl:mr-4  max-w-full`}
             >
               {locale === "vi" ? (
                 <>
@@ -227,9 +211,7 @@ export default function About() {
               )}
             </p>
             <p
-              className={`border border-black rounded-full px-6 py-4  text-[16.6px] text-justify  mr-[190px]  ${
-                locale === "vi" ? "max-w-[280px]" : "max-w-[300px]"
-              }`}
+              className={`border border-black rounded-full text-justify content-center lg:p-[20px] 2xl:p-[24px]   max-w-full`}
             >
               {locale === "vi" ? (
                 <>

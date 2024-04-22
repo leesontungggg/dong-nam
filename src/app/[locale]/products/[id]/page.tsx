@@ -56,7 +56,7 @@ export default function Root() {
               >
                 <AccordionItem value="item-1">
                   <AccordionTrigger>
-                    {locale === "vi" ? "Mô tả" : "Description"}
+                    {locale === "vi" ? "Công Dụng" : "Description"}
                   </AccordionTrigger>
                   <AccordionContent className="whitespace-pre-line">
                     {locale === "vi"
@@ -67,7 +67,7 @@ export default function Root() {
 
                 <AccordionItem value="item-2">
                   <AccordionTrigger>
-                    {locale === "vi" ? "Loại" : "Type"}
+                    {locale === "vi" ? "Dạng Bào Chế" : "Type"}
                   </AccordionTrigger>
                   <AccordionContent className="whitespace-pre-line">
                     {locale === "vi" ? product.type : product.type_en}
@@ -76,7 +76,7 @@ export default function Root() {
 
                 <AccordionItem value="item-3">
                   <AccordionTrigger>
-                    {locale === "vi" ? "Hướng dẫn sử dụng" : "Administration"}
+                    {locale === "vi" ? "Cách Dùng" : "Administration"}
                   </AccordionTrigger>
                   <AccordionContent className="whitespace-pre-line">
                     {locale === "vi"
@@ -86,7 +86,7 @@ export default function Root() {
                 </AccordionItem>
                 <AccordionItem value="item-4">
                   <AccordionTrigger>
-                    {locale === "vi" ? "Loại" : "Category"}
+                    {locale === "vi" ? "Danh Mục" : "Category"}
                   </AccordionTrigger>
                   <AccordionContent className="whitespace-pre-line">
                     {locale === "vi"
@@ -96,74 +96,6 @@ export default function Root() {
                 </AccordionItem>
                 <AccordionItem value="item-5">
                   <AccordionTrigger>
-                    {locale === "vi" ? "Dược lý" : "Pharmacodynamic"}
-                  </AccordionTrigger>
-                  <AccordionContent className="whitespace-pre-line">
-                    {locale === "vi"
-                      ? product.pharmacodynamic
-                      : product.pharmacodynamic_en}
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-6">
-                  <AccordionTrigger>
-                    {locale === "vi" ? "Hậu tố" : "Pharmacokinetic"}
-                  </AccordionTrigger>
-                  <AccordionContent className="whitespace-pre-line">
-                    {locale === "vi"
-                      ? product.pharmacokinetic
-                      : product.pharmacokinetic_en}
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-7">
-                  <AccordionTrigger>
-                    {locale === "vi" ? "Chú ý" : "Caution"}
-                  </AccordionTrigger>
-                  <AccordionContent className="whitespace-pre-line">
-                    {locale === "vi"
-                      ? product.precaution
-                      : product.precaution_en}
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-8">
-                  <AccordionTrigger>
-                    {locale === "vi" ? "Chống chỉ định" : "Contraindication"}
-                  </AccordionTrigger>
-                  <AccordionContent className="whitespace-pre-line">
-                    {locale === "vi"
-                      ? product.contraindication
-                      : product.contraindication_en}
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-9">
-                  <AccordionTrigger>
-                    {locale === "vi" ? "Tác dụng phụ" : "Side Effect"}
-                  </AccordionTrigger>
-                  <AccordionContent className="whitespace-pre-line">
-                    {locale === "vi"
-                      ? product.side_effect
-                      : product.side_effect_en}
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-10">
-                  <AccordionTrigger>
-                    {locale === "vi" ? "Liều lượng" : "Dosage"}
-                  </AccordionTrigger>
-                  <AccordionContent className="whitespace-pre-line">
-                    {locale === "vi" ? product.dosage : product.dosage_en}
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-11">
-                  <AccordionTrigger>
-                    {locale === "vi" ? "Tác dụng phụ" : "Drug Interaction"}
-                  </AccordionTrigger>
-                  <AccordionContent className="whitespace-pre-line">
-                    {locale === "vi"
-                      ? product.drug_interaction
-                      : product.drug_interaction_en}
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-12">
-                  <AccordionTrigger>
                     {locale === "vi" ? "Thành phần" : "Ingredients"}
                   </AccordionTrigger>
                   <AccordionContent className="whitespace-pre-line">
@@ -172,9 +104,81 @@ export default function Root() {
                       : product.ingredients_en}
                   </AccordionContent>
                 </AccordionItem>
+                <AccordionItem value="item-6">
+                  <AccordionTrigger>
+                    {locale === "vi" ? "Dược Lực Học" : "Pharmacodynamic"}
+                  </AccordionTrigger>
+                  <AccordionContent className="whitespace-pre-line">
+                    {locale === "vi"
+                      ? product.pharmacodynamic
+                      : product.pharmacodynamic_en}
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-7">
+                  <AccordionTrigger>
+                    {locale === "vi" ? "Dược Động Học" : "Pharmacokinetic"}
+                  </AccordionTrigger>
+                  <AccordionContent className="whitespace-pre-line">
+                    {locale === "vi"
+                      ? product.pharmacokinetic
+                      : product.pharmacokinetic_en}
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-8">
+                  <AccordionTrigger>
+                    {locale === "vi" ? "Thận Trọng Khi Sử Dụng" : "Caution"}
+                  </AccordionTrigger>
+                  <AccordionContent className="whitespace-pre-line">
+                    {locale === "vi"
+                      ? product.precaution
+                      : product.precaution_en}
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-9">
+                  <AccordionTrigger>
+                    {locale === "vi" ? "Chống Chỉ Định" : "Contraindication"}
+                  </AccordionTrigger>
+                  <AccordionContent className="whitespace-pre-line">
+                    {locale === "vi"
+                      ? product.contraindication
+                      : product.contraindication_en}
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-10">
+                  <AccordionTrigger>
+                    {locale === "vi" ? "Tác Dụng Phụ" : "Side Effect"}
+                  </AccordionTrigger>
+                  <AccordionContent className="whitespace-pre-line">
+                    {locale === "vi"
+                      ? product.side_effect
+                      : product.side_effect_en}
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-11">
+                  <AccordionTrigger>
+                    {locale === "vi" ? "Liều Dùng" : "Dosage"}
+                  </AccordionTrigger>
+                  <AccordionContent className="whitespace-pre-line">
+                    {locale === "vi" ? product.dosage : product.dosage_en}
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-12">
+                  <AccordionTrigger>
+                    {locale === "vi"
+                      ? "Tương Tác - Tương Kỵ Của Thuốc"
+                      : "Drug Interaction"}
+                  </AccordionTrigger>
+                  <AccordionContent className="whitespace-pre-line">
+                    {locale === "vi"
+                      ? product.drug_interaction
+                      : product.drug_interaction_en}
+                  </AccordionContent>
+                </AccordionItem>
                 <AccordionItem value="item-13">
                   <AccordionTrigger>
-                    {locale === "vi" ? "Điều kiện bảo quản" : "Storage Expiry"}
+                    {locale === "vi"
+                      ? "Bảo Quản & Hạn Sử Dụng"
+                      : "Storage Expiry"}
                   </AccordionTrigger>
                   <AccordionContent className="whitespace-pre-line">
                     {locale === "vi"
@@ -184,7 +188,7 @@ export default function Root() {
                 </AccordionItem>
                 <AccordionItem value="item-14">
                   <AccordionTrigger>
-                    {locale === "vi" ? "Chi tiết" : "Specification"}
+                    {locale === "vi" ? "Quy Cách Đóng Gói" : "Specification"}
                   </AccordionTrigger>
                   <AccordionContent className="whitespace-pre-line">
                     {locale === "vi"
