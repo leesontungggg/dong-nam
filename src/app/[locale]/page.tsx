@@ -26,13 +26,13 @@ export default function Root() {
 
   return (
     <main className="!font-sans">
-      <section className="relative bg-white  min-h-screen">
+      <section className=" relative bg-white  min-h-screen">
         <div
           className="absolute top-[-100px] left-0 w-full h-full opacity-100 bg-[url('/image/hero-bg.jpg')] bg-cover bg-repeat "
           style={{ minHeight: "-webkit-fill-available" }}
         />
-        <div className="absolute bg-transparent flex xl:pt-[4em]  xl:-translate-x-[800px] xl:top-[640px] xl:left-[970px] xl:-translate-y-1/2 lg:pt-[20em] lg:-translate-x-[-140px] lg:top-[5px] lg:left-[-5px] ">
-          <div className=" flex flex-col gap-6   lg:h-100 lg:w-1/2 xl:w-2/5 bg-white rounded-[60px] px-8  min-w-[700px]  justify-center   min-h-[350px] max-h-[300px]">
+        <div className="absolute   object-cover lg:mt-[21em] lg:ml-[10em] xl:mt-[32em] xl:ml-[12em] ">
+          <div className=" flex flex-col gap-6 h-[20vh]   lg:h-100 lg:w-1/2 xl:w-2/5 bg-white rounded-[60px] px-8  min-w-[700px]  justify-center   min-h-[350px] max-h-[300px]">
             <h1 className="text-[37.4px] pt-6 leading-[33px]  text-[#00A44E] font-bold text-center  mx-auto load-hidden animate-fade-in uppercase  w-fit min-w-max  ">
               {t("title")}
             </h1>
@@ -71,10 +71,10 @@ export default function Root() {
         <div className="container xl:px-[95px]  mx-auto grid grid-cols-2 gap-8">
           <img src="/image/sumenh.jpg" className="w-full lg:h-full" />
           <div className="flex flex-col xl:gap-4">
-            <h1 className="text-[38px] uppercase font-bold text-[#F18200] ">
+            <h1 className=" xl:text-[38px] lg:text-[32px] uppercase font-bold text-[#F18200] ">
               {t("mission.title")}
             </h1>
-            <p className="text-[22.6px] xl:pt-4 lg:pt-2 max-w-[600px]  lg:leading-[30px] xl:leading-[40px] text-justify">
+            <p className="text-[22.6px] lg:max-w-[19.5em]   pt-2  xl:max-w-[23em] lg:leading-[28px] xl:leading-[30px]  text-justify">
               {locale === "vi" ? (
                 <>
                   Với sứ mệnh{" "}
@@ -120,7 +120,7 @@ export default function Root() {
       <section className="bg-base-200 pt-[3em] px-[2em] md:pt-[4em] lg:pt-[4em] lg:px-[5em]">
         <div className="container max-w-screen-xl mx-auto ">
           <div className=" load-hidden animate-fade-in animate-delay-200 max-w-[800px] w-max ">
-            <h2 className="w-80 mx-auto mb-[40px] text-2xl text-center text-[#00A44E] md:w-full md:text-[38px] leading-10 max-h-fit min-w-max  lg:text-left lg:ml-0 font-bold uppercase  ">
+            <h2 className="w-80 mx-auto mb-[40px]  text-[#00A44E] lg:w-full lg:text-[38px] leading-10 max-h-fit text-left  font-bold uppercase  ">
               {t("reason.title")}
             </h2>
           </div>
