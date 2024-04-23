@@ -7,6 +7,7 @@ import { useRouter, usePathname } from "next-intl/client";
 import { useContext, useState, useTransition } from "react";
 import * as _ from "lodash";
 import { CATEGORY } from "@/services/category";
+import { _formatString } from "@/lib/utils";
 
 export default function Root() {
   const data = useContext(Context);
@@ -137,10 +138,14 @@ export default function Root() {
 
                 .filter((product: any) =>
                   locale === "vi"
-                    ? product.name.toLowerCase().includes(searchText) &&
+                    ? _formatString(product.name)
+                        .toLowerCase()
+                        .includes(searchText) &&
                       product.categories.includes(categoryFilter) &&
                       product.type.includes(typeFilter)
-                    : product.name_en.toLowerCase().includes(searchText) &&
+                    : _formatString(product.name_en)
+                        .toLowerCase()
+                        .includes(searchText) &&
                       product.categories_en.includes(categoryFilter) &&
                       product.type_en.includes(typeFilter)
                 )

@@ -32,8 +32,8 @@ export default function Root() {
           style={{ minHeight: "-webkit-fill-available" }}
         />
         <div className="absolute   object-cover lg:mt-[19em] lg:ml-[8em] 2xl:mt-[32em] 2xl:ml-[12em] ">
-          <div className=" flex flex-col gap-6 h-[20vh]   lg:h-100 lg:w-1/2 2xl:w-2/5 bg-white rounded-[60px] px-8  min-w-[700px]  justify-center   min-h-[350px] max-h-[300px]">
-            <h1 className="text-[37.4px] pt-6 leading-[33px]  text-[#00A44E] font-bold text-center  mx-auto load-hidden animate-fade-in uppercase  w-fit min-w-max  ">
+          <div className=" flex flex-col gap-6 h-fit md:h-[20vh]   lg:h-100 lg:w-1/2 2xl:w-2/5 bg-white rounded-[60px] px-8  md:min-w-[700px]  justify-center   min-h-[350px] md:max-h-[300px]">
+            <h1 className="text-[37.4px] pt-6 leading-[33px]  text-[#00A44E] font-bold text-center  mx-auto load-hidden animate-fade-in uppercase">
               {t("title")}
             </h1>
             <p
@@ -270,10 +270,10 @@ export default function Root() {
               {t("article.title")}
             </h2>
             <div
-              className="flex flex-row content-center items-center text-center cursor-pointer"
+              className="hidden md:flex flex-row content-center items-center text-center cursor-pointer"
               onClick={() => router.push(`/news/`)}
             >
-              <div className="cursor-pointer w-[350px] text-[22.6px] font-bold pl-3">
+              <div className=" cursor-pointer w-[350px] text-[22.6px] font-bold pl-3">
                 {`${
                   locale === "vi"
                     ? "Xem tất cả bài viết tại đây"
@@ -325,10 +325,10 @@ export default function Root() {
               {t("blog.title")}
             </h2>
             <div
-              className="flex flex-row content-center items-center text-center cursor-pointer"
+              className="flex-row content-center items-center text-center cursor-pointer hidden md:flex"
               onClick={() => router.push(`/blog/`)}
             >
-              <div className="cursor-pointer w-[350px] text-[22.6px] font-bold pl-3">
+              <div className=" cursor-pointer w-[350px] text-[22.6px] font-bold pl-3">
                 {`${
                   locale === "vi"
                     ? "Xem tất cả bài viết tại đây"
