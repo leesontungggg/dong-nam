@@ -91,7 +91,7 @@ export default function Root() {
                 className="w-full rounded-2xl border-2 p-2 border-black"
                 placeholder="Nhập tên thuốc"
                 // @ts-ignore
-                onChange={(e) => setSearchText(event?.target.value)}
+                onChange={(e) => setSearchText(e.target.value)}
               />
               <div className="flex flex-col gap-2">
                 <h6 className="text-xl font-bold">
@@ -134,12 +134,13 @@ export default function Root() {
             </div>
             <div className="col-span-4 grid grid-cols-3">
               {data.products
+
                 .filter((product: any) =>
                   locale === "vi"
-                    ? product.name.includes(searchText) &&
+                    ? product.name.toLowerCase().includes(searchText) &&
                       product.categories.includes(categoryFilter) &&
                       product.type.includes(typeFilter)
-                    : product.name_en.includes(searchText) &&
+                    : product.name_en.toLowerCase().includes(searchText) &&
                       product.categories_en.includes(categoryFilter) &&
                       product.type_en.includes(typeFilter)
                 )
@@ -161,7 +162,7 @@ export default function Root() {
                           {locale === "vi" ? product.name : product.name_en}
                         </a>
                       </h2>
-                      <h2 className="text-lg text-center md:text-left">
+                      {/* <h2 className="text-lg text-center md:text-left">
                         <a
                           className="hover:underline text-black"
                           href={`/products/${product.id}`}
@@ -170,7 +171,7 @@ export default function Root() {
                             ? product.categories
                             : product.categories_en}
                         </a>
-                      </h2>
+                      </h2> */}
                     </div>
                   </div>
                 ))}
