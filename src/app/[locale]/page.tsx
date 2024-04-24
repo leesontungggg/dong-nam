@@ -31,7 +31,7 @@ export default function Root() {
           className="absolute top-[-100px] left-0 w-full h-full opacity-100 bg-[url('/image/hero-bg.jpg')] bg-cover bg-repeat "
           style={{ minHeight: "-webkit-fill-available" }}
         />
-        <div className="absolute   object-cover lg:mt-[19em] lg:ml-[8em] 2xl:mt-[17.5em] 2xl:ml-[10em]   ">
+        <div className="absolute   object-cover lg:mt-[15em] lg:ml-[8em] 2xl:mt-[17.5em] 2xl:ml-[10em]   ">
           <div className=" flex flex-col gap-6 h-fit md:h-[20vh]   lg:h-100 lg:w-1/2 2xl:w-2/5 bg-white rounded-[60px] px-8  md:min-w-[700px]  justify-center   min-h-[350px] md:max-h-[300px]">
             <h1 className="text-[37.4px] pt-6 leading-[33px]  text-[#00A44E] font-bold text-center  mx-auto load-hidden animate-fade-in uppercase">
               {t("title")}
