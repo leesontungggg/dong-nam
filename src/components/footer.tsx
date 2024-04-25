@@ -45,15 +45,15 @@ const Footer = () => {
             </>
           )}
         </p>
-        <p className="text-white text-center md:text-2xl xl:text-3xl flex flex-row w-full justify-between">
-          <div>
+        <div className="text-white text-center md:text-2xl xl:text-3xl flex flex-row w-full justify-between">
+          <>
             <img
               src="/image/footer-3.png"
               className="w-10 h-10 inline-block mr-2 "
             />
             <strong className="justify-start text-start">Email: </strong>{" "}
             kinhdoanh@dongnampharma.vn
-          </div>
+          </>
           <div className="absolute hidden md:flex flex-row items-center bottom-0 right-10">
             <a
               href="https://web.facebook.com/dongnampharmaceutical"
@@ -72,7 +72,7 @@ const Footer = () => {
               className="w-auto md:h-40 xl:h-80"
             />
           </div>
-        </p>
+        </div>
       </aside>
       <div className="md:hidden flex flex-row items-center w-full justify-center ">
         <a

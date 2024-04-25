@@ -37,7 +37,7 @@ export default async function RootLayout({
     notFound();
   }
 
-  const activePath = children?.props?.childProp.segment;
+  const activePath = children?.props?.childProp;
 
   return (
     <html lang={locale}>

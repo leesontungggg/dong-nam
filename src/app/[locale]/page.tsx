@@ -31,7 +31,7 @@ export default function Root() {
           className="absolute top-[-100px] left-0 w-full h-full opacity-100 bg-[url('/image/hero-bg.jpg')] bg-cover bg-repeat"
           style={{ minHeight: "-webkit-fill-available" }}
         />
-        <div className="absolute object-cover md:mt-[18em] md:ml-[10em] xl:mt-[40em] xl:ml-[20em]   ">
+        <div className="absolute object-cover md:mt-[20em] md:ml-[10em] 2xl:mt-[38em] 2xl:ml-[18em]   ">
           <div className="flex flex-col gap-6 h-fit md:h-[20vh] md:w-5/6 xl:h-100 xl:w-1/2 2xl:w-[30vw] bg-white rounded-[60px] px-8    justify-center md:min-h-[320px] xl:min-h-[410px]">
             <h1 className="md:text-[33px] xl:text-[38px] md:pt-6 xl:pt-4 leading-[33px]  text-[#00A44E] font-bold text-center mx-auto load-hidden animate-fade-in uppercase">
               {t("title")}
@@ -187,14 +187,14 @@ export default function Root() {
           </div>
           <h1 className="block md:hidden leading-[22px] text-[18px] uppercase  text-[#00A44E] ">
             {locale === "vi" ? (
-              <span className="block md:hidden text-end">
+              <span className="block md:hidden">
                 VÌ SAO CÔNG TY DƯỢC
                 <br /> ĐÔNG NAM ĐƯỢC NHIỀU
                 <br />
                 <strong>ĐỐI TÁC LỚN TIN TƯỞNG?</strong>
               </span>
             ) : (
-              <span className="block md:hidden text-end">
+              <span className="block md:hidden">
                 <strong>WHY OUR PARTNERS</strong>
                 <br />
                 PLACE TRUST ON US?
@@ -210,12 +210,12 @@ export default function Root() {
               />
               <p className="block md:hidden mt-2 text-center">
                 {locale === "vi" ? (
-                  <p>
+                  <>
                     Sản Phẩm Chất Lượng GMP-WHO
                     <br /> Giá Cả Cạnh Tranh
-                  </p>
+                  </>
                 ) : (
-                  <p>Quality Products - Competitive Prices</p>
+                  <>Quality Products - Competitive Prices</>
                 )}
               </p>
               <div className="md:flex flex-col lg:px-4 hidden">
@@ -246,12 +246,12 @@ export default function Root() {
               />
               <p className="block md:hidden mt-2 text-center capitalize">
                 {locale === "vi" ? (
-                  <p>
+                  <>
                     sản xuất nhanh chóng
                     <br /> chất lượng đồng bộ
-                  </p>
+                  </>
                 ) : (
-                  <p>Fast Production - Consistent Quality</p>
+                  <>Fast Production - Consistent Quality</>
                 )}
               </p>
               <div className="md:flex flex-col lg:px-4 hidden ">
@@ -282,12 +282,12 @@ export default function Root() {
               />
               <p className="block md:hidden mt-2 text-center capitalize">
                 {locale === "vi" ? (
-                  <p>
+                  <>
                     đa dạng danh mục
                     <br /> sản xuất độc quyền
-                  </p>
+                  </>
                 ) : (
-                  <p>Diverse Portfolio - Exclusive Manufacturing</p>
+                  <>Diverse Portfolio - Exclusive Manufacturing</>
                 )}
               </p>
               <div className="md:flex flex-col lg:px-4 hidden ">
