@@ -19,8 +19,6 @@ const Hamburger = (props: any) => {
       <label
         className={`${className} mix-blend-multiply btn btn-circle swap swap-rotate bg-black text-black`}
       >
-        <input type="checkbox" onClick={handleToggle} />
-
         {/* hamburger icon */}
         <svg
           className="mix-blend-difference swap-off fill-current text-black"

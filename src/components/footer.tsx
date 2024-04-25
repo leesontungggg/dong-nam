@@ -6,14 +6,14 @@ const Footer = () => {
   const locale = useLocale();
 
   return (
-    <footer className="relative flex flex-col justify-start items-start p-10 bg-[#F18200] text-white">
+    <footer className="relative flex flex-col justify-start items-start p-7 bg-[#F18200] text-white">
       <aside className="flex flex-col justify-start items-start">
-        <p className="font-bold mt-4 text-white text-center capitalize text-2xl">
+        <p className="font-bold mt-4 text-white text-center capitalize md:text-2xl xl:text-3xl">
           {locale === "vi"
             ? "Công ty cổ phần sản xuất thương mại dược phẩm đông nam"
             : "Dong Nam Pharmaceutical Trading and Production Joint Stock Company"}
         </p>
-        <p className="text-white text-center mt-4 text-lg">
+        <p className="text-white text-center mt-4 md:text-2xl xl:text-3xl">
           <img
             src="/image/footer-1.png"
             className="w-10 h-10 inline-block mr-2"
@@ -30,7 +30,7 @@ const Footer = () => {
             </>
           )}
         </p>
-        <p className="text-white text-center text-lg">
+        <p className="text-white text-center md:text-2xl xl:text-3xl">
           <img
             src="/image/footer-2.png"
             className="w-10 h-10 inline-block mr-2"
@@ -45,15 +45,36 @@ const Footer = () => {
             </>
           )}
         </p>
-        <p className="text-white text-center text-lg">
-          <img
-            src="/image/footer-3.png"
-            className="w-10 h-10 inline-block mr-2"
-          />
-          <strong>Email:</strong> kinhdoanh@dongnampharma.vn
+        <p className="text-white text-center md:text-2xl xl:text-3xl flex flex-row w-full justify-between">
+          <div>
+            <img
+              src="/image/footer-3.png"
+              className="w-10 h-10 inline-block mr-2 "
+            />
+            <strong className="justify-start text-start">Email: </strong>{" "}
+            kinhdoanh@dongnampharma.vn
+          </div>
+          <div className="absolute hidden md:flex flex-row items-center bottom-0 right-10">
+            <a
+              href="https://web.facebook.com/dongnampharmaceutical"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/image/facebook.png"
+                alt="Facebook-DongNam"
+                className="md:w-16 md:h-16 xl:w-32 xl:h-32"
+              />
+            </a>
+            <img
+              src="/image/bocongthuong.png"
+              alt="DongNam"
+              className="w-auto md:h-40 xl:h-80"
+            />
+          </div>
         </p>
       </aside>
-      <div className="absolute bottom-0 right-12 flex flex-row items-center">
+      <div className="md:hidden flex flex-row items-center w-full justify-center ">
         <a
           href="https://web.facebook.com/dongnampharmaceutical"
           target="_blank"
