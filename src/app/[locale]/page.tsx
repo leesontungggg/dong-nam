@@ -31,8 +31,8 @@ export default function Root() {
           className="absolute top-[-100px] left-0 w-full h-full opacity-100 bg-[url('/image/hero-bg.jpg')] bg-cover bg-repeat"
           style={{ minHeight: "-webkit-fill-available" }}
         />
-        <div className="absolute object-cover md:mt-[20em] md:ml-[10em] 2xl:mt-[38em] 2xl:ml-[18em]   ">
-          <div className="flex flex-col gap-6 h-fit md:h-[20vh] md:w-5/6 xl:h-100 xl:w-1/2 2xl:w-[30vw] bg-white rounded-[60px] px-8    justify-center md:min-h-[320px] xl:min-h-[410px]">
+        <div className="absolute object-cover md:mt-[20em] md:ml-[6em] xl:mt-[14em] xl:ml-[12em] 2xl:mt-[22em] 2xl:ml-[18em]   ">
+          <div className="flex flex-col gap-6 h-fit md:h-[20vh] xl:h-[60vh] 2xl:h-[50vh] md:w-[60vw] xl:h-100 xl:w-[50vw] 2xl:w-[35vw] bg-white rounded-[60px] px-8 justify-center md:min-h-[320px] xl:min-h-[410px] ">
             <h1 className="md:text-[33px] xl:text-[38px] md:pt-6 xl:pt-4 leading-[33px]  text-[#00A44E] font-bold text-center mx-auto load-hidden animate-fade-in uppercase">
               {t("title")}
             </h1>
@@ -329,7 +329,7 @@ export default function Root() {
                   <strong className="inline md:hidden">
                     DONG NAM PHARMACEUTICALS
                   </strong>
-                  DONG NAM PHARMACEUTICALS
+                  <p className="hidden md:inline">DONG NAM PHARMACEUTICALS</p>
                   <br /> IN NUMBERS
                 </div>
               )}
@@ -424,9 +424,9 @@ export default function Root() {
                   <p
                     className={`${
                       locale === "vi" ? "md:text-[20px]" : "md:text-[18px]"
-                    } hidden md:flex text-slate-950 py-4 px-2 xl:px-6 xl:text-[24px] text-justify md:leading-[30px] xl:leading-[35px] md:h-[22vh] xl:max-h-[19.5vh]`}
+                    } hidden md:flex text-slate-950 py-4 px-2 xl:px-6 xl:text-[24px] text-justify md:leading-[30px] xl:leading-[35px] md:h-[22vh] xl:max-h-[21vh] 2xl:max-h-[23vh]`}
                   >
-                    <div className="md:line-clamp-5 xl:line-clamp-6">
+                    <div className="md:line-clamp-5 xl:line-clamp-4 2xl:line-clamp-5">
                       {locale === "vi" ? (
                         <p>{blog.description}</p>
                       ) : (
@@ -493,15 +493,15 @@ export default function Root() {
                     src={`https://dongnam.up.railway.app/assets/${blog.thumbnail}`}
                     alt="Online Banking"
                   />
-                  <h3 className=" md:text-center text-black md:font-bold md:px-4 pt-2 md:pt-4  capitalize text-[16px] leading-[20px] md:text-[24.6px] xl:text-[26px] md:leading-[30px] line-clamp-2 md:line-clamp-3 xl:line-clamp-4">
+                  <h3 className=" md:text-center text-black md:font-bold md:px-4 pt-2 md:pt-4  capitalize text-[16px] leading-[20px] md:text-[24.6px] xl:text-[26px] md:leading-[30px] line-clamp-2 md:line-clamp-3 xl:line-clamp-2 ">
                     {locale === "vi" ? (
                       <p>{blog.title}</p>
                     ) : (
                       <p>{blog.title_en}</p>
                     )}
                   </h3>
-                  <p className="hidden md:flex text-slate-950 py-4 px-2 xl:px-6 md:text-[20px] xl:text-[24px] text-justify md:leading-[30px] xl:leading-[35px] md:h-[22vh] xl:max-h-[19.5vh]">
-                    <div className="md:line-clamp-5 xl:line-clamp-6">
+                  <p className="hidden md:flex text-slate-950 py-4 px-2 xl:px-6 md:text-[20px] xl:text-[24px] text-justify md:leading-[30px] xl:leading-[35px] md:h-[22vh] xl:max-h-[21vh] 2xl:max-h-[23vh]">
+                    <div className="md:line-clamp-5 xl:line-clamp-4 2xl:line-clamp-5">
                       {locale === "vi" ? (
                         <p>{blog.description}</p>
                       ) : (
@@ -510,7 +510,7 @@ export default function Root() {
                     </div>
                   </p>
                   <div className="hidden md:flex">
-                    <div className="md:py-3 xl:py-5 flex flex-row content-center items-center">
+                    <div className="md:py-3 xl:py-5 flex flex-row content-center items-end">
                       <SlArrowRight className="pr-2" size="33" />
                       <p className="mt-auto  font-bold md:text-[19.6px] xl:text-[24px]">{`${
                         locale === "vi" ? "Đọc thêm" : "Read more"
