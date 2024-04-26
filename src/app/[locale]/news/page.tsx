@@ -52,20 +52,31 @@ export default function Root() {
         className="w-full h-max rounded-lg max-h-screen"
       />
       <div
-        className="container mx-auto w-full mt-8 bg-white text-black 
+        className="container mx-auto w-full md:mt-8 mt-4 bg-white text-black 
        flex flex-col justify-center items-center"
       >
-        <div className="px-4 ">
-          <div className="flex flex-row pb-8">
+        <div className="md:px-4">
+          <div className="flex flex-row md:pb-8 pb-4 gap-4">
             <div
               onClick={() => {
                 setCurrentIndex(0);
               }}
               className={`font-bold ${
                 currentIndex === 0 && "text-green-400"
-              } cursor-pointer border border-black rounded-full mr-4 px-10 max-h-[100px] max-w-[250px] text-center content-center `}
+              } cursor-pointer border border-black rounded-full  md:px-10 px-2 max-h-[100px] text-center md:w-[22vw] ${
+                locale === "en" ? "w-[30vw]" : "w-[29vw]"
+              }  content-center text-[16px] `}
             >
-              {t("title1")}
+              <p className="hidden md:inline">{t("title1")}</p>
+              {locale === "vi" ? (
+                <p className="inline md:hidden">
+                  Tin Tức <br /> Sự Kiện
+                </p>
+              ) : (
+                <p className="inline md:hidden">
+                  News- <br /> Events
+                </p>
+              )}
             </div>
             <div
               onClick={() => {
@@ -73,9 +84,20 @@ export default function Root() {
               }}
               className={`font-bold ${
                 currentIndex === 1 && "text-green-400"
-              } cursor-pointer border border-black rounded-full mr-4 px-10 py-8 max-w-[200px] max-h-[100px] content-center text-center `}
+              } cursor-pointer border border-black rounded-full  md:px-10 px-2 py-8 md:w-[22vw] max-h-[100px] content-center text-center  ${
+                locale === "en" ? "w-[30vw]" : "w-[29vw]"
+              } text-[16px]`}
             >
-              {t("title2")}
+              {/* <p className="hidden md:inline">{t("title2")}</p> */}
+              {locale === "vi" ? (
+                <p className="">
+                  Trách Nhiệm <br /> Xã Hội
+                </p>
+              ) : (
+                <p className="">
+                  Sustainable <br /> Development
+                </p>
+              )}
             </div>
             <div
               onClick={() => {
@@ -83,36 +105,51 @@ export default function Root() {
               }}
               className={`font-bold ${
                 currentIndex === 2 && "text-green-400"
-              } cursor-pointer border border-black rounded-full mr-4 px-10 py-8 max-w-[200px] text-center max-h-[100px] content-center `}
+              } cursor-pointer border border-black rounded-full  md:px-10 px-2 py-8  text-center max-h-[100px] content-center md:w-[22vw] ${
+                locale === "en" ? "w-[30vw]" : "w-[29vw]"
+              } text-[16px]`}
             >
-              {t("title3")}
+              {/* <p className="hidden md:inline">{t("title3")}</p> */}
+              {locale === "vi" ? (
+                <p className="">
+                  Môi Trường <br /> Làm Việc
+                </p>
+              ) : (
+                <p className="">
+                  Work <br /> Environment
+                </p>
+              )}
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-8 pb-6">
+          <div className="md:grid md:grid-cols-1 flex flex-col gap-8 pb-6">
             {data?.blogs
               ?.filter((blog: any) => blog.type === "news")
               .map((blog: any) => (
-                <div className="py-3 px-4 flex flex-col md:flex-row gap-6 md:gap-10 items-center justify-between border border-black w-full min-h-[200px] ">
-                  <a href={`/blog/${blog.id}`} className="shrink-0 ">
+                <div className="md:py-3 md:px-4 flex flex-row gap-4 md:gap-10 md:items-center justify-between md:border md:border-black w-full md:min-h-[200px] ">
+                  <a href={`/blog/${blog.id}`} className="md:shrink-0 ">
                     <img
                       src={`https://dongnam.up.railway.app/assets/${blog.thumbnail}`}
                       alt="DONG-NAM"
-                      className="rounded bg-base-200 object-cover w-auto  max-w-[240px] min-h-[160px]"
+                      className="rounded bg-base-200 w-3/4 object-cover md:w-auto  max-w-[240px] h-[15vh] min-w-[180px] md:min-h-[160px]"
                     />
                   </a>
-                  <div className="flex flex-col gap-4 max-h-[156px] w-full ">
+                  <div className="flex flex-col  md:max-h-[156px] w-full ">
                     <a
-                      className="hover:underline text-black max-h-[29px] line-clamp-1 text-2xl font-bold text-center md:text-left w-full max-w-full text-[22.6px] "
+                      className="hover:underline text-black max-h-[29px] md:line-clamp-1 md:text-2xl md:font-bold  md:text-left w-full max-w-full text-[16px]   "
                       href={`/blog/${blog.id}`}
                     >
                       {locale === "vi" ? blog.title : blog.title_en}
                     </a>
-                    <p className="text-sm text-[16px]  text-base-content/70 text-center md:text-left line-clamp-2 leading-5  ">
-                      {locale === "vi" ? blog.description : blog.description_en}
-                    </p>
+                    <div className="hidden md:block text-sm text-[16px]  text-base-content/70 text-center md:text-left  leading-5 md:pt-3">
+                      <p className="xl:line-clamp-2 md:line-clamp-3">
+                        {locale === "vi"
+                          ? blog.description
+                          : blog.description_en}
+                      </p>
+                    </div>
                     <a
                       href={`/blog/${blog.id}`}
-                      className="flex items-center font-bold pt-8 text-[16px]"
+                      className="hidden md:flex items-center font-bold pt-8 text-[16px]"
                     >
                       <SlArrowRight className="pr-2" size="25" />
                       {t("navigate")}

@@ -6,7 +6,7 @@ const Footer = () => {
   const locale = useLocale();
 
   return (
-    <footer className="relative flex flex-col justify-start items-start p-7 bg-[#F18200] text-white">
+    <footer className="relative flex flex-col justify-start items-start md:p-7 px-7 pt-4 bg-[#F18200] text-white">
       <aside className="flex flex-col justify-start items-start">
         <p className="font-bold mt-4 text-white text-center capitalize md:text-2xl xl:text-3xl">
           {locale === "vi"
@@ -45,14 +45,13 @@ const Footer = () => {
             </>
           )}
         </p>
-        <div className="text-white text-center md:text-2xl xl:text-3xl flex flex-row w-full justify-between">
+        <div className="text-white md:text-2xl xl:text-3xl inline    w-full">
           <>
             <img
               src="/image/footer-3.png"
               className="w-10 h-10 inline-block mr-2 "
             />
-            <strong className="justify-start text-start">Email: </strong>{" "}
-            kinhdoanh@dongnampharma.vn
+            <strong>Email:</strong> kinhdoanh@dongnampharma.vn
           </>
           <div className="absolute hidden md:flex flex-row items-center bottom-0 right-10">
             <a
@@ -63,13 +62,13 @@ const Footer = () => {
               <img
                 src="/image/facebook.png"
                 alt="Facebook-DongNam"
-                className="md:w-16 md:h-16 xl:w-32 xl:h-32"
+                className="md:w-16 md:h-16 xl:h-24 xl:w-24 2xl:w-32 2xl:h-32"
               />
             </a>
             <img
               src="/image/bocongthuong.png"
               alt="DongNam"
-              className="w-auto md:h-40 xl:h-80"
+              className="w-auto md:h-40 xl:h-60 2xl:h-80"
             />
           </div>
         </div>

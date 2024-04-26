@@ -117,8 +117,9 @@
   },
   "news": {
     "title1": "News - Events",
+    "title1_mb": "News - Events",
     "title2": "Sustainable Development",
-    "title3": "Working Development",
+    "title3": "Work Environment",
     "navigate": "Read the article"
   },
   "contacts": {
