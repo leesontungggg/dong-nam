@@ -31,9 +31,19 @@ export default function Root() {
           className="absolute top-[-100px] left-0 w-full h-full opacity-100 bg-[url('/image/hero-bg.jpg')] bg-cover bg-repeat"
           style={{ minHeight: "-webkit-fill-available" }}
         />
-        <div className="absolute object-cover md:mt-[20em] md:ml-[6em] xl:mt-[14em] xl:ml-[12em] 2xl:mt-[22em] 2xl:ml-[18em]   ">
-          <div className="flex flex-col gap-6 h-fit md:h-[20vh] xl:h-[60vh] 2xl:h-[50vh] md:w-[60vw] xl:h-100 xl:w-[50vw] 2xl:w-[35vw] bg-white rounded-[60px] px-8 justify-center md:min-h-[320px] xl:min-h-[410px] ">
-            <h1 className="md:text-[33px] xl:text-[38px] md:pt-6 xl:pt-4 leading-[33px]  text-[#00A44E] font-bold text-center mx-auto load-hidden animate-fade-in uppercase">
+        <div
+          className={`${
+            locale === "en" ? "md:mt-[14em]" : "md:mt-[16em]"
+          } absolute object-cover  md:ml-[6em] xl:mt-[14em] xl:ml-[12em] 2xl:mt-[22em] 2xl:ml-[18em]`}
+        >
+          <div
+            className={`${
+              locale === "en" ? "md:h-full" : "md:h-[20vh]"
+            } flex flex-col gap-6 h-fit  xl:h-[60vh] 2xl:h-[50vh] md:w-[60vw] xl:h-100 xl:w-[50vw] 2xl:w-[35vw] bg-white rounded-[60px] px-8 justify-center md:min-h-[320px] xl:min-h-[410px]`}
+          >
+            <h1
+              className={`md:text-[33px] xl:text-[38px] md:pt-6 xl:pt-4 leading-[33px]  text-[#00A44E] font-bold text-center mx-auto load-hidden animate-fade-in uppercase`}
+            >
               {t("title")}
             </h1>
             <p
