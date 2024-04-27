@@ -49,7 +49,7 @@ export default function Root() {
       <img
         src="https://i.postimg.cc/zfwDkngH/2abb5eaf-9b49-4fd4-9b71-0cfed12c17a9.jpg"
         alt="DongNam"
-        className="w-full h-max rounded-lg max-h-screen"
+        className="w-full h-max max-h-screen"
       />
       <div
         className="container mx-auto w-full md:mt-8 mt-4 bg-white text-black 
@@ -138,7 +138,9 @@ export default function Root() {
                       className="hover:underline text-black max-h-[29px] md:line-clamp-1 md:text-2xl md:font-bold  md:text-left w-full max-w-full text-[16px]   "
                       href={`/blog/${blog.id}`}
                     >
-                      {locale === "vi" ? blog.title : blog.title_en}
+                      <div className="line-clamp-4">
+                        {locale === "vi" ? blog.title : blog.title_en}
+                      </div>
                     </a>
                     <div className="hidden md:block text-sm text-[16px]  text-base-content/70 text-center md:text-left  leading-5 md:pt-3">
                       <p className="xl:line-clamp-2 md:line-clamp-3">
