@@ -93,7 +93,12 @@
     }
   },
   "about": {
-    "title": "Về chúng tôi",
+    "title1": "Công ty Dược Phẩm Đông Nam",
+    "title2": "Về chúng tôi",
+    "title3": "Tầm nhìn",
+    "title4": "Sứ mệnh",
+    "title5": "Chiến lược",
+
     "description": "Là đơn vị tiên phong trong việc sản xuất dược phẩm đạt tiêu chuẩn GMP-WHO đầu tiên tại Việt Nam. Công Ty Dược Đông Nam mang trong mình tinh thần luôn phát triển liên tục và đổi mới, cùng mới với mục tiêu cung cấp những sản phẩm đạt chất lượng quốc tế cho người dân Việt Nam và các nước lân cận.",
     "pros": {
       "article1": {
