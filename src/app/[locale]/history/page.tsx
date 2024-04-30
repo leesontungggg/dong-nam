@@ -16,18 +16,24 @@ export default function About() {
       <section className="relative bg-white h-fit w-full">
         <img
           src="https://i.postimg.cc/kD3xwk4M/oie-ub-Jk-IMNAaes-Z.jpg"
-          className="w-screen h-max  rounded-lg max-h-screen  "
+          className="w-screen h-max md:rounded-lg max-h-screen  "
         />
       </section>
-      <section className="bg-base-200 py-[3em]  flex flex-col items-center">
+      <section className="bg-base-200 md:py-[3em] py-[1em]  flex flex-col items-center">
         <div className="w-full center flex-col container">
-          <h1 className="uppercase text-[37.4px] text-[#00A44E] font-semibold">
+          <h1 className="uppercase text-center text-[28px] md:text-[37.4px] text-[#00A44E] font-bold">
             {locale === "vi" ? <>LỊCH SỬ HÌNH THÀNH</> : <>OUR STORIES</>}
           </h1>
-          <p className="text-[22.6px] leading-9 text-center mt-8 ">
+          <p className="text-[22.6px] leading-[25px] md:leading-9 text-justify md:text-center md:mt-8 mt-4">
             {locale === "vi" ? (
               <>
-                Hơn 20 năm với những <strong>bước tiến khoa học đột phá</strong>
+                Hơn 20 năm với những{" "}
+                <strong className="hidden md:inline">
+                  bước tiến khoa học đột phá
+                </strong>
+                <span className="inline md:hidden">
+                  bước tiến khoa học đột phá
+                </span>
                 , hành trình của chúng tôi vẫn chưa kết thúc. Với mỗi ngày trôi
                 qua, chúng tôi tận tâm nghiên cứu những phương pháp cải tiến
                 giúp thay đổi bức tranh về lĩnh vực chăm sóc sức khỏe.
@@ -35,18 +41,27 @@ export default function About() {
             ) : (
               <>
                 With over 20 years of{" "}
-                <strong> groundbreaking scientific advancements</strong>, our
-                journey is far from over. With each passing day, we are
+                <strong className="hidden md:inline">
+                  {" "}
+                  groundbreaking scientific advancements
+                </strong>
+                <span className="inline md:hidden">
+                  {" "}
+                  groundbreaking scientific advancements
+                </span>
+                , our journey is far from over. With each passing day, we are
                 dedicated to researching innovative methods to change the
                 landscape of healthcare.
               </>
             )}
           </p>
         </div>
-        <div className="flex flex-col w-full mx-auto 2xl:px-8  ">
-          <div className="flex flex-row mt-20 w-full  text-justify lg:leading-[18px] 2xl:leading-[25px] lg:text-[15px] xl:text-[16.6px] 2xl:text-[18.6px]  ">
+        <div className="flex flex-row-reverse md:flex-col mt-10 md:mt-0 w-full mx-auto 2xl:px-8  ">
+          <div
+            className={`flex flex-col md:flex-row md:mt-20 w-full  text-justify leading-[16.5px] lg:leading-[18px] 2xl:leading-[25px] text-[14px] lg:text-[15px] xl:text-[16.6px] 2xl:text-[18.6px] gap-4 mr-1`}
+          >
             <p
-              className={`border border-black rounded-full text-justify content-center p-[20px] 2xl:mr-4  max-w-full`}
+              className={`border border-black rounded-3xl md:rounded-full text-justify content-center px-2 py-1 md:p-[20px] 2xl:mr-4 2xl:px-8  max-w-full`}
             >
               {locale === "vi" ? (
                 <>
@@ -63,7 +78,7 @@ export default function About() {
             </p>
 
             <p
-              className={`border border-black rounded-full text-justify content-center p-[20px] 2xl:mr-4  max-w-full`}
+              className={`border border-black rounded-3xl md:rounded-full text-justify content-center px-2 py-1 md:p-[20px] md:py-6 2xl:mr-4 2xl:px-8 max-w-full`}
             >
               {locale === "vi" ? (
                 <>
@@ -85,7 +100,7 @@ export default function About() {
               )}
             </p>
             <p
-              className={`border border-black rounded-full text-justify content-center p-[20px] 2xl:mr-4  max-w-full`}
+              className={`border border-black rounded-3xl md:rounded-full text-justify content-center px-2 py-1 md:p-[20px] 2xl:mr-4 2xl:px-8 max-w-full`}
             >
               {locale === "vi" ? (
                 <>
@@ -109,7 +124,7 @@ export default function About() {
               )}
             </p>
             <p
-              className={`border border-black rounded-full text-justify content-center p-[20px] 2xl:mr-4  max-w-full`}
+              className={`border border-black rounded-3xl md:rounded-full text-justify content-center px-2 py-1 md:p-[20px] 2xl:mr-4 2xl:px-8 max-w-full`}
             >
               {locale === "vi" ? (
                 <>
@@ -124,7 +139,7 @@ export default function About() {
               )}
             </p>
             <p
-              className={`border border-black rounded-full text-justify content-center p-[20px]   max-w-full`}
+              className={`border border-black rounded-3xl md:rounded-full text-justify content-center px-2 py-1 md:p-[20px] 2xl:px-8 max-w-full`}
             >
               {locale === "vi" ? (
                 <>
@@ -149,11 +164,23 @@ export default function About() {
           <img
             src="https://i.postimg.cc/x0dj1N74/oie-Qt-Lv-Qq-Cnthd-A.png"
             alt="DongNam-history"
-            className="w-full mx-auto "
+            className="hidden md:inline w-full mx-auto "
           />
-          <div className="flex flex-row w-full  text-justify lg:leading-[18px] 2xl:leading-[25px] lg:pr-[210px] xl:pr-[285px] 2xl:pr-[360px] lg:text-[15px] 2xl:text-[18.6px] xl:text-[16.6px]  ">
+          <img
+            src="https://i.postimg.cc/kG34FCPq/oie-r9-Rbk-Uq-LWj-BA.png"
+            alt="DongNam-history"
+            className={`md:hidden w-full mx-auto h-full max-w-[145px] ${
+              locale === "en" ? "mt-7" : "mt-0"
+            }`}
+          />
+          <div
+            className={`flex flex-col md:flex-row w-full text-justify lg:leading-[18px] leading-[14px] 2xl:leading-[25px] lg:pr-[210px] xl:pr-[285px] 2xl:pr-[360px] text-[14px] lg:text-[15px] 2xl:text-[18.6px] xl:text-[16.6px] ${
+              locale === "en" ? "gap-3" : "gap-4"
+            }
+            } ml-1`}
+          >
             <p
-              className={`border border-black rounded-full text-justify content-center p-[24px]  2xl:mr-4 max-w-full`}
+              className={`border border-black rounded-3xl md:rounded-full text-justify content-center px-2 py-1 md:p-[24px] md:py-8 2xl:mr-4 max-w-full`}
             >
               {locale === "vi" ? (
                 <>
@@ -174,7 +201,7 @@ export default function About() {
               )}
             </p>
             <p
-              className={`border border-black rounded-full text-justify content-center p-[24px] 2xl:mr-4  max-w-full`}
+              className={`border border-black rounded-3xl md:rounded-full text-justify content-center px-2 py-1 md:p-[24px] 2xl:mr-4 2xl:px-6  max-w-full`}
             >
               {locale === "vi" ? (
                 <>
@@ -196,7 +223,7 @@ export default function About() {
               )}
             </p>
             <p
-              className={`border border-black rounded-full text-justify content-center lg:px-4  2xl:p-[24px] 2xl:mr-4  max-w-full lg:min-w-[180px]`}
+              className={`border border-black rounded-3xl md:rounded-full text-justify content-center px-2 py-1 lg:px-6 2xl:p-[24px] 2xl:mr-4 2xl:px-8  max-w-full lg:min-w-[180px]`}
             >
               {locale === "vi" ? (
                 <>
@@ -211,7 +238,7 @@ export default function About() {
               )}
             </p>
             <p
-              className={`border border-black rounded-full text-justify content-center lg:px-4 2xl:p-[24px] max-w-full lg:min-w-[200px]`}
+              className={`border border-black rounded-3xl md:rounded-full text-justify content-center px-2 py-1 lg:px-4 2xl:p-[24px] 2xl:px-8 max-w-full lg:min-w-[200px]`}
             >
               {locale === "vi" ? (
                 <>
@@ -228,10 +255,10 @@ export default function About() {
             </p>
           </div>
         </div>
-        <h1 className="uppercase text-[37.4px] text-[#F18200] font-semibold mt-10">
+        <h1 className="uppercase text-[28px] md:text-[37.4px] text-[#F18200] font-bold mt-10">
           {locale === "vi" ? <>Ban giám đốc</> : <>Board of directors</>}
         </h1>
-        <div className="w-full flex flex-row justify-center gap-16 mt-10">
+        <div className="w-full flex flex-col-reverse md:flex-row justify-center gap-10 md:gap-16 my-6 md:mt-10 ">
           <div className="flex flex-col items-center">
             <img
               className="w-72 h-72 rounded-full"
