@@ -65,7 +65,7 @@ export default function Root() {
                 currentIndex === 0 && "text-green-400"
               } cursor-pointer border border-black rounded-full  md:px-10 px-2 max-h-[100px] text-center md:w-[22vw] ${
                 locale === "en" ? "w-[30vw]" : "w-[29vw]"
-              }  content-center text-[16px] flex justify-center items-center`}
+              }  content-center text-[14px] flex justify-center items-center`}
             >
               <p className="hidden md:inline">{t("title1")}</p>
               {locale === "vi" ? (
@@ -86,7 +86,7 @@ export default function Root() {
                 currentIndex === 1 && "text-green-400"
               } cursor-pointer border border-black rounded-full  md:px-10 px-2 py-8 md:w-[22vw] max-h-[100px] content-center text-center  ${
                 locale === "en" ? "w-[30vw]" : "w-[29vw]"
-              } text-[16px] flex justify-center items-center`}
+              } text-[14px] flex justify-center items-center`}
             >
               {/* <p className="hidden md:inline">{t("title2")}</p> */}
               {locale === "vi" ? (
@@ -107,7 +107,7 @@ export default function Root() {
                 currentIndex === 2 && "text-green-400"
               } cursor-pointer border border-black rounded-full  md:px-10 px-2 py-8  text-center max-h-[100px] content-center md:w-[22vw] ${
                 locale === "en" ? "w-[30vw]" : "w-[29vw]"
-              } text-[16px] flex justify-center items-center`}
+              } text-[14px] flex justify-center items-center`}
             >
               {/* <p className="hidden md:inline">{t("title3")}</p> */}
               {locale === "vi" ? (

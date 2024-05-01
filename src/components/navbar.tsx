@@ -27,8 +27,9 @@ const Navbar = (props: any) => {
     });
   };
 
-  const handleToggle = () => {
+  const handleToggle = (e: any) => {
     setToggle(!toggle);
+    e.preventDefault();
   };
 
   return (
@@ -121,13 +122,13 @@ const Navbar = (props: any) => {
           aria-controls="radix-:R96la:"
           data-state="closed"
         >
-          <Menubar onClick={() => handleToggle()}>
+          <Menubar>
             <MenubarMenu>
-              <MenubarTrigger>
+              <MenubarTrigger onClick={handleToggle}>
                 <svg
                   className={`${
                     toggle ? "block" : "hidden"
-                  } swap-off fill-current text-black `}
+                  } swap-off fill-current text-black bg-transparent `}
                   xmlns="http://www.w3.org/2000/svg"
                   width="50"
                   height="50"
@@ -154,7 +155,7 @@ const Navbar = (props: any) => {
                 <MenubarItem>
                   <a
                     className="transition-colors hover:text-foreground/80 text-foreground md:text-md xl:text-lg"
-                    href="/home"
+                    href="/"
                   >
                     {t("home")}
                   </a>
@@ -172,7 +173,7 @@ const Navbar = (props: any) => {
                     <MenubarTrigger className="text-[14px] font-normal">
                       {t("about")}
                     </MenubarTrigger>
-                    <MenubarContent className="ml-[12em] -mt-10">
+                    <MenubarContent className="ml-[12em] -mt-12">
                       <MenubarItem>
                         <a
                           className="transition-colors hover:text-foreground/80 text-foreground md:text-[16px] xl:text-lg"
@@ -201,7 +202,7 @@ const Navbar = (props: any) => {
                           {locale === "vi" ? (
                             <>Lịch Sử Hình Thành</>
                           ) : (
-                            <>History</>
+                            <>Our History</>
                           )}
                         </a>
                       </MenubarItem>

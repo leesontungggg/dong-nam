@@ -16,7 +16,7 @@ const Footer = () => {
         <p className="text-white text-justify md:text-center md:mt-4 text-[14px] md:text-2xl xl:text-3xl">
           <img
             src="/image/footer-1.png"
-            className="w-10 h-10 inline-block md:mr-2"
+            className="w-8 h-8 inline-block md:mr-2"
           />
           {locale === "vi" ? (
             <>
@@ -33,7 +33,7 @@ const Footer = () => {
         <p className="text-white text-justify md:text-center text-[14px] md:text-2xl xl:text-3xl">
           <img
             src="/image/footer-2.png"
-            className="w-10 h-10 inline-block md:mr-2"
+            className="w-8 h-8 inline-block md:mr-2"
           />
           {locale === "vi" ? (
             <>
@@ -45,10 +45,10 @@ const Footer = () => {
             </>
           )}
         </p>
-        <p className="block md:hidden text-white text-justify md:text-center text-[14px] md:text-2xl xl:text-3xl h-[20vh]">
+        <p className="block md:hidden text-white text-justify md:text-center text-[14px] md:text-2xl xl:text-3xl">
           <img
             src="/image/footer-3.png"
-            className="w-10 h-10 inline-block md:mr-2"
+            className="w-8 h-8 inline-block md:mr-2"
           />
           <strong>Email:</strong> kinhdoanh@dongnampharma.vn
         </p>
@@ -80,10 +80,7 @@ const Footer = () => {
           </div>
         </div>
       </aside>
-      <div
-        className="absolute bottom-0 md:hidden flex flex-row items-center justify-center"
-        style={{ width: "-webkit-fill-available" }}
-      >
+      <div className="mx-auto md:hidden flex flex-row items-center justify-center">
         <a
           href="https://web.facebook.com/dongnampharmaceutical"
           target="_blank"
@@ -92,13 +89,13 @@ const Footer = () => {
           <img
             src="/image/facebook.png"
             alt="Facebook-DongNam"
-            className="w-16 h-16"
+            className="w-10 h-10"
           />
         </a>
         <img
           src="/image/bocongthuong.png"
           alt="DongNam"
-          className="w-auto h-40"
+          className="w-20 h-20"
         />
       </div>
     </footer>

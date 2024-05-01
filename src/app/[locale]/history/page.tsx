@@ -13,10 +13,10 @@ export default function About() {
 
   return (
     <main className="!font-sans">
-      <section className="relative bg-white h-fit w-full">
+      <section className="flex flex-col w-full bg-white">
         <img
-          src="https://i.postimg.cc/kD3xwk4M/oie-ub-Jk-IMNAaes-Z.jpg"
-          className="w-screen h-max md:rounded-lg max-h-screen  "
+          src="/image/history.jpg"
+          className="md:rounded-lg w-full h-max max-h-screen"
         />
       </section>
       <section className="bg-base-200 md:py-[3em] py-[1em]  flex flex-col items-center">
@@ -58,7 +58,7 @@ export default function About() {
         </div>
         <div className="flex flex-row-reverse md:flex-col mt-10 md:mt-0 w-full mx-auto 2xl:px-8  ">
           <div
-            className={`flex flex-col md:flex-row md:mt-20 w-full  text-justify leading-[16.5px] lg:leading-[18px] 2xl:leading-[25px] text-[14px] lg:text-[15px] xl:text-[16.6px] 2xl:text-[18.6px] gap-4 mr-1`}
+            className={`flex flex-col md:flex-row md:mt-20 w-full  text-justify leading-[14px] lg:leading-[18px] 2xl:leading-[25px] text-[12px] lg:text-[15px] xl:text-[16.6px] 2xl:text-[18.6px] gap-1 mr-1`}
           >
             <p
               className={`border border-black rounded-3xl md:rounded-full text-justify content-center px-2 py-1 md:p-[20px] 2xl:mr-4 2xl:px-8  max-w-full`}
@@ -169,13 +169,13 @@ export default function About() {
           <img
             src="https://i.postimg.cc/kG34FCPq/oie-r9-Rbk-Uq-LWj-BA.png"
             alt="DongNam-history"
-            className={`md:hidden w-full mx-auto h-full max-w-[145px] ${
-              locale === "en" ? "mt-7" : "mt-0"
+            className={`md:hidden w-full mx-auto h-full max-w-[110px] ${
+              locale === "en" ? "mt-7" : "mt-8"
             }`}
           />
           <div
-            className={`flex flex-col md:flex-row w-full text-justify lg:leading-[18px] leading-[14px] 2xl:leading-[25px] lg:pr-[210px] xl:pr-[285px] 2xl:pr-[360px] text-[14px] lg:text-[15px] 2xl:text-[18.6px] xl:text-[16.6px] ${
-              locale === "en" ? "gap-3" : "gap-4"
+            className={`flex flex-col md:flex-row w-full text-justify lg:leading-[18px] 2xl:leading-[25px] lg:pr-[210px] xl:pr-[285px] 2xl:pr-[360px] text-[12px] lg:text-[15px] 2xl:text-[18.6px] xl:text-[16.6px] gap-1 ${
+              locale === "en" ? "leading-[12px]" : "leading-[14px]"
             }
             } ml-1`}
           >

@@ -71,7 +71,8 @@ export default function Root() {
               }}
               className={`font-bold ${
                 currentIndex === 0 && "text-[#00A44E]"
-              } cursor-pointer border border-black rounded-full  md:px-10 px-2  h-[7vh] md:min-h-[100px] text-center md:w-[17vw] xl:w-[17vw] 2xl:w-[12vw] leading-4 md:leading-6 w-[28vw]  content-center text-[16px] `}
+              } flex justify-center items-center
+              cursor-pointer border border-black rounded-full  md:px-10 px-2  h-[7vh] md:min-h-[100px] text-center md:w-[17vw] xl:w-[17vw] 2xl:w-[12vw] leading-4 md:leading-6 w-[28vw]  content-center text-[14px] md:text-[16px] `}
             >
               <p className="hidden md:inline">{t("title1")}</p>
               {locale === "vi" ? (
@@ -86,7 +87,8 @@ export default function Root() {
               }}
               className={`font-bold ${
                 currentIndex === 1 && "text-[#00A44E]"
-              } cursor-pointer border border-black rounded-full  md:px-10 px-2  h-[7vh] md:min-h-[100px] text-center md:w-[17vw] xl:w-[17vw] 2xl:w-[12vw] leading-4 md:leading-6 w-[28vw] content-center text-[16px] `}
+              } flex justify-center items-center
+              cursor-pointer border border-black rounded-full  md:px-10 px-2  h-[7vh] md:min-h-[100px] text-center md:w-[17vw] xl:w-[17vw] 2xl:w-[12vw] leading-4 md:leading-6 w-[28vw] content-center text-[14px] md:text-[16px]`}
             >
               <p className="hidden md:inline">{t("title2")}</p>
               {locale === "vi" ? (
@@ -105,7 +107,8 @@ export default function Root() {
               }}
               className={`font-bold ${
                 currentIndex === 2 && "text-[#00A44E]"
-              } cursor-pointer border border-black rounded-full  md:px-10 px-2 h-[7vh] md:min-h-[100px] text-center md:w-[17vw] xl:w-[17vw] 2xl:w-[12vw] leading-4 md:leading-6 w-[28vw]  content-center text-[16px] `}
+              } flex justify-center items-center
+              cursor-pointer border border-black rounded-full  md:px-10 px-2 h-[7vh] md:min-h-[100px] text-center md:w-[17vw] xl:w-[17vw] 2xl:w-[12vw] leading-4 md:leading-6 w-[28vw]  content-center text-[14px] md:text-[16px]`}
             >
               <p className="hidden md:inline">{t("title3")}</p>
               {locale === "vi" ? (
@@ -120,7 +123,8 @@ export default function Root() {
               }}
               className={`font-bold ${
                 currentIndex === 3 && "text-[#00A44E]"
-              } cursor-pointer border border-black rounded-full  md:px-10 px-2  h-[7vh] md:min-h-[100px] text-center md:w-[17vw] xl:w-[17vw] 2xl:w-[12vw] leading-4 md:leading-6 w-[28vw]  content-center text-[16px] `}
+              } flex justify-center items-center
+              cursor-pointer border border-black rounded-full  md:px-10 px-2  h-[7vh] md:min-h-[100px] text-center md:w-[17vw] xl:w-[17vw] 2xl:w-[12vw] leading-4 md:leading-6 w-[28vw]  content-center text-[14px] md:text-[16px]`}
             >
               <p className="hidden md:inline">{t("title4")}</p>
               {locale === "vi" ? (
@@ -141,7 +145,8 @@ export default function Root() {
               }}
               className={`font-bold ${
                 currentIndex === 4 && "text-[#00A44E]"
-              } cursor-pointer border border-black rounded-full  md:px-10 px-2  h-[7vh] md:min-h-[100px] text-center md:w-[17vw] xl:w-[17vw] 2xl:w-[12vw] leading-4 md:leading-6 w-[28vw]  content-center text-[16px] `}
+              } flex justify-center items-center
+              cursor-pointer border border-black rounded-full  md:px-10 px-2  h-[7vh] md:min-h-[100px] text-center md:w-[17vw] xl:w-[17vw] 2xl:w-[12vw] leading-4 md:leading-6 w-[28vw]  content-center text-[14px] md:text-[16px]`}
             >
               <p className="hidden md:inline">{t("title5")}</p>
               {locale === "vi" ? (
@@ -156,7 +161,8 @@ export default function Root() {
               }}
               className={`font-bold ${
                 currentIndex === 5 && "text-[#00A44E]"
-              } cursor-pointer border border-black rounded-full  md:px-10 px-2  h-[7vh] md:min-h-[100px] text-center md:w-[17vw] xl:w-[17vw] 2xl:w-[12vw] leading-4 md:leading-6 w-[28vw]  content-center text-[16px] `}
+              } flex justify-center items-center
+              cursor-pointer border border-black rounded-full  md:px-10 px-2  h-[7vh] md:min-h-[100px] text-center md:w-[17vw] xl:w-[17vw] 2xl:w-[12vw] leading-4 md:leading-6 w-[28vw]  content-center text-[14px] md:text-[16px]`}
             >
               <p className="hidden md:inline">{t("title6")}</p>
               {locale === "vi" ? (
@@ -175,7 +181,8 @@ export default function Root() {
               }}
               className={`font-bold ${
                 currentIndex === 6 && "text-[#00A44E]"
-              } cursor-pointer border border-black rounded-full  md:px-10 px-2  h-[7vh] md:min-h-[100px] text-center md:w-[17vw]  2xl:w-[12vw] leading-4 md:leading-6 w-[28vw]  content-center text-[16px] `}
+              } flex justify-center items-center
+               cursor-pointer border border-black rounded-full  md:px-10 px-2  h-[7vh] md:min-h-[100px] text-center md:w-[17vw]  2xl:w-[12vw] leading-4 md:leading-6 w-[28vw]  content-center text-[14px] md:text-[16px]`}
             >
               <p className="hidden md:inline">{t("title7")}</p>
               {locale === "vi" ? (
@@ -190,7 +197,8 @@ export default function Root() {
               }}
               className={`font-bold ${
                 currentIndex === 7 && "text-[#00A44E]"
-              } cursor-pointer border border-black rounded-full  md:px-10 px-2  h-[7vh] md:min-h-[100px] text-center md:w-[17vw] 2xl:w-[12vw]  leading-4 md:leading-6 w-[28vw]  content-center text-[16px]  `}
+              } flex justify-center items-center
+              cursor-pointer border border-black rounded-full  md:px-10 px-2  h-[7vh] md:min-h-[100px] text-center md:w-[17vw] 2xl:w-[12vw]  leading-4 md:leading-6 w-[28vw] content-center text-[14px] md:text-[16px]`}
             >
               <p className="hidden md:inline">{t("title8")}</p>
               {locale === "vi" ? (
@@ -207,7 +215,8 @@ export default function Root() {
               }}
               className={`font-bold ${
                 currentIndex === 8 && "text-[#00A44E]"
-              } cursor-pointer border border-black rounded-full  md:px-10 px-2  h-[7vh] md:min-h-[100px] text-center md:w-[17vw] 2xl:w-[12vw]  leading-4 md:leading-6 w-[28vw]  content-center text-[16px] `}
+              } flex justify-center items-center
+              cursor-pointer border border-black rounded-full  md:px-10 px-2  h-[7vh] md:min-h-[100px] text-center md:w-[17vw] 2xl:w-[12vw]  leading-4 md:leading-6 w-[28vw] content-center text-[14px] md:text-[16px]`}
             >
               <p className="hidden md:inline">{t("title9")}</p>
               {locale === "vi" ? (
@@ -225,7 +234,8 @@ export default function Root() {
               }}
               className={`font-bold ${
                 currentIndex === 9 && "text-[#00A44E]"
-              } cursor-pointer border border-black rounded-full  md:px-10 px-2  h-[7vh] md:min-h-[100px] text-center md:w-[17vw] 2xl:w-[12vw] leading-4 md:leading-6 w-[28vw]  content-center text-[16px] `}
+              } flex justify-center items-center
+              cursor-pointer border border-black rounded-full  md:px-10 px-2  h-[7vh] md:min-h-[100px] text-center md:w-[17vw] 2xl:w-[12vw] leading-4 md:leading-6 w-[28vw] content-center text-[14px] md:text-[16px]`}
             >
               <p className="hidden md:inline">{t("title10")}</p>
               {locale === "vi" ? (
