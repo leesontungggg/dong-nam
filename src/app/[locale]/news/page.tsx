@@ -45,9 +45,9 @@ export default function Root() {
   }
 
   return (
-    <div>
+    <div className="flex flex-col w-full">
       <img
-        src="https://i.postimg.cc/zfwDkngH/2abb5eaf-9b49-4fd4-9b71-0cfed12c17a9.jpg"
+        src="/image/news.jpg"
         alt="DongNam"
         className="w-full h-max max-h-screen"
       />

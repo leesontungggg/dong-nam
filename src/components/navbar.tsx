@@ -56,7 +56,7 @@ const Navbar = (props: any) => {
                       className="transition-colors hover:text-foreground/80 text-foreground md:text-[16px] xl:text-lg"
                       href="/about"
                     >
-                      Về Chúng Tôi
+                      {locale === "vi" ? <>Về Chúng Tôi</> : <>About Us</>}
                     </a>
                   </MenubarItem>
                   <MenubarItem>
@@ -64,7 +64,11 @@ const Navbar = (props: any) => {
                       className="transition-colors hover:text-foreground/80 text-foreground md:text-[16px] xl:text-lg"
                       href="/factory"
                     >
-                      Nhà Máy Đông Nam
+                      {locale === "vi" ? (
+                        <>Nhà Máy Đông Nam</>
+                      ) : (
+                        <>Dong Nam Factory</>
+                      )}
                     </a>
                   </MenubarItem>
                   <MenubarItem>
@@ -72,7 +76,7 @@ const Navbar = (props: any) => {
                       className="transition-colors hover:text-foreground/80 text-foreground md:text-[16px] xl:text-lg"
                       href="/history"
                     >
-                      Lịch Sử Hình Thành
+                      {locale === "vi" ? <>Lịch Sử Hình Thành</> : <>History</>}
                     </a>
                   </MenubarItem>
                 </MenubarContent>
@@ -155,14 +159,55 @@ const Navbar = (props: any) => {
                     {t("home")}
                   </a>
                 </MenubarItem>
-                <MenubarItem>
+                {/* <MenubarItem>
                   <a
                     className="transition-colors hover:text-foreground/80 text-foreground md:text-md xl:text-lg"
                     href="/about"
                   >
                     {t("about")}
                   </a>
-                </MenubarItem>
+                </MenubarItem> */}
+                <Menubar className="border-none bg-transparent ">
+                  <MenubarMenu>
+                    <MenubarTrigger className="text-[14px] font-normal">
+                      {t("about")}
+                    </MenubarTrigger>
+                    <MenubarContent className="ml-[12em] -mt-10">
+                      <MenubarItem>
+                        <a
+                          className="transition-colors hover:text-foreground/80 text-foreground md:text-[16px] xl:text-lg"
+                          href="/about"
+                        >
+                          {locale === "vi" ? <>Về Chúng Tôi</> : <>About Us</>}
+                        </a>
+                      </MenubarItem>
+                      <MenubarItem>
+                        <a
+                          className="transition-colors hover:text-foreground/80 text-foreground md:text-[16px] xl:text-lg"
+                          href="/factory"
+                        >
+                          {locale === "vi" ? (
+                            <>Nhà Máy Đông Nam</>
+                          ) : (
+                            <>Dong Nam Factory</>
+                          )}
+                        </a>
+                      </MenubarItem>
+                      <MenubarItem>
+                        <a
+                          className="transition-colors hover:text-foreground/80 text-foreground md:text-[16px] xl:text-lg"
+                          href="/history"
+                        >
+                          {locale === "vi" ? (
+                            <>Lịch Sử Hình Thành</>
+                          ) : (
+                            <>History</>
+                          )}
+                        </a>
+                      </MenubarItem>
+                    </MenubarContent>
+                  </MenubarMenu>
+                </Menubar>
                 <MenubarItem>
                   <a
                     className="transition-colors hover:text-foreground/80 text-foreground md:text-md xl:text-lg"

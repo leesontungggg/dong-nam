@@ -53,9 +53,9 @@ export default function Root() {
   console.log(data.blog);
 
   return (
-    <div>
+    <div className="flex flex-col w-full">
       <img
-        src="https://i.postimg.cc/WzZfG2yW/yes.jpg"
+        src="/image/blog.jpg"
         alt="DongNam"
         className="w-full h-max max-h-screen"
       />

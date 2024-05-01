@@ -45,7 +45,7 @@ const Footer = () => {
             </>
           )}
         </p>
-        <p className="block md:hidden text-white text-justify md:text-center text-[14px] md:text-2xl xl:text-3xl h-[16vh]">
+        <p className="block md:hidden text-white text-justify md:text-center text-[14px] md:text-2xl xl:text-3xl h-[20vh]">
           <img
             src="/image/footer-3.png"
             className="w-10 h-10 inline-block md:mr-2"
@@ -53,7 +53,7 @@ const Footer = () => {
           <strong>Email:</strong> kinhdoanh@dongnampharma.vn
         </p>
         <div className="text-white md:text-2xl xl:text-3xl inline    w-full">
-          <div className="hidden md:block">
+          <div className="hidden md:block xl:h-[10vh] 2xl:h-[12vh]">
             <img
               src="/image/footer-3.png"
               className="w-10 h-10 inline-block mr-2"
