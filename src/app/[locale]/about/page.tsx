@@ -151,7 +151,7 @@ export default function About() {
         <div className="container max-w-screen-xl mx-auto grid grid-cols-2 gap-8 mt-32">
           <img
             src="/image/about-3.jpg"
-            className="w-full h-full rounded-lg xl:max-h-80 object-cover"
+            className="w-full h-full rounded-lg xl:max-h-80 object-fill"
           />
           <div className="flex flex-col gap-4">
             <h1 className="text-3xl uppercase font-bold text-[#F18200]">
