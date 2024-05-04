@@ -37,16 +37,16 @@ export default function Root() {
               <h1 className="text-black font-bold text-[22.6px] text-justify sm:text-left sm:mb-6 leading-[22px]  ">
                 {locale === "vi" ? product.name : product.name_en}
               </h1>
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-16  w-full justify-center">
+              <div className="flex flex-row gap-8 md:gap-6 lg:gap-16  w-full justify-center">
                 <img
                   src={`https://dongnam.up.railway.app/assets/${product.galleries[0]?.directus_files_id}`}
                   alt="DONG-NAM"
-                  className="rounded bg-base-200 object-cover w-auto sm:w-1/2 h-80 sm:h-full "
+                  className="rounded bg-base-200 object-fill md:object-cover w-1/2  md:w-1/2 h-[170px] md:h-full "
                 />
                 <img
                   src={`https://dongnam.up.railway.app/assets/${product.galleries[1]?.directus_files_id}`}
                   alt="DONG-NAM"
-                  className="rounded bg-base-200 object-cover w-auto sm:w-1/2 h-80 sm:h-full"
+                  className="rounded bg-base-200 object-fill md:object-cover w-1/2 md:w-1/2 h-[170px] md:h-full"
                 />
               </div>
               <Accordion
@@ -163,7 +163,7 @@ export default function Root() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-12">
-                  <AccordionTrigger>
+                  <AccordionTrigger className="text-left">
                     {locale === "vi"
                       ? "Tương Tác - Tương Kỵ Của Thuốc"
                       : "Drug Interaction"}
