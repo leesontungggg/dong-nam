@@ -13,7 +13,11 @@ const Footer = () => {
             ? "Công ty cổ phần sản xuất thương mại dược phẩm đông nam"
             : "Dong Nam Pharmaceutical Trading and Production Joint Stock Company"}
         </p>
-        <p className="text-white text-justify md:text-center md:mt-4 text-[14px] md:text-2xl xl:text-3xl">
+        <p
+          className={`text-white text-justify md:text-center md:mt-4 text-[14px] ${
+            locale === "vi" ? "md:text-2xl" : "md:text-xl lg:max-2xl:pb-3"
+          } xl:text-3xl xl:text-[29px]`}
+        >
           <img
             src="/image/footer-1.png"
             className="w-8 h-8 xl:h-12 xl:w-12 inline-block md:mr-2"
@@ -31,7 +35,11 @@ const Footer = () => {
             </>
           )}
         </p>
-        <p className="text-white text-justify md:text-center text-[14px] md:text-2xl xl:text-3xl">
+        <p
+          className={`text-white text-justify md:text-center text-[14px]  ${
+            locale === "vi" ? "md:text-2xl" : "md:text-xl lg:max-2xl:pb-3"
+          } xl:text-3xl xl:text-[29px]`}
+        >
           <img
             src="/image/footer-2.png"
             className="w-8 h-8 xl:h-12 xl:w-12 inline-block md:mr-2"
@@ -55,7 +63,11 @@ const Footer = () => {
           />{" "}
           kinhdoanh@dongnampharma.vn
         </p>
-        <div className="text-white md:text-2xl xl:text-3xl inline    w-full">
+        <div
+          className={`text-white ${
+            locale === "vi" ? "md:text-2xl" : "md:text-xl"
+          } xl:text-3xl xl:text-[29px] inline    w-full`}
+        >
           <div className="hidden md:block xl:h-[10vh] 2xl:h-[12vh]">
             <img
               src="/image/footer-3.png"
