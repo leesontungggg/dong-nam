@@ -33,8 +33,8 @@ export default function Root() {
         />
         <div
           className={`${
-            locale === "en" ? "md:mt-[14em]" : "md:mt-[16em]"
-          } absolute object-cover  md:ml-[6em] xl:mt-[14em] xl:ml-[12em] 2xl:mt-[22em] 2xl:ml-[18em]`}
+            locale === "en" ? "md:mt-[14em]" : "md:mt-[10em]"
+          } absolute object-cover  md:ml-[6em] xl:mt-[10em] xl:ml-[12em] 2xl:mt-[16em] 2xl:ml-[18em]`}
         >
           <div
             className={`${
@@ -117,8 +117,8 @@ export default function Root() {
             src="/image/sumenh.jpg"
             className="w-full lg:h-full md:pr-4 xl:pr-6 md:pl-20 xl:pl-0 "
           />
-          <div className="container flex flex-col xl:gap-4 md:pl-4 xl:pl-6 md:pr-20 xl:pr-0">
-            <h1 className="leading-[22px] md:leading-[33px] md:text-[38px] xl:text-[38px] text-[18px] uppercase md:font-bold text-[#F18200] ">
+          <div className="container flex flex-col md:pl-4 xl:pl-4">
+            <h1 className="leading-[22px] md:leading-[33px] text-[18px] md:text-2xl xl:text-3xl uppercase md:font-bold text-[#F18200] ">
               {locale === "vi" ? (
                 <span className="inline md:hidden ">
                   <strong>Sứ mệnh</strong>
@@ -132,7 +132,7 @@ export default function Root() {
               )}
               <span className="hidden md:block">{t("mission.title")}</span>
             </h1>
-            <p className="text-[16px] md:text-[22.6px] xl:text-[28.6px] md:leading-[30px] xl:leading-[35px] lg:max-w-[19.5em] pt-2 leading-[20px] text-justify">
+            <p className="text-[16px] md:text-xl xl:text-2xl pt-2 leading-[20px] text-justify">
               {locale === "vi" ? (
                 <>
                   Với sứ mệnh{" "}
@@ -191,7 +191,7 @@ export default function Root() {
       <section className="bg-base-200 md:pt-[4em] pt-[1em] bg-base-200  px-[2em] lg:pt-[4em] lg:px-[5em]  ">
         <div className="md:container md:max-w-screen-xl md:mx-auto  ">
           <div className="hidden md:block load-hidden animate-fade-in animate-delay-200 md:max-w-[800px] md:w-max ">
-            <h2 className="md:w-full  md:mx-auto md:mb-[40px]  text-[#00A44E] lg:w-full md:text-[38px] text-[18px] md:leading-10 leading-[22px] md:max-h-fit md:text-left  md:font-bold uppercase md:max-w-[78vw] xl:max-w-[50vw]  max-w-[250px] w-full text-end">
+            <h2 className="md:w-full  md:mx-auto md:mb-[20px]  text-[#00A44E] lg:w-full md:text-2xl xl:text-3xl text-[18px] leading-[22px] md:max-h-fit md:text-left  md:font-bold uppercase md:max-w-[50vw] xl:max-w-[50vw]  max-w-[250px] w-full text-end">
               {t("reason.title")}
             </h2>
           </div>
@@ -211,7 +211,7 @@ export default function Root() {
               </span>
             )}
           </h1>
-          <div className="mt-4 grid md:grid-cols-3 md:gap-4 gap-2">
+          <div className="mt-4 grid md:grid-cols-3 md:gap-2 gap-2">
             <div className="flex flex-col items-center  w-full load-hidden animate-slide-up md:border-[1px] md:border-black border-solid rounded-t-lg animate-delay-200">
               <img
                 className="aspect-square md:object-cover  w-full md:h-[250px] h-[220px] md:rounded-lg "
@@ -228,9 +228,9 @@ export default function Root() {
                   <>Quality Products - Competitive Prices</>
                 )}
               </p>
-              <div className="md:flex flex-col lg:px-4 hidden">
+              <div className="md:flex flex-col md:px-1 hidden">
                 <h3
-                  className={`md:text-[24.6px] xl:text-[26.6px] text-left pt-4  ${
+                  className={`md:text-[18px] xl:text-[24px] text-left pt-4  ${
                     locale === "en" ? "pr-16" : "pr-8"
                   } text-black font-semibold capitalize`}
                   dangerouslySetInnerHTML={{
@@ -238,13 +238,13 @@ export default function Root() {
                   }}
                 ></h3>
                 <h3
-                  className="text-[24.6px] xl:text-[26.6px] text-right  text-black font-semibold  capitalize"
+                  className="text-[18px] xl:text-[24px] text-right  text-black font-semibold  capitalize"
                   dangerouslySetInnerHTML={{
                     __html: t("reason.reason1.title2"),
                   }}
                 ></h3>
               </div>
-              <p className="hidden md:block text-center text-[22.6px] xl:text-[24.6px] xl:text-justify md:text-left  text-slate-950 p-4 leading-[36px]">
+              <p className="hidden md:block text-center text-[18px] xl:text-[24px] xl:text-justify md:text-left  text-slate-950 p-4 leading-[36px]">
                 {t("reason.reason1.description")}
               </p>
             </div>
@@ -264,9 +264,9 @@ export default function Root() {
                   <>Fast Production - Consistent Quality</>
                 )}
               </p>
-              <div className="md:flex flex-col lg:px-4 hidden ">
+              <div className="md:flex flex-col md:px-1 hidden">
                 <h3
-                  className={`md:text-[24.6px] xl:text-[26.6px] text-left pt-4  ${
+                  className={`md:text-[18px] xl:text-[24px] text-left pt-4  ${
                     locale === "en" ? "pr-16" : "pr-8"
                   } text-black font-semibold capitalize`}
                   dangerouslySetInnerHTML={{
@@ -274,19 +274,19 @@ export default function Root() {
                   }}
                 ></h3>
                 <h3
-                  className="md:text-[24.6px] xl:text-[26.6px] text-right  text-black font-semibold  capitalize"
+                  className="md:text-[18px] xl:text-[24px] text-right  text-black font-semibold  capitalize"
                   dangerouslySetInnerHTML={{
                     __html: t("reason.reason2.title2"),
                   }}
                 ></h3>
               </div>
-              <p className="hidden md:block text-center text-[22.6px] xl:text-[24.6px] xl:text-justify md:text-left text-slate-950 p-4 leading-[36px]">
+              <p className="hidden md:block text-center text-[18px] xl:text-[24px] xl:text-justify md:text-left text-slate-950 p-4 leading-[36px]">
                 {t("reason.reason2.description")}
               </p>
             </div>
-            <div className="flex flex-col items-center  w-full load-hidden animate-slide-up md:border-[1px] md:border-black border-solid rounded-t-lg animate-delay-200">
+            <div className="flex flex-col items-center w-full load-hidden animate-slide-up md:border-[1px] md:border-black border-solid rounded-t-lg animate-delay-200">
               <img
-                className="aspect-square md:object-cover  w-full md:h-[250px] h-[220px] md:rounded-lg "
+                className="aspect-square md:object-cover w-full md:h-[250px] h-[220px] md:rounded-lg"
                 src="/image/reason-3.jpg"
                 alt="Fast Onboarding"
               />
@@ -300,9 +300,9 @@ export default function Root() {
                   <>Diverse Portfolio - Exclusive Manufacturing</>
                 )}
               </p>
-              <div className="md:flex flex-col lg:px-4 hidden ">
+              <div className="md:flex flex-col md:px-1 hidden ">
                 <h3
-                  className={`md:text-[24.6px] xl:text-[26.6px] text-left pt-4  ${
+                  className={`md:text-[18px] xl:text-[24px] text-left pt-4  ${
                     locale === "en" ? "pr-16" : "pr-10"
                   } text-black font-semibold capitalize`}
                   dangerouslySetInnerHTML={{
@@ -310,13 +310,13 @@ export default function Root() {
                   }}
                 ></h3>
                 <h3
-                  className="md:text-[24.6px] xl:text-[26.6px] text-right  text-black font-semibold  capitalize"
+                  className="md:text-[18px] xl:text-[24px] text-right  text-black font-semibold  capitalize"
                   dangerouslySetInnerHTML={{
                     __html: t("reason.reason3.title2"),
                   }}
                 ></h3>
               </div>
-              <p className="hidden md:block text-center text-[22.6px] xl:text-[24.6px] xl:text-justify md:text-left text-slate-950 p-4 leading-[36px]">
+              <p className="hidden md:block text-center text-[18px] xl:text-[24px] xl:text-justify md:text-left text-slate-950 p-4 leading-[36px]">
                 {t("reason.reason3.description")}
               </p>
             </div>
@@ -327,7 +327,7 @@ export default function Root() {
       <section className="bg-base-200 pt-3  md:pt-[4em] lg:pt-[3em] lg:px-[5em]">
         <div className="container max-w-screen-xl mx-auto w-full ">
           <div className="load-hidden animate-fade-in animate-delay-200">
-            <h2 className="  uppercase mb-4 leading-[22px] text-[18px] md:text-center text-[#F18200] md:text-[38px] md:leading-[44px] lg:text-left lg:ml-0 md:font-bold w-12/13 md:w-3/4 ">
+            <h2 className="  uppercase mb-4 leading-[22px] text-[18px] md:text-center text-[#F18200] md:text-2xl xl:text-3xl lg:text-left lg:ml-0 md:font-bold w-12/13 md:w-1/2 ">
               {locale === "vi" ? (
                 <p>
                   <span className="font-bold">DƯỢC PHẨM ĐÔNG NAM</span>{" "}
@@ -393,7 +393,7 @@ export default function Root() {
       <section className="bg-base-200 pt-4 md:pt-[4em] lg:pt-[3em] lg:px-[5em]">
         <div className="container max-w-screen-xl mx-auto w-full flex flex-col justify-center items-center">
           <div className="load-hidden animate-fade-in animate-delay-200 flex self-stretch">
-            <h2 className="uppercase mb-4 leading-[22px] text-[18px] md:text-center text-[#00A44E] md:text-[38px] md:leading-[44px] lg:text-left lg:ml-0 md:font-bold w-11/12 md:w-3/4 font-bold">
+            <h2 className="uppercase mb-4 md:mb-0 leading-[22px] text-[18px] md:text-center text-[#00A44E] md:text-2xl xl:text-3xl lg:text-left lg:ml-0 md:font-bold w-11/12 md:w-3/4 font-bold">
               {t("article.title")}
             </h2>
             <div
@@ -434,9 +434,9 @@ export default function Root() {
                   <p
                     className={`${
                       locale === "vi" ? "md:text-[20px]" : "md:text-[18px]"
-                    } hidden md:flex text-slate-950 py-4 px-2 xl:px-6 xl:text-[24px] text-justify md:leading-[30px] xl:leading-[35px] md:h-[22vh] xl:max-h-[21vh] 2xl:max-h-[23vh]`}
+                    } hidden md:flex text-slate-950 py-4 px-2 xl:px-6 xl:text-[24px] text-justify md:leading-[30px] xl:leading-[35px] md:h-[21vh] xl:max-h-[19vh] 2xl:max-h-[23vh]`}
                   >
-                    <div className="md:line-clamp-5 xl:line-clamp-4 2xl:line-clamp-5">
+                    <div className="md:line-clamp-4 xl:line-clamp-3 2xl:line-clamp-4">
                       {locale === "vi" ? (
                         <p>{blog.description}</p>
                       ) : (
@@ -472,7 +472,7 @@ export default function Root() {
       <section className="bg-base-200 pt-4 md:pt-[4em] lg:pt-[3em] lg:px-[5em] mb-4 md:mb-6 xl:mb-8">
         <div className="container max-w-screen-xl mx-auto w-full flex flex-col justify-center items-center">
           <div className="load-hidden animate-fade-in animate-delay-200 flex self-stretch">
-            <h2 className="uppercase mb-4 leading-[22px] text-[18px] md:text-center text-[#00A44E] md:text-[38px] md:leading-[44px] lg:text-left lg:ml-0 md:font-bold w-11/12 md:w-3/4 font-bold">
+            <h2 className="uppercase mb-4 md:mb-0 leading-[22px] text-[18px] md:text-center text-[#00A44E] md:text-2xl xl:text-3xl lg:text-left lg:ml-0 md:font-bold w-11/12 md:w-3/4 font-bold">
               {t("blog.title")}
             </h2>
             <div
@@ -510,8 +510,8 @@ export default function Root() {
                       <p>{blog.title_en}</p>
                     )}
                   </h3>
-                  <p className="hidden md:flex text-slate-950 py-4 px-2 xl:px-6 md:text-[20px] xl:text-[24px] text-justify md:leading-[30px] xl:leading-[35px] md:h-[22vh] xl:max-h-[21vh] 2xl:max-h-[23vh]">
-                    <div className="md:line-clamp-5 xl:line-clamp-4 2xl:line-clamp-5">
+                  <p className="hidden md:flex text-slate-950 py-4 px-2 xl:px-6 md:text-[20px] xl:text-[24px] text-justify md:leading-[30px] xl:leading-[35px] md:h-[21vh] xl:max-h-[19vh] 2xl:max-h-[23vh]">
+                    <div className="md:line-clamp-4 xl:line-clamp-3 2xl:line-clamp-4">
                       {locale === "vi" ? (
                         <p>{blog.description}</p>
                       ) : (

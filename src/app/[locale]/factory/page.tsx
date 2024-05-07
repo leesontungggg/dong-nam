@@ -43,9 +43,9 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="hidden md:block bg-base-200  px-[5em] pt-[2em]">
+      <section className="hidden md:block bg-base-200 pt-[2em]">
         <div className="container max-w-screen-xl mx-auto">
-          <p className="text-2xl leading-10 text-justify">
+          <p className="md:text-[18px] xl:text-[24px] text-justify">
             {" "}
             {locale === "vi" ? (
               <>
@@ -106,17 +106,17 @@ export default function About() {
           </p>
         </div>
       </section>
-      <section className="hidden md:block bg-base-200 py-[3em] px-[2em] md:py-[4em] lg:p-[5em]">
-        <div className="container max-w-screen-xl mx-auto grid grid-cols-2 gap-8">
+      <section className="hidden md:block bg-base-200 py-[3em] md:py-[2em]">
+        <div className="container max-w-screen-xl mx-auto grid grid-cols-2 gap-6 pt-6">
           <img
             src="/image/factory-1.jpg"
             className="w-full h-full xl:max-h-[47vh] 2xl:max-h-[39vh] rounded-lg object-cover"
           />
           <div className="flex flex-col gap-4">
-            <h1 className="text-3xl uppercase font-bold text-[#F18200]">
+            <h1 className="md:text-2xl xl:text-3xl uppercase font-bold text-[#F18200]">
               {t("title2")}
             </h1>
-            <p className="text-2xl leading-10 text-justify">
+            <p className="md:text-[18px] xl:text-[24px] lg:max-xl:leading-8 text-justify">
               {locale === "vi" ? (
                 <>
                   Nhà máy sản xuất dược phẩm Đông Nam đã tuân thủ nghiêm ngặt
@@ -142,12 +142,16 @@ export default function About() {
             </p>
           </div>
         </div>
-        <div className="container max-w-screen-xl mx-auto grid grid-cols-2 gap-8 mt-32 ">
+        <div className="container max-w-screen-xl mx-auto grid grid-cols-2 gap-6 pt-[66px]">
           <div className="flex flex-col gap-4">
-            <h1 className="text-3xl uppercase font-bold text-[#00A44E]">
+            <h1 className="md:text-2xl xl:text-3xl uppercase font-bold text-[#00A44E]">
               {t("title3")}
             </h1>
-            <p className="text-2xl leading-10 text-justify">
+            <p
+              className={`md:text-[18px] xl:text-[24px] lg:max-xl:leading-8 ${
+                locale === "en" ? "xl:leading-7" : ""
+              } text-justify`}
+            >
               {locale === "vi" ? (
                 <>
                   Chúng tôi chuyên sản xuất các loại sản phẩm dạng{" "}
@@ -190,20 +194,20 @@ export default function About() {
           </div>
           <img
             src="/image/factory-2.jpg"
-            className="w-full h-full rounded-lg xl:max-h-[58vh] 2xl:max-h-[47vh]   object-cover"
+            className="w-full h-full rounded-lg xl:max-h-[58vh] 2xl:max-h-[47vh] object-cover"
           />
         </div>
-        <div className="container max-w-screen-xl mx-auto grid grid-cols-2 gap-8 mt-32">
+        <div className="container max-w-screen-xl mx-auto grid grid-cols-2 gap-6 pt-[66px]">
           <img
             src="/image/factory-3.jpg"
             className="w-full h-full rounded-lg
-            xl:max-h-[44vh] 2xl:max-h-[36vh]    object-fill"
+            xl:max-h-[44vh] 2xl:max-h-[36vh] object-fill"
           />
           <div className="flex flex-col gap-4">
-            <h1 className="text-3xl uppercase font-bold text-[#F18200]">
+            <h1 className="md:text-2xl xl:text-3xl uppercase font-bold text-[#F18200]">
               {t("title4")}
             </h1>
-            <p className="text-2xl leading-[60px] text-justify pt-2">
+            <p className="md:text-[18px] xl:text-[24px] lg:max-xl:leading-10 xl:leading-[50px]  text-justify">
               {locale === "vi" ? (
                 <>
                   Nhờ vào sự đầu tư mạnh mẽ vào nghiên cứu và phát triển, các

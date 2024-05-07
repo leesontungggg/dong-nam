@@ -19,7 +19,7 @@ export default function About() {
           className="md:rounded-lg w-full h-max max-h-screen"
         />
       </section>
-      <section className="bg-base-200 md:py-[3em] py-[1em]  flex flex-col items-center">
+      <section className="bg-base-200 md:py-[3em] py-[1em] flex flex-col items-center">
         <div className="w-full center flex-col container">
           <h1 className="uppercase text-center text-[28px] md:text-[37.4px] text-[#00A44E] font-bold">
             {locale === "vi" ? <>LỊCH SỬ HÌNH THÀNH</> : <>OUR STORIES</>}
@@ -56,12 +56,12 @@ export default function About() {
             )}
           </p>
         </div>
-        <div className="flex flex-row-reverse md:flex-col mt-10 md:mt-0 w-full mx-auto 2xl:px-8  ">
+        <div className="flex flex-row-reverse md:flex-col mt-10 md:mt-0 w-full mx-auto 2xl:px-8">
           <div
-            className={`flex flex-col md:flex-row md:mt-20 w-full  text-justify leading-[14px] lg:leading-[18px] 2xl:leading-[25px] text-[12px] lg:text-[15px] xl:text-[16.6px] 2xl:text-[18.6px] gap-1 mr-1`}
+            className={`flex flex-col md:flex-row md:mt-20 w-full text-justify leading-[14px] lg:leading-[18px] 2xl:leading-[25px] text-[12px] lg:text-[15px] xl:text-[16.6px] 2xl:text-[18.6px] gap-1 md:gap-4 mr-1 justify-start md:pl-1 xl:max-2xl:pl-5 `}
           >
             <p
-              className={`border border-black rounded-3xl md:rounded-full text-justify content-center px-2 py-1 md:p-[20px] 2xl:mr-4 2xl:px-8  max-w-full`}
+              className={`border border-black rounded-3xl md:rounded-3xl text-justify content-center md:self-end px-2 py-1 md:px-4 md:py-2 md:max-w-[16vw] 2xl:mr-4 2xl:px-8 max-w-full`}
             >
               {locale === "vi" ? (
                 <>
@@ -78,7 +78,7 @@ export default function About() {
             </p>
 
             <p
-              className={`border border-black rounded-3xl md:rounded-full text-justify content-center px-2 py-1 md:p-[20px] md:py-6 2xl:mr-4 2xl:px-8 max-w-full`}
+              className={`border border-black rounded-3xl md:rounded-3xl text-justify content-center md:self-end px-2 py-1 md:px-4 md:py-2 md:max-w-[16vw] 2xl:mr-4 2xl:px-8 max-w-full`}
             >
               {locale === "vi" ? (
                 <>
@@ -100,7 +100,7 @@ export default function About() {
               )}
             </p>
             <p
-              className={`border border-black rounded-3xl md:rounded-full text-justify content-center px-2 py-1 md:p-[20px] 2xl:mr-4 2xl:px-8 max-w-full`}
+              className={`border border-black rounded-3xl md:rounded-3xl text-justify content-center md:self-end px-2 py-1 md:px-2 md:py-2 md:max-w-[16vw] 2xl:mr-4 2xl:px-8 max-w-full`}
             >
               {locale === "vi" ? (
                 <>
@@ -124,7 +124,7 @@ export default function About() {
               )}
             </p>
             <p
-              className={`border border-black rounded-3xl md:rounded-full text-justify content-center px-2 py-1 md:p-[20px] 2xl:mr-4 2xl:px-8 max-w-full`}
+              className={`border border-black rounded-3xl md:rounded-3xl text-justify content-center md:self-end px-2 py-1 md:px-4 md:py-2 md:max-w-[16vw] 2xl:mr-4 2xl:px-8 max-w-full`}
             >
               {locale === "vi" ? (
                 <>
@@ -139,7 +139,7 @@ export default function About() {
               )}
             </p>
             <p
-              className={`border border-black rounded-3xl md:rounded-full text-justify content-center px-2 py-1 md:p-[20px] 2xl:px-8 max-w-full`}
+              className={`border border-black rounded-3xl md:rounded-3xl text-justify content-center md:self-end px-2 py-1 md:px-4 md:py-2 md:max-w-[16vw] 2xl:px-8 max-w-full`}
             >
               {locale === "vi" ? (
                 <>
@@ -162,7 +162,7 @@ export default function About() {
             </p>
           </div>
           <img
-            src="https://i.postimg.cc/x0dj1N74/oie-Qt-Lv-Qq-Cnthd-A.png"
+            src="/image/history-arrow.png"
             alt="DongNam-history"
             className="hidden md:inline w-full mx-auto "
           />
@@ -174,13 +174,13 @@ export default function About() {
             }`}
           />
           <div
-            className={`flex flex-col md:flex-row w-full text-justify lg:leading-[18px] 2xl:leading-[25px] lg:pr-[210px] xl:pr-[285px] 2xl:pr-[360px] text-[12px] lg:text-[15px] 2xl:text-[18.6px] xl:text-[16.6px] gap-1 ${
+            className={`flex flex-col md:flex-row w-full text-justify lg:leading-[18px] 2xl:leading-[25px] lg:pr-[210px] xl:pr-[285px] 2xl:pr-[360px] text-[12px] lg:text-[15px] 2xl:text-[18.6px] xl:text-[16.6px] gap-1 md:gap-4 ${
               locale === "en" ? "leading-[12px]" : "leading-[14px]"
             }
             } ml-1`}
           >
             <p
-              className={`border border-black rounded-3xl md:rounded-full text-justify content-center px-2 py-1 md:p-[24px] md:py-8 2xl:mr-4 max-w-full`}
+              className={`border border-black rounded-3xl md:rounded-3xl text-justify content-center px-2 py-1 md:self-start md:px-4 md:py-2 md:max-w-[20vw] 2xl:mr-4 max-w-full`}
             >
               {locale === "vi" ? (
                 <>
@@ -201,7 +201,7 @@ export default function About() {
               )}
             </p>
             <p
-              className={`border border-black rounded-3xl md:rounded-full text-justify content-center px-2 py-1 md:p-[24px] 2xl:mr-4 2xl:px-6  max-w-full`}
+              className={`border border-black rounded-3xl md:rounded-3xl text-justify content-center px-2 py-1 md:self-start md:px-4 md:py-2 md:max-w-[20vw] 2xl:mr-4 2xl:px-6  max-w-full`}
             >
               {locale === "vi" ? (
                 <>
@@ -223,7 +223,7 @@ export default function About() {
               )}
             </p>
             <p
-              className={`border border-black rounded-3xl md:rounded-full text-justify content-center px-2 py-1 lg:px-6 2xl:p-[24px] 2xl:mr-4 2xl:px-8  max-w-full lg:min-w-[180px]`}
+              className={`border border-black rounded-3xl md:rounded-3xl text-justify content-center px-2 py-1 md:self-start md:px-4 md:py-2 md:max-w-[20vw] max-w-full `}
             >
               {locale === "vi" ? (
                 <>
@@ -238,7 +238,7 @@ export default function About() {
               )}
             </p>
             <p
-              className={`border border-black rounded-3xl md:rounded-full text-justify content-center px-2 py-1 lg:px-4 2xl:p-[24px] 2xl:px-8 max-w-full lg:min-w-[200px]`}
+              className={`border border-black rounded-3xl md:rounded-3xl text-justify content-center px-2 py-1 md:self-start md:px-4 md:py-2 md:max-w-[20vw] 2xl:ml-4 max-w-full`}
             >
               {locale === "vi" ? (
                 <>

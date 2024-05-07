@@ -8,19 +8,19 @@ const Footer = () => {
   return (
     <footer className="relative flex flex-col justify-start items-start md:py-4 md:px-8 px-4 pt-4 bg-[#F18200] text-white">
       <aside className="flex flex-col justify-start items-start">
-        <p className="font-bold md:mt-4 text-white text-justify md:text-center capitalize text-[20px] leading-[22px] md:text-2xl xl:text-3xl md:pl-2">
+        <p className="font-bold md:mt-4 text-white text-justify md:text-center capitalize text-[20px] leading-[22px] md:text-xl xl:text-2xl md:pl-2">
           {locale === "vi"
             ? "Công ty cổ phần sản xuất thương mại dược phẩm đông nam"
             : "Dong Nam Pharmaceutical Trading and Production Joint Stock Company"}
         </p>
         <p
           className={`text-white text-justify md:text-center md:mt-4 text-[14px] ${
-            locale === "vi" ? "md:text-2xl" : "md:text-xl lg:max-2xl:pb-3"
-          } xl:text-3xl xl:text-[29px]`}
+            locale === "vi" ? "md:text-xl" : "md:text-xl lg:max-2xl:pb-3"
+          } xl:text-2xl`}
         >
           <img
             src="/image/footer-1.png"
-            className="w-8 h-8 xl:h-12 xl:w-12 inline-block md:mr-2"
+            className="w-10 h-10 xl:h-12 xl:w-12 inline-block md:pr-1"
           />
           {locale === "vi" ? (
             <>
@@ -37,12 +37,12 @@ const Footer = () => {
         </p>
         <p
           className={`text-white text-justify md:text-center text-[14px]  ${
-            locale === "vi" ? "md:text-2xl" : "md:text-xl lg:max-2xl:pb-3"
-          } xl:text-3xl xl:text-[29px]`}
+            locale === "vi" ? "md:text-xl" : "md:text-xl lg:max-2xl:pb-3"
+          } xl:text-2xl`}
         >
           <img
             src="/image/footer-2.png"
-            className="w-8 h-8 xl:h-12 xl:w-12 inline-block md:mr-2"
+            className="w-10 h-10 xl:h-12 xl:w-12 inline-block md:pr-1"
           />
           {locale === "vi" ? (
             <>
@@ -59,19 +59,19 @@ const Footer = () => {
         <p className="block md:hidden text-white text-justify md:text-center text-[14px] md:text-2xl xl:text-3xl">
           <img
             src="/image/footer-3.png"
-            className="w-8 h-8 inline-block md:mr-2"
+            className="w-8 h-8 inline-block mr-1 ml-1"
           />{" "}
           kinhdoanh@dongnampharma.vn
         </p>
         <div
           className={`text-white ${
-            locale === "vi" ? "md:text-2xl" : "md:text-xl"
-          } xl:text-3xl xl:text-[29px] inline    w-full`}
+            locale === "vi" ? "md:text-xl" : "md:text-xl"
+          } xl:text-2xl inline w-full`}
         >
           <div className="hidden md:block xl:h-[10vh] 2xl:h-[12vh]">
             <img
               src="/image/footer-3.png"
-              className="w-8 h-8 xl:h-12 xl:w-12 inline-block mr-2"
+              className="w-8 h-8 xl:h-12 xl:w-12 inline-block lg:max-xl:pl-1 lg:max-xl:mr-2 xl:px-1"
             />
             <strong>Email:</strong> kinhdoanh@dongnampharma.vn
           </div>
