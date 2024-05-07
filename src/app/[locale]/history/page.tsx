@@ -261,7 +261,7 @@ export default function About() {
         <div className="w-full flex flex-col-reverse md:flex-row justify-center gap-10 md:gap-16 my-6 md:mt-10 ">
           <div className="flex flex-col items-center">
             <img
-              className="w-72 h-72 rounded-full"
+              className="w-72 h-72 rounded-full object-cover"
               src="/image/director-1.jpg"
             />
             <p className="text-[20.6px] font-bold uppercase mt-4">

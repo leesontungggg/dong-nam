@@ -50,44 +50,16 @@ export default function Root() {
 
   return (
     <main className="!font-sans">
-      <section className="hidden md:block relative bg-white min-h-screen ">
-        <div className="absolute top-0 left-0 w-full h-full opacity-100 bg-[url('/image/factory-hero-bg.jpg')] bg-cover bg-repeat bg-cli" />
-        <div className="absolute bg-transparent container flex flex-col-reverse gap-20 max-w-screen-xl mx-auto pt-[4em] lg:min-h-screen lg:items-center lg:flex-row left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
-          <div className="flex flex-col gap-6 content-center items-center lg:h-100 lg:w-1/2 xl:w-2/5 bg-white rounded-3xl p-8">
-            <h1 className="text-xl md:text-3xl text-[#00A44E] font-bold text-center mx-auto lg:mx-0 load-hidden animate-fade-in">
-              {locale === "vi" ? <>SẢN PHẨM</> : <>PRODUCT LIST</>}
-            </h1>
-            <p className="text-center load-hidden animate-fade-in animate-delay-200 text-slate-950 text-2xl">
-              {locale === "vi" ? (
-                <>
-                  Trang web của chúng tôi hiện trưng bày cả các sản phẩm đã được
-                  đăng ký độc quyền bởi các đại lý thuốc lẫn các sản phẩm chưa
-                  được đăng ký.{" "}
-                  <strong>
-                    Quý khách hàng có thể liên hệ trực tiếp với chúng tôi để
-                    được tư vấn và nghiên cứu sản phẩm theo yêu cầu riêng của
-                    Công ty.
-                  </strong>
-                </>
-              ) : (
-                <>
-                  Our website currently showcases both exclusive products
-                  registered by pharmaceutical agents and products that have not
-                  been registered.{" "}
-                  <strong>
-                    Customers can contact us directly for advice and research on
-                    products tailored to the company's specific requirements.
-                  </strong>
-                </>
-              )}
-            </p>
-          </div>
-        </div>
-      </section>
-      <section className="flex flex-col md:hidden w-full mb-6">
-        <img src="/image/factory-hero-bg.jpg" className="pb-4" />
-        <div className="container max-w-screen-xl mx-auto">
-          <p className="text-lg leading-6 text-justify">
+      <section className="flex flex-col w-full mb-6">
+        <img
+          src="/image/factory-hero-bg.jpg"
+          className="block md:hidden pb-4"
+        />
+        <h6 className="hidden md:inline py-6 pl-20  text-left md:text-2xl xl:text-3xl font-bold uppercase text-[#00A44E]">
+          {locale === "vi" ? "Sản phẩm" : "Product list"}
+        </h6>
+        <div className="container md:pl-20 max-w-screen-xl mx-auto md:mx-0">
+          <p className="text-[16px] md:text-[18px] leading-6 text-justify md:max-w-[84vw] xl:max-w-[80vw] 2xl:max-w-full 2xl:min-w-[80vw]">
             {" "}
             {locale === "vi" ? (
               <>
@@ -114,24 +86,24 @@ export default function Root() {
           </p>
         </div>
       </section>
-      <div className="w-full h-fit min-h-screen bg-white text-black flex flex-col justify-start items-center  md:px-0 md:mx-0 lg:max-xl:pr-[25px]">
-        <div className="md:p-10 xl:p-20 pb-10">
-          <div className="md:grid md:grid-cols-5">
+      <div className="w-full h-fit min-h-screen bg-white text-black flex flex-col justify-start items-center md:px-4 md:pt-4">
+        <div className="md:p-2 xl:p-4 pb-10">
+          <div className="md:grid md:grid-cols-4">
             <div className="container md:mx-0 md:px-0 col-span-1 flex flex-col gap-4 lg:max-xl:pr-[20px]">
               <input
-                className="w-full lg:max-xl:text-[14px] rounded-2xl border-2 p-2 pl-12 lg:max-xl:pl-8 border-black bg-no-repeat bg-contain bg-[5px] lg:max-xl:bg-[1px]"
+                className="w-full lg:max-xl:text-[14px] rounded-2xl border-2 p-2 pl-12 lg:max-xl:pl-10 border-black bg-no-repeat font-normal bg-contain bg-[5px] lg:max-xl:bg-[1px]"
                 style={{ backgroundImage: "url(/icon-search.png)" }}
                 placeholder={`${
-                  locale === "vi" ? "Nhập tên thuốc" : "Name of product"
+                  locale === "vi" ? "Nhập tên thuốc" : "Insert product name"
                 }`}
                 // @ts-ignore
                 onChange={(e) => setSearchText(e.target.value)}
               />
               <div className="flex flex-col gap-4 md:gap-4">
-                <h6 className="text-center md:text-left text-xl font-bold uppercase text-[#00A44E] md:text-black">
+                <h6 className="text-center md:text-left text-[18px] md:text-[20px] font-bold uppercase text-[#00A44E] md:text-black">
                   {locale === "vi" ? "Danh mục" : "Category"}
                 </h6>
-                <div className="grid grid-cols-3 md:flex md:flex-col text-[16px] xl:text-[18px] leading-4 xl:leading-6 gap-x-6 md:gap-x-0 gap-y-4 md:gap-y-4 xl:gap-y-6">
+                <div className="grid grid-cols-3 md:flex md:flex-col text-[16px] md:text-[18px] leading-4 md:leading-5 xl:leading-6 gap-x-6 md:gap-x-0 gap-y-4 md:gap-y-4 xl:gap-y-6">
                   {Object.keys(groupCategory).map((key) => (
                     <p
                       className={`cursor-pointer ${
@@ -149,10 +121,10 @@ export default function Root() {
                 </div>
               </div>
               <div className="hidden md:flex flex-col gap-4">
-                <h6 className="text-xl font-bold uppercase mt-4">
+                <h6 className="text-[18px] md:text-[20px] font-bold uppercase mt-4">
                   {locale === "vi" ? "Dạng bào chế" : "Formulation"}
                 </h6>
-                <div className="flex flex-col text-[18px] leading-6 gap-y-6">
+                <div className="flex flex-col text-[16px] md:text-[18px] leading-6 gap-y-6">
                   {Object.keys(groupType).map((key) => (
                     <p
                       className={`cursor-pointer ${
@@ -170,10 +142,10 @@ export default function Root() {
                 </div>
               </div>
             </div>
-            <h6 className="md:hidden text-center md:text-left text-xl font-bold uppercase text-[#00A44E] md:text-black mt-4">
+            <h6 className="md:hidden text-center md:text-left text-[18px] md:text-[20px] font-bold uppercase text-[#00A44E] md:text-black mt-4">
               {locale === "vi" ? "sản phẩm" : "products"}
             </h6>
-            <div className="col-span-4 grid grid-cols-3 mx-4 md:mx-0 gap-x-4 md:gap-x-0">
+            <div className="col-span-3 grid grid-cols-3 mx-4 md:ml-4 gap-x-4 md:gap-x-4 xl:gap-x-8 2xl:gap-x-12">
               {data.products
 
                 .filter((product: any) =>
@@ -190,7 +162,7 @@ export default function Root() {
                       product.type_en.includes(typeFilter)
                 )
                 .map((product: any) => (
-                  <div className="md:py-6 flex flex-col md:gap-2 items-center">
+                  <div className="md:pb-6 flex flex-col md:gap-2 items-center">
                     <a href={`/products/${product.id}`} className="shrink-0">
                       <img
                         src={`https://dongnam.up.railway.app/assets/${product.galleries[0]?.directus_files_id}`}
@@ -199,7 +171,7 @@ export default function Root() {
                       />
                     </a>
                     <div className="flex flex-col gap-0">
-                      <h2 className="text-[16px] md:text-lg ">
+                      <h2 className="text-[16px] md:text-[18px] md:max-w-[21vw] ">
                         <a
                           className="hover:underline text-black"
                           href={`/products/${product.id}`}
