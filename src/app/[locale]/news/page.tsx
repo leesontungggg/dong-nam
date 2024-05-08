@@ -45,12 +45,42 @@ export default function Root() {
   }
 
   return (
-    <div className="flex flex-col w-full">
+    <div className="relative flex flex-col w-full">
       <img
         src="/image/news.jpg"
         alt="DongNam"
-        className="w-full h-max max-h-screen"
+        className="w-full h-max max-h-[190px] md:max-h-[520px] xl:max-h-screen object-cover"
       />
+      <div
+        className={`md:mt-[14em] md:ml-[3em] xl:mt-[20em] xl:ml-[4em] absolute object-cover hidden md:block`}
+      >
+        <div
+          className={`flex flex-col md:w-[40vw] md:h-[180px] xl:h-[230px] bg-white rounded-[60px] px-8 justify-center md:gap-2`}
+        >
+          <h1
+            className={`md:text-2xl xl:text-3xl md:pt-0 xl:pb-2 text-[#00A44E] font-bold text-center mx-auto load-hidden animate-fade-in uppercase`}
+          >
+            {locale === "vi" ? <>Tin tức</> : <>News</>}
+          </h1>
+          <p
+            className="text-justify load-hidden animate-fade-in animate-delay-200 text-slate-950 md:text-[18px] xl:text-[23px] md:leading-6 xl:leading-7"
+            // dangerouslySetInnerHTML={{ __html: t("description") }}
+          >
+            {/* {t("description")} */}
+            {locale === "vi" ? (
+              <>
+                Tại đây chúng tôi sẽ cập nhật những tin tức mới nhất về hoạt
+                động của Công ty Dược phẩm Đông Nam.
+              </>
+            ) : (
+              <>
+                Get update with the lastest news about the activities of Dong
+                Nam Pharmaceuticals.
+              </>
+            )}
+          </p>
+        </div>
+      </div>
       <div
         className="container mx-auto w-full md:mt-8 mt-4 bg-white text-black 
        flex flex-col justify-center items-center"

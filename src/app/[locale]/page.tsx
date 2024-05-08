@@ -231,7 +231,7 @@ export default function Root() {
               <div className="md:flex flex-col md:px-1 hidden">
                 <h3
                   className={`md:text-[18px] xl:text-[24px] text-left pt-4  ${
-                    locale === "en" ? "pr-16" : "pr-8"
+                    locale === "en" ? "pr-20" : "pr-8"
                   } text-black font-semibold capitalize`}
                   dangerouslySetInnerHTML={{
                     __html: t("reason.reason1.title1"),
@@ -267,14 +267,14 @@ export default function Root() {
               <div className="md:flex flex-col md:px-1 hidden">
                 <h3
                   className={`md:text-[18px] xl:text-[24px] text-left pt-4  ${
-                    locale === "en" ? "pr-16" : "pr-8"
+                    locale === "en" ? "pr-20" : "pr-8"
                   } text-black font-semibold capitalize`}
                   dangerouslySetInnerHTML={{
                     __html: t("reason.reason2.title1"),
                   }}
                 ></h3>
                 <h3
-                  className="md:text-[18px] xl:text-[24px] text-right  text-black font-semibold  capitalize"
+                  className="md:text-[18px] xl:text-[24px]  text-right text-black font-semibold  capitalize"
                   dangerouslySetInnerHTML={{
                     __html: t("reason.reason2.title2"),
                   }}
@@ -310,7 +310,7 @@ export default function Root() {
                   }}
                 ></h3>
                 <h3
-                  className="md:text-[18px] xl:text-[24px] text-right  text-black font-semibold  capitalize"
+                  className="md:text-[18px] xl:text-[24px] text-right xl:pl-6 text-black font-semibold  capitalize"
                   dangerouslySetInnerHTML={{
                     __html: t("reason.reason3.title2"),
                   }}

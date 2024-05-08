@@ -24,17 +24,12 @@ export default function Root() {
       <div className=" pb-10">
         <div className="mx-auto">
           {!!blog && (
-            <div className="flex flex-col items-center gap-4 w-full  h-full">
-              <img
-                src={`https://dongnam.up.railway.app/assets/${blog.thumbnail}`}
-                alt="DONG-NAM"
-                className=" bg-base-200 object-cover w-screen h-screen rounded-lg max-h-screen hidden md:inline"
-              />
-              <div className="md:container max-w-full lg:px-8 xl:px-12 2xl:max-w-[58vw]  pt-2 md:pt-6">
-                <h1 className="container text-[#0aa652] leading-[43px] font-bold text-[38px] mb-2 md:pb-6 lg:mb-0">
+            <div className="flex flex-col items-center gap-4 w-full md:px-4 xl:px-12 2xl:px-0 h-full">
+              <div className="container max-w-full md:max-w-[88vw] xl:max-w-[82vw] 2xl:max-w-[76vw] lg:px-8 pt-2 md:pt-6">
+                <h1 className=" text-[#0aa652] leading-[43px] font-bold text-[38px] mb-2 md:pb-6 lg:mb-0">
                   {locale === "vi" ? blog.title : blog.title_en}
                 </h1>
-                <div className="container flex flex-row w-full justify-between pb-6 md:text-[22.6px]">
+                <div className=" flex flex-row w-full justify-between pb-6 md:text-[22.6px]">
                   <p className="hidden md:inline">Jacy Huynh</p>
                   <p className="text-[24px] inline md:hidden">12.03.2024</p>
                   <p className="hidden md:inline justify-end">12.03.2024</p>
@@ -44,20 +39,20 @@ export default function Root() {
                     __html:
                       locale === "vi" ? blog.description : blog.description_en,
                   }}
-                  className="container !text-black pb-6 md:text-[22.6px] text-[24px] md:font-bold italic md:not-italic text-justify leading-7"
+                  className=" !text-black pb-8 md:text-[22.6px] text-[24px] md:font-bold italic md:not-italic text-justify leading-7"
                 ></div>
-                <div className="flex md:hidden  w-full pb-5 ">
+                <div className="flex w-full h-full pb-5 ">
                   <img
                     src={`https://dongnam.up.railway.app/assets/${blog.thumbnail}`}
                     alt="DONG-NAM"
-                    className=""
+                    className="h-full w-full"
                   />
                 </div>
                 <div
                   dangerouslySetInnerHTML={{
                     __html: locale === "vi" ? blog.content : blog.content_en,
                   }}
-                  className="container !text-black  md:text-[22.6px] text-[24px] text-justify leading-7 md:leading-[34px] lg:leading-[40px]"
+                  className=" !text-black  md:text-[22.6px] text-[24px] text-justify leading-7 md:leading-[34px] lg:leading-[40px]"
                 ></div>
                 <p className="container flex md:hidden flex-row w-full justify-end pt-9 text-[24px] md:text-[22.6px]">
                   Jacy Huynh

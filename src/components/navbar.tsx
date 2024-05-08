@@ -3,6 +3,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "next-intl/client";
 import { useTransition } from "react";
 import { useState } from "react";
+import { MdLanguage } from "react-icons/md";
 
 import {
   Menubar,
@@ -265,12 +266,12 @@ const Navbar = (props: any) => {
             />
           </a>
         </div>
-        <div className="flex ml-auto items-center justify-end space-x-2 md:justify-end mr-2">
+        <div className="flex ml-auto items-center justify-end space-x-2 md:justify-end mr-2 md:mr-0">
           <nav className="flex items-center  border-slate-400 border rounded-lg">
             <Menubar>
               <MenubarMenu>
-                <MenubarTrigger className="md:text-[16px] xl:text-lg ">
-                  {locale === "vi" ? "VI" : "EN"}
+                <MenubarTrigger className="md:text-[16px] xl:text-lg flex justify-center w-[50px] h-full md:w-[6vw]">
+                  <MdLanguage size="35" />
                 </MenubarTrigger>
                 <MenubarContent>
                   <MenubarItem
