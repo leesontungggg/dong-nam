@@ -63,7 +63,7 @@ export default function Root() {
         className={`md:mt-[18em] md:ml-[30em] xl:mt-[18em] xl:ml-[38em] 2xl:mt-[24em] 2xl:ml-[44em] absolute object-cover hidden md:block`}
       >
         <div
-          className={`flex flex-col md:w-[50vw] md:h-[180px] xl:h-[230px] bg-white rounded-[60px] px-8 justify-center  md:gap-2`}
+          className={`flex flex-col md:w-[50vw] md:h-[180px] xl:h-[230px] bg-white rounded-[60px] px-8 justify-center md:gap-2`}
         >
           <h1
             className={`md:text-2xl xl:text-3xl md:pt-0 xl:pb-2 text-[#00A44E] font-bold text-center mx-auto load-hidden animate-fade-in uppercase`}

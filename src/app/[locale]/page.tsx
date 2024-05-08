@@ -32,22 +32,22 @@ export default function Root() {
           style={{ minHeight: "-webkit-fill-available" }}
         />
         <div
-          className={`${
-            locale === "en" ? "md:mt-[14em]" : "md:mt-[10em]"
-          } absolute object-cover  md:ml-[6em] xl:mt-[10em] xl:ml-[12em] 2xl:mt-[16em] 2xl:ml-[18em]`}
+          className={`absolute object-cover md:mt-[16em] md:ml-[8em] xl:mt-[16em] xl:ml-[8em] 2xl:mt-[18em] 2xl:ml-[10em]`}
         >
           <div
             className={`${
-              locale === "en" ? "md:h-full" : "md:h-[20vh]"
-            } flex flex-col gap-6 h-fit  xl:h-[60vh] 2xl:h-[50vh] md:w-[60vw] xl:h-100 xl:w-[50vw] 2xl:w-[35vw] bg-white rounded-[60px] px-8 justify-center md:min-h-[320px] xl:min-h-[410px]`}
+              locale === "en"
+                ? "md:w-[58vw] md:h-[280px] 2xl:w-[44vw] 2xl:h-[40vh]"
+                : "md:w-[50vw] md:h-[300px] 2xl:w-[42vw] 2xl:h-[40vh]"
+            } flex flex-col md:gap-4 xl:gap-6 h-fit xl:w-[48vw] xl:h-[42vh] justify-center bg-white rounded-[60px] px-8`}
           >
             <h1
-              className={`md:text-[33px] xl:text-[38px] md:pt-6 xl:pt-4 leading-[33px]  text-[#00A44E] font-bold text-center mx-auto load-hidden animate-fade-in uppercase`}
+              className={`md:text-3xl xl:text-3xl xl:max-2xl:pt-4 text-[#00A44E] font-bold text-center mx-auto load-hidden animate-fade-in uppercase`}
             >
               {t("title")}
             </h1>
             <p
-              className="text-justify load-hidden animate-fade-in animate-delay-200 text-slate-950 md:text-[22.6px] xl:text-[28.6px] md:leading-[30px] xl:leading-[35px] pb-6"
+              className="text-justify load-hidden animate-fade-in animate-delay-200 text-slate-950 md:text-[20px] xl:text-[24px] md:leading-6 xl:leading-7"
               // dangerouslySetInnerHTML={{ __html: t("description") }}
             >
               {/* {t("description")} */}
