@@ -177,7 +177,7 @@ export default function About() {
             className={`flex flex-col md:flex-row w-full text-justify lg:leading-[18px] 2xl:leading-[25px] lg:pr-[210px] xl:pr-[285px] 2xl:pr-[360px] text-[12px] lg:text-[15px] 2xl:text-[18.6px] xl:text-[16.6px] gap-1 md:gap-4 ${
               locale === "en" ? "leading-[12px]" : "leading-[14px]"
             }
-            } ml-1`}
+            } pl-1`}
           >
             <p
               className={`border border-black rounded-3xl md:rounded-3xl text-justify content-center px-2 py-1 md:self-start md:px-4 md:py-2 md:max-w-[20vw] 2xl:mr-4 max-w-full`}
