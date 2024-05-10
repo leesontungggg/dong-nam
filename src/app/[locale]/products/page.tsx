@@ -103,12 +103,12 @@ export default function Root() {
                 <h6 className="text-center md:text-left text-[18px] md:text-[20px] font-bold uppercase text-[#00A44E] md:text-black">
                   {locale === "vi" ? "Danh mục" : "Category"}
                 </h6>
-                <div className="grid grid-cols-3 md:flex md:flex-col text-[16px] md:text-[18px] leading-4 md:leading-5 xl:leading-6 gap-x-6 md:gap-x-0 gap-y-4 md:gap-y-4 xl:gap-y-6">
+                <div className="grid grid-cols-3 md:flex md:flex-col text-[16px]  leading-4 md:leading-5 xl:leading-6 gap-x-2 md:gap-x-0 gap-y-2 md:gap-y-4 xl:gap-y-6">
                   {Object.keys(groupCategory).map((key) => (
                     <p
                       className={`cursor-pointer ${
                         categoryFilter === key ? "font-bold" : "font-normal"
-                      }`}
+                      } border md:border-0 border-black md:border-none rounded-3xl md:rounded-none py-1 px-[5px] md:py-0 md:px-0 flex items-center justify-center md:items-normal md:justify-normal text-center md:text-left text-[13px] md:text-[18px]`}
                       onClick={() =>
                         categoryFilter === key
                           ? setCategoryFilter("")
@@ -162,12 +162,15 @@ export default function Root() {
                       product.type_en.includes(typeFilter)
                 )
                 .map((product: any) => (
-                  <div className="md:pb-6 flex flex-col md:gap-2 items-center">
-                    <a href={`/products/${product.id}`} className="shrink-0">
+                  <div className="md:pb-6 flex flex-col md:gap-2 items-center w-full h-full">
+                    <a
+                      href={`/products/${product.id}`}
+                      className="shrink-0 flex w-full "
+                    >
                       <img
                         src={`https://dongnam.up.railway.app/assets/${product.galleries[0]?.directus_files_id}`}
                         alt="DONG-NAM"
-                        className="rounded bg-base-200 object-fill md:object-cover w-auto h-40"
+                        className="rounded bg-base-200 object-cover md:object-cover w-full h-[12vh] md:h-[22vh] 2xl:h-[24vh]"
                       />
                     </a>
                     <div className="flex flex-col gap-0">

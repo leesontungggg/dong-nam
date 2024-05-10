@@ -37,16 +37,16 @@ export default function Root() {
               <h1 className="text-black font-bold text-[22.6px] text-justify sm:text-left sm:mb-6 leading-[22px]  ">
                 {locale === "vi" ? product.name : product.name_en}
               </h1>
-              <div className="flex flex-row gap-8 md:gap-6 lg:gap-16  w-full justify-center">
+              <div className="flex flex-row gap-2 md:gap-6 lg:gap-16  w-full h-full justify-center">
                 <img
                   src={`https://dongnam.up.railway.app/assets/${product.galleries[0]?.directus_files_id}`}
                   alt="DONG-NAM"
-                  className="rounded bg-base-200 object-fill md:object-cover w-1/2  md:w-1/2 h-[170px] md:h-full "
+                  className="rounded bg-base-200 object-cover md:object-cover w-[42vw]  md:w-1/2 h-[22vh] md:h-full "
                 />
                 <img
                   src={`https://dongnam.up.railway.app/assets/${product.galleries[1]?.directus_files_id}`}
                   alt="DONG-NAM"
-                  className="rounded bg-base-200 object-fill md:object-cover w-1/2 md:w-1/2 h-[170px] md:h-full"
+                  className="rounded bg-base-200 object-cover md:object-cover w-[42vw] md:w-1/2 h-[22vh] md:h-full"
                 />
               </div>
               <Accordion

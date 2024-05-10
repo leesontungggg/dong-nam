@@ -93,9 +93,9 @@ export default function Root() {
               }}
               className={`font-bold ${
                 currentIndex === 0 && "text-green-400"
-              } cursor-pointer border border-black rounded-full  md:px-10 px-2 max-h-[100px] text-center md:w-[22vw] ${
+              } cursor-pointer border border-black rounded-full  md:px-10 px-2 max-h-[100px] text-center md:w-[22vw] 2xl:w-[20vw] ${
                 locale === "en" ? "w-[30vw]" : "w-[29vw]"
-              }  content-center text-[14px] flex justify-center items-center`}
+              }  content-center text-[14px] md:text-base xl:text-xl flex justify-center items-center`}
             >
               <p className="hidden md:inline">{t("title1")}</p>
               {locale === "vi" ? (
@@ -116,7 +116,7 @@ export default function Root() {
                 currentIndex === 1 && "text-green-400"
               } cursor-pointer border border-black rounded-full  md:px-10 px-2 py-8 md:w-[22vw] max-h-[100px] content-center text-center  ${
                 locale === "en" ? "w-[30vw]" : "w-[29vw]"
-              } text-[14px] flex justify-center items-center`}
+              } text-[14px] md:text-base xl:text-xl flex justify-center items-center`}
             >
               {/* <p className="hidden md:inline">{t("title2")}</p> */}
               {locale === "vi" ? (
@@ -137,7 +137,7 @@ export default function Root() {
                 currentIndex === 2 && "text-green-400"
               } cursor-pointer border border-black rounded-full  md:px-10 px-2 py-8  text-center max-h-[100px] content-center md:w-[22vw] ${
                 locale === "en" ? "w-[30vw]" : "w-[29vw]"
-              } text-[14px] flex justify-center items-center`}
+              } text-[14px] md:text-base xl:text-xl flex justify-center items-center`}
             >
               {/* <p className="hidden md:inline">{t("title3")}</p> */}
               {locale === "vi" ? (
@@ -155,25 +155,28 @@ export default function Root() {
             {data?.blogs
               ?.filter((blog: any) => blog.type === "news")
               .map((blog: any) => (
-                <div className="md:py-3 md:px-4 flex flex-row gap-4 md:gap-10 md:items-center justify-between md:border md:border-black w-full md:min-h-[200px] ">
-                  <a href={`/blog/${blog.id}`} className="md:shrink-0 ">
+                <div className="md:py-3 md:px-4 flex flex-row gap-4 md:gap-4 xl:gap-6 md:items-center justify-between md:border md:border-black w-full md:h-[200px] xl:h-[220px]">
+                  <a
+                    href={`/blog/${blog.id}`}
+                    className="md:shrink-0 h-full content-center"
+                  >
                     <img
                       src={`https://dongnam.up.railway.app/assets/${blog.thumbnail}`}
                       alt="DONG-NAM"
-                      className="rounded bg-base-200 w-3/4 object-cover md:w-auto  max-w-[240px] h-[15vh] min-w-[180px] md:min-h-[160px]"
+                      className="rounded bg-base-200 md:w-auto  max-w-[240px]  min-w-[180px] md:min-h-[160px] w-full h-full md:object-cover xl:object-fill"
                     />
                   </a>
-                  <div className="flex flex-col  md:max-h-[156px] w-full ">
+                  <div className="flex flex-col w-full h-full justify-between">
                     <a
-                      className="hover:underline text-black max-h-[29px] md:line-clamp-1 md:text-2xl md:font-bold  md:text-left w-full max-w-full text-[16px]   "
+                      className="hover:underline text-black md:text-lg xl:text-2xl md:font-bold md:text-left w-full max-w-full text-[16px]"
                       href={`/blog/${blog.id}`}
                     >
-                      <div className="line-clamp-4">
+                      <div className="line-clamp-4 md:line-clamp-2 h-full items-start">
                         {locale === "vi" ? blog.title : blog.title_en}
                       </div>
                     </a>
-                    <div className="hidden md:block text-sm text-[16px]  text-base-content/70 text-center md:text-left  leading-5 md:pt-3">
-                      <p className="xl:line-clamp-2 md:line-clamp-3">
+                    <div className="hidden md:block text-[16px] xl:text-[18px] 2xl:text-[20px]  text-base-content/70 text-center md:text-left leading-5 xl:leading-6 2xl:leading-7 md:pt-1 md:h-full">
+                      <p className="xl:line-clamp-4 md:line-clamp-4">
                         {locale === "vi"
                           ? blog.description
                           : blog.description_en}
@@ -181,7 +184,7 @@ export default function Root() {
                     </div>
                     <a
                       href={`/blog/${blog.id}`}
-                      className="hidden md:flex items-center font-bold pt-8 text-[16px]"
+                      className="hidden md:flex items-end font-bold pt-8 md:pt-0 xl:pt-0 text-[16px] xl:text-[18px]"
                     >
                       <SlArrowRight className="pr-2" size="25" />
                       {t("navigate")}

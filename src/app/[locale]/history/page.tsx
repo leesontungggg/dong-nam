@@ -167,10 +167,10 @@ export default function About() {
             className="hidden md:inline w-full mx-auto "
           />
           <img
-            src="https://i.postimg.cc/kG34FCPq/oie-r9-Rbk-Uq-LWj-BA.png"
+            src="/image/history-arrow-mobile.png"
             alt="DongNam-history"
-            className={`md:hidden w-full mx-auto h-full max-w-[110px] ${
-              locale === "en" ? "mt-7" : "mt-8"
+            className={`md:hidden w-full mx-auto h-full max-w-[115px] ${
+              locale === "en" ? "mt-8" : "mt-11"
             }`}
           />
           <div
