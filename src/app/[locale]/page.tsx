@@ -32,14 +32,14 @@ export default function Root() {
           style={{ minHeight: "-webkit-fill-available" }}
         />
         <div
-          className={`absolute object-cover md:mt-[16em] md:ml-[8em] xl:mt-[16em] xl:ml-[8em] 2xl:mt-[18em] 2xl:ml-[10em]`}
+          className={`absolute object-cover md:mt-[10em] md:ml-[8em] xl:mt-[10em] xl:ml-[8em] 2xl:mt-[18em] 2xl:ml-[10em]`}
         >
           <div
             className={`${
               locale === "en"
-                ? "md:w-[58vw] md:h-[320px] 2xl:w-[44vw] 2xl:h-[44vh]"
-                : "md:w-[50vw] md:h-[340px] 2xl:w-[42vw] 2xl:h-[44vh]"
-            } flex flex-col md:gap-4 xl:gap-6 h-fit xl:w-[48vw] xl:h-[46vh] justify-center bg-white rounded-[60px] px-8`}
+                ? "md:w-[58vw] md:h-[290px] 2xl:w-[44vw] 2xl:h-[44vh]"
+                : "md:w-[50vw] md:h-[310px] 2xl:w-[42vw] 2xl:h-[44vh]"
+            } flex flex-col md:gap-4 xl:gap-6 h-fit xl:w-[48vw] xl:h-[43vh] justify-center bg-white rounded-[60px] px-8`}
           >
             <h1
               className={`md:text-3xl xl:text-3xl xl:max-2xl:pt-4 text-[#00A44E] font-bold text-center mx-auto load-hidden animate-fade-in uppercase`}
