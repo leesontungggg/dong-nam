@@ -48,6 +48,8 @@ export default function Root() {
     locale === "vi" ? item.type : item.type_en
   );
 
+  console.log(Object.keys(groupType));
+
   return (
     <main className="!font-sans">
       <section className="flex flex-col w-full mb-6">

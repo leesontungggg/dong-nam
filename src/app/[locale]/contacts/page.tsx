@@ -3,6 +3,8 @@
 import Button from "@/components/button";
 import TextArea from "@/components/text-area";
 import TextInput from "@/components/text-input";
+import MenuDisplay from "@/components/ui/MenuDisplay";
+import PaginationDemo from "@/components/ui/PaginationDemo";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "next-intl/client";
 import { useTransition } from "react";

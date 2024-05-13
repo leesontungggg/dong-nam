@@ -5,8 +5,7 @@ import { Context } from "@/services/context";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "next-intl/client";
 import { useContext, useState, useTransition } from "react";
-import { PaginationEng } from "@/components/paginationEng";
-import { PaginationVie } from "@/components/paginationVie";
+import PaginationSection from "@/components/PaginationSection";
 
 export default function Root() {
   const data = useContext(Context);
@@ -16,6 +15,13 @@ export default function Root() {
   const [isPending, startTransition] = useTransition();
   const locale = useLocale();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(4);
+  const lastItemIndex = currentPage * itemsPerPage;
+  const firstItemIndex = lastItemIndex - itemsPerPage;
+  const currentItems = data?.blogs
+    ?.filter((blog: any) => blog.type === "news")
+    .slice(firstItemIndex, lastItemIndex);
 
   const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const lang = e.target.value;
@@ -24,7 +30,7 @@ export default function Root() {
     });
   };
 
-  if (data?.blogs?.length === 0) {
+  if (currentItems.length === 0) {
     return (
       <div
         className="w-full h-screen bg-white text-black 
@@ -62,11 +68,7 @@ export default function Root() {
           >
             {locale === "vi" ? <>Tin tức</> : <>News</>}
           </h1>
-          <p
-            className="text-justify load-hidden animate-fade-in animate-delay-200 text-slate-950 md:text-[18px] xl:text-[23px] md:leading-6 xl:leading-7"
-            // dangerouslySetInnerHTML={{ __html: t("description") }}
-          >
-            {/* {t("description")} */}
+          <p className="text-justify load-hidden animate-fade-in animate-delay-200 text-slate-950 md:text-[18px] xl:text-[23px] md:leading-6 xl:leading-7">
             {locale === "vi" ? (
               <>
                 Tại đây chúng tôi sẽ cập nhật những tin tức mới nhất về hoạt
@@ -118,7 +120,6 @@ export default function Root() {
                 locale === "en" ? "w-[30vw]" : "w-[29vw]"
               } text-[14px] md:text-base xl:text-xl flex justify-center items-center`}
             >
-              {/* <p className="hidden md:inline">{t("title2")}</p> */}
               {locale === "vi" ? (
                 <p className="">
                   Trách Nhiệm <br /> Xã Hội
@@ -139,7 +140,6 @@ export default function Root() {
                 locale === "en" ? "w-[30vw]" : "w-[29vw]"
               } text-[14px] md:text-base xl:text-xl flex justify-center items-center`}
             >
-              {/* <p className="hidden md:inline">{t("title3")}</p> */}
               {locale === "vi" ? (
                 <p className="">
                   Môi Trường <br /> Làm Việc
@@ -152,52 +152,51 @@ export default function Root() {
             </div>
           </div>
           <div className="md:grid md:grid-cols-1 flex flex-col gap-8 pb-6">
-            {data?.blogs
-              ?.filter((blog: any) => blog.type === "news")
-              .map((blog: any) => (
-                <div className="md:py-3 md:px-4 flex flex-row gap-4 md:gap-4 xl:gap-6 md:items-center justify-between md:border md:border-black w-full md:h-[200px] xl:h-[220px]">
+            {currentItems.map((blog: any) => (
+              <div className="md:py-3 md:px-4 flex flex-row gap-4 md:gap-4 xl:gap-6 md:items-center justify-between md:border md:border-black w-full md:h-[200px] xl:h-[220px]">
+                <a
+                  href={`/blog/${blog.id}`}
+                  className="md:shrink-0 h-full content-center"
+                >
+                  <img
+                    src={`https://dongnam.up.railway.app/assets/${blog.thumbnail}`}
+                    alt="DONG-NAM"
+                    className="rounded bg-base-200 md:w-auto  max-w-[240px]  min-w-[180px] md:min-h-[160px] w-full h-full md:object-cover xl:object-fill"
+                  />
+                </a>
+                <div className="flex flex-col w-full h-full justify-between">
+                  <a
+                    className="hover:underline text-black md:text-lg xl:text-2xl md:font-bold md:text-left w-full max-w-full text-[16px]"
+                    href={`/blog/${blog.id}`}
+                  >
+                    <div className="line-clamp-4 md:line-clamp-2 h-full items-start">
+                      {locale === "vi" ? blog.title : blog.title_en}
+                    </div>
+                  </a>
+                  <div className="hidden md:block text-[16px] xl:text-[18px] 2xl:text-[20px]  text-base-content/70 text-center md:text-left leading-5 xl:leading-6 2xl:leading-7 md:pt-1 md:h-full">
+                    <p className="xl:line-clamp-4 md:line-clamp-4">
+                      {locale === "vi" ? blog.description : blog.description_en}
+                    </p>
+                  </div>
                   <a
                     href={`/blog/${blog.id}`}
-                    className="md:shrink-0 h-full content-center"
+                    className="hidden md:flex items-end font-bold pt-8 md:pt-0 xl:pt-0 text-[16px] xl:text-[18px]"
                   >
-                    <img
-                      src={`https://dongnam.up.railway.app/assets/${blog.thumbnail}`}
-                      alt="DONG-NAM"
-                      className="rounded bg-base-200 md:w-auto  max-w-[240px]  min-w-[180px] md:min-h-[160px] w-full h-full md:object-cover xl:object-fill"
-                    />
+                    <SlArrowRight className="pr-2" size="25" />
+                    {t("navigate")}
                   </a>
-                  <div className="flex flex-col w-full h-full justify-between">
-                    <a
-                      className="hover:underline text-black md:text-lg xl:text-2xl md:font-bold md:text-left w-full max-w-full text-[16px]"
-                      href={`/blog/${blog.id}`}
-                    >
-                      <div className="line-clamp-4 md:line-clamp-2 h-full items-start">
-                        {locale === "vi" ? blog.title : blog.title_en}
-                      </div>
-                    </a>
-                    <div className="hidden md:block text-[16px] xl:text-[18px] 2xl:text-[20px]  text-base-content/70 text-center md:text-left leading-5 xl:leading-6 2xl:leading-7 md:pt-1 md:h-full">
-                      <p className="xl:line-clamp-4 md:line-clamp-4">
-                        {locale === "vi"
-                          ? blog.description
-                          : blog.description_en}
-                      </p>
-                    </div>
-                    <a
-                      href={`/blog/${blog.id}`}
-                      className="hidden md:flex items-end font-bold pt-8 md:pt-0 xl:pt-0 text-[16px] xl:text-[18px]"
-                    >
-                      <SlArrowRight className="pr-2" size="25" />
-                      {t("navigate")}
-                    </a>
-                  </div>
                 </div>
-              ))}
+              </div>
+            ))}
           </div>
-          {locale === "en" ? (
-            <PaginationEng className="pb-6" />
-          ) : (
-            <PaginationVie className="pb-6" />
-          )}
+          <PaginationSection
+            totalItems={
+              data?.blogs?.filter((blog: any) => blog.type === "news").length
+            }
+            itemsPerPage={itemsPerPage}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
         </div>
       </div>
     </div>
