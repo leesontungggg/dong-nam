@@ -169,8 +169,8 @@ export default function About() {
           <img
             src="/image/history-arrow-mobile.png"
             alt="DongNam-history"
-            className={`md:hidden w-full mx-auto h-full max-w-[115px] ${
-              locale === "en" ? "mt-8" : "mt-11"
+            className={`md:hidden w-full mx-auto h-full  ${
+              locale === "en" ? "mt-9 max-w-[105px]" : "mt-11 max-w-[115px]"
             }`}
           />
           <div

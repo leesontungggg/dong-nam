@@ -434,7 +434,7 @@ export default function Root() {
                   <p
                     className={`${
                       locale === "vi" ? "md:text-[20px]" : "md:text-[18px]"
-                    } hidden md:flex text-slate-950 py-4 px-2 xl:px-6 xl:text-[24px] text-justify md:leading-[30px] xl:leading-[35px] md:h-[21vh] xl:max-h-[19vh] 2xl:max-h-[23vh]`}
+                    } hidden md:flex text-slate-950 py-4 px-2 xl:px-6 2xl:py-0 2xl:pt-2 xl:text-[24px] text-justify md:leading-[30px] xl:leading-[35px] md:h-[20vh] xl:max-h-[18vh] 2xl:max-h-[23vh]`}
                   >
                     <div className="md:line-clamp-4 xl:line-clamp-3 2xl:line-clamp-4">
                       {locale === "vi" ? (
@@ -510,7 +510,7 @@ export default function Root() {
                       <p>{blog.title_en}</p>
                     )}
                   </h3>
-                  <p className="hidden md:flex text-slate-950 py-4 px-2 xl:px-6 md:text-[20px] xl:text-[24px] text-justify md:leading-[30px] xl:leading-[35px] md:h-[21vh] xl:max-h-[19vh] 2xl:max-h-[23vh]">
+                  <p className="hidden md:flex text-slate-950 py-4 2xl:py-0 2xl:pt-2 px-2 xl:px-6 md:text-[20px] xl:text-[24px] text-justify md:leading-[30px] xl:leading-[35px] md:h-[20vh] xl:max-h-[18vh] 2xl:max-h-full">
                     <div className="md:line-clamp-4 xl:line-clamp-3 2xl:line-clamp-4">
                       {locale === "vi" ? (
                         <p>{blog.description}</p>

@@ -14,6 +14,7 @@ export default function Root() {
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
   const locale = useLocale();
+  const [searchText, setSearchText] = useState("");
 
   const careers = data?.blogs?.filter((item: any) => item.isCareer);
 

@@ -54,7 +54,7 @@ export default function Root() {
                   }}
                   className=" !text-black  md:text-[22.6px] text-[24px] text-justify leading-7 md:leading-[34px] lg:leading-[40px]"
                 ></div>
-                <p className="container flex md:hidden flex-row w-full justify-end pt-9 text-[24px] md:text-[22.6px]">
+                <p className="flex md:hidden flex-row w-full justify-end pt-9 text-[24px] md:text-[22.6px]">
                   Jacy Huynh
                 </p>
               </div>
