@@ -6,6 +6,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "next-intl/client";
 import { useContext, useState, useTransition } from "react";
 import { SlArrowRight } from "react-icons/sl";
+import { _formatString } from "@/lib/utils";
 
 export default function Root() {
   const data = useContext(Context);
@@ -101,32 +102,40 @@ export default function Root() {
           {locale === "vi" ? "Vị trí đang tuyển dụng" : "Jobs opening"}
         </h6>
         <div className="mt-6 flex flex-col md:flex-row h-full mb-4 gap-6">
-          {careers?.map((blog: any) => (
-            <div className="flex flex-row border border-black w-full md:w-1/3">
-              <div className="flex flex-col w-full h-full ">
-                <a
-                  className="hover:underline text-black p-4 leading-4 font-bold w-full text-[16px] md:text-2xl"
-                  href={`/blog/${blog.id}`}
-                >
-                  <div className="line-clamp-2">
-                    {locale === "vi" ? blog.title : blog.title_en}
+          {careers
+            ?.filter((blog: any) =>
+              locale === "vi"
+                ? _formatString(blog.title).toLowerCase().includes(searchText)
+                : _formatString(blog.title_en)
+                    .toLowerCase()
+                    .includes(searchText)
+            )
+            .map((blog: any) => (
+              <div className="flex flex-row border border-black w-full md:w-1/3">
+                <div className="flex flex-col w-full h-full ">
+                  <a
+                    className="hover:underline text-black p-4 leading-4 font-bold w-full text-[16px] md:text-2xl"
+                    href={`/blog/${blog.id}`}
+                  >
+                    <div className="line-clamp-2">
+                      {locale === "vi" ? blog.title : blog.title_en}
+                    </div>
+                  </a>
+                  <div className="flex text-sm md:text-base px-4 text-base-content/70 text-justify leading-5">
+                    <p className="line-clamp-4">
+                      {locale === "vi" ? blog.description : blog.description_en}
+                    </p>
                   </div>
-                </a>
-                <div className="flex text-sm md:text-base px-4 text-base-content/70 text-justify leading-5">
-                  <p className="line-clamp-4">
-                    {locale === "vi" ? blog.description : blog.description_en}
-                  </p>
+                  <a
+                    href={`/blog/${blog.id}`}
+                    className="flex p-4 items-center md:justify-center font-bold text-[16px]"
+                  >
+                    <SlArrowRight className="pr-1" size="20" />
+                    {locale === "vi" ? "Xem Thêm" : "See job"}
+                  </a>
                 </div>
-                <a
-                  href={`/blog/${blog.id}`}
-                  className="flex p-4 items-center md:justify-center font-bold text-[16px]"
-                >
-                  <SlArrowRight className="pr-1" size="20" />
-                  {locale === "vi" ? "Xem Thêm" : "See job"}
-                </a>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
     </section>
