@@ -8,6 +8,7 @@ const TextArea = ({
       onChange={onChange}
       className={`${className} bg-base-200 text-black textarea textarea-bordered`}
       placeholder={placeholder}
+      name="user_question"
     ></textarea>
   );
 };

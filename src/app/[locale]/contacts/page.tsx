@@ -8,6 +8,8 @@ import PaginationDemo from "@/components/ui/PaginationDemo";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "next-intl/client";
 import { useTransition } from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Root() {
   const t = useTranslations("contacts");
@@ -21,6 +23,50 @@ export default function Root() {
     startTransition(() => {
       router.replace(pathname, { locale: lang });
     });
+  };
+
+  const user = {
+    name: "James",
+    phone: "Check this out!",
+    email: "",
+    question: "",
+  };
+
+  const sendEmailMobile = (e: any) => {
+    e.preventDefault();
+    emailjs
+      .send("Test dongnam contact", "template_oqaah76", user, {
+        publicKey: "DyLjAx0uOUZol2onx",
+      })
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          e.target.reset();
+        },
+        (err) => {
+          console.log("FAILED...", err);
+        }
+      );
+  };
+
+  const form = useRef(null);
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("Test dongnam contact", "template_ieecpoa", form.current!, {
+        publicKey: "DyLjAx0uOUZol2onx",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          e.target.reset();
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
   };
 
   return (
@@ -41,34 +87,47 @@ export default function Root() {
             <br />
             {t("description3")}
           </p>
-          <TextArea
-            onChange={(e: any) => console.log(e.target.value)}
-            placeholder={`${
-              locale === "en" ? "Write your questions" : "Nhập câu hỏi"
-            }`}
-            className="mt-4 p-2  text-base h-[100px] resize-none border border-black w-full"
-          />
-          <TextInput
-            onChange={(e: any) => console.log(e.target.value)}
-            className="mt-2 border-b pl-2 border-black"
-            placeholder={`${locale === "en" ? "Name" : "Họ và tên"}`}
-          />
-          <TextInput
-            onChange={(e: any) => console.log(e.target.value)}
-            className="mt-4 border-b pl-2 border-black"
-            placeholder={`${
-              locale === "en" ? "Phone number" : "Số điện thoại"
-            }`}
-          />
-          <TextInput
-            onChange={(e: any) => console.log(e.target.value)}
-            className="mt-4 border-b pl-2 border-black"
-            placeholder="Email"
-          />
-          <Button
-            className="text-white font-bold px-4  rounded-lg bg-blue-500 mt-4 w-full"
-            text={`${locale === "en" ? "Submit" : "Gửi"}`}
-          />
+          <form
+            action=""
+            ref={form}
+            onSubmit={sendEmailMobile}
+            className="w-full"
+          >
+            <textarea
+              name="user.question"
+              onChange={(e: any) => console.log(e.target.value)}
+              placeholder={`${
+                locale === "en" ? "Write your questions" : "Nhập câu hỏi"
+              }`}
+              className="mt-4 p-2  text-base h-[100px] resize-none border border-black w-full"
+            />
+            <TextInput
+              onChange={(e: any) => console.log(e.target.value)}
+              className="mt-2 border-b pl-2 border-black"
+              placeholder={`${locale === "en" ? "Name" : "Họ và tên"}`}
+            />
+            <input
+              type="text"
+              name="user_phone"
+              onChange={(e: any) => console.log(e.target.value)}
+              className="mt-4 w-full border-b pl-2 border-black"
+              placeholder={`${
+                locale === "en" ? "Phone number" : "Số điện thoại"
+              }`}
+            />
+            <input
+              onChange={(e: any) => console.log(e.target.value)}
+              className="mt-4 border-b pl-2 w-full border-black"
+              placeholder="Email"
+              type="text"
+              name="user_email"
+            />
+            <input
+              className="text-white font-bold px-4 py-2 cursor-pointer rounded-lg bg-blue-500 mt-4 w-full"
+              type="submit"
+              value={`${locale === "en" ? "Submit" : "Gửi"}`}
+            />
+          </form>
           <div className="sm:w-1/2 w-full">
             <iframe
               className="mt-4 sm:mt-0 content-center w-full  flex flex-col"
@@ -102,34 +161,48 @@ export default function Root() {
                   <h1 className=" text-[22.6px] sm:px-0 px-4 text-left block">
                     {t("description3")}
                   </h1>
-                  <TextArea
-                    onChange={(e: any) => console.log(e.target.value)}
-                    placeholder={`${
-                      locale === "en" ? "Write your questions" : "Nhập câu hỏi"
-                    }`}
-                    className="mt-4 p-2  text-base h-[100px] resize-none border border-black"
-                  />
-                  <TextInput
-                    onChange={(e: any) => console.log(e.target.value)}
-                    className="mt-8 border-b pl-2 border-black"
-                    placeholder={`${locale === "en" ? "Name" : "Họ và tên"}`}
-                  />
-                  <TextInput
-                    onChange={(e: any) => console.log(e.target.value)}
-                    className="mt-4 border-b pl-2 border-black"
-                    placeholder={`${
-                      locale === "en" ? "Phone number" : "Số điện thoại"
-                    }`}
-                  />
-                  <TextInput
-                    onChange={(e: any) => console.log(e.target.value)}
-                    className="mt-4 border-b pl-2 border-black"
-                    placeholder="Email"
-                  />
-                  <Button
-                    className="text-white font-bold px-4  rounded-lg bg-blue-500 mt-8"
-                    text="Submit"
-                  />
+                  <form
+                    action=""
+                    ref={form}
+                    onSubmit={sendEmail}
+                    className="w-full"
+                  >
+                    <TextArea
+                      onChange={(e: any) => console.log(e.target.value)}
+                      placeholder={`${
+                        locale === "en"
+                          ? "Write your questions"
+                          : "Nhập câu hỏi"
+                      }`}
+                      className="mt-4 p-2 w-full text-base h-[100px] resize-none border border-black"
+                    />
+                    <TextInput
+                      onChange={(e: any) => console.log(e.target.value)}
+                      className="mt-8 border-b pl-2 border-black"
+                      placeholder={`${locale === "en" ? "Name" : "Họ và tên"}`}
+                    />
+                    <input
+                      type="text"
+                      name="user_phone"
+                      onChange={(e: any) => console.log(e.target.value)}
+                      className="mt-4 w-full border-b pl-2 border-black"
+                      placeholder={`${
+                        locale === "en" ? "Phone number" : "Số điện thoại"
+                      }`}
+                    />
+                    <input
+                      type="text"
+                      name="user_email"
+                      onChange={(e: any) => console.log(e.target.value)}
+                      className="mt-4 border-b pl-2 w-full border-black"
+                      placeholder="Email"
+                    />
+                    <input
+                      type="submit"
+                      value={`${locale === "en" ? "Submit" : "Gửi"}`}
+                      className="text-white font-bold px-4 py-2 cursor-pointer w-full rounded-lg bg-blue-500 mt-8"
+                    />
+                  </form>
                 </div>
                 <div className=" sm:w-1/2 w-full">
                   <iframe
