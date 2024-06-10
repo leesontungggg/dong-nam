@@ -8,10 +8,10 @@ const Footer = () => {
   return (
     <footer className="relative flex flex-col justify-start items-start md:py-4 md:px-8 px-4 pt-4 bg-[#F18200] text-white">
       <aside className="flex flex-col justify-start items-start">
-        <p className="font-bold md:mt-4 text-white text-justify md:text-center capitalize text-[20px] leading-[22px] md:text-xl xl:text-2xl md:pl-2">
+        <p className="font-extrabold md:mt-4 text-white text-justify md:text-center capitalize text-[20px] leading-[22px] md:text-[24px] xl:text-2xl md:pl-2">
           {locale === "vi"
             ? "Công ty cổ phần sản xuất thương mại dược phẩm đông nam"
-            : "Dong Nam Pharmaceutical Trading and Production Joint Stock Company"}
+            : "Dong Nam Pharmaceutical Trading Pharmaceutical Corporation"}
         </p>
         <p
           className={`text-white text-justify md:text-center md:mt-4 text-[14px] ${
@@ -46,13 +46,13 @@ const Footer = () => {
           />
           {locale === "vi" ? (
             <>
-              <strong className="hidden md:inline">Liên hệ:</strong> (+84 283)
-              7541 748 - (+84 283) 7541 749
+              <strong className="hidden md:inline">Hotline:</strong> 0902 327
+              775 - (+84 283) 7541 748 - (+84 283) 7541 749
             </>
           ) : (
             <>
-              <strong className="hidden md:inline">Contact:</strong> (+84 283)
-              7541 748 - (+84 283) 754 1749
+              <strong className="hidden md:inline">Hotline:</strong> 0902 327
+              775 - (+84 283) 7541 748 - (+84 283) 754 1749
             </>
           )}
         </p>
@@ -84,13 +84,13 @@ const Footer = () => {
               <img
                 src="/image/facebook.png"
                 alt="Facebook-DongNam"
-                className="md:w-16 md:h-16 xl:h-24 xl:w-24 "
+                className="md:w-14 md:h-14 xl:h-16 xl:w-16 "
               />
             </a>
             <img
               src="/image/bocongthuong.png"
               alt="DongNam"
-              className="w-auto md:h-40 xl:h-60 "
+              className="md:w-[120px] md:h-[120px] xl:w-[160px] xl:h-[160px]"
             />
           </div>
         </div>

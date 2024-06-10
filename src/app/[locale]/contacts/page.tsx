@@ -10,6 +10,14 @@ import { useRouter, usePathname } from "next-intl/client";
 import { useTransition } from "react";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { useForm, SubmitHandler } from "react-hook-form";
+
+type Inputs = {
+  name: string;
+  phone: string;
+  email: string;
+  question: string;
+};
 
 export default function Root() {
   const t = useTranslations("contacts");
@@ -25,43 +33,23 @@ export default function Root() {
     });
   };
 
-  const user = {
-    name: "James",
-    phone: "Check this out!",
-    email: "",
-    question: "",
-  };
-
-  const sendEmailMobile = (e: any) => {
-    e.preventDefault();
-    emailjs
-      .send("Test dongnam contact", "template_oqaah76", user, {
-        publicKey: "DyLjAx0uOUZol2onx",
-      })
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          e.target.reset();
-        },
-        (err) => {
-          console.log("FAILED...", err);
-        }
-      );
-  };
-
   const form = useRef(null);
 
-  const sendEmail = (e: any) => {
-    e.preventDefault();
-
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
     emailjs
-      .sendForm("Test dongnam contact", "template_ieecpoa", form.current!, {
+      .send("Test dongnam contact", "template_ieecpoa", data, {
         publicKey: "DyLjAx0uOUZol2onx",
       })
       .then(
         () => {
           console.log("SUCCESS!");
-          e.target.reset();
+          alert(`${locale === "en" ? "Sent !" : "Đã gửi !"}`);
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -90,37 +78,36 @@ export default function Root() {
           <form
             action=""
             ref={form}
-            onSubmit={sendEmailMobile}
+            onSubmit={handleSubmit(onSubmit)}
             className="w-full"
           >
             <textarea
-              name="user.question"
-              onChange={(e: any) => console.log(e.target.value)}
               placeholder={`${
                 locale === "en" ? "Write your questions" : "Nhập câu hỏi"
               }`}
               className="mt-4 p-2  text-base h-[100px] resize-none border border-black w-full"
+              {...register("question")}
             />
-            <TextInput
-              onChange={(e: any) => console.log(e.target.value)}
-              className="mt-2 border-b pl-2 border-black"
+            <input
+              className="mt-2 border-b pl-2 border-black w-full"
               placeholder={`${locale === "en" ? "Name" : "Họ và tên"}`}
+              required
+              {...register("name")}
             />
             <input
               type="text"
-              name="user_phone"
-              onChange={(e: any) => console.log(e.target.value)}
               className="mt-4 w-full border-b pl-2 border-black"
               placeholder={`${
                 locale === "en" ? "Phone number" : "Số điện thoại"
               }`}
+              required
+              {...register("phone")}
             />
             <input
-              onChange={(e: any) => console.log(e.target.value)}
               className="mt-4 border-b pl-2 w-full border-black"
               placeholder="Email"
-              type="text"
-              name="user_email"
+              type="email"
+              {...register("email")}
             />
             <input
               className="text-white font-bold px-4 py-2 cursor-pointer rounded-lg bg-blue-500 mt-4 w-full"
@@ -164,38 +151,38 @@ export default function Root() {
                   <form
                     action=""
                     ref={form}
-                    onSubmit={sendEmail}
+                    onSubmit={handleSubmit(onSubmit)}
                     className="w-full"
                   >
-                    <TextArea
-                      onChange={(e: any) => console.log(e.target.value)}
+                    <textarea
                       placeholder={`${
                         locale === "en"
                           ? "Write your questions"
                           : "Nhập câu hỏi"
                       }`}
                       className="mt-4 p-2 w-full text-base h-[100px] resize-none border border-black"
+                      {...register("question")}
                     />
-                    <TextInput
-                      onChange={(e: any) => console.log(e.target.value)}
-                      className="mt-8 border-b pl-2 border-black"
+                    <input
+                      className="mt-8 border-b pl-2 border-black w-full"
                       placeholder={`${locale === "en" ? "Name" : "Họ và tên"}`}
+                      required
+                      {...register("name")}
                     />
                     <input
                       type="text"
-                      name="user_phone"
-                      onChange={(e: any) => console.log(e.target.value)}
                       className="mt-4 w-full border-b pl-2 border-black"
+                      required
                       placeholder={`${
                         locale === "en" ? "Phone number" : "Số điện thoại"
                       }`}
+                      {...register("phone")}
                     />
                     <input
-                      type="text"
-                      name="user_email"
-                      onChange={(e: any) => console.log(e.target.value)}
+                      type="email"
                       className="mt-4 border-b pl-2 w-full border-black"
                       placeholder="Email"
+                      {...register("email")}
                     />
                     <input
                       type="submit"

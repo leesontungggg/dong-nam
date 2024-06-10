@@ -11,6 +11,7 @@ const TextInput = ({
         className={`${className} bg-base-200 text-black input input-bordered w-full`}
         onChange={onChange}
         name="user_name"
+        required
       />
     </div>
   );

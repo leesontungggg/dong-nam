@@ -4,6 +4,7 @@ import { useRouter, usePathname } from "next-intl/client";
 import { useTransition } from "react";
 import { useState } from "react";
 import { MdLanguage } from "react-icons/md";
+import { useEffect } from "react";
 
 import {
   Menubar,
@@ -13,6 +14,7 @@ import {
   MenubarTrigger,
 } from "@/components/ui/menubar";
 import Hamburger from "./hamburger";
+import { isBoolean } from "lodash";
 
 const Navbar = (props: any) => {
   const t = useTranslations("navbar");
@@ -21,6 +23,7 @@ const Navbar = (props: any) => {
   const [isPending, startTransition] = useTransition();
   const locale = useLocale();
   const [toggle, setToggle] = useState(true);
+  const [toggleLanguage, setToggleLanguage] = useState(isBoolean);
 
   const handleSelect = (lang: string) => {
     startTransition(() => {
@@ -32,6 +35,15 @@ const Navbar = (props: any) => {
     setToggle(!toggle);
     e.preventDefault();
   };
+
+  const handleToggleLanguage = () => {
+    setToggleLanguage(!toggleLanguage);
+    toggleLanguage ? handleSelect("vi") : handleSelect("en");
+  };
+
+  useEffect(() => console.log("UseEffect says:", toggleLanguage));
+
+  console.log(toggleLanguage);
 
   return (
     <header className="flex sticky top-0 z-50 w-full h-fit border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -270,10 +282,19 @@ const Navbar = (props: any) => {
           <nav className="flex items-center  border-slate-400 border rounded-lg">
             <Menubar>
               <MenubarMenu>
-                <MenubarTrigger className="md:text-[16px] xl:text-lg flex justify-center w-[50px] h-full md:w-[6vw]">
-                  <MdLanguage size="35" />
+                <MenubarTrigger
+                  className="md:text-[16px] xl:text-lg flex justify-center w-[50px] h-full md:w-[10vw]"
+                  onClick={() => handleToggleLanguage()}
+                >
+                  <span className={`${locale === "vi" ? "font-bold" : ""}`}>
+                    Vie
+                  </span>
+                  {"  "} |{" "}
+                  <span className={`${locale === "en" ? "font-bold" : ""}`}>
+                    Eng
+                  </span>
                 </MenubarTrigger>
-                <MenubarContent>
+                {/* <MenubarContent>
                   <MenubarItem
                     className="md:text-[16px] xl:text-lg"
                     onClick={() => handleSelect("vi")}
@@ -286,7 +307,7 @@ const Navbar = (props: any) => {
                   >
                     English
                   </MenubarItem>
-                </MenubarContent>
+                </MenubarContent> */}
               </MenubarMenu>
             </Menubar>
           </nav>

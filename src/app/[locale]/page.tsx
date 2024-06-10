@@ -15,8 +15,6 @@ export default function Root() {
   const [isPending, startTransition] = useTransition();
   const locale = useLocale();
 
-  console.log(data);
-
   const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const lang = e.target.value;
     startTransition(() => {
@@ -53,24 +51,20 @@ export default function Root() {
               {/* {t("description")} */}
               {locale === "vi" ? (
                 <>
-                  Với hơn 20 năm cung cấp dược phẩm đạt tiêu chuẩn quốc tế
-                  CMP-WHO, Dược phẩm Đông Nam{" "}
-                  <strong>
-                    sản xuất và phân phối độc quyền thuốc kê đơn và không kê đơn
-                  </strong>{" "}
-                  chất lượng cao với giá thành tốt cho các đại lý phân phối, cửa
-                  hàng bản lẻ lớn tại Việt Nam và các quốc gia lân cận.
+                  Chúng tôi là nhà sản xuất duợc phẩm đạt tiêu chuẩn WHO-GMP,
+                  GLP, GSP với tiêu chí "Chất lượng - Hiệu quả - An toàn". Hơn
+                  20 năm trong lĩnh vực sản xuất dược phẩm, chúng tôi đã và đang
+                  cung cấp cho các nhà phân phối giải pháp y tế tốt nhất vì sức
+                  khoẻ của bệnh nhân.
                 </>
               ) : (
                 <>
-                  With over two decades of providing internationally
-                  standardized pharmaceuticals, Dong Nam Pharmaceuticals{" "}
-                  <strong>
-                    manufactures high-quality prescription and over-the- counter
-                    medications
-                  </strong>{" "}
-                  at competitive prices for distributors and major retail
-                  outlets in Vietnam and around the world.
+                  We are a pharmaceutical manufacturer that meets WHO-GMP, GLP,
+                  and GSP standards with the motto "Quality - Efficiency -
+                  Safety." With over 20 years in the pharmaceutical
+                  manufacturing field, we have been and continue to provide the
+                  best medical solutions to distributors for the health of
+                  patients.
                 </>
               )}
             </p>
@@ -86,26 +80,19 @@ export default function Root() {
           <p className="text-justify leading-[20px] text-[16px]">
             {locale === "vi" ? (
               <>
-                Với hơn 20 năm cung cấp dược phẩm đạt tiêu chuẩn quốc tế
-                CMP-WHO, Dược phẩm Đông Nam{" "}
-                <strong>
-                  sản xuất và phân phối độc quyền thuốc kê đơn và không kê đơn
-                </strong>{" "}
-                chất lượng cao với giá thành tốt cho các đại lý phân phối, cửa
-                hàng bản lẻ lớn tại Việt Nam và các quốc gia lân cận.
+                Chúng tôi là nhà sản xuất duợc phẩm đạt tiêu chuẩn WHO-GMP, GLP,
+                GSP với tiêu chí "Chất lượng - Hiệu quả - An toàn". Hơn 20 năm
+                trong lĩnh vực sản xuất dược phẩm, chúng tôi đã và đang cung cấp
+                cho các nhà phân phối giải pháp y tế tốt nhất vì sức khoẻ của
+                bệnh nhân.
               </>
             ) : (
               <>
-                With over two decades of providing internationally standardized
-                pharmaceuticals, Dong Nam Pharmaceuticals{" "}
-                <strong>
-                  manufactures high-quality prescription and over-the- counter
-                  medications
-                </strong>{" "}
-                at competitive prices for distributors and major retail outlets
-                in Vietnam and{" "}
-                <span className="hidden md:inline">around the world.</span>
-                <span className="inline md:hidden">global.</span>
+                We are a pharmaceutical manufacturer that meets WHO-GMP, GLP,
+                and GSP standards with the motto "Quality - Efficiency -
+                Safety." With over 20 years in the pharmaceutical manufacturing
+                field, we have been and continue to provide the best medical
+                solutions to distributors for the health of patients.
               </>
             )}
           </p>
@@ -118,7 +105,7 @@ export default function Root() {
             className="w-full lg:h-full md:pr-4 xl:pr-6 md:pl-20 xl:pl-0 "
           />
           <div className="container flex flex-col md:pl-4 xl:pl-4">
-            <h1 className="leading-[22px] md:leading-[33px] text-[18px] md:text-2xl xl:text-3xl uppercase md:font-bold text-[#F18200] ">
+            {/* <h1 className="leading-[22px] md:leading-[33px] text-[18px] md:text-2xl xl:text-3xl uppercase md:font-bold text-[#F18200] ">
               {locale === "vi" ? (
                 <span className="inline md:hidden ">
                   <strong>Sứ mệnh</strong>
@@ -131,56 +118,24 @@ export default function Root() {
                 </span>
               )}
               <span className="hidden md:block">{t("mission.title")}</span>
-            </h1>
+            </h1> */}
             <p className="text-[16px] md:text-xl xl:text-2xl pt-2 leading-[20px] text-justify">
               {locale === "vi" ? (
                 <>
-                  Với sứ mệnh{" "}
-                  <strong>
-                    "Đồng hành cùng người tiêu dùng trên hành trình sức khỏe
-                    toàn diện"
-                  </strong>
-                  <span className="hidden md:inline">
-                    , chúng tôi có đa dạng danh mục sản phẩm thuốc đáp ứng các
-                    nhu cầu của bệnh nhân trong các lĩnh vực giảm đau hạ sốt, dạ
-                    dày - đường ruột, gan - mật, tim mạch... Điểm mạnh của chúng
-                    tôi không chỉ nằm ở việc phát triển các sản phẩm thuốc mới,
-                    mà còn ở khả năng{" "}
-                    <strong>
-                      {" "}
-                      nghiên cứu và chế tạo sản phẩm độc quyền theo yêu cầu của
-                      các Quý đối tác.
-                    </strong>
-                  </span>
-                  <span className="inline md:hidden">
-                    , chúng tôi sẽ nghiên cứu sản phẩm độc quyền theo yêu cầu
-                    của Quý đối tác với đa dạng danh mục đáp ứng các yêu cầu của
-                    bệnh nhân.
-                  </span>
+                  Chúng tôi cung cấp các biện pháp phòng và điều trị bệnh hiệu
+                  quả. Sản phẩm thuốc của chúng tôi là nỗ lực đáp ứng các nhu
+                  cầu của bệnh nhân trong các lĩnh vực giảm đau hạ sốt, kháng
+                  viêm, kháng sinh, dạ dày - đường ruột, gan - mật, tim mạch, cơ
+                  xuơng khớp, vitamin - khoáng chất,...
                 </>
               ) : (
                 <>
-                  With a mission to{" "}
-                  <strong>
-                    "accompany consumers on the journey to comprehensive health"
-                  </strong>
-                  <span className="hidden md:inline">
-                    , we offer a diverse portfolio of medicines to meet patient
-                    needs across various areas, such as pain relief, digestive
-                    health, liver function, cardiovascular health, and more. Our
-                    strength lies not only in developing new drug products but
-                    also in our ability to
-                    <strong>
-                      {" "}
-                      research products tailored to the specific requirements of
-                      our esteemed partners.
-                    </strong>
-                  </span>
-                  <span className="inline md:hidden">
-                    , we will research exclusive products according to the
-                    requests of our valued partners, with a diverse portfolio to
-                    meet the needs of patients
-                  </span>
+                  We provide effective measures for the prevention and treatment
+                  of diseases. Our pharmaceutical products are the result of
+                  efforts to meet the needs of patients in the areas of pain
+                  relief and fever reduction, anti-inflammatory, antibiotics,
+                  gastrointestinal, liver and biliary, cardiovascular,
+                  musculoskeletal, vitamins and minerals, and more.
                 </>
               )}
             </p>
@@ -196,135 +151,64 @@ export default function Root() {
             </h2>
           </div>
           <h1 className="block md:hidden leading-[22px] text-[18px] uppercase  text-[#00A44E] ">
-            {locale === "vi" ? (
-              <span className="block md:hidden">
-                VÌ SAO CÔNG TY DƯỢC
-                <br /> ĐÔNG NAM ĐƯỢC NHIỀU
-                <br />
-                <strong>ĐỐI TÁC LỚN TIN TƯỞNG?</strong>
-              </span>
-            ) : (
-              <span className="block md:hidden">
-                <strong>WHY OUR PARTNERS</strong>
-                <br />
-                PLACE TRUST ON US?
-              </span>
-            )}
+            {locale === "vi" ? "chính sách chất lượng" : "quality policy"}
           </h1>
-          <div className="mt-4 grid md:grid-cols-3 md:gap-2 gap-2">
+          <div className="mt-10 grid md:grid-cols-2 md:gap-14 xl:gap-20 gap-2">
             <div className="flex flex-col items-center  w-full load-hidden animate-slide-up md:border-[1px] md:border-black border-solid rounded-t-lg animate-delay-200">
               <img
-                className="aspect-square md:object-cover  w-full md:h-[250px] h-[220px] md:rounded-lg "
+                className="md:object-fill md:h-[26vh] xl:h-[34vh] md:p-3 xl:p-5 w-full md:rounded-3xl"
                 src="/image/reason-1.jpg"
                 alt="Online Banking"
               />
               <p className="block md:hidden mt-2 text-center">
                 {locale === "vi" ? (
-                  <>
-                    Sản Phẩm Chất Lượng GMP-WHO
-                    <br /> Giá Cả Cạnh Tranh
-                  </>
+                  <>Nhân sự tiến bộ theo xu huớng phát triển của ngành</>
                 ) : (
-                  <>Quality Products - Competitive Prices</>
+                  <>Personnel advancing with industry trends</>
                 )}
               </p>
-              <div className="md:flex flex-col md:px-1 hidden">
+              <div className="md:flex hidden w-full">
                 <h3
-                  className={`md:text-[18px] xl:text-[24px] text-left pt-4  ${
-                    locale === "en" ? "pr-20" : "pr-8"
-                  } text-black font-semibold capitalize`}
+                  className={`md:text-[24px] xl:text-[26px] pt-2 md:px-4 xl:px-6 text-black font-bold leading-7`}
                   dangerouslySetInnerHTML={{
                     __html: t("reason.reason1.title1"),
                   }}
                 ></h3>
-                <h3
-                  className="text-[18px] xl:text-[24px] text-right  text-black font-semibold  capitalize"
-                  dangerouslySetInnerHTML={{
-                    __html: t("reason.reason1.title2"),
-                  }}
-                ></h3>
               </div>
-              <p className="hidden md:block text-center text-[18px] xl:text-[24px] xl:text-justify md:text-left  text-slate-950 p-4 leading-[36px]">
+              <p className="hidden md:block text-center text-[18px] xl:text-[24px] xl:text-justify md:text-left  text-slate-950 p-4 md:px-4 xl:px-6 leading-7">
                 {t("reason.reason1.description")}
               </p>
             </div>
             <div className="flex flex-col items-center  w-full load-hidden animate-slide-up md:border-[1px] md:border-black border-solid rounded-t-lg animate-delay-200">
               <img
-                className="aspect-square md:object-cover  w-full md:h-[250px] h-[220px] md:rounded-lg "
+                className="md:object-fill w-full md:h-[26vh] xl:h-[34vh] md:p-3 xl:p-5 md:rounded-3xl "
                 src="/image/reason-2.jpg"
                 alt="Simple Budgeting"
               />
-              <p className="block md:hidden mt-2 text-center capitalize">
+              <p className="block md:hidden mt-2 text-center">
                 {locale === "vi" ? (
-                  <>
-                    sản xuất nhanh chóng
-                    <br /> chất lượng đồng bộ
-                  </>
+                  <>Chú trọng vào nghiên cứu và cải tiến</>
                 ) : (
-                  <>Fast Production - Consistent Quality</>
+                  <>Focus on research and improvement</>
                 )}
               </p>
-              <div className="md:flex flex-col md:px-1 hidden">
+              <div className="md:flex hidden w-full">
                 <h3
-                  className={`md:text-[18px] xl:text-[24px] text-left pt-4  ${
-                    locale === "en" ? "pr-20" : "pr-8"
-                  } text-black font-semibold capitalize`}
+                  className={`md:text-[24px] xl:text-[26px] pt-2 md:px-4 xl:px-6 text-black font-bold leading-7`}
                   dangerouslySetInnerHTML={{
                     __html: t("reason.reason2.title1"),
                   }}
                 ></h3>
-                <h3
-                  className="md:text-[18px] xl:text-[24px]  text-right text-black font-semibold  capitalize"
-                  dangerouslySetInnerHTML={{
-                    __html: t("reason.reason2.title2"),
-                  }}
-                ></h3>
               </div>
-              <p className="hidden md:block text-center text-[18px] xl:text-[24px] xl:text-justify md:text-left text-slate-950 p-4 leading-[36px]">
+              <p className="hidden md:block text-center text-[18px] xl:text-[24px] xl:text-justify md:text-left text-slate-950 p-4 md:px-4 xl:px-6 leading-7">
                 {t("reason.reason2.description")}
-              </p>
-            </div>
-            <div className="flex flex-col items-center w-full load-hidden animate-slide-up md:border-[1px] md:border-black border-solid rounded-t-lg animate-delay-200">
-              <img
-                className="aspect-square md:object-cover w-full md:h-[250px] h-[220px] md:rounded-lg"
-                src="/image/reason-3.jpg"
-                alt="Fast Onboarding"
-              />
-              <p className="block md:hidden mt-2 text-center capitalize">
-                {locale === "vi" ? (
-                  <>
-                    đa dạng danh mục
-                    <br /> sản xuất độc quyền
-                  </>
-                ) : (
-                  <>Diverse Portfolio - Exclusive Manufacturing</>
-                )}
-              </p>
-              <div className="md:flex flex-col md:px-1 hidden ">
-                <h3
-                  className={`md:text-[18px] xl:text-[24px] text-left pt-4  ${
-                    locale === "en" ? "pr-16" : "pr-10"
-                  } text-black font-semibold capitalize`}
-                  dangerouslySetInnerHTML={{
-                    __html: t("reason.reason3.title1"),
-                  }}
-                ></h3>
-                <h3
-                  className="md:text-[18px] xl:text-[24px] text-right xl:pl-6 text-black font-semibold  capitalize"
-                  dangerouslySetInnerHTML={{
-                    __html: t("reason.reason3.title2"),
-                  }}
-                ></h3>
-              </div>
-              <p className="hidden md:block text-center text-[18px] xl:text-[24px] xl:text-justify md:text-left text-slate-950 p-4 leading-[36px]">
-                {t("reason.reason3.description")}
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-base-200 pt-3  md:pt-[4em] lg:pt-[3em] lg:px-[5em]">
+      {/* <section className="bg-base-200 pt-3  md:pt-[4em] lg:pt-[3em] lg:px-[5em]">
         <div className="container max-w-screen-xl mx-auto w-full ">
           <div className="load-hidden animate-fade-in animate-delay-200">
             <h2 className="  uppercase mb-4 leading-[22px] text-[18px] md:text-center text-[#F18200] md:text-2xl xl:text-3xl lg:text-left lg:ml-0 md:font-bold w-12/13 md:w-1/2 ">
@@ -388,90 +272,11 @@ export default function Root() {
             </div>
           </div>
         </div>
-      </section>
-
-      <section className="bg-base-200 pt-4 md:pt-[4em] lg:pt-[3em] lg:px-[5em]">
-        <div className="container max-w-screen-xl mx-auto w-full flex flex-col justify-center items-center">
-          <div className="load-hidden animate-fade-in animate-delay-200 flex self-stretch">
-            <h2 className="uppercase mb-4 md:mb-0 leading-[22px] text-[18px] md:text-center text-[#00A44E] md:text-2xl xl:text-3xl lg:text-left lg:ml-0 md:font-bold w-11/12 md:w-3/4 font-bold">
-              {t("article.title")}
-            </h2>
-            <div
-              className="hidden md:flex flex-row content-center items-center text-center cursor-pointer"
-              onClick={() => router.push(`/news/`)}
-            >
-              <div className="cursor-pointer w-[350px] md:text-[22.6px] xl:text-[23.8px] font-bold pl-3 xl:pr-2">
-                {`${
-                  locale === "vi"
-                    ? "Xem tất cả bài viết tại đây"
-                    : "Read all articles here"
-                }`}
-              </div>
-              <ImArrowRight2 size="22.6" />
-            </div>
-          </div>
-
-          <div className="mt-0 md:mt-4 grid md:grid-cols-3 gap-4">
-            {data.blogs
-              .filter((blog: any) => blog.type === "news")
-              .map((blog: any) => (
-                <div
-                  className="flex flex-col items-center  w-full load-hidden animate-slide-up md:border-[1px] md:border-black md:border-solid rounded-t-lg animate-delay-200 cursor-pointer"
-                  onClick={() => router.push(`/news/${blog.id}`)}
-                >
-                  <img
-                    className="aspect-square object-cover w-full h-[20vh] md:h-[25vh] rounded-lg"
-                    src={`https://dongnam.up.railway.app/assets/${blog.thumbnail}`}
-                    alt="Online Banking"
-                  />
-                  <h3 className=" md:text-center text-black md:font-bold md:px-4 pt-2 md:pt-4  capitalize text-[16px] leading-[20px] md:text-[24.6px] xl:text-[26px] md:leading-[30px] line-clamp-2 md:line-clamp-3 xl:line-clamp-3">
-                    {locale === "vi" ? (
-                      <p>{blog.title}</p>
-                    ) : (
-                      <p>{blog.title_en}</p>
-                    )}
-                  </h3>
-                  <p
-                    className={`${
-                      locale === "vi" ? "md:text-[20px]" : "md:text-[18px]"
-                    } hidden md:flex text-slate-950 py-4 px-2 xl:px-6 2xl:py-0 2xl:pt-2 xl:text-[24px] text-justify md:leading-[30px] xl:leading-[35px] md:h-[20vh] xl:max-h-[18vh] 2xl:max-h-[23vh]`}
-                  >
-                    <div className="md:line-clamp-4 xl:line-clamp-3 2xl:line-clamp-4">
-                      {locale === "vi" ? (
-                        <p>{blog.description}</p>
-                      ) : (
-                        <p>{blog.description_en}</p>
-                      )}
-                    </div>
-                  </p>
-                  <div className="hidden md:flex">
-                    <div className="md:py-3 xl:py-5 flex flex-row content-center items-center">
-                      <SlArrowRight className="pr-2" size="33" />
-                      <p className="mt-auto  font-bold md:text-[19.6px] xl:text-[24px]">{`${
-                        locale === "vi" ? "Đọc thêm" : "Read more"
-                      }`}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-          </div>
-
-          <div
-            className="flex md:hidden cursor-pointer justify-center items-center mt-3 text-white bg-orange-500 rounded-full py-3 w-1/2"
-            onClick={() => router.push(`/news/`)}
-          >
-            <div className="cursor-pointer text-center text-[15px] font-bold w-full px-1">
-              {`${
-                locale === "vi" ? "Xem tất cả bài viết" : "See all articles"
-              }`}
-            </div>
-          </div>
-        </div>
-      </section>
+      </section> */}
 
       <section className="bg-base-200 pt-4 md:pt-[4em] lg:pt-[3em] lg:px-[5em] mb-4 md:mb-6 xl:mb-8">
         <div className="container max-w-screen-xl mx-auto w-full flex flex-col justify-center items-center">
-          <div className="load-hidden animate-fade-in animate-delay-200 flex self-stretch">
+          <div className="load-hidden animate-fade-in animate-delay-200 flex self-stretch md:mb-5">
             <h2 className="uppercase mb-4 md:mb-0 leading-[22px] text-[18px] md:text-center text-[#00A44E] md:text-2xl xl:text-3xl lg:text-left lg:ml-0 md:font-bold w-11/12 md:w-3/4 font-bold">
               {t("blog.title")}
             </h2>
@@ -499,19 +304,21 @@ export default function Root() {
                   onClick={() => router.push(`/blog/${blog.id}`)}
                 >
                   <img
-                    className="aspect-square object-cover w-full h-[20vh] md:h-[25vh] rounded-lg"
+                    className="aspect-square object-cover w-full h-[20vh] md:h-[25vh] xl:h-[33vh] rounded-lg md:p-2"
                     src={`https://dongnam.up.railway.app/assets/${blog.thumbnail}`}
                     alt="Online Banking"
                   />
-                  <h3 className=" md:text-center text-black md:font-bold md:px-4 pt-2 md:pt-4  capitalize text-[16px] leading-[20px] md:text-[24.6px] xl:text-[26px] md:leading-[30px] line-clamp-2 md:line-clamp-3 xl:line-clamp-2 ">
-                    {locale === "vi" ? (
-                      <p>{blog.title}</p>
-                    ) : (
-                      <p>{blog.title_en}</p>
-                    )}
+                  <h3 className=" md:text-left text-black md:font-bold md:px-4 pt-3 xl:pt-5 text-[16px] leading-[20px] md:text-[20px] xl:text-[26px] md:leading-6 xl:leading-8 md:h-[96px] xl:h-[128px]">
+                    <div className="line-clamp-2 md:line-clamp-5">
+                      {locale === "vi" ? (
+                        <p>{blog.title}</p>
+                      ) : (
+                        <p>{blog.title_en}</p>
+                      )}
+                    </div>
                   </h3>
-                  <p className="hidden md:flex text-slate-950 py-4 2xl:py-0 2xl:pt-2 px-2 xl:px-6 md:text-[20px] xl:text-[24px] text-justify md:leading-[30px] xl:leading-[35px] md:h-[20vh] xl:max-h-[18vh] 2xl:max-h-full">
-                    <div className="md:line-clamp-4 xl:line-clamp-3 2xl:line-clamp-4">
+                  <p className="hidden md:flex text-slate-950 md:px-4 md:pt-6 xl:pt-10 2xl:pt-10 py-4 2xl:py-0 px-2 xl:px-4 md:text-[18px] xl:text-[24px] text-justify md:leading-6 xl:leading-8 md:h-[32vh] xl:h-[48vh]">
+                    <div className="">
                       {locale === "vi" ? (
                         <p>{blog.description}</p>
                       ) : (
@@ -520,7 +327,83 @@ export default function Root() {
                     </div>
                   </p>
                   <div className="hidden md:flex">
-                    <div className="md:py-3 xl:py-5 flex flex-row content-center items-end">
+                    <div className="md:py-3 md:pt-8 xl:py-5 flex flex-row content-center items-end">
+                      <SlArrowRight className="pr-2" size="33" />
+                      <p className="mt-auto  font-bold md:text-[19.6px] xl:text-[24px]">{`${
+                        locale === "vi" ? "Đọc thêm" : "Read more"
+                      }`}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+          </div>
+
+          <div
+            className="flex md:hidden cursor-pointer justify-center items-center mt-3 text-white bg-orange-500 rounded-full py-3 w-1/2"
+            onClick={() => router.push(`/news/`)}
+          >
+            <div className="cursor-pointer text-center text-[15px] font-bold w-full px-1">
+              {`${
+                locale === "vi" ? "Xem tất cả bài viết" : "See all articles"
+              }`}
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="bg-base-200 md:pt-6 lg:px-[5em] mb-4 md:mb-16 xl:mb-8">
+        <div className="container max-w-screen-xl mx-auto w-full flex flex-col justify-center items-center">
+          <div className="load-hidden animate-fade-in animate-delay-200 flex self-stretch md:mb-5 md:pt-0">
+            <h2 className="uppercase mb-4 md:mb-0 leading-[22px] text-[18px] md:text-center text-[#00A44E] md:text-2xl xl:text-3xl lg:text-left lg:ml-0 md:font-bold w-11/12 md:w-3/4 font-bold">
+              {t("article.title")}
+            </h2>
+            <div
+              className="hidden md:flex flex-row content-center items-center text-center cursor-pointer"
+              onClick={() => router.push(`/news/`)}
+            >
+              <div className="cursor-pointer w-[350px] md:text-[22.6px] xl:text-[23.8px] font-bold pl-3 xl:pr-2">
+                {`${
+                  locale === "vi"
+                    ? "Xem tất cả bài viết tại đây"
+                    : "Read all articles here"
+                }`}
+              </div>
+              <ImArrowRight2 size="22.6" />
+            </div>
+          </div>
+
+          <div className="mt-0 md:mt-4 grid md:grid-cols-3 gap-4">
+            {data.blogs
+              .filter((blog: any) => blog.type === "news")
+              .map((blog: any) => (
+                <div
+                  className="flex flex-col items-center  w-full load-hidden animate-slide-up md:border-[1px] md:border-black md:border-solid rounded-t-lg animate-delay-200 cursor-pointer"
+                  onClick={() => router.push(`/news/${blog.id}`)}
+                >
+                  <img
+                    className="aspect-square object-cover w-full h-[20vh] md:h-[25vh] xl:h-[33vh] rounded-lg p-2"
+                    src={`https://dongnam.up.railway.app/assets/${blog.thumbnail}`}
+                    alt="Online Banking"
+                  />
+                  <h3 className=" md:text-left text-black md:font-bold md:px-4 pt-3 xl:pt-5 text-[16px] leading-[20px] md:text-[20px] xl:text-[26px] md:leading-6 xl:leading-8 md:h-[120px] xl:h-[160px]">
+                    <div className="line-clamp-2 md:line-clamp-5">
+                      {locale === "vi" ? (
+                        <p>{blog.title}</p>
+                      ) : (
+                        <p>{blog.title_en}</p>
+                      )}
+                    </div>
+                  </h3>
+                  <p className="hidden md:flex text-slate-950 md:px-4 md:pt-6 xl:pt-10 2xl:pt-10 py-4 2xl:py-0 px-2 xl:px-4 md:text-[18px] xl:text-[24px] text-justify md:leading-6 xl:leading-8 md:h-[50vh] xl:h-[74vh] 2xl:h-[60vh]">
+                    <div className="">
+                      {locale === "vi" ? (
+                        <p>{blog.description}</p>
+                      ) : (
+                        <p>{blog.description_en}</p>
+                      )}
+                    </div>
+                  </p>
+                  <div className="hidden md:flex">
+                    <div className="md:py-3 md:pt-8 xl:py-5 flex flex-row content-center items-end">
                       <SlArrowRight className="pr-2" size="33" />
                       <p className="mt-auto  font-bold md:text-[19.6px] xl:text-[24px]">{`${
                         locale === "vi" ? "Đọc thêm" : "Read more"

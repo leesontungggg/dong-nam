@@ -8,7 +8,7 @@
     "home": "Trang Chủ",
     "about": "Giới thiệu",
     "products": "Sản phẩm",
-    "blog": "Sức khỏe của bạn",
+    "blog": "Kiến thức",
     "news": "Tin tức",
     "career": "Tuyển dụng",
     "standard": "Chứng chỉ",
@@ -27,17 +27,17 @@
       "description": "Với sứ mệnh 'Đồng hành cùng người tiêu dùng trên hành trình sức khỏe toàn diện', chúng tôi có đa dạng danh mục sản phẩm thuốc đáp ứng các nhu cầu của bệnh nhân trong các lĩnh vực giảm đau hạ sốt, dạ dày - đường ruột, gan - mật, tim mạch... Điểm mạnh của chúng tôi không chỉ nằm ở việc phát triển các sản phẩm thuốc mới, mà còn ở khả năng nghiên cứu và chế tạo sản phẩm độc quyền theo yêu cầu của các Quý đối tác."
     },
     "reason": {
-      "title": "VÌ SAO CÔNG TY DƯỢC ĐÔNG NAM ĐƯỢC NHIỀU ĐỐI TÁC LỚN TIN TƯỞNG?",
+      "title": "chính sách chất lượng",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
       "reason1": {
-        "title1": "Sản Phẩm Chất Lượng",
+        "title1": "Nhân sự tiến bộ theo xu huớng phát triển của ngành",
         "title2": "Giá Cả Cạnh Tranh",
-        "description": "Cam kết cung cấp các sản phẩm dược phẩm chất lượng với giá thành cạnh tranh, được kiểm nghiệm nghiêm ngặt theo tiêu chuẩn của Bộ Y Tế và tiêu chuẩn quốc tế GMP-WHO."
+        "description": "Đối với chúng tôi, sự phát triển năng lực của nhân sự không chỉ nhằm phát triển công ty mà còn vì sự phát triển của cả ngành dược. Chúng tôi mong muốn tạo ra một môi trường nơi mọi người có thể phát huy hết tiềm năng thông qua huấn luyện và học tập liên tục."
       },
       "reason2": {
-        "title1": "Sản xuất nhanh chóng",
+        "title1": "Chú trọng vào nghiên cứu và cải tiến",
         "title2": "chất lượng đồng bộ",
-        "description": "Với khả năng quản trị sản xuất hàng đầu và công nghệ tiên tiến, chúng tôi đảm bảo mọi sản phẩm đều được sản xuất với độ chính xác cao nhất trong thời gian nhanh nhất"
+        "description": "Năng lực nghiên cứu dược phẩm là nền tảng phát triển của chúng tôi. Với những cải tiến y tế tiên tiến cho bệnh nhân, dược phẩm của chúng tôi được các nhà phân phối toàn quốc và bệnh nhân đặt trọn niềm tin."
       },
       "reason3": {
         "title1": "Đa dạng danh mục",
@@ -73,7 +73,7 @@
       }
     },
     "blog": {
-      "title": "Sức khỏe của bạn",
+      "title": "Kiến thức",
       "article1": {
         "title": "Bài viết 1",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
