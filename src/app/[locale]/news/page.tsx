@@ -88,7 +88,7 @@ export default function Root() {
        flex flex-col justify-center items-center"
       >
         <div className="md:px-4">
-          <div className="flex flex-row md:pb-8 pb-4 gap-4">
+          <div className="flex flex-row md:pb-8 pb-4 gap-4 md:place-content-center">
             <div
               onClick={() => {
                 setCurrentIndex(0);

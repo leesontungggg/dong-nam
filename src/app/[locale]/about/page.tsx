@@ -34,15 +34,15 @@ export default function About() {
             <p className="load-hidden animate-fade-in animate-delay-200 text-slate-950 text-2xl leading-10 text-justify">
               {locale === "vi" ? (
                 <>
-                  Công ty Dược Phẩm Đông Nam được thành lập từ năm 2001, là đơn
-                  vị <strong>tiên phong</strong> sản xuất dược phẩm đạt{" "}
-                  <strong>tiêu chuẩn GMP-WHO</strong> tại Việt Nam.
+                  Công ty Dược Phẩm Đông Nam được thành lập từ năm 2001, chúng
+                  tôi là một trong những đơn vị tiên phong sản xuất dược phẩm
+                  đạt tiêu chuẩn WHO-GMP, GLP, GSP tại Việt Nam.{" "}
                 </>
               ) : (
                 <>
-                  Dong Nam Pharmaceutical Company was established in 2001 and is
-                  a <strong>pioneering</strong> unit in manufacturing
-                  pharmaceuticals <strong>meeting GMP- WHO standards</strong> in
+                  Dong Nam Pharmaceuticals was established in 2001. We are one
+                  of the pioneering companies in the production of
+                  pharmaceuticals that meet WHO-GMP, GLP, and GSP standards in
                   Vietnam.
                 </>
               )}
@@ -79,152 +79,108 @@ export default function About() {
           </p>
         </div>
       </section>
-      <section className="hidden md:block bg-base-200 py-[3em] px-[2em] md:py-[4em] lg:p-[5em]">
-        <div className="container max-w-screen-xl mx-auto grid grid-cols-2 gap-8">
-          <img
-            src="/image/about-1.jpg"
-            className="w-full h-full rounded-lg xl:max-h-80 object-cover"
-          />
-          <div className="flex flex-col gap-4">
-            <h1 className="text-3xl uppercase font-bold text-[#F18200]">
-              {locale === "vi" ? "Về chúng tôi" : "About us"}
-            </h1>
-            <p className="text-2xl leading-10 text-justify">
-              {locale === "vi" ? (
-                <>
-                  Với{" "}
-                  <strong>
-                    đội ngũ nhân viên dày dặn kinh nghiệm, chuỗi nhà máy hiện
-                    đại có diện tích hơn 13,000 m2
-                  </strong>
-                  . chúng tôi là một nhà sản xuất dược phẩm không ngừng đầu tư
-                  vào công nghệ và quản lý chất lượng để đảm bảo rằng mỗi sản
-                  phẩm mang thương hiệu Đông Nam đều đáp ứng được các tiêu chuẩn
-                  cao nhất.
-                </>
-              ) : (
-                <>
-                  With a team of <strong>experienced staff</strong> and a{" "}
-                  <strong>modern factory chain</strong> spanning over{" "}
-                  <strong>13,000 m2</strong>, we are a leading pharmaceutical
-                  manufacturer, continuously investing in technology and quality
-                  management to ensure that every Dong Nam branded product meets
-                  the highest standards.
-                </>
-              )}
-            </p>
-          </div>
-        </div>
-        <div className="container max-w-screen-xl mx-auto grid grid-cols-2 gap-8 mt-32 ">
+      <section className="hidden md:block bg-base-200 py-[3em] px-[2em] md:px-[4em]">
+        <div className="container max-w-screen-xl mx-auto grid grid-cols-2 gap-12">
           <div className="flex flex-col gap-4">
             <h1 className="text-3xl uppercase font-bold text-[#00A44E]">
-              {locale === "vi" ? "Tầm nhìn" : "Our vision"}
+              {locale === "vi" ? "Tầm nhìn" : "Vision"}
             </h1>
             <p className="text-2xl leading-10 text-justify">
               {locale === "vi" ? (
                 <>
-                  Tầm nhìn của chúng tôi là{" "}
-                  <strong>trở thành thương hiệu hàng đầu Việt Nam</strong> trong
-                  lĩnh vực sản xuất dược phẩm, thông qua việc{" "}
-                  <strong>thúc đẩy sự tiến bộ và đổi mới trong ngành,</strong>{" "}
-                  góp phần nâng cao chất lượng cuộc sống cho người dân trên toàn
-                  cầu.
+                  Tầm nhìn của chúng tôi là trở thành thương hiệu hàng đầu Việt
+                  Nam trong lĩnh vực sản xuất dược phẩm, thông qua việc thúc đẩy
+                  sự tiến bộ và đổi mới trong ngành, góp phần nâng cao chất
+                  lượng cuộc sống cho người dân.
                 </>
               ) : (
                 <>
-                  Our vision is to become <strong>a top brand</strong> in
-                  Vietnam's pharmaceutical manufacturing sector, by{" "}
-                  <strong>
-                    promoting progress and innovation in the industry,
-                  </strong>{" "}
-                  contributing to improving the quality of life for people
-                  globally.
+                  Our vision is to become the leading brand in Vietnam in the
+                  field of pharmaceutical manufacturing by promoting progress
+                  and innovation in the industry, thereby contributing to
+                  improving the quality of life for the people .
                 </>
               )}
             </p>
           </div>
           <img
             src="/image/about-2.jpg"
-            className="w-full h-full rounded-lg xl:max-h-80 object-cover"
+            className="w-full h-full rounded-lg xl:max-h-80 object-fill"
           />
         </div>
-        <div className="container max-w-screen-xl mx-auto grid grid-cols-2 gap-8 mt-32">
+        <div className="container max-w-screen-xl mx-auto grid grid-cols-2 gap-12 md:mt-14">
           <img
             src="/image/about-3.jpg"
             className="w-full h-full rounded-lg xl:max-h-80 object-fill"
           />
           <div className="flex flex-col gap-4">
-            <h1 className="text-3xl uppercase font-bold text-[#F18200]">
-              {locale === "vi" ? "Sứ mệnh" : "Our mission"}
+            <h1 className="text-3xl uppercase font-bold text-[#00A44E]">
+              {locale === "vi" ? "Sứ mệnh" : "Mission"}
             </h1>
             <p className="text-2xl leading-10 text-justify">
               {locale === "vi" ? (
                 <>
-                  Sứ mệnh của chúng tôi không chỉ là{" "}
-                  <strong>
-                    cung cấp sản phẩm chất lượng với giá cả phải chăng vì sức
-                    khỏe người Việt,
-                  </strong>{" "}
-                  mà còn mở rộng phạm vi tác động để cải thiện sức khỏe và cuộc
-                  sống của cộng đồng quốc tế. Chúng tôi tự hào khi được tin
-                  tưởng để đồng hành cùng nhiều{" "}
-                  <strong>Quý khách hàng từ các quốc gia trong khu vực.</strong>
+                  Lấy sức khoẻ cộng đồng làm khởi sự cho mọi hoạt động, chúng
+                  tôi không chỉ mang lại sự đổi mới cho lĩnh vực chăm sóc sức
+                  khỏe thông qua các giải pháp tiên tiến, mà còn đóng góp tích
+                  cực vào việc bảo vệ môi trường và thực hiện các hoạt động xã
+                  hội.
                 </>
               ) : (
                 <>
-                  Our mission is not only to{" "}
-                  <strong>
-                    provide quality products at affordable prices for consumers
-                    in Vietnam
-                  </strong>{" "}
-                  but also to expand our impact to improve the health and lives
-                  of the international community. We take pride in being trusted
-                  to accompany many{" "}
-                  <strong>
-                    esteemed customers from countries in the region.
-                  </strong>
+                  With public health as the foundation of all our activities, we
+                  not only bring innovation to the healthcare sector through
+                  advanced solutions but also activity contribute to
+                  environmental protection and engage in social activities.
                 </>
               )}
             </p>
           </div>
         </div>
-        <div className="container max-w-screen-xl mx-auto grid grid-cols-2 gap-8 mt-32">
+        <div className="container max-w-screen-xl mx-auto grid grid-cols-2 gap-12 md:mt-14">
           <div className="flex flex-col gap-4 h-fit">
             <h1 className="text-3xl uppercase font-bold text-[#00A44E]">
-              {locale === "vi" ? "Chiến lược" : "Strategy"}
+              {locale === "vi" ? "Giá trị cốt lõi" : "Core values"}
             </h1>
             <p className="text-2xl leading-10 text-justify">
               {locale === "vi" ? (
                 <>
-                  Điểm mạnh của chúng tôi không chỉ nằm ở việc phát triển các
-                  sản phẩm thuốc mới, mà còn ở khả năng{" "}
-                  <strong>
-                    nghiên cứu và chế tạo sản phẩm theo yêu cầu của các Quý đối
-                    tác.
-                  </strong>{" "}
-                  Chúng tôi tự tin về khả năng sản xuất các sản phẩm chất lượng,
-                  từ loại viên nén, viên nang cứng, viên nang mềm và viên nén
-                  bao phim, đáp ứng mọi nhu cầu trong điều trị và bảo vệ sức
-                  khỏe.
+                  Đuợc thúc đẩy bởi mong muốn cải thiện cuộc sống. Các giá trị
+                  cốt lõi của chúng tôi giúp định hướng cho mọi quyết định và
+                  hành động mà chúng tôi thực hiện.
                 </>
               ) : (
                 <>
-                  Our strength lies not only in developing new drug products but
-                  also in our ability to research and manufacture products{" "}
-                  <strong>
-                    according to the customized requirements of our valued
-                    partners.
-                  </strong>{" "}
-                  We are confident in our ability to produce quality products,
-                  from tablets, hard capsules, and soft capsules to film-coated
-                  tablets, meeting all needs in treatment and health protection.
+                  Driven by the desire to improve lives, our core values guide
+                  every decision and action we take.
+                </>
+              )}
+            </p>
+            <p className="text-2xl leading-10 text-justify md:pl-4">
+              {locale === "vi" ? (
+                <>
+                  ● Đồng cảm: Chúng tôi luôn đặt mình vào vị trí của bệnh nhân
+                  và các nhà phân phối để hiểu nhu cầu của họ.
+                  <br /> ● Minh bạch: Chúng tôi hành động với sự chính trực và
+                  tuân thủ nghiêm ngặt các nguyên tắc đạo đức.
+                  <br /> ● Sáng tạo: Chúng tôi không ngừng đổi mới nhằm mang đến
+                  những giải pháp tốt hơn trong mọi hoạt động.
+                </>
+              ) : (
+                <>
+                  ● Empathy: We always put ourselves in the position of patients
+                  and distributors to understand their needs.
+                  <br />● Transparency: We act with integrity and strictly
+                  adhere to ethical principles.
+                  <br />● Innovation: We continually strive to bring better
+                  solutions in all our activities.
                 </>
               )}
             </p>
           </div>
           <img
             src="/image/about-4.jpg"
-            className="w-full h-full rounded-lg xl:h-[372px] object-cover"
+            className="w-full h-full rounded-lg  object-cover"
           />
         </div>
       </section>
@@ -358,6 +314,58 @@ export default function About() {
           </p>
         </div>
       </section>
+      <h1 className="uppercase text-[28px] md:text-[30px] text-[#00A44E] font-bold text-center w-full h-full">
+        {locale === "vi" ? <>Ban giám đốc</> : <>Board of directors</>}
+      </h1>
+      <div className="w-full flex flex-col-reverse md:flex-col justify-center gap-10 md:gap-8 my-6 md:mt-10 md:mb-20">
+        <div className="flex flex-col items-center">
+          <img className="w-72 h-72 rounded-full" src="/image/director-2.jpg" />
+          <p className="text-[20.6px] font-bold uppercase mt-4">Võ Tấn Lộc</p>
+          <p className="text-[16.6px] mt-2 text-center capitalize">
+            {locale === "vi" ? (
+              <>
+                Chủ tịch hội đồng quản trị <br /> Tổng Giám Đốc
+              </>
+            ) : (
+              <>
+                Chairman
+                <br />
+                Chief Executive Officer
+              </>
+            )}
+          </p>
+        </div>
+        <div className="flex flex-row items-center w-full place-content-center justify-evenly">
+          <div className="flex flex-col items-center">
+            <img
+              className="w-72 h-72 rounded-full object-contain"
+              src="/image/director-3.jpg"
+            />
+            <p className="text-[20.6px] font-bold uppercase mt-4">
+              Nguyễn Văn Vĩnh
+            </p>
+            <p className="text-[16.6px] mt-2 text-center">
+              {locale === "vi" ? (
+                <>Giám Đốc Điều Hành</>
+              ) : (
+                <>Managing Director</>
+              )}
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <img
+              className="w-72 h-72 rounded-full object-cover"
+              src="/image/director-1.jpg"
+            />
+            <p className="text-[20.6px] font-bold uppercase mt-4">
+              Võ Quân Huy
+            </p>
+            <p className="text-[16.6px] mt-2 text-center capitalize">
+              {locale === "vi" ? <>Phó Tổng Giám Đốc</> : <>Deputy CEO</>}
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }

@@ -255,47 +255,6 @@ export default function About() {
             </p>
           </div>
         </div>
-        <h1 className="uppercase text-[28px] md:text-[37.4px] text-[#F18200] font-bold mt-10">
-          {locale === "vi" ? <>Ban giám đốc</> : <>Board of directors</>}
-        </h1>
-        <div className="w-full flex flex-col-reverse md:flex-row justify-center gap-10 md:gap-16 my-6 md:mt-10 ">
-          <div className="flex flex-col items-center">
-            <img
-              className="w-72 h-72 rounded-full object-cover"
-              src="/image/director-1.jpg"
-            />
-            <p className="text-[20.6px] font-bold uppercase mt-4">
-              Võ Quân Huy
-            </p>
-            <p className="text-[16.6px] mt-2 text-center">
-              {locale === "vi" ? (
-                <>Phó Tổng Giám Đốc</>
-              ) : (
-                <>Deputy General Director</>
-              )}
-            </p>
-          </div>
-          <div className="flex flex-col items-center">
-            <img
-              className="w-72 h-72 rounded-full"
-              src="/image/director-2.jpg"
-            />
-            <p className="text-[20.6px] font-bold uppercase mt-4">Võ Tấn Lộc</p>
-            <p className="text-[16.6px] mt-2 text-center capitalize">
-              {locale === "vi" ? (
-                <>
-                  Chủ tịch hội đồng quản trị <br /> Tổng Giám Đốc
-                </>
-              ) : (
-                <>
-                  Chairman of the BOD
-                  <br />
-                  CEO
-                </>
-              )}
-            </p>
-          </div>
-        </div>
       </section>
     </main>
   );
