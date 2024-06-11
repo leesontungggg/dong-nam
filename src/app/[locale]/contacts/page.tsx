@@ -129,16 +129,20 @@ export default function Root() {
           </div>
         </div>
       </section>
-      <div className="hidden w-full h-fit bg-white md:flex flex-col justify-center items-center">
+      <div className="hidden w-full h-fit bg-white md:flex flex-col justify-center items-center md:px-16 xl:px-20">
         <div className="place-items-center mx-auto">
           <div className="mt-8 h-fit px-4 justify-center w-full  flex flex-col">
             <div className="flex flex-col">
-              <div className=" mx-auto  w-fit pb-8 ">
-                <div className="text-[22.6px] pb-6  ">{t("description1")}</div>
+              <div className="w-full pb-8 text-left">
+                <div className="text-[22.6px] pb-6 w-full text-left">
+                  {t("description1")}
+                </div>
                 <div className="text-[22.6px] pb-6">{t("description2")}</div>
-                <h2 className="flex flex-col text-xl p-10 border border-black rounded-full w-fit mx-auto text-left text-[20px] ">
-                  <div className="font-bold pb-4">{t("contact.title")}</div>
-                  <div className=" flex-wrap w-[420px]">
+                <h2 className="flex flex-col text-xl mx-auto text-left text-[22.6px] py-6 xl:py-8">
+                  <div className="font-bold pb-4 text-[22.6px]">
+                    {t("contact.title")}
+                  </div>
+                  <div className="text-[22.6px] flex-wrap w-[420px]">
                     {t("contact.description")}
                   </div>
                 </h2>

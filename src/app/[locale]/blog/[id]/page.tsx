@@ -29,11 +29,11 @@ export default function Root() {
                 <h1 className=" text-[#0aa652] leading-[43px] font-bold text-[38px] mb-2 md:pb-6 lg:mb-0">
                   {locale === "vi" ? blog.title : blog.title_en}
                 </h1>
-                <div className=" flex flex-row w-full justify-between pb-6 md:text-[22.6px]">
+                {/* <div className=" flex flex-row w-full justify-between pb-6 md:text-[22.6px]">
                   <p className="hidden md:inline">Jacy Huynh</p>
                   <p className="text-[24px] inline md:hidden">12.03.2024</p>
                   <p className="hidden md:inline justify-end">12.03.2024</p>
-                </div>
+                </div> */}
                 <div
                   dangerouslySetInnerHTML={{
                     __html:

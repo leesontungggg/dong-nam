@@ -52,44 +52,8 @@ export default function Root() {
 
   return (
     <main className="!font-sans">
-      <section className="flex flex-col w-full mb-6">
-        <img
-          src="/image/factory-hero-bg.jpg"
-          className="block md:hidden pb-4"
-        />
-        <h6 className="hidden md:inline py-6 pl-20  text-left md:text-2xl xl:text-3xl font-bold uppercase text-[#00A44E]">
-          {locale === "vi" ? "Sản phẩm" : "Product list"}
-        </h6>
-        <div className="container md:pl-20 max-w-screen-xl mx-auto md:mx-0">
-          <p className="text-[16px] md:text-[18px] leading-6 text-justify md:max-w-[84vw] xl:max-w-[80vw] 2xl:max-w-full 2xl:min-w-[80vw]">
-            {" "}
-            {locale === "vi" ? (
-              <>
-                Trang web của chúng tôi hiện trưng bày cả các sản phẩm đã được
-                đăng ký độc quyền bởi các đại lý thuốc lẫn các sản phẩm chưa
-                được đăng ký.{" "}
-                <strong>
-                  Quý khách hàng có thể liên hệ trực tiếp với chúng tôi để được
-                  tư vấn và nghiên cứu sản phẩm theo yêu cầu riêng của Công ty
-                </strong>
-                .
-              </>
-            ) : (
-              <>
-                Our website currently showcases both exclusive products
-                registered by pharmaceutical agents and products that have not
-                been registered.{" "}
-                <strong>
-                  Customers can contact us directly for advice and research on
-                  products tailored to the company's specific requirements.
-                </strong>
-              </>
-            )}
-          </p>
-        </div>
-      </section>
       <div className="w-full h-fit min-h-screen bg-white text-black flex flex-col justify-start items-center md:px-4 md:pt-4">
-        <div className="md:p-2 xl:p-4 pb-10">
+        <div className="md:p-2 md:pt-6 xl:pt-10 xl:p-4 pb-10">
           <div className="md:grid md:grid-cols-4">
             <div className="container md:mx-0 md:px-0 col-span-1 flex flex-col gap-4 lg:max-xl:pr-[20px]">
               <input
