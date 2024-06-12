@@ -74,8 +74,8 @@ export default function Root() {
       <section className="flex flex-col md:hidden w-full ">
         <img src="/image/hero-bg.jpg" className="pb-4" />
         <div className="flex flex-col w-full md:container px-7">
-          <p className="text-[18px] text-[#00A44E] font-bold pb-2 uppercase">
-            {t("title")}
+          <p className="text-[18px] text-[#00A44E] font-bold pb-2 uppercase mx-auto">
+            {locale === "vi" ? <>dược phẩm đông nam</> : <>dong nam pharma</>}
           </p>
           <p className="text-justify leading-[20px] text-[16px]">
             {locale === "vi" ? (
@@ -150,7 +150,7 @@ export default function Root() {
               {t("reason.title")}
             </h2>
           </div>
-          <h1 className="block md:hidden leading-[22px] text-[18px] uppercase  text-[#00A44E] ">
+          <h1 className="block md:hidden leading-[22px] text-[18px] uppercase font-bold pt-2 -mb-2 text-[#00A44E] ">
             {locale === "vi" ? "chính sách chất lượng" : "quality policy"}
           </h1>
           <div className="mt-10 grid md:grid-cols-2 md:gap-14 xl:gap-20 gap-2">
@@ -160,7 +160,7 @@ export default function Root() {
                 src="/image/reason-1.jpg"
                 alt="Online Banking"
               />
-              <p className="block md:hidden mt-2 text-center">
+              <p className="block md:hidden mt-2 py-3 font-bold leading-6 text-[18px]">
                 {locale === "vi" ? (
                   <>Nhân sự tiến bộ theo xu huớng phát triển của ngành</>
                 ) : (
@@ -175,17 +175,17 @@ export default function Root() {
                   }}
                 ></h3>
               </div>
-              <p className="hidden md:block text-center text-[18px] xl:text-[24px] xl:text-justify md:text-left  text-slate-950 p-4 md:px-4 xl:px-6 leading-7">
+              <p className="text-[18px] xl:text-[24px] xl:text-justify text-justify  text-slate-950 md:p-4 md:px-4 xl:px-6 leading-6 md:leading-7">
                 {t("reason.reason1.description")}
               </p>
             </div>
             <div className="flex flex-col items-center  w-full load-hidden animate-slide-up md:border-[1px] md:border-black border-solid rounded-t-lg animate-delay-200">
               <img
-                className="md:object-fill w-full md:h-[26vh] xl:h-[34vh] md:p-3 xl:p-5 md:rounded-3xl "
+                className="md:object-fill w-full md:h-[26vh] xl:h-[34vh] pt-4 md:p-3 xl:p-5 md:rounded-3xl "
                 src="/image/reason-2.jpg"
                 alt="Simple Budgeting"
               />
-              <p className="block md:hidden mt-2 text-center">
+              <p className="block md:hidden mt-2 py-3 font-bold leading-6 text-[18px]">
                 {locale === "vi" ? (
                   <>Chú trọng vào nghiên cứu và cải tiến</>
                 ) : (
@@ -200,7 +200,7 @@ export default function Root() {
                   }}
                 ></h3>
               </div>
-              <p className="hidden md:block text-center text-[18px] xl:text-[24px] xl:text-justify md:text-left text-slate-950 p-4 md:px-4 xl:px-6 leading-7">
+              <p className="text-[18px] xl:text-[24px] xl:text-justify text-justify  text-slate-950 md:p-4 md:px-4 xl:px-6 leading-6 md:leading-7">
                 {t("reason.reason2.description")}
               </p>
             </div>
@@ -277,7 +277,7 @@ export default function Root() {
       <section className="bg-base-200 pt-4 md:pt-[4em] lg:pt-[3em] lg:px-[5em] mb-4 md:mb-6 xl:mb-8">
         <div className="container max-w-screen-xl mx-auto w-full flex flex-col justify-center items-center">
           <div className="load-hidden animate-fade-in animate-delay-200 flex self-stretch md:mb-5">
-            <h2 className="uppercase mb-4 md:mb-0 leading-[22px] text-[18px] md:text-center text-[#00A44E] md:text-2xl xl:text-3xl lg:text-left lg:ml-0 md:font-bold w-11/12 md:w-3/4 font-bold">
+            <h2 className="uppercase mt-1 mb-6 md:mb-0 leading-[22px] text-[18px] md:text-center text-[#00A44E] md:text-2xl xl:text-3xl lg:text-left lg:ml-0 md:font-bold w-11/12 md:w-3/4 font-bold">
               {t("blog.title")}
             </h2>
             <div
@@ -339,12 +339,14 @@ export default function Root() {
           </div>
 
           <div
-            className="flex md:hidden cursor-pointer justify-center items-center mt-3 text-white bg-orange-500 rounded-full py-3 w-1/2"
+            className="flex md:hidden cursor-pointer justify-center items-center mt-5 mb-4 text-white bg-[#00A44E] rounded-full py-3 w-[50vw]"
             onClick={() => router.push(`/news/`)}
           >
             <div className="cursor-pointer text-center text-[15px] font-bold w-full px-1">
               {`${
-                locale === "vi" ? "Xem tất cả bài viết" : "See all articles"
+                locale === "vi"
+                  ? "Xem tất cả bài viết"
+                  : "Read all articles here"
               }`}
             </div>
           </div>
@@ -380,7 +382,7 @@ export default function Root() {
                   onClick={() => router.push(`/news/${blog.id}`)}
                 >
                   <img
-                    className="aspect-square object-cover w-full h-[20vh] md:h-[25vh] xl:h-[33vh] rounded-lg p-2"
+                    className="aspect-square object-cover w-full h-[20vh] md:h-[25vh] xl:h-[33vh] rounded-lg md:p-2"
                     src={`https://dongnam.up.railway.app/assets/${blog.thumbnail}`}
                     alt="Online Banking"
                   />
@@ -415,12 +417,14 @@ export default function Root() {
           </div>
 
           <div
-            className="flex md:hidden cursor-pointer justify-center items-center mt-3 text-white bg-orange-500 rounded-full py-3 w-1/2"
+            className="flex md:hidden cursor-pointer justify-center items-center mt-5 mb-2 text-white bg-[#00A44E] rounded-full py-3 w-[50vw]"
             onClick={() => router.push(`/news/`)}
           >
             <div className="cursor-pointer text-center text-[15px] font-bold w-full px-1">
               {`${
-                locale === "vi" ? "Xem tất cả bài viết" : "See all articles"
+                locale === "vi"
+                  ? "Xem tất cả bài viết"
+                  : "Read all articles here"
               }`}
             </div>
           </div>

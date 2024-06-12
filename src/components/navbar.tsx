@@ -283,7 +283,7 @@ const Navbar = (props: any) => {
             <Menubar>
               <MenubarMenu>
                 <MenubarTrigger
-                  className="md:text-[16px] xl:text-lg flex justify-center w-[50px] h-full md:w-[10vw]"
+                  className="md:text-[16px] xl:text-lg flex justify-center w-[22vw] h-full md:w-[10vw]"
                   onClick={() => handleToggleLanguage()}
                 >
                   <span className={`${locale === "vi" ? "font-bold" : ""}`}>
