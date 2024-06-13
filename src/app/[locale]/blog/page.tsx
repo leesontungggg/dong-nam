@@ -98,7 +98,7 @@ export default function Root() {
         </div>
       </div>
       <div
-        className="container mx-auto w-full md:mt-12 mt-4 bg-white text-black 
+        className="container mx-auto w-full md:mt-12 mt-8 bg-white text-black 
        flex flex-col justify-center items-center"
       >
         <div className="md:px-4">

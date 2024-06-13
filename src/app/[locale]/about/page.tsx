@@ -54,26 +54,20 @@ export default function About() {
         <img src="/image/about-hero-bg.jpg" className="pb-4" />
         <div className="flex flex-col w-full md:container px-7">
           <p className="text-[18px] text-[#00A44E] font-bold pb-2 uppercase text-center">
-            {/* {locale === "vi" ? (
-              <>Công ty Dược Phẩm Đông Nam</>
-            ) : (
-              <>Dong Nam Pharmaceuticals</>
-            )} */}
-            {t("title1")}
+            {locale === "vi" ? <>Dược Phẩm Đông Nam</> : <>Dong Nam Pharma</>}
           </p>
           <p className="text-justify leading-[20px] text-[16px]">
             {locale === "vi" ? (
               <>
-                Công ty Dược Phẩm Đông Nam được thành lập từ năm 2001, là đơn vị{" "}
-                <strong>tiên phong</strong> sản xuất dược phẩm{" "}
-                <strong>đạt tiêu chuẩn GMP-WHO</strong> tại Việt Nam.
+                Công ty Dược Phẩm Đông Nam được thành lập từ năm 2001, chúng tôi
+                là một trong những đơn vị tiên phong sản xuất dược phẩm đạt tiêu
+                chuẩn WHO-GMP, GLP, GSP tại Việt Nam.
               </>
             ) : (
               <>
-                Dong Nam Pharmaceutical Company was established in 2001 and is a{" "}
-                <strong>pioneering unit</strong> in manufacturing
-                pharmaceuticals meeting <strong>GMP- WHO standards</strong> in
-                Vietnam.
+                Dong Nam Pharmaceuticals was established in 2001. We are one of
+                the pioneering companies in the production of pharmaceuticals
+                that meet WHO-GMP, GLP, and GSP standards in Vietnam.
               </>
             )}
           </p>
@@ -184,93 +178,30 @@ export default function About() {
           />
         </div>
       </section>
-      <section className="flex flex-col md:hidden w-full ">
-        <img src="/image/about-1.jpg" className="container py-4" />
-        <div className="flex flex-col w-full md:container px-7">
-          <p className="text-[18px] text-[#F18200] font-bold pb-2 uppercase">
-            {t("title2")}
-          </p>
-          <p className="text-justify leading-[20px] text-[16px]">
-            {locale === "vi" ? (
-              <>
-                Với{" "}
-                <strong>
-                  đội ngũ nhân viên dày dặn kinh nghiệm, chuỗi nhà máy hiện đại
-                  có diện tích hơn 13,000 m2
-                </strong>
-                . chúng tôi là một nhà sản xuất dược phẩm không ngừng đầu tư vào
-                công nghệ và quản lý chất lượng để đảm bảo rằng mỗi sản phẩm
-                mang thương hiệu Đông Nam đều đáp ứng được các tiêu chuẩn cao
-                nhất.
-              </>
-            ) : (
-              <>
-                With a team of <strong>experienced staff</strong> and a{" "}
-                <strong>modern factory chain</strong> spanning over 13,000 m2,
-                we are a leading pharmaceutical manufacturer, continuously
-                investing in technology and quality management to ensure that
-                every Dong Nam branded product meets the highest standards.
-              </>
-            )}
-          </p>
-        </div>
-      </section>
-      <section className="flex flex-col md:hidden w-full ">
-        <img src="/image/about-2.jpg" className="container py-4" />
+
+      <section className="flex flex-col md:hidden w-full h-full ">
+        <img
+          src="/image/about-2-mobile.jpg"
+          className="container py-8 w-full"
+        />
         <div className="flex flex-col w-full md:container px-7">
           <p className="text-[18px] text-[#00A44E] font-bold pb-2 uppercase">
-            {t("title3")}
+            {locale === "vi" ? "Tầm nhìn" : "Vision"}
           </p>
           <p className="text-justify leading-[20px] text-[16px]">
             {locale === "vi" ? (
               <>
-                Tầm nhìn của chúng tôi là{" "}
-                <strong>trở thành thương hiệu hàng đầu Việt Nam</strong> trong
-                lĩnh vực sản xuất dược phẩm, thông qua việc{" "}
-                <strong>thúc đẩy sự tiến bộ và đổi mới trong ngành</strong>, góp
-                phần nâng cao chất lượng cuộc sống cho người dân trên toàn cầu.
+                Tầm nhìn của chúng tôi là trở thành thương hiệu hàng đầu Việt
+                Nam trong lĩnh vực sản xuất dược phẩm, thông qua việc thúc đẩy
+                sự tiến bộ và đổi mới trong ngành, góp phần nâng cao chất lượng
+                cuộc sống cho người dân.
               </>
             ) : (
               <>
-                Our vision is to{" "}
-                <strong>become a top brand in Vietnam's</strong> pharmaceutical
-                manufacturing sector, by{" "}
-                <strong>promoting progress and innovation</strong> in the
-                industry, contributing to improving the quality of life for
-                people globally.
-              </>
-            )}
-          </p>
-        </div>
-      </section>
-      <section className="flex flex-col md:hidden w-full ">
-        <img src="/image/about-3.jpg" className="container py-4" />
-        <div className="flex flex-col w-full md:container px-7">
-          <p className="text-[18px] text-[#F18200] font-bold pb-2 uppercase">
-            {t("title4")}
-          </p>
-          <p className="text-justify leading-[20px] text-[16px]">
-            {locale === "vi" ? (
-              <>
-                Sứ mệnh của chúng tôi không chỉ là{" "}
-                <strong>
-                  cung cấp sản phẩm chất lượng với giá cả phải chăng vì sức khỏe
-                  người Việt
-                </strong>
-                , mà còn mở rộng phạm vi tác động để cải thiện sức khỏe và cuộc
-                sống của cộng đồng quốc tế. Chúng tôi tự hào khi được tin tưởng
-                để đồng hành cùng nhiều{" "}
-                <strong>Quý khách hàng từ các quốc gia trong khu vực</strong>.
-              </>
-            ) : (
-              <>
-                Our mission is not only to{" "}
-                <strong>provide quality products at affordable prices</strong>{" "}
-                for consumers in Vietnam but also to expand our impact to
-                improve the health and lives of the international community. We
-                take pride in being trusted to accompany many{" "}
-                <strong>esteemed customers</strong> from countries in the
-                region.
+                Our vision is to become the leading brand in Vietnam in the
+                field of pharmaceutical manufacturing by promoting progress and
+                innovation in the industry, thereby contributing to improving
+                the quality of life for the people .
               </>
             )}
           </p>
@@ -278,50 +209,96 @@ export default function About() {
       </section>
       <section className="flex flex-col md:hidden w-full ">
         <img
-          src="/image/about-4.jpg"
-          className="container py-4 h-[276px] object-cover"
+          src="/image/about-3-mobile.jpg"
+          className="container py-4 my-4 h-[220px]"
         />
         <div className="flex flex-col w-full md:container px-7">
-          <p className="text-[18px] text-[#00A44E] font-bold pb-2 uppercase">
-            {t("title5")}
+          <p className="text-[18px] text-[#00A44E] font-bold pb-4 uppercase">
+            {locale === "vi" ? "sứ mệnh" : "Mission"}
           </p>
-          <p className="text-justify leading-[20px] text-[16px] pb-4">
+          <p className="text-justify leading-[20px] text-[16px] mb-4">
             {locale === "vi" ? (
               <>
-                Điểm mạnh của chúng tôi không chỉ nằm ở việc phát triển các sản
-                phẩm thuốc mới, mà còn ở khả năng{" "}
-                <strong>
-                  nghiên cứu và chế tạo sản phẩm theo yêu cầu của các Quý đối
-                  tác
-                </strong>
-                . Chúng tôi tự tin về khả năng sản xuất các sản phẩm chất lượng,
-                từ loại viên nén, viên nang cứng, viên nang mềm và viên nén bao
-                phim, đáp ứng mọi nhu cầu trong điều trị và bảo vệ sức khỏe.
+                Lấy sức khoẻ cộng đồng làm khởi sự cho mọi hoạt động, chúng tôi
+                không chỉ mang lại sự đổi mới cho lĩnh vực chăm sóc sức khỏe
+                thông qua các giải pháp tiên tiến, mà còn đóng góp tích cực vào
+                việc bảo vệ môi trường và thực hiện các hoạt động xã hội.
               </>
             ) : (
               <>
-                Our strength lies not only in developing new drug products but
-                also in our ability to research and manufacture products{" "}
-                <strong>
-                  according to the customized requirements of our valued
-                  partners
-                </strong>
-                . We are confident in our ability to produce quality products,
-                from tablets, hard capsules, and soft capsules to film-coated
-                tablets, meeting all needs in treatment and health protection.
+                With public health as the foundation of all our activities, we
+                not only bring innovation to the healthcare sector through
+                advanced solutions but also activity contribute to environmental
+                protection and engage in social activities.
               </>
             )}
           </p>
         </div>
       </section>
-      <h1 className="uppercase text-[28px] md:text-[30px] text-[#00A44E] font-bold text-center w-full h-full">
+      <section className="flex flex-col md:hidden w-full ">
+        <img
+          src="/image/about-4-mobile.jpg"
+          className="container py-4 object-cover h-[220px]"
+        />
+        <div className="flex flex-col w-full md:container px-7">
+          <p className="text-[18px] text-[#00A44E] font-bold py-4 uppercase">
+            {locale === "vi" ? "Giá trị cốt lõi" : "Core values"}{" "}
+          </p>
+
+          <p className="text-justify leading-[20px] text-[16px] pb-4">
+            {locale === "vi" ? (
+              <>
+                Đuợc thúc đẩy bởi mong muốn cải thiện cuộc sống. Các giá trị cốt
+                lõi của chúng tôi giúp định hướng cho mọi quyết định và hành
+                động mà chúng tôi thực hiện.
+              </>
+            ) : (
+              <>
+                Driven by the desire to improve lives, our core values guide
+                every decision and action we take.
+              </>
+            )}
+          </p>
+          <p className="text-justify leading-[20px] text-[16px] pb-4 px-2 mb-8">
+            {locale === "vi" ? (
+              <>
+                ● Đồng cảm: Chúng tôi luôn đặt mình vào vị trí của bệnh nhân và
+                các nhà phân phối để hiểu nhu cầu của họ.
+                <br />
+                <br /> ● Minh bạch: Chúng tôi hành động với sự chính trực và
+                tuân thủ nghiêm ngặt các nguyên tắc đạo đức.
+                <br />
+                <br /> ● Sáng tạo: Chúng tôi không ngừng đổi mới nhằm mang đến
+                những giải pháp tốt hơn trong mọi hoạt động.
+              </>
+            ) : (
+              <>
+                ● Empathy: We always put ourselves in the position of patients
+                and distributors to understand their needs.
+                <br />
+                <br />● Transparency: We act with integrity and strictly adhere
+                to ethical principles.
+                <br />
+                <br />● Innovation: We continually strive to bring better
+                solutions in all our activities.
+              </>
+            )}
+          </p>
+        </div>
+      </section>
+      <h1 className="uppercase text-[18px] md:text-[30px] text-[#00A44E] font-bold text-center w-full h-full">
         {locale === "vi" ? <>Ban giám đốc</> : <>Board of directors</>}
       </h1>
-      <div className="w-full flex flex-col-reverse md:flex-col justify-center gap-10 md:gap-8 my-6 md:mt-10 md:mb-20">
+      <div className="w-full flex flex-col justify-center gap-10 md:gap-8 my-6 md:mt-10 md:mb-20">
         <div className="flex flex-col items-center">
-          <img className="w-72 h-72 rounded-full" src="/image/director-2.jpg" />
-          <p className="text-[20.6px] font-bold uppercase mt-4">Võ Tấn Lộc</p>
-          <p className="text-[16.6px] mt-2 text-center capitalize">
+          <img
+            className="w-36 h-36 md:w-72 md:h-72 rounded-full"
+            src="/image/director-2.jpg"
+          />
+          <p className="text-[16px] md:text-[20.6px] font-bold uppercase mt-4">
+            Võ Tấn Lộc
+          </p>
+          <p className="text-[14px] md:text-[16.6px] mt-2 text-center capitalize">
             {locale === "vi" ? (
               <>
                 Chủ tịch hội đồng quản trị <br /> Tổng Giám Đốc
@@ -335,16 +312,16 @@ export default function About() {
             )}
           </p>
         </div>
-        <div className="flex flex-row items-center w-full place-content-center justify-evenly">
+        <div className="flex flex-row items-center w-full place-content-center justify-around md:justify-evenly mb-6 md:mb-0">
           <div className="flex flex-col items-center">
             <img
-              className="w-72 h-72 rounded-full object-contain"
+              className="w-36 h-36 md:w-72 md:h-72 rounded-full object-contain"
               src="/image/director-3.jpg"
             />
-            <p className="text-[20.6px] font-bold uppercase mt-4">
+            <p className="text-[16px] md:text-[20.6px] font-bold uppercase mt-4">
               Nguyễn Văn Vĩnh
             </p>
-            <p className="text-[16.6px] mt-2 text-center">
+            <p className="text-[14px] md:text-[16.6px] mt-2 text-center">
               {locale === "vi" ? (
                 <>Giám Đốc Điều Hành</>
               ) : (
@@ -354,13 +331,13 @@ export default function About() {
           </div>
           <div className="flex flex-col items-center">
             <img
-              className="w-72 h-72 rounded-full object-cover"
+              className="w-36 h-36 md:w-72 md:h-72 rounded-full object-cover"
               src="/image/director-1.jpg"
             />
-            <p className="text-[20.6px] font-bold uppercase mt-4">
+            <p className="text-[16px] md:text-[20.6px] font-bold uppercase mt-4">
               Võ Quân Huy
             </p>
-            <p className="text-[16.6px] mt-2 text-center capitalize">
+            <p className="text-[14px] md:text-[16.6px] mt-2 text-center capitalize">
               {locale === "vi" ? <>Phó Tổng Giám Đốc</> : <>Deputy CEO</>}
             </p>
           </div>
