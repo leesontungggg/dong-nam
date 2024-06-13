@@ -26,7 +26,7 @@ export default function Root() {
           {!!blog && (
             <div className="flex flex-col items-center gap-4 w-full md:px-4 xl:px-12 2xl:px-0 h-full">
               <div className="container max-w-full md:max-w-[88vw] xl:max-w-[82vw] 2xl:max-w-[76vw] lg:px-8 pt-2 md:pt-6">
-                <h1 className=" text-[#0aa652] leading-[43px] font-bold text-[38px] mb-2 md:pb-6 lg:mb-0">
+                <h1 className=" text-[#0aa652] leading-9 md:leading-[43px] font-bold text-[30px] md:text-[38px] mb-2 md:pb-6 lg:mb-0">
                   {locale === "vi" ? blog.title : blog.title_en}
                 </h1>
                 {/* <div className=" flex flex-row w-full justify-between pb-6 md:text-[22.6px]">
@@ -39,9 +39,9 @@ export default function Root() {
                     __html:
                       locale === "vi" ? blog.description : blog.description_en,
                   }}
-                  className=" !text-black pb-8 md:text-[22.6px] text-[24px] md:font-bold italic md:not-italic text-justify leading-7"
+                  className=" !text-black pt-4 md:pt-0 pb-8 md:text-[22.6px] text-[24px] md:font-bold italic md:not-italic text-justify leading-7"
                 ></div>
-                <div className="flex w-full h-full pb-5 ">
+                <div className="flex w-full h-full pb-7 md:pb-5 ">
                   <img
                     src={`https://dongnam.up.railway.app/assets/${blog.thumbnail}`}
                     alt="DONG-NAM"
@@ -54,9 +54,6 @@ export default function Root() {
                   }}
                   className=" !text-black  md:text-[22.6px] text-[24px] text-justify leading-7 md:leading-[34px] lg:leading-[40px]"
                 ></div>
-                <p className="flex md:hidden flex-row w-full justify-end pt-9 text-[24px] md:text-[22.6px]">
-                  Jacy Huynh
-                </p>
               </div>
             </div>
           )}
