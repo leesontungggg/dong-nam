@@ -74,8 +74,8 @@ export default function Root() {
                     <p
                       className={`cursor-pointer ${
                         categoryFilter === key ? "font-bold" : "font-normal"
-                      } border md:border-0 border-black md:border-none rounded-3xl md:rounded-none py-1 px-[5px] md:py-0 md:px-0 flex items-center justify-center md:items-normal md:justify-normal text-center md:text-left ${
-                        locale === "vi" ? "text-[13px]" : "text-[12px]"
+                      }  md:border-0  md:border-none  md:rounded-none py-1 px-[5px] md:py-0 md:px-0 flex   md:items-normal md:justify-normal md:text-left ${
+                        locale === "vi" ? "text-[14px]" : "text-[14px]"
                       } md:text-[18px]`}
                       onClick={() =>
                         categoryFilter === key

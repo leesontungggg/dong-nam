@@ -90,7 +90,11 @@ const Navbar = (props: any) => {
                       className="transition-colors hover:text-foreground/80 text-foreground md:text-[16px] xl:text-lg"
                       href="/history"
                     >
-                      {locale === "vi" ? <>Lịch Sử Hình Thành</> : <>History</>}
+                      {locale === "vi" ? (
+                        <>Danh Hiệu Giải Thưởng</>
+                      ) : (
+                        <>Awards</>
+                      )}
                     </a>
                   </MenubarItem>
                 </MenubarContent>
@@ -213,9 +217,9 @@ const Navbar = (props: any) => {
                           href="/history"
                         >
                           {locale === "vi" ? (
-                            <>Lịch Sử Hình Thành</>
+                            <>Danh Hiệu Giải Thưởng</>
                           ) : (
-                            <>Our History</>
+                            <>Awards</>
                           )}
                         </a>
                       </MenubarItem>

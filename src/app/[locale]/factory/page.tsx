@@ -70,31 +70,25 @@ export default function About() {
       <section className="flex flex-col md:hidden w-full">
         <img src="/image/factory-hero-bg.jpg" className="pb-4" />
         <div className="flex flex-col w-full md:container px-7">
-          <p className="text-[18px] text-[#00A44E] font-bold pb-2 uppercase text-center">
+          <p className="text-[18px] text-[#00A44E] font-bold pb-4 py-2 uppercase text-center">
             {t("title1")}
           </p>
           <p className="text-justify leading-[20px] text-[16px]">
             {locale === "vi" ? (
               <>
-                Thành lập từ năm 2001, Nhà máy Dược Phẩm Đông Nam đã trở thành{" "}
-                <strong>
-                  một trong những cơ sở sản xuất dược phẩm đáng tin cậy nhất tại
-                  Việt Nam
-                </strong>
-                . Tự hào về khả năng quản trị sản xuất hàng đầu, nhà máy Đông
-                Nam tập trung vào việc cung cấp các{" "}
-                <strong>sản phẩm chất lượng và đa dạng</strong>.
+                Thành lập từ năm 2001, Nhà máy Dược Phẩm Đông Nam đã trở thành
+                một trong những cơ sở sản xuất dược phẩm đáng tin cậy nhất tại
+                Việt Nam. Tự hào về khả năng quản trị sản xuất hàng đầu, nhà máy
+                Đông Nam tập trung vào việc cung cấp các sản phẩm chất lượng và
+                đa dạng.
               </>
             ) : (
               <>
-                Established in 2001, Đông Nam Pharmaceutical Factory has become{" "}
-                <strong>
-                  one of the most reliable pharmaceutical manufacturing
-                  facilities in Vietnam.
-                </strong>{" "}
-                Proud of our top-notch manufacturing management, Đông Nam
-                Factory focuses on providing{" "}
-                <strong>quality and diverse products.</strong>
+                Established in 2001, Đông Nam Pharmaceutical Factory has become
+                one of the most reliable pharmaceutical manufacturing facilities
+                in Vietnam. Proud of our top-notch manufacturing management,
+                Đông Nam Factory focuses on providing quality and diverse
+                products.
               </>
             )}
           </p>
@@ -199,33 +193,23 @@ export default function About() {
       </section>
       <section className="flex flex-col md:hidden w-full">
         <div className="container">
-          <img src="/image/factory-1.jpg" className="my-4  rounded-xl" />
+          <img src="/image/factory-1.jpg" className="my-4 pt-2 rounded-xl" />
         </div>
         <div className="flex flex-col w-full md:container px-7">
-          <p className="text-[18px] text-center text-[#F18200] font-bold pb-2 uppercase">
+          <p className="text-[18px] text-center text-[#00A44E] font-bold pb-4 uppercase">
             {t("title2")}
           </p>
-          <p className="text-justify leading-[20px] text-[16px]">
+          <p className="text-justify leading-[20px] text-[16px] pb-2">
             {locale === "vi" ? (
               <>
-                Nhà máy sản xuất dược phẩm Đông Nam đã tuân thủ nghiêm ngặt các
-                nguyên tắc trong <strong>tiêu chuẩn GMP – WHO.</strong> Chúng
-                tôi đã đầu tư mạnh mẽ vào cơ sở hạ tầng với diện tích lên đến
-                hơn <strong>13,000 m2</strong> với đầy đủ các chức năng, bao gồm
-                các khu vực quan trọng như kho bảo quản, khu vực xử lý, và hệ
-                thống{" "}
-                <strong>dây chuyền sản xuất theo công nghệ tự động</strong> tiên
-                tiến nhất.
+                Nhà máy sản xuất dược phẩm Đông Nam đã và đang tuân thủ nghiêm
+                ngặt các nguyên tắc trong tiêu chuẩn WHO-GMP, GLP, GSP.
               </>
             ) : (
               <>
-                To continuously improve product quality and market position
-                worldwide, Đông Nam Pharmaceutical Factory strictly adheres to
-                principles in <strong>GMP-WHO standards</strong>. We have
-                heavily invested in infrastructure with an area of over{" "}
-                <strong>13,000 m2</strong>, including essential areas such as
-                storage warehouses, processing zones, and the most{" "}
-                <strong>advanced automated production lines</strong>.
+                Our manufacturing plant has been and continues to strictly
+                adhere to the principles outlined in WHO-GMP, GLP, GSP
+                standards.
               </>
             )}
           </p>
@@ -236,45 +220,32 @@ export default function About() {
           <img src="/image/factory-2.jpg" className="my-4  rounded-xl" />
         </div>
         <div className="flex flex-col w-full md:container px-7">
-          <p className="text-[18px] text-center text-[#00A44E] font-bold pb-2 uppercase">
+          <p className="text-[18px] text-center text-[#00A44E] font-bold pb-4 pt-2 uppercase">
             {t("title3")}
           </p>
-          <p className="text-justify leading-[20px] text-[16px]">
+          <p className="text-justify leading-[20px] text-[16px] pb-2">
             {locale === "vi" ? (
               <>
-                Chúng tôi chuyên sản xuất các loại sản phẩm dạng{" "}
-                <strong>
-                  viên nén, viên nang cứng, viên nang mềm, viên nén bao phim và
-                  thuốc bột
-                </strong>
-                . <br />
+                Chúng tôi chuyên sản xuất các loại sản phẩm dạng viên nang cứng,
+                viên nang mềm, viên nén (viên nén, viên nén bao phim), dạng bào
+                chế rắn khác (thuốc bột, thuốc cốm).
                 <br />
-                Chúng tôi đảm bảo nguồn nguyên liệu đầu vào được lựa chọn và
-                kiểm soát nghiêm ngặt theo các{" "}
-                <strong>tiêu chuẩn quốc tế CACP, GCP, GSP.</strong> Mỗi nguyên
-                liệu sử dụng đều được qua quá trình kiểm tra chất lượng nghiêm
-                ngặt bởi phòng kiểm nghiệm đạt{" "}
-                <strong>tiêu chuẩn GLP của Bộ Y tế</strong>.
+                <br /> Chúng tôi đảm bảo nguồn nguyên liệu đầu vào được kiểm
+                soát và bảo quản theo tiêu chuẩn GSP. Mỗi nguyên liệu sử dụng
+                đều được qua quá trình kiểm tra chất lượng nghiêm ngặt bởi phòng
+                kiểm nghiệm đạt tiêu chuẩn GLP.
               </>
             ) : (
               <>
-                We specialize in manufacturing various types of products such as{" "}
-                <strong>
-                  tablets, hard capsules, soft capsules, film-coated tablets,
-                  and powdered medicines
-                </strong>
-                .
+                We specialize in manufacturing various types of pharmaceutical
+                products including hard capsules, soft capsules, tablets
+                (film-coated tablets, sugar-coated tablets), and other solid
+                forms (powders, granules).
                 <br />
-                <br /> We ensure that our raw materials are carefully selected
-                and strictly controlled according to{" "}
-                <strong>
-                  international standards such as GACP, GCP, and GSP
-                </strong>
-                . Each raw material undergoes rigorous quality testing by{" "}
-                <strong>
-                  GLP-standard laboratories of the Ministry of Health
-                </strong>{" "}
-                to ensure safety for health.
+                <br /> We always ensure that the input materials are controlled
+                and stored according to GSP standards. Each raw material
+                undergoes rigorous quality testing by a GLP-compliant
+                laboratory.
               </>
             )}
           </p>
@@ -285,30 +256,22 @@ export default function About() {
           <img src="/image/factory-3.jpg" className="my-4  rounded-xl" />
         </div>
         <div className="flex flex-col w-full md:container px-7">
-          <p className="text-[18px] text-center text-[#F18200] font-bold pb-2 uppercase">
+          <p className="text-[18px] text-center text-[#00A44E] font-bold pb-4 uppercase">
             {t("title4")}
           </p>
           <p className="text-justify leading-[20px] text-[16px]">
             {locale === "vi" ? (
               <>
                 Nhờ vào sự đầu tư mạnh mẽ vào nghiên cứu và phát triển, các sản
-                phẩm của chúng tôi luôn đạt được hiệu quả vượt trội và được các{" "}
-                <strong>
-                  đại lý phân phối thuốc uy tín trên toàn quốc tin tưởng đặt
-                  hàng
-                </strong>
-                .
+                phẩm của chúng tôi luôn đạt được hiệu quả vượt trội và được các
+                đại lý phân phối thuốc uy tín trên toàn quốc tin tưởng.
               </>
             ) : (
               <>
                 Thanks to strong investment in research and development, our
                 products consistently achieve superior effectiveness and are
-                trusted by{" "}
-                <strong>
-                  reputable pharmaceutical distributors nationwide to place
-                  orders
-                </strong>
-                .
+                trusted by reputable global pharmaceutical distributors to place
+                orders.
               </>
             )}
           </p>
