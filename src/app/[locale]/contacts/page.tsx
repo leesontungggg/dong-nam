@@ -39,9 +39,11 @@ export default function Root() {
     register,
     handleSubmit,
     watch,
+    setValue,
     formState: { errors },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => {
+    console.log(data);
     emailjs
       .send("Test dongnam contact", "template_ieecpoa", data, {
         publicKey: "DyLjAx0uOUZol2onx",
@@ -85,14 +87,18 @@ export default function Root() {
               placeholder={`${
                 locale === "en" ? "Write your questions" : "Nhập câu hỏi"
               }`}
-              className="mt-4 p-2  text-base h-[100px] resize-none border border-black w-full"
-              {...register("question")}
+              className="mt-4 p-2 resize-none border border-black w-full"
+              onChange={(e) => {
+                setValue("question", e.target.value);
+              }}
             />
             <input
               className="mt-2 border-b pl-2 border-black w-full"
               placeholder={`${locale === "en" ? "Name" : "Họ và tên"}`}
               required
-              {...register("name")}
+              onChange={(e) => {
+                setValue("name", e.target.value);
+              }}
             />
             <input
               type="text"
@@ -101,13 +107,17 @@ export default function Root() {
                 locale === "en" ? "Phone number" : "Số điện thoại"
               }`}
               required
-              {...register("phone")}
+              onChange={(e) => {
+                setValue("phone", e.target.value);
+              }}
             />
             <input
               className="mt-4 border-b pl-2 w-full border-black"
               placeholder="Email"
               type="email"
-              {...register("email")}
+              onChange={(e) => {
+                setValue("email", e.target.value);
+              }}
             />
             <input
               className="text-white font-bold px-4 py-2 cursor-pointer rounded-lg bg-blue-500 mt-4 w-full"

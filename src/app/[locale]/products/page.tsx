@@ -8,6 +8,16 @@ import { useContext, useState, useTransition } from "react";
 import * as _ from "lodash";
 import { CATEGORY } from "@/services/category";
 import { _formatString } from "@/lib/utils";
+import { SlArrowDown } from "react-icons/sl";
+
+import Dropdown from "@/components/dropdown";
+import {
+  Menubar,
+  MenubarContent,
+  MenubarItem,
+  MenubarMenu,
+  MenubarTrigger,
+} from "@/components/ui/menubar";
 
 export default function Root() {
   const data = useContext(Context);
@@ -55,10 +65,13 @@ export default function Root() {
       <div className="w-full h-fit min-h-screen bg-white text-black flex flex-col justify-start items-center md:px-4 md:pt-4">
         <div className="md:p-2 md:pt-6 xl:pt-10 xl:p-4 pb-10">
           <div className="md:grid md:grid-cols-4">
-            <div className="container md:mx-0 md:px-0 col-span-1 flex flex-col gap-4 lg:max-xl:pr-[20px]">
+            <div className="container md:mx-0 md:px-0 col-span-1 flex flex-col gap-4 lg:max-xl:pr-[20px] mt-4">
               <input
-                className="w-full lg:max-xl:text-[14px] rounded-2xl border-2 p-2 pl-12 lg:max-xl:pl-10 border-black bg-no-repeat font-normal bg-contain bg-[5px] lg:max-xl:bg-[1px]"
-                style={{ backgroundImage: "url(/icon-search.png)" }}
+                className="w-full lg:max-xl:text-[14px] rounded-2xl border-2 p-2  lg:max-xl:pl-10 bg-[3px] border-black bg-no-repeat font-normal bg-contain lg:max-xl:bg-[1px]"
+                style={{
+                  backgroundImage: "url(/icon-search.png)",
+                  paddingLeft: "42px",
+                }}
                 placeholder={`${
                   locale === "vi" ? "Nhập tên thuốc" : "Insert product name"
                 }`}
@@ -69,7 +82,7 @@ export default function Root() {
                 <h6 className="text-center md:text-left text-[18px] md:text-[20px] font-bold uppercase text-[#00A44E] md:text-black">
                   {locale === "vi" ? "Danh mục" : "Category"}
                 </h6>
-                <div className="grid grid-cols-3 md:flex md:flex-col text-[16px]  leading-4 md:leading-5 xl:leading-6 gap-x-2 md:gap-x-0 gap-y-2 md:gap-y-4 xl:gap-y-6">
+                <div className="hidden md:flex md:flex-col text-[16px]  leading-4 md:leading-5 xl:leading-6 gap-x-2 md:gap-x-0 gap-y-2 md:gap-y-4 xl:gap-y-6">
                   {Object.keys(groupCategory).map((key) => (
                     <p
                       className={`cursor-pointer ${
@@ -86,6 +99,49 @@ export default function Root() {
                       {key}
                     </p>
                   ))}
+                </div>
+                <div className="md:hidden text-center my-3">
+                  <select
+                    onChange={(val) => {
+                      console.log(val.target.value);
+                      categoryFilter === val.target.value
+                        ? setCategoryFilter("")
+                        : setCategoryFilter(val.target.value);
+                    }}
+                    className={`bg-white border w-[280px] ${
+                      locale === "vi" ? "text-[14px]" : "text-[14px]"
+                    }`}
+                  >
+                    <option
+                      value=""
+                      className={`${
+                        locale === "vi" ? "text-[14px]" : "text-[13px]"
+                      }`}
+                    >
+                      {locale === "vi" ? "Tất cả" : "All Products"}
+                    </option>
+                    {Object.keys(groupCategory).map((key) => (
+                      <option
+                        value={key}
+                        className={`${
+                          locale === "vi" ? "text-[14px]" : "text-[13px]"
+                        }`}
+                        onClick={() =>
+                          categoryFilter === key
+                            ? setCategoryFilter("")
+                            : setCategoryFilter(key)
+                        }
+                      >
+                        <div
+                          className={`cursor-pointer ${
+                            categoryFilter === key ? "font-bold" : "font-normal"
+                          }  md:border-0  md:border-none  md:rounded-none py-1 px-[5px] md:py-0 md:px-0 flex   md:items-normal md:justify-normal md:text-left  md:text-[18px]`}
+                        >
+                          {key}
+                        </div>
+                      </option>
+                    ))}
+                  </select>
                 </div>
               </div>
               <div className="hidden md:flex flex-col gap-4">
@@ -110,10 +166,10 @@ export default function Root() {
                 </div>
               </div>
             </div>
-            <h6 className="md:hidden text-center md:text-left text-[18px] md:text-[20px] font-bold uppercase text-[#00A44E] md:text-black mt-4">
+            <h6 className="md:hidden text-center md:text-left text-[18px] md:text-[20px] font-bold uppercase text-[#00A44E] md:text-black mt-4 md:pt-0">
               {locale === "vi" ? "sản phẩm" : "products"}
             </h6>
-            <div className="col-span-3 grid grid-cols-3 mx-4 md:ml-4 gap-x-4 md:gap-x-4 xl:gap-x-8 2xl:gap-x-12">
+            <div className="col-span-3 grid grid-cols-2  md:grid-cols-3 pt-4 mx-4 md:ml-4 gap-x-5 md:gap-x-4 xl:gap-x-8 2xl:gap-x-12">
               {data.products
 
                 .filter((product: any) =>
@@ -142,7 +198,7 @@ export default function Root() {
                       />
                     </a>
                     <div className="flex flex-col gap-0">
-                      <h2 className="text-[16px] md:text-[18px] md:max-w-[21vw] ">
+                      <h2 className="text-[16px] md:text-[18px] md:max-w-[21vw] py-4 md:py-0 ">
                         <a
                           className="hover:underline text-black"
                           href={`/products/${product.id}`}

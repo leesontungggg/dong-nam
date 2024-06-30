@@ -4,7 +4,7 @@ import { useRouter, usePathname } from "next-intl/client";
 import { useTransition } from "react";
 import { useState } from "react";
 import { MdLanguage } from "react-icons/md";
-import { useEffect } from "react";
+import { useEffect, useRef, useLayoutEffect } from "react";
 
 import {
   Menubar,
@@ -22,6 +22,7 @@ const Navbar = (props: any) => {
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
   const locale = useLocale();
+  const button = useRef<any>(null);
   const [toggle, setToggle] = useState(true);
   const [toggleLanguage, setToggleLanguage] = useState(isBoolean);
 
@@ -31,23 +32,29 @@ const Navbar = (props: any) => {
     });
   };
 
+  useLayoutEffect(() => {
+    if (button.current === null) return;
+    button.current.getBoundingClientRect();
+  }, [toggle]);
+
   const handleToggle = (e: any) => {
     setToggle(!toggle);
     e.preventDefault();
   };
 
-  const handleToggleLanguage = () => {
+  const handleToggleLanguage = (e: any) => {
     setToggleLanguage(!toggleLanguage);
     toggleLanguage ? handleSelect("vi") : handleSelect("en");
+    e.preventDefault();
   };
 
-  useEffect(() => console.log("UseEffect says:", toggleLanguage));
+  // useEffect(() => console.log("UseEffect says:", toggleLanguage));
 
-  console.log(toggleLanguage);
+  // console.log(toggleLanguage);
 
   return (
     <header className="flex sticky top-0 z-50 w-full h-fit border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <nav className="mx-auto md:container flex max-w-screen-2xl items-center h-14 md:py-2 md:h-fit w-full justify-between">
+      <nav className="mx-auto md:container flex max-w-screen-2xl items-center h-18 md:py-2 md:h-fit w-full justify-between">
         <div className="mr-4 hidden md:flex flex-1">
           <a className="mr-6 hidden md:flex items-center space-x-2" href="/">
             <img className="w-auto h-20" src="/logo.svg" alt="DongNam" />
@@ -141,22 +148,31 @@ const Navbar = (props: any) => {
         >
           <Menubar>
             <MenubarMenu>
-              <MenubarTrigger onClick={handleToggle}>
+              <MenubarTrigger
+                className="cursor-pointer z-40"
+                onClick={handleToggle}
+                ref={button}
+              >
                 <svg
                   className={`${
-                    toggle ? "block" : "hidden"
-                  } swap-off fill-current text-black bg-transparent `}
+                    toggle ? "" : "hidden"
+                  } swap-off fill-current text-black bg-transparent cursor-pointer z-40`}
                   xmlns="http://www.w3.org/2000/svg"
                   width="50"
                   height="50"
                   viewBox="0 0 512 512"
                 >
-                  <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
+                  <path
+                    className={`${
+                      toggle ? "" : "hidden"
+                    } swap-off fill-current text-black bg-transparent cursor-pointer z-40`}
+                    d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"
+                  />
                 </svg>
                 <svg
                   className={`${
-                    toggle ? "hidden" : "block"
-                  } swap-on fill-current text-black`}
+                    toggle ? "hidden" : ""
+                  } swap-on fill-current text-black cursor-pointer`}
                   xmlns="http://www.w3.org/2000/svg"
                   width="50"
                   height="50"
@@ -277,43 +293,30 @@ const Navbar = (props: any) => {
               className=""
               src="/logo.svg"
               alt="DongNam"
-              width="50"
-              height="50"
+              width="70"
+              height="70"
             />
           </a>
         </div>
         <div className="flex ml-auto items-center justify-end space-x-2 md:justify-end mr-2 md:mr-0">
-          <nav className="flex items-center  border-slate-400 border rounded-lg">
-            <Menubar>
-              <MenubarMenu>
-                <MenubarTrigger
-                  className="md:text-[16px] xl:text-lg flex justify-center w-[22vw] h-full md:w-[10vw]"
-                  onClick={() => handleToggleLanguage()}
-                >
-                  <span className={`${locale === "vi" ? "font-bold" : ""}`}>
-                    Vie
-                  </span>
-                  {"  "} |{" "}
-                  <span className={`${locale === "en" ? "font-bold" : ""}`}>
-                    Eng
-                  </span>
-                </MenubarTrigger>
-                {/* <MenubarContent>
-                  <MenubarItem
-                    className="md:text-[16px] xl:text-lg"
-                    onClick={() => handleSelect("vi")}
-                  >
-                    Tiếng Việt
-                  </MenubarItem>
-                  <MenubarItem
-                    className="md:text-[16px] xl:text-lg"
-                    onClick={() => handleSelect("en")}
-                  >
-                    English
-                  </MenubarItem>
-                </MenubarContent> */}
-              </MenubarMenu>
-            </Menubar>
+          <nav className="flex items-center  border-slate-400 rounded-lg cursor-pointer">
+            {/* <Menubar> */}
+            {/* <MenubarMenu> */}
+            <div
+              className="md:text-[16px] xl:text-lg flex justify-center w-[22vw] h-full md:w-[10vw]"
+              onClick={() => handleToggleLanguage()}
+            >
+              <span className={`${locale === "vi" ? "font-bold" : ""}`}>
+                Vie
+              </span>
+              {"   "} |{"  "}
+              <span className={`${locale === "en" ? "font-bold" : ""}`}>
+                Eng
+              </span>
+            </div>
+
+            {/* </MenubarMenu> */}
+            {/* </Menubar> */}
           </nav>
         </div>
       </nav>

@@ -7,6 +7,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { ContextProvider } from "@/services/context";
 import { cn } from "@/lib/utils";
+import Floating from "@/components/floating";
 // import { headers } from "next/headers";
 
 const fontSans = FontSans({
@@ -42,11 +43,22 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <head>
+        <meta
+          name="title"
+          content="Đông Nam Pharma - Nhà máy gia công dược phẩm
+"
+        />
+        <meta
+          name="description"
+          content="Công ty Dược Đông Nam - Với kinh nghiệm hơn 20 năm trong lĩnh vực gia công dược phẩm đạt chuẩn GMP-WHO."
+        />
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap"
           rel="stylesheet"
         />
+        {/* <link rel="icon" href="/path/to/favicon.ico"/> */}
       </head>
       <body
         className={cn(
@@ -59,6 +71,7 @@ export default async function RootLayout({
             <Navbar activePath={activePath} />
             {children}
             <Footer />
+            <Floating />
           </ContextProvider>
         </NextIntlClientProvider>
       </body>
