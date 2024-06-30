@@ -42,10 +42,10 @@ const Navbar = (props: any) => {
     e.preventDefault();
   };
 
-  const handleToggleLanguage = (e: any) => {
+  const handleToggleLanguage = () => {
     setToggleLanguage(!toggleLanguage);
     toggleLanguage ? handleSelect("vi") : handleSelect("en");
-    e.preventDefault();
+    // e.preventDefault();
   };
 
   // useEffect(() => console.log("UseEffect says:", toggleLanguage));
