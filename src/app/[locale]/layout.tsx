@@ -16,8 +16,9 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "Đông Nam",
-  description: "Đông Nam",
+  title: "Đông Nam Pharma - Nhà máy sản xuất dược phẩm",
+  description:
+    "Công ty Dược Đông Nam - Với kinh nghiệm hơn 20 năm trong lĩnh vực sản xuất dược phẩm đạt chuẩn GMP-WHO.",
 };
 
 export function generateStaticParams() {
@@ -50,7 +51,7 @@ export default async function RootLayout({
         />
         <meta
           name="description"
-          content="Công ty Dược Đông Nam - Với kinh nghiệm hơn 20 năm trong lĩnh vực gia công dược phẩm đạt chuẩn GMP-WHO."
+          content="Công ty Dược Đông Nam - Với kinh nghiệm hơn 20 năm trong lĩnh vực sản xuất dược phẩm đạt chuẩn GMP-WHO."
         />
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
