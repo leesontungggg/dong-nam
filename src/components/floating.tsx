@@ -38,7 +38,7 @@ const Floating = () => {
         </button>
 
         {isOpen && (
-          <div className="origin-bottom-left absolute bottom-16 md:bottom-24 right-0 mt-2 w-44 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+          <div className="origin-bottom-left absolute bottom-16 md:bottom-24 right-0 mt-2 w-44 md:w-60 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5">
             <ul
               role="menu"
               aria-orientation="vertical"
@@ -47,11 +47,11 @@ const Floating = () => {
               <li>
                 <a
                   href="tel:+84902327775"
-                  className="flex items-center gap-2 px-2 pt-2 text-sm text-gray-700 hover:bg-gray-100 md:hidden"
+                  className="flex items-center gap-2 md:gap-3 px-2 pt-2 md:pt-4 text-sm md:text-lg text-gray-700 hover:bg-gray-100"
                   onClick={closeDropdown}
                 >
                   <FaPhone
-                    className={`rounded-full p-2 w-10 h-10 text-white bg-orange-400 `}
+                    className={`rounded-full p-2 w-10 h-10 md:w-14 md:h-12 text-white bg-orange-400 `}
                   />
                   0902 327 775
                 </a>
@@ -103,7 +103,7 @@ const Floating = () => {
                   <img
                     src="./image/icon-zalo.png"
                     alt="zalo-icon"
-                    className={`rounded-full p-2 w-13 h-12 text-white bg-blue-400 `}
+                    className={`rounded-full p-2 w-14 h-12 text-white bg-blue-400 `}
                   />
                   Zalo
                 </a>

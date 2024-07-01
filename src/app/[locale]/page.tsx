@@ -156,7 +156,7 @@ export default function Root() {
           <div className="mt-10 grid md:grid-cols-2 md:gap-14 xl:gap-20 gap-2">
             <div className="flex flex-col items-center  w-full load-hidden animate-slide-up md:border-[1px] md:border-black border-solid rounded-t-lg animate-delay-200">
               <img
-                className="md:object-fill md:h-[34vh] xl:h-[42vh] md:p-3 xl:p-5 w-full md:rounded-3xl"
+                className="md:object-cover md:h-[34vh] xl:h-[42vh] md:p-3 xl:p-5 w-full md:rounded-3xl"
                 src="/image/reason-1.jpg"
                 alt="Online Banking"
               />
@@ -181,7 +181,7 @@ export default function Root() {
             </div>
             <div className="flex flex-col items-center  w-full load-hidden animate-slide-up md:border-[1px] md:border-black border-solid rounded-t-lg animate-delay-200">
               <img
-                className="md:object-fill w-full md:h-[34vh] xl:h-[42vh] pt-4 md:p-3 xl:p-5 md:rounded-3xl "
+                className="md:object-cover w-full md:h-[34vh] xl:h-[42vh] pt-4 md:p-3 xl:p-5 md:rounded-3xl "
                 src="/image/reason-2.jpg"
                 alt="Simple Budgeting"
               />
