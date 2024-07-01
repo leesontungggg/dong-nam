@@ -15,20 +15,30 @@ const Floating = () => {
     setIsOpen(false);
   };
 
+  console.log(isOpen);
+
   return (
-    <div className="md:hidden fixed bottom-4 right-4">
+    <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8">
       <div className="relative inline-block">
         <button
           type="button"
           className="rounded-full border px-4 py-2 text-white bg-orange-400 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium text-sm inline-flex items-center w-full h-full"
           onClick={toggleDropdown}
         >
-          <FaPhone className={`${isOpen === true ? "hidden" : ""} w-7 h-11`} />
-          <ImCross className={`${isOpen === true ? "" : "hidden"} w-7 h-11`} />
+          <FaPhone
+            className={`${
+              isOpen === true ? "hidden" : ""
+            } w-7 h-11 md:w-12 md:h-16`}
+          />
+          <ImCross
+            className={`${
+              isOpen === true ? "" : "hidden"
+            } w-7 h-11 md:w-12 md:h-16`}
+          />
         </button>
 
         {isOpen && (
-          <div className="origin-bottom-left absolute bottom-16 right-0 mt-2 w-44 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+          <div className="origin-bottom-left absolute bottom-16 md:bottom-24 right-0 mt-2 w-44 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5">
             <ul
               role="menu"
               aria-orientation="vertical"
@@ -37,7 +47,7 @@ const Floating = () => {
               <li>
                 <a
                   href="tel:+84902327775"
-                  className="flex items-center gap-2 px-2 pt-2 text-sm text-gray-700 hover:bg-gray-100"
+                  className="flex items-center gap-2 px-2 pt-2 text-sm text-gray-700 hover:bg-gray-100 md:hidden"
                   onClick={closeDropdown}
                 >
                   <FaPhone
@@ -50,11 +60,22 @@ const Floating = () => {
                 <a
                   href="fb-messenger://user-thread/114214031746625
                   "
-                  className="flex items-center gap-2 px-2 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  className="flex items-center gap-2 px-2 py-2 text-sm text-gray-700 hover:bg-gray-100 md:hidden"
                   onClick={closeDropdown}
                 >
                   <FaFacebookMessenger
                     className={`rounded-full p-2 w-10 h-10 text-white bg-blue-400 `}
+                  />
+                  Messenger
+                </a>
+                <a
+                  href="https://www.messenger.com/t/114214031746625
+                  "
+                  className="md:flex items-center gap-3 px-2 py-4 text-lg text-gray-700 hover:bg-gray-100 hidden"
+                  onClick={closeDropdown}
+                >
+                  <FaFacebookMessenger
+                    className={`rounded-full p-2 w-14 h-12 text-white bg-blue-400 `}
                   />
                   Messenger
                 </a>
@@ -63,13 +84,26 @@ const Floating = () => {
                 <a
                   href="https://zalo.me/0902327775
                   "
-                  className="flex items-center gap-2 px-2 pb-2 text-sm text-gray-700 hover:bg-gray-100"
+                  className="flex items-center gap-2 px-2 pb-2 text-sm text-gray-700 hover:bg-gray-100 md:hidden"
                   onClick={closeDropdown}
                 >
                   <img
                     src="./image/icon-zalo.png"
                     alt="zalo-icon"
                     className={`rounded-full p-2 w-10 h-10 text-white bg-blue-400 `}
+                  />
+                  Zalo
+                </a>
+                <a
+                  href="https://chat.zalo.me/?c=4938055873798847916
+                  "
+                  className="md:flex items-center gap-3 px-2 pb-4 pt-0 text-lg text-gray-700 hover:bg-gray-100 hidden"
+                  onClick={closeDropdown}
+                >
+                  <img
+                    src="./image/icon-zalo.png"
+                    alt="zalo-icon"
+                    className={`rounded-full p-2 w-13 h-12 text-white bg-blue-400 `}
                   />
                   Zalo
                 </a>

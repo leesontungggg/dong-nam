@@ -45,7 +45,7 @@ export default async function RootLayout({
       <head>
         <meta
           name="title"
-          content="Đông Nam Pharma - Nhà máy gia công dược phẩm
+          content="Đông Nam Pharma - Nhà máy sản xuất dược phẩm
 "
         />
         <meta
