@@ -53,6 +53,7 @@ export default async function RootLayout({
           name="description"
           content="Công ty Dược Đông Nam - Với kinh nghiệm hơn 20 năm trong lĩnh vực sản xuất dược phẩm đạt chuẩn GMP-WHO."
         />
+        <meta name="robots" content="noodp,noydir" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
